@@ -1391,15 +1391,14 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             const anos = [2010, 2014, 2018, 2022];
 
             anos.forEach(ano => {
-                // Tentar acessar com chave inteira ou string (para compatibilidade com ESTADO)
-                const data = mun.presidente[ano] || mun.presidente[String(ano)];
-                // Só incluir se NÃO for zero (pois dados antigos não foram carregados)
-                if (data && (data.pt > 0 || data.direita > 0)) {
+                // Usar dados de Gleisi (não presidenciais)
+                const data = mun.gleisi && mun.gleisi[ano];
+                // Só incluir se não for zero
+                if (data && data.votos_pct > 0) {
                     presData.push({
                         ano: ano,
-                        pt: data.pt,
-                        direita: data.direita,
-                        margem: data.margem
+                        gleisi: data.votos_pct,
+                        votos_pct: data.votos_pct
                     });
                 }
             });
@@ -1555,10 +1554,10 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             }
 
             const presValues = [
-                mun.presidente[2010]?.pt - mun.presidente[2010]?.direita || 0,
-                mun.presidente[2014]?.pt - mun.presidente[2014]?.direita || 0,
-                mun.presidente[2018]?.pt - mun.presidente[2018]?.direita || 0,
-                mun.presidente[2022]?.pt - mun.presidente[2022]?.direita || 0
+                mun.gleisi?.[2010]?.votos_pct || 0,
+                mun.gleisi?.[2014]?.votos_pct || 0,
+                mun.gleisi?.[2018]?.votos_pct || 0,
+                mun.gleisi?.[2022]?.votos_pct || 0
             ];
 
             chartsInstances.historicaPres = new Chart(presContext, {
