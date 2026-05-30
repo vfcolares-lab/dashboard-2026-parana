@@ -4,12 +4,22 @@
   "outputDirectory": ".",
   "routes": [
     {
-      "src": "/secoes_2022.json",
-      "dest": "/secoes_2022.json"
+      "src": "/data.js",
+      "dest": "/data.js",
+      "headers": {
+        "content-type": "application/javascript"
+      }
     },
     {
-      "src": "/index.html",
-      "dest": "/index.html"
+      "src": "/secoes_2022.json",
+      "dest": "/secoes_2022.json",
+      "headers": {
+        "content-type": "application/json"
+      }
+    },
+    {
+      "src": "/.*\\.(json|js|css|png|jpg|jpeg|gif|svg|ico)$",
+      "dest": "/$1"
     },
     {
       "src": "/.*",
