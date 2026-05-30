@@ -884,29 +884,39 @@ IGLEISI = (perf_2010 × 0.10) +<br>
 
     <!-- SCRIPTS -->
     <script>
-        // Carregar dados via fetch (mais eficiente que arquivo JS gigante)
-        async function carregarSecoes() {
+        // Carregar dados via fetch
+        async function carregarDados() {
             try {
-                const response = await fetch('secoes_2022.json');
-                window.SECOES_2022 = await response.json();
+                // Carregar secoes_2022.json
+                const secoes_response = await fetch('secoes_2022.json');
+                window.SECOES_2022 = await secoes_response.json();
                 console.log('✅ SECOES_2022 carregado com sucesso');
+
+                // Carregar data.js (DASHBOARD_DATA)
+                const data_response = await fetch('data.js');
+                const data_text = await data_response.text();
+                // Remove "const DASHBOARD_DATA = " e ";" do arquivo
+                const data_json = data_text.replace(/^const DASHBOARD_DATA = /, '').replace(/;$/, '');
+                window.DASHBOARD_DATA = JSON.parse(data_json);
+                console.log('✅ DASHBOARD_DATA carregado com sucesso');
+
                 inicializarAposCarregar();
             } catch (error) {
-                console.error('❌ Erro ao carregar secoes_2022.json:', error);
+                console.error('❌ Erro ao carregar dados:', error);
             }
         }
 
         function inicializarAposCarregar() {
-            // Inicializar impulsionamento quando tudo estiver pronto
+            // Inicializar quando DOM estiver pronto
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', function() {
-                    console.log('Pronto para inicializar impulsionamento');
+                    console.log('Pronto para inicializar dashboard');
                 });
             }
         }
 
-        // Começar a aguardar
-        carregarSecoes();
+        // Começar a carregar
+        carregarDados();
     </script>
 
     <script>
