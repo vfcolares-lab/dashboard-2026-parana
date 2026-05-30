@@ -914,6 +914,16 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         function inicializarAposCarregar() {
             // Rodar diagnóstico APÓS dados carregarem
             runDiagnostics();
+
+            // Inicializar dashboard
+            const numMunicipios = Object.keys(DASHBOARD_DATA.municipios).length;
+            console.log('✅ Dashboard inicializado com', numMunicipios, 'municípios');
+
+            populateKPIs();
+            populateMunicipoSelect();
+            populateTables();
+            initCharts();
+            initMaps();
         }
 
         // Começar a carregar
@@ -975,14 +985,6 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         document.addEventListener('DOMContentLoaded', function() {
             // Diagnóstico rodará após os dados serem carregados via fetch
             console.log('DOM carregado, aguardando dados via fetch...');
-            const numMunicipios = Object.keys(DASHBOARD_DATA.municipios).length;
-            console.log('✅ Dashboard inicializado com', numMunicipios, 'municípios');
-
-            populateKPIs();
-            populateMunicipoSelect();
-            populateTables();
-            initCharts();
-            initMaps();
         });
 
         // ============= KPIs DINÂMICOS =============
