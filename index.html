@@ -882,18 +882,18 @@ IGLEISI = (perf_2010 × 0.10) +<br>
 
     <!-- DATA -->
     <script src="data.js"></script>
-    <script src="secoes_2022.js"></script>
 
     <!-- SCRIPTS -->
     <script>
-        // Aguardar que SECOES_2022 esteja carregado
-        function aguardarSecoes() {
-            if (typeof SECOES_2022 === 'undefined') {
-                console.warn('SECOES_2022 ainda não carregado, aguardando...');
-                setTimeout(aguardarSecoes, 100);
-            } else {
+        // Carregar dados via fetch (mais eficiente que arquivo JS gigante)
+        async function carregarSecoes() {
+            try {
+                const response = await fetch('secoes_2022.json');
+                window.SECOES_2022 = await response.json();
                 console.log('✅ SECOES_2022 carregado com sucesso');
                 inicializarAposCarregar();
+            } catch (error) {
+                console.error('❌ Erro ao carregar secoes_2022.json:', error);
             }
         }
 
@@ -907,7 +907,7 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         }
 
         // Começar a aguardar
-        aguardarSecoes();
+        carregarSecoes();
     </script>
 
     <script>
