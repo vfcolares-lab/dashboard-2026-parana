@@ -895,8 +895,13 @@ IGLEISI = (perf_2010 × 0.10) +<br>
                 // Carregar data.js (DASHBOARD_DATA)
                 const data_response = await fetch('data.js');
                 const data_text = await data_response.text();
-                // Remove "const DASHBOARD_DATA = " e ";" do arquivo
-                const data_json = data_text.replace(/^const DASHBOARD_DATA = /, '').replace(/;$/, '');
+                // Extrai o JSON entre o primeiro { e o último }
+                const firstBrace = data_text.indexOf('{');
+                const lastBrace = data_text.lastIndexOf('}');
+                if (firstBrace === -1 || lastBrace === -1) {
+                    throw new Error('JSON inválido em data.js');
+                }
+                const data_json = data_text.substring(firstBrace, lastBrace + 1);
                 window.DASHBOARD_DATA = JSON.parse(data_json);
                 console.log('✅ DASHBOARD_DATA carregado com sucesso');
 
@@ -971,7 +976,7 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             // Diagnóstico rodará após os dados serem carregados
             console.log('DOM carregado, aguardando dados...');
 
-            if (!DASHBOARD_DATA || !DASHBOARD_DATA.municipios) {
+            if (typeof DASHBOARD_DATA === 'undefined' || !DASHBOARD_DATA.municipios) {
                 console.error('❌ ERRO: data.js não foi carregado!');
                 console.error('   Certifique-se de que está usando HTTP (http://localhost:8000)');
                 alert('⚠️ ERRO: Dados não carregados.\n\nUse:\ncd relatorios tse/dashboard-2026\npython3 -m http.server 8000\n\nDepois acesse: http://localhost:8000');
