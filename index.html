@@ -973,15 +973,8 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Diagnóstico rodará após os dados serem carregados
-            console.log('DOM carregado, aguardando dados...');
-
-            if (typeof DASHBOARD_DATA === 'undefined' || !DASHBOARD_DATA.municipios) {
-                console.error('❌ ERRO: data.js não foi carregado!');
-                console.error('   Certifique-se de que está usando HTTP (http://localhost:8000)');
-                alert('⚠️ ERRO: Dados não carregados.\n\nUse:\ncd relatorios tse/dashboard-2026\npython3 -m http.server 8000\n\nDepois acesse: http://localhost:8000');
-                return;
-            }
+            // Diagnóstico rodará após os dados serem carregados via fetch
+            console.log('DOM carregado, aguardando dados via fetch...');
             const numMunicipios = Object.keys(DASHBOARD_DATA.municipios).length;
             console.log('✅ Dashboard inicializado com', numMunicipios, 'municípios');
 
