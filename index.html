@@ -907,12 +907,8 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         }
 
         function inicializarAposCarregar() {
-            // Inicializar quando DOM estiver pronto
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', function() {
-                    console.log('Pronto para inicializar dashboard');
-                });
-            }
+            // Rodar diagnóstico APÓS dados carregarem
+            runDiagnostics();
         }
 
         // Começar a carregar
@@ -972,11 +968,8 @@ IGLEISI = (perf_2010 × 0.10) +<br>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Rodar diagnóstico
-            const diagOk = runDiagnostics();
-
-            if (!diagOk) {
-                console.error('❌ Diagnóstico falhou! Verifique os erros acima.');
+            // Diagnóstico rodará após os dados serem carregados
+            console.log('DOM carregado, aguardando dados...');
                 return;
             }
 
