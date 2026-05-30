@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": ".",
   "routes": [
     {
-      "src": "/(?!.*\\.(js|json|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$).*",
-      "dest": "/"
+      "src": "/secoes_2022.json",
+      "dest": "/secoes_2022.json"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
