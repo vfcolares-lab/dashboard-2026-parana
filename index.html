@@ -1194,33 +1194,23 @@ IGLEISI = (perf_2010 × 0.10) +<br>
                 `;
             });
 
-            // Prioridades
-            const priorTable = document.querySelector('#prioridades tbody');
-            municipios
-                .filter(m => m.preditivo_2026.classificacao.includes('BATTLEGROUND') || m.preditivo_2026.classificacao === 'COMPETITIVO PRÓ-GLEISI')
-                .sort((a, b) => b.preditivo_2026.score - a.preditivo_2026.score)
-                .forEach(m => {
-                    const row = priorTable.insertRow();
-                    row.innerHTML = `
-                        <td><strong>${m.name}</strong></td>
-                        <td>${(m.preditivo_2026.score * 100).toFixed(1)}%</td>
-                        <td><span class="badge" style="background: #F39C12; color: white;">${m.preditivo_2026.classificacao}</span></td>
-                        <td>${m.preditivo_2026.tendencia}</td>
-                    `;
-                });
+            // Prioridades (dados não disponíveis ainda)
+            // TODO: Implementar quando dados preditivos estiverem disponíveis
+            // const priorTable = document.querySelector('#prioridades tbody');
+            // municipios.forEach(...);
 
             // All Data
             const allTable = document.querySelector('#allDataTable tbody');
             municipios.forEach(m => {
                 const row = allTable.insertRow();
+                const gleisiVotos2022 = m.gleisi?.[2022]?.votos_pct || 0;
+                const trajetoria = m.trajetoria || 'N/A';
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
-                    <td>${m.indice_nacional.toFixed(3)}</td>
-                    <td><span class="badge badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}">${m.classificacao_nacional}</span></td>
-                    <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge badge-${m.classificacao_eb.toLowerCase().replace(/ /g, '-')}">${m.classificacao_eb}</span></td>
-                    <td>${m.eixo_estrategico}</td>
-                    <td>${m.preditivo_2026.classificacao}</td>
+                    <td>${m.num_secoes || 0}</td>
+                    <td>${gleisiVotos2022.toFixed(1)}%</td>
+                    <td>${trajetoria}</td>
+                    <td>${(m.volatilidade || 0).toFixed(2)}</td>
                 `;
             });
 
