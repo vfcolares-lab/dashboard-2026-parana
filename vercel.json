@@ -8,7 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/(?!.*\\.(js|json|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$).*",
       "dest": "/"
     }
   ]
