@@ -1183,17 +1183,14 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             const munTable = document.querySelector('#municipiosTable tbody');
             municipios.forEach(m => {
                 const row = munTable.insertRow();
-                const classeNacBadge = `badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}`;
-                const classeGLEISIBadge = `badge-${m.classificacao_eb.toLowerCase().replace(/ /g, '-')}`;
+                const trajetoria = m.trajetoria || 'N/A';
+                const volatilidade = m.volatilidade || 0;
 
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
-                    <td>${m.indice_nacional.toFixed(3)}</td>
-                    <td><span class="badge ${classeNacBadge}">${m.classificacao_nacional}</span></td>
-                    <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge ${classeGLEISIBadge}">${m.classificacao_eb}</span></td>
-                    <td><span class="badge badge-${m.eixo_estrategico.toLowerCase()}">${m.eixo_estrategico}</span></td>
-                    <td><span class="badge" style="background: #F39C12; color: white;">${m.preditivo_2026.classificacao}</span></td>
+                    <td>${m.num_secoes || 0}</td>
+                    <td>${trajetoria}</td>
+                    <td>${volatilidade.toFixed(2)}</td>
                 `;
             });
 
