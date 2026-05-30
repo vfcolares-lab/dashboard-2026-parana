@@ -1468,17 +1468,13 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             };
 
             anos.forEach(ano => {
-                // Tentar acessar com chave inteira ou string (para compatibilidade com ESTADO)
-                const data = mun.eb[ano] || mun.eb[String(ano)];
+                // Usar dados de Gleisi
+                const data = mun.gleisi && mun.gleisi[ano];
                 if (data) {
                     ebData.push({
                         ano: ano,
-                        votos_pct: data.votos_pct,
-                        media_estado: data.media_estado,
-                        diff: data.diff,
-                        cargo: cargos[ano],
-                        adversario: adversarios[ano],
-                        adversario_pct: data.adversario_pct || 0
+                        votos_pct: data.votos_pct || 0,
+                        cargo: cargos[ano]
                     });
                 }
             });
@@ -1596,10 +1592,10 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             }
 
             const ebValues = [
-                mun.eb[2010]?.votos_pct || 0,
-                mun.eb[2014]?.votos_pct || 0,
-                mun.eb[2018]?.votos_pct || 0,
-                mun.eb[2022]?.votos_pct || 0
+                mun.gleisi?.[2010]?.votos_pct || 0,
+                mun.gleisi?.[2014]?.votos_pct || 0,
+                mun.gleisi?.[2018]?.votos_pct || 0,
+                mun.gleisi?.[2022]?.votos_pct || 0
             ];
 
             chartsInstances.historicaGLEISI = new Chart(contexto, {
