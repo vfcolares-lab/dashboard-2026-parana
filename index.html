@@ -923,7 +923,8 @@ IGLEISI = (perf_2010 × 0.10) +<br>
             populateMunicipoSelect();
             populateTables();
             initCharts();
-            initMaps();
+            // TODO: Implementar mapas quando todos os dados estiverem disponíveis
+            // initMaps();
         }
 
         // Começar a carregar
@@ -1335,8 +1336,8 @@ IGLEISI = (perf_2010 × 0.10) +<br>
                 chartsInstances.scatter = scatterChart;
                 console.log('✅ Scatter chart inicializado com', e1Data.length + e5Data.length + e6Data.length, 'pontos totais');
 
-                // Inicializar também o gráfico preditivo
-                initPreditivoChart();
+                // TODO: Inicializar gráfico preditivo quando dados estiverem disponíveis
+                // initPreditivoChart();
             } catch (error) {
                 console.error('❌ Erro ao inicializar scatter chart:', error);
                 console.error('   Stack:', error.stack);
