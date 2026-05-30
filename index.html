@@ -1409,24 +1409,21 @@ IGLEISI = (perf_2010 × 0.10) +<br>
                 tr.innerHTML = `<td colspan="6" style="text-align: center; color: var(--text-muted); padding: 1rem;">⚠️ Dados históricos em processamento (apenas 2022 disponível)</td>`;
                 tabelaPres.appendChild(tr);
             } else {
-                // Calcular terceira via e variação
+                // Mostrar histórico de Gleisi
                 presData.forEach((row, idx) => {
-                    const terceiraVia = (100 - row.pt - row.direita).toFixed(1);
-                    const saldo = (row.pt - row.direita).toFixed(1);
+                    const gleisiVotos = (row.gleisi || row.votos_pct || 0).toFixed(1);
                     let variacao = '—';
 
                     if (idx > 0) {
-                        const prev = (presData[idx-1].pt - presData[idx-1].direita);
-                        variacao = ((row.pt - row.direita) - prev).toFixed(1);
+                        const prev = presData[idx-1].gleisi || presData[idx-1].votos_pct || 0;
+                        const atual = row.gleisi || row.votos_pct || 0;
+                        variacao = (atual - prev).toFixed(1);
                     }
 
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
                         <td><strong>${row.ano}</strong></td>
-                        <td style="color: #E74C3C;">${row.pt.toFixed(1)}%</td>
-                        <td style="color: #2E86C1;">${row.direita.toFixed(1)}%</td>
-                        <td>${terceiraVia}%</td>
-                        <td style="font-weight: 600; color: ${saldo > 0 ? '#E74C3C' : '#2E86C1'};">${saldo}</td>
+                        <td style="color: #27AE60;">${gleisiVotos}%</td>
                         <td>${variacao}</td>
                     `;
                     tabelaPres.appendChild(tr);
