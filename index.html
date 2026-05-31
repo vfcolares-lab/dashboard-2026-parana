@@ -1296,17 +1296,20 @@ IGleisi = (perf_2010 × 0.10) +<br>
             const munTable = document.querySelector('#municipiosTable tbody');
             municipios.forEach(m => {
                 const row = munTable.insertRow();
-                const classeNacBadge = `badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}`;
-                const classeEBBadge = `badge-${m.classificacao_gleisi.toLowerCase().replace(/ /g, '-')}`;
+
+                // Usar campos reais: classificacao (federal) e preditivo_2026 (Gleisi)
+                const clasNacional = m.classificacao || 'N/A';
+                const clasGleisi = m.preditivo_2026?.classificacao || 'N/A';
+                const classeNacBadge = `badge-${clasNacional.toLowerCase().replace(/ /g, '-')}`;
+                const classeGleisiBadge = `badge-${clasGleisi.toLowerCase().replace(/ /g, '-')}`;
 
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
-                    <td>${m.indice_nacional.toFixed(3)}</td>
-                    <td><span class="badge ${classeNacBadge}">${m.classificacao_nacional}</span></td>
-                    <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge ${classeEBBadge}">${m.classificacao_gleisi}</span></td>
-                    <td><span class="badge badge-${m.eixo_estrategico.toLowerCase()}">${m.eixo_estrategico}</span></td>
-                    <td><span class="badge" style="background: #F39C12; color: white;">${m.preditivo_2026.classificacao}</span></td>
+                    <td>${(m.indice_nacional || 0).toFixed(3)}</td>
+                    <td><span class="badge ${classeNacBadge}">${clasNacional}</span></td>
+                    <td>${(m.indice_eb || 0).toFixed(3)}</td>
+                    <td><span class="badge ${classeGleisiBadge}">${clasGleisi}</span></td>
+                    <td><span class="badge" style="background: #F39C12; color: white;">${clasGleisi}</span></td>
                 `;
             });
 
@@ -1329,14 +1332,15 @@ IGleisi = (perf_2010 × 0.10) +<br>
             const allTable = document.querySelector('#allDataTable tbody');
             municipios.forEach(m => {
                 const row = allTable.insertRow();
+                const clasNac = m.classificacao || 'N/A';
+                const clasGleisi = m.preditivo_2026?.classificacao || 'N/A';
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
-                    <td>${m.indice_nacional.toFixed(3)}</td>
-                    <td><span class="badge badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}">${m.classificacao_nacional}</span></td>
-                    <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge badge-${m.classificacao_gleisi.toLowerCase().replace(/ /g, '-')}">${m.classificacao_gleisi}</span></td>
-                    <td>${m.eixo_estrategico}</td>
-                    <td>${m.preditivo_2026.classificacao}</td>
+                    <td>${(m.indice_nacional || 0).toFixed(3)}</td>
+                    <td><span class="badge badge-${clasNac.toLowerCase().replace(/ /g, '-')}">${clasNac}</span></td>
+                    <td>${(m.indice_eb || 0).toFixed(3)}</td>
+                    <td><span class="badge badge-${clasGleisi.toLowerCase().replace(/ /g, '-')}">${clasGleisi}</span></td>
+                    <td><span class="badge" style="background: #F39C12; color: white;">${clasGleisi}</span></td>
                 `;
             });
 
@@ -1367,30 +1371,31 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
                 const ctx = scatterEl.getContext('2d');
 
-                const e1Data = municipios.filter(m => m.eixo_estrategico === 'E1').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
-                const e5Data = municipios.filter(m => m.eixo_estrategico === 'E5').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
-                const e6Data = municipios.filter(m => m.eixo_estrategico === 'E6').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
+                // Dividir por classificação federal (2022)
+                const bastiaoPetista = municipios.filter(m => m.classificacao === 'Bastião Petista').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
+                const bastiaoBolsonarista = municipios.filter(m => m.classificacao === 'Bastião Bolsonarista').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
+                const swing = municipios.filter(m => m.classificacao === 'Swing').map(m => ({x: m.indice_nacional, y: m.indice_eb, r: 6}));
 
-                console.log('  E1 (Lulismo):', e1Data.length, 'pontos');
-                console.log('  E5 (Bolsonarismo Interior):', e5Data.length, 'pontos');
-                console.log('  E6 (Bolsonarismo Manaus):', e6Data.length, 'pontos');
+                console.log('  Bastião Petista:', bastiaoPetista.length, 'pontos');
+                console.log('  Bastião Bolsonarista:', bastiaoBolsonarista.length, 'pontos');
+                console.log('  Swing:', swing.length, 'pontos');
 
                 const data = {
                     datasets: [
                         {
-                            label: 'E1 (Lulismo Interior)',
-                            data: e1Data,
-                            backgroundColor: 'rgba(231, 76, 60, 0.6)',
-                            borderColor: 'rgba(231, 76, 60, 1)',
+                            label: 'Bastião Petista',
+                            data: bastiaoPetista,
+                            backgroundColor: 'rgba(39, 174, 96, 0.6)',
+                            borderColor: 'rgba(39, 174, 96, 1)',
                             pointRadius: 6,
                             pointHoverRadius: 8,
                             tension: 0,
                             showLine: false
                         },
                         {
-                            label: 'E5 (Bolsonarismo Interior)',
-                            data: e5Data,
-                            backgroundColor: 'rgba(46, 134, 193, 0.6)',
+                            label: 'Bastião Bolsonarista',
+                            data: bastiaoBolsonarista,
+                            backgroundColor: 'rgba(231, 76, 60, 0.6)',
                             borderColor: 'rgba(46, 134, 193, 1)',
                             pointRadius: 6,
                             pointHoverRadius: 8,
@@ -1398,10 +1403,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             showLine: false
                         },
                         {
-                            label: 'E6 (Bolsonarismo Manaus)',
-                            data: e6Data,
-                            backgroundColor: 'rgba(93, 173, 226, 0.6)',
-                            borderColor: 'rgba(93, 173, 226, 1)',
+                            label: 'Swing',
+                            data: swing,
+                            backgroundColor: 'rgba(244, 208, 63, 0.6)',
+                            borderColor: 'rgba(244, 208, 63, 1)',
                             pointRadius: 6,
                             pointHoverRadius: 8,
                             tension: 0,
@@ -1472,14 +1477,52 @@ IGleisi = (perf_2010 × 0.10) +<br>
         function updateHistoricoCharts(municipio) {
             if (!municipio) return;
 
-            // Se for ESTADO, usar dados estaduais
+            // Se for ESTADO, agregar dados de todos os municípios
             let mun;
             if (municipio === 'ESTADO') {
-                mun = DASHBOARD_DATA.estado;
-                if (!mun) {
-                    console.error('❌ Dados estaduais não encontrados');
-                    return;
-                }
+                // Criar agregado estadual a partir de todos os municípios
+                const allMunicipios = Object.values(DASHBOARD_DATA.municipios);
+
+                // Calcular médias
+                let avgPt2010 = 0, avgBolso2010 = 0, avgGleisi2010 = 0;
+                let avgPt2014 = 0, avgBolso2014 = 0, avgGleisi2014 = 0;
+                let avgPt2018 = 0, avgBolso2018 = 0, avgGleisi2018 = 0;
+                let avgPt2022 = 0, avgBolso2022 = 0, avgGleisi2022 = 0;
+
+                allMunicipios.forEach(m => {
+                    avgPt2010 += m.presidencial['2010']?.pt_pct || 0;
+                    avgBolso2010 += m.presidencial['2010']?.oposicao_pct || 0;
+                    avgGleisi2010 += m.gleisi['2010'] || 0;
+
+                    avgPt2014 += m.presidencial['2014']?.pt_pct || 0;
+                    avgBolso2014 += m.presidencial['2014']?.oposicao_pct || 0;
+                    avgGleisi2014 += m.gleisi['2014'] || 0;
+
+                    avgPt2018 += m.presidencial['2018']?.pt_pct || 0;
+                    avgBolso2018 += m.presidencial['2018']?.oposicao_pct || 0;
+                    avgGleisi2018 += m.gleisi['2018'] || 0;
+
+                    avgPt2022 += m.presidencial['2022']?.pt_pct || 0;
+                    avgBolso2022 += m.presidencial['2022']?.oposicao_pct || 0;
+                    avgGleisi2022 += m.gleisi['2022'] || 0;
+                });
+
+                const n = allMunicipios.length;
+                mun = {
+                    municipio: 'PARANÁ',
+                    presidencial: {
+                        '2010': { pt_pct: avgPt2010/n, oposicao_pct: avgBolso2010/n, margem: (avgPt2010-avgBolso2010)/n },
+                        '2014': { pt_pct: avgPt2014/n, oposicao_pct: avgBolso2014/n, margem: (avgPt2014-avgBolso2014)/n },
+                        '2018': { pt_pct: avgPt2018/n, oposicao_pct: avgBolso2018/n, margem: (avgPt2018-avgBolso2018)/n },
+                        '2022': { pt_pct: avgPt2022/n, oposicao_pct: avgBolso2022/n, margem: (avgPt2022-avgBolso2022)/n }
+                    },
+                    gleisi: {
+                        '2010': avgGleisi2010/n,
+                        '2014': avgGleisi2014/n,
+                        '2018': avgGleisi2018/n,
+                        '2022': avgGleisi2022/n
+                    }
+                };
             } else {
                 mun = DASHBOARD_DATA.municipios[municipio];
                 if (!mun) return;
@@ -1487,13 +1530,22 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             // ============= MOSTRAR INFORMAÇÕES DO MUNICÍPIO =============
             document.getElementById('municipioInfo').style.display = 'grid';
-            document.getElementById('municEixo').textContent = mun.eixo_estrategico || '—';
-            document.getElementById('municEixoLabel').textContent = mun.eixo_label || '—';
-            document.getElementById('municClassNac').textContent = mun.classificacao_nacional || '—';
-            document.getElementById('municIndiceNac').textContent = `IN: ${(mun.indice_nacional || 0).toFixed(3)}`;
-            document.getElementById('municClassGleisi').textContent = mun.classificacao_gleisi || '—';
-            document.getElementById('municIndiceGleisi').textContent = `IGH: ${(mun.indice_eb || 0).toFixed(3)}`;
-            document.getElementById('municPred26').textContent = (mun.preditivo_2026 && mun.preditivo_2026.classificacao) ? mun.preditivo_2026.classificacao : '—';
+
+            // Usar campos reais
+            const clasNac = mun.classificacao || 'N/A';
+            const clasGleisi = mun.preditivo_2026?.classificacao || 'N/A';
+            const indNac = mun.indice_nacional !== undefined ? mun.indice_nacional : (mun.presidencial?.['2022']?.pt_pct || 0);
+            const indGleisi = mun.indice_eb !== undefined ? mun.indice_eb : (mun.gleisi?.['2022'] || 0);
+
+            // Mostrar município ou estado
+            const munLabel = mun.municipio || mun.name || 'N/A';
+
+            // Elementos que podem não existir - mostrar N/A
+            document.getElementById('municClassNac').textContent = clasNac;
+            document.getElementById('municIndiceNac').textContent = `PT 2022: ${indNac.toFixed(3)}%`;
+            document.getElementById('municClassGleisi').textContent = clasGleisi;
+            document.getElementById('municIndiceGleisi').textContent = `Gleisi 2022: ${indGleisi.toFixed(3)}%`;
+            document.getElementById('municPred26').textContent = clasGleisi;
             document.getElementById('municPredScore').textContent = (mun.preditivo_2026 && mun.preditivo_2026.score !== undefined) ? `Score: ${(mun.preditivo_2026.score * 100).toFixed(1)}%` : 'Score: —';
 
             // ============= TABELA PT × DIREITA =============
