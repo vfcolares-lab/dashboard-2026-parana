@@ -27,16 +27,16 @@
             --text-muted: #5A6474;
 
             /* Eixos E1-E6 */
-            --e1: #E74C3C;    /* Vermelho PT */
+            --pt: #E74C3C;    /* Vermelho PT */
             --e2: #FF6B6B;    /* Vermelho claro */
             --e3: #F39C12;    /* Amarelo */
             --e4: #F1C40F;    /* Amarelo claro */
-            --e5: #2E86C1;    /* Azul */
+            --bolso: #2E86C1;    /* Azul */
             --e6: #5DADE2;    /* Azul claro */
 
-            /* Classificação EB */
-            --bastiao-eb: #27AE60;
-            --tendencia-eb: #82E0AA;
+            /* Classificação Gleisi */
+            --bastiao-gleisi: #27AE60;
+            --tendencia-gleisi: #82E0AA;
             --swing: #F4D03F;
             --tendencia-anti: #E59866;
             --bastiao-anti: #E74C3C;
@@ -341,9 +341,9 @@
             text-transform: uppercase;
         }
 
-        .kpi-card.bastiao-lulista .kpi-number { color: var(--e1); }
-        .kpi-card.tendencia-lulista .kpi-number { color: #FF6B6B; }
-        .kpi-card.seguro-eb .kpi-number { color: var(--bastiao-eb); }
+        .kpi-card.bastiao-petista .kpi-number { color: var(--e1); }
+        .kpi-card.tendencia-petista .kpi-number { color: #FF6B6B; }
+        .kpi-card.seguro-eb .kpi-number { color: var(--bastiao-gleisi); }
         .kpi-card.dificil .kpi-number { color: #E74C3C; }
 
         /* ============= TABELAS ============= */
@@ -388,9 +388,9 @@
             text-transform: uppercase;
         }
 
-        .badge-bastiao-lulista { background: var(--e1); color: white; }
+        .badge-bastiao-petista { background: var(--e1); color: white; }
         .badge-bastiao-bolsonarista { background: var(--e5); color: white; }
-        .badge-bastiao-eb { background: var(--bastiao-eb); color: white; }
+        .badge-bastiao-gleisi { background: var(--bastiao-gleisi); color: white; }
         .badge-swing { background: var(--swing); color: #000; }
         .badge-e1 { background: var(--e1); color: white; }
         .badge-e5 { background: var(--e5); color: white; }
@@ -540,30 +540,30 @@ IN = (margem_2010 × 0.10) +<br>
                                 </p>
                             </div>
 
-                            <!-- ÍNDICE EB -->
+                            <!-- ÍNDICE Gleisi -->
                             <div class="index-box">
-                                <h4>🎯 Índice Gleisi Hoffmann (IEB)</h4>
-                                <p><strong>Mede:</strong> Quanto EB supera (ou não) a média estadual em cada município (escala -1 a +1)</p>
+                                <h4>🎯 Índice Gleisista (IGH)</h4>
+                                <p><strong>Mede:</strong> Quanto Gleisi supera (ou não) a média estadual em cada município (escala -1 a +1)</p>
 
                                 <div class="index-formula">
-perf_ano = (% votos EB município - % votos EB estado) / 100<br><br>
-IEB = (perf_2010 × 0.10) +<br>
+perf_ano = (% votos Gleisi município - % votos Gleisi estado) / 100<br><br>
+IGleisi = (perf_2010 × 0.10) +<br>
       (perf_2014 × 0.15) +<br>
       (perf_2018 × 0.30) +<br>
       (perf_2022 × 0.45)
                                 </div>
 
-                                <p><strong>Onde:</strong> Compara desempenho local de EB com a média estadual</p>
+                                <p><strong>Onde:</strong> Compara desempenho local de Gleisi com a média estadual</p>
 
                                 <p style="margin-top: 0.75rem;"><strong>Interpretação:</strong></p>
                                 <ul style="margin-left: 1rem; color: var(--text-secondary); font-size: 0.8rem;">
-                                    <li><span style="color: #27AE60;">▪ IEB &gt; +0.10</span> = Bastião Eduardista (EB supera estado)</li>
-                                    <li><span style="color: #82E0AA;">▪ IEB +0.03 a +0.10</span> = Tendência Eduardista</li>
-                                    <li><span style="color: #F4D03F;">▪ IEB -0.05 a +0.03</span> = Swing EB (EB ≈ média estadual)</li>
-                                    <li><span style="color: #E74C3C;">▪ IEB &lt; -0.05</span> = Tendência Anti-EB (EB abaixo do estado)</li>
+                                    <li><span style="color: #27AE60;">▪ IGleisi &gt; +0.10</span> = Bastião Gleisista (Gleisi supera estado)</li>
+                                    <li><span style="color: #82E0AA;">▪ IGleisi +0.03 a +0.10</span> = Tendência Gleisista</li>
+                                    <li><span style="color: #F4D03F;">▪ IGleisi -0.05 a +0.03</span> = Swing Gleisi (Gleisi ≈ média estadual)</li>
+                                    <li><span style="color: #E74C3C;">▪ IGleisi &lt; -0.05</span> = Tendência Anti-Gleisi (Gleisi abaixo do estado)</li>
                                 </ul>
                                 <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">
-                                    <em>Nota: EB tem desempenho muito próximo à média estadual em 2010-2022. Todos os 62 municípios estão no Swing EB.</em>
+                                    <em>Nota: Gleisi tem desempenho muito próximo à média estadual em 2010-2022. Todos os 62 municípios estão no Swing EB.</em>
                                 </p>
                             </div>
                         </div>
@@ -578,23 +578,23 @@ IEB = (perf_2010 × 0.10) +<br>
                         <div class="methodology-title">🔮 Modelo Preditivo 2026 — Cenários de Campanha</div>
 
                         <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            <strong>Método:</strong> Classificação por percentis do Índice EB (ranking dos 62 municípios).
-                            Divide municípios em 5 quintis para identificar onde EB tem melhor chance de vencer em 2026.
+                            <strong>Método:</strong> Classificação por percentis do Índice Gleisi (ranking dos 62 municípios).
+                            Divide municípios em 5 quintis para identificar onde Gleisi tem melhor chance de vencer em 2026.
                         </p>
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                             <div style="background: var(--bg-primary); border: 2px solid #27AE60; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #27AE60; margin-bottom: 0.5rem;">🟢 SEGURO EB — 14 municípios (Top 23%)</div>
+                                <div style="font-weight: 700; color: #27AE60; margin-bottom: 0.5rem;">🟢 SEGURO Gleisi — 14 municípios (Top 23%)</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-                                    Melhor correlação de EB com Lula e desempenho histórico positivo. <strong>Tendência favorável.</strong> <br><br>
+                                    Melhor correlação de Gleisi com Lula e desempenho histórico positivo. <strong>Tendência favorável.</strong> <br><br>
                                     <strong>Ação:</strong> Consolidar votação, manter mobilização, ampliar margem.
                                 </p>
                             </div>
 
                             <div style="background: var(--bg-primary); border: 2px solid #F39C12; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #F39C12; margin-bottom: 0.5rem;">🟡 COMPETITIVO PRÓ-EB — 12 municípios</div>
+                                <div style="font-weight: 700; color: #F39C12; margin-bottom: 0.5rem;">🟡 COMPETITIVO PRÓ-Gleisi — 12 municípios</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-                                    EB com <strong>boas chances</strong>. Desempenho positivo em 2022, mas com alguma volatilidade. <br><br>
+                                    Gleisi com <strong>boas chances</strong>. Desempenho positivo em 2022, mas com alguma volatilidade. <br><br>
                                     <strong>Ação:</strong> Campanha ativa, não relaxar, acompanhar tendências locais.
                                 </p>
                             </div>
@@ -610,7 +610,7 @@ IEB = (perf_2010 × 0.10) +<br>
                             <div style="background: var(--bg-primary); border: 2px solid #E74C3C; border-radius: 6px; padding: 1rem;">
                                 <div style="font-weight: 700; color: #E74C3C; margin-bottom: 0.5rem;">🔴 COMPETITIVO CONTRA — 12 municípios</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-                                    Candidato <strong>rival tem vantagem</strong>. EB abaixo da média estadual. Precisa de esforço especial. <br><br>
+                                    Candidato <strong>rival tem vantagem</strong>. Gleisi abaixo da média estadual. Precisa de esforço especial. <br><br>
                                     <strong>Ação:</strong> Focar em votação móvel, atração de apoios estratégicos.
                                 </p>
                             </div>
@@ -727,7 +727,7 @@ IEB = (perf_2010 × 0.10) +<br>
                                 <thead>
                                     <tr>
                                         <th>Ano</th>
-                                        <th>EB %</th>
+                                        <th>Gleisi %</th>
                                         <th>Adv %</th>
                                         <th>Estado %</th>
                                         <th>Saldo</th>
@@ -843,7 +843,7 @@ IEB = (perf_2010 × 0.10) +<br>
                     <div style="background: var(--bg-card); border: 1px solid #2A3144; border-radius: 8px; padding: 1.5rem;">
                         <h3 style="margin-bottom: 1rem;">📋 Legenda de Conteúdo</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                            <div><span class="badge badge-bastiao-eb">LULA+EB</span><br><small style="color: var(--text-secondary);">Fotos com Lula, obras federais</small></div>
+                            <div><span class="badge badge-bastiao-gleisi">LULA+EB</span><br><small style="color: var(--text-secondary);">Fotos com Lula, obras federais</small></div>
                             <div><span class="badge" style="background: #3498DB; color: white;">EB_PURO</span><br><small style="color: var(--text-secondary);">Entregas regionais, BR-319</small></div>
                             <div><span class="badge" style="background: #8E44AD; color: white;">BOLSO+EB</span><br><small style="color: var(--text-secondary);">Independência de EB</small></div>
                             <div><span class="badge badge-swing">PURO_SWING</span><br><small style="color: var(--text-secondary);">Mix de conteúdo, máx. prioridade</small></div>
@@ -866,7 +866,7 @@ IEB = (perf_2010 × 0.10) +<br>
                                     <th>Município</th>
                                     <th>IN</th>
                                     <th>Classe Nac.</th>
-                                    <th>IEB</th>
+                                    <th>IGH</th>
                                     <th>Classe EB</th>
                                     <th>Eixo</th>
                                     <th>Pred. 2026</th>
@@ -943,7 +943,7 @@ IEB = (perf_2010 × 0.10) +<br>
                 console.log('   ✅ getMunicipios() retorna:', mun.length, 'municípios');
 
                 if (mun.length > 0) {
-                    console.log('   ✅ Primeiro município:', mun[0].name, 'IN:', mun[0].indice_nacional, 'IEB:', mun[0].indice_eb);
+                    console.log('   ✅ Primeiro município:', mun[0].name, 'IN:', mun[0].indice_nacional, 'IGH:', mun[0].indice_eb);
                 }
             } catch (e) {
                 console.error('   ❌ Erro em getMunicipios():', e.message);
@@ -993,8 +993,8 @@ IEB = (perf_2010 × 0.10) +<br>
             const totalMunicipios = municipios.length;
 
             let counts = {
-                bastiao_lulista: 0,
-                tendencia_lulista: 0,
+                bastiao_petista: 0,
+                tendencia_petista: 0,
                 seguro_eb: 0,
                 dificil: 0
             };
@@ -1002,15 +1002,15 @@ IEB = (perf_2010 × 0.10) +<br>
             municipios.forEach(mun => {
                 // Contar Bastião Lulista
                 if (mun.classificacao_nacional === 'Bastião Lulista') {
-                    counts.bastiao_lulista++;
+                    counts.bastiao_petista++;
                 }
 
                 // Contar Tendência Lulista
                 if (mun.classificacao_nacional === 'Tendência Lulista') {
-                    counts.tendencia_lulista++;
+                    counts.tendencia_petista++;
                 }
 
-                // Contar Seguro EB (preditivo 2026)
+                // Contar Seguro Gleisi (preditivo 2026)
                 if (mun.preditivo_2026?.classificacao === 'SEGURO EB') {
                     counts.seguro_eb++;
                 }
@@ -1027,8 +1027,8 @@ IEB = (perf_2010 × 0.10) +<br>
             // Renderizar KPIs com tooltips
             const kpiGrid = document.getElementById('kpiGrid');
             kpiGrid.innerHTML = `
-                <div class="kpi-card bastiao-lulista">
-                    <div class="kpi-number">${counts.bastiao_lulista}</div>
+                <div class="kpi-card bastiao-petista">
+                    <div class="kpi-number">${counts.bastiao_petista}</div>
                     <div class="kpi-label">
                         Bastião Lulista
                         <div class="tooltip-container">
@@ -1038,8 +1038,8 @@ IEB = (perf_2010 × 0.10) +<br>
                     </div>
                 </div>
 
-                <div class="kpi-card tendencia-lulista">
-                    <div class="kpi-number">${counts.tendencia_lulista}</div>
+                <div class="kpi-card tendencia-petista">
+                    <div class="kpi-number">${counts.tendencia_petista}</div>
                     <div class="kpi-label">
                         Tendência Lulista
                         <div class="tooltip-container">
@@ -1050,9 +1050,9 @@ IEB = (perf_2010 × 0.10) +<br>
                 </div>
 
                 <div class="kpi-card seguro-eb">
-                    <div class="kpi-number" style="color: var(--bastiao-eb);">${counts.seguro_eb}</div>
+                    <div class="kpi-number" style="color: var(--bastiao-gleisi);">${counts.seguro_eb}</div>
                     <div class="kpi-label">
-                        Seguro EB 2026
+                        Seguro Gleisi 2026
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
                             <span class="tooltip-text"><strong>PROGNÓSTICO 2026:</strong> Top 23% (14 municípios) com melhor correlação EB-Lula e desempenho histórico. Reeleição viável. Consolidar base.</span>
@@ -1105,9 +1105,19 @@ IEB = (perf_2010 × 0.10) +<br>
         // ============= DADOS =============
         function getMunicipios() {
             if (!DASHBOARD_DATA || !DASHBOARD_DATA.municipios) {
-                console.error('❌ DASHBOARD_DATA não carregado! Verifique se data.js está sendo servido via HTTP');
+                console.error('❌ DASHBOARD_DATA não carregado!');
                 return [];
             }
+            return Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => ({
+                name,
+                ...data,
+                // Adicionar campos compatíveis com o resto do código
+                indice_eb: (data.gleisi['2022'] || 0),  // Usar % de Gleisi como "índice"
+                indice_nacional: (data.presidencial['2022']?.pt_pct || 0),  // PT %
+                margem: (data.presidencial['2022']?.margem || 0),  // Margem PT-Bolsonaro
+                classificacao: data.classificacao_2022 || 'N/A'
+            }));
+        }
             const municipios = DASHBOARD_DATA.municipios || {};
             return Object.entries(municipios).map(([name, data]) => ({
                 name,
@@ -1160,7 +1170,7 @@ IEB = (perf_2010 × 0.10) +<br>
                 const row = topFavBody.insertRow();
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
-                    <td style="color: var(--bastiao-eb);">${m.indice_eb.toFixed(3)}</td>
+                    <td style="color: var(--bastiao-gleisi);">${m.indice_eb.toFixed(3)}</td>
                 `;
             });
 
@@ -1241,7 +1251,7 @@ IEB = (perf_2010 × 0.10) +<br>
         // ============= CHARTS =============
         function initCharts() {
             try {
-                // Scatter: IN × IEB
+                // Scatter: IN × IGH
                 const municipios = getMunicipios();
                 console.log('📊 Inicializando scatter chart com', municipios.length, 'municípios');
 
@@ -1334,7 +1344,7 @@ IEB = (perf_2010 × 0.10) +<br>
                                 max: 0.5,
                                 title: {
                                     display: true,
-                                    text: '← Anti-EB | Pro-EB →',
+                                    text: '← Anti-Gleisi | Pro-Gleisi →',
                                     color: 'var(--text-secondary)',
                                     font: { size: 12 }
                                 },
@@ -1379,7 +1389,7 @@ IEB = (perf_2010 × 0.10) +<br>
             document.getElementById('municClassNac').textContent = mun.classificacao_nacional || '—';
             document.getElementById('municIndiceNac').textContent = `IN: ${(mun.indice_nacional || 0).toFixed(3)}`;
             document.getElementById('municClassEB').textContent = mun.classificacao_eb || '—';
-            document.getElementById('municIndiceEB').textContent = `IEB: ${(mun.indice_eb || 0).toFixed(3)}`;
+            document.getElementById('municIndiceEB').textContent = `IGH: ${(mun.indice_eb || 0).toFixed(3)}`;
             document.getElementById('municPred26').textContent = (mun.preditivo_2026 && mun.preditivo_2026.classificacao) ? mun.preditivo_2026.classificacao : '—';
             document.getElementById('municPredScore').textContent = (mun.preditivo_2026 && mun.preditivo_2026.score !== undefined) ? `Score: ${(mun.preditivo_2026.score * 100).toFixed(1)}%` : 'Score: —';
 
@@ -1454,7 +1464,7 @@ IEB = (perf_2010 × 0.10) +<br>
             tabelaPres.appendChild(tr2026);
 
             // ============= TABELA EDUARDO BRAGA =============
-            const tabelaEB = document.getElementById('tabelaEB').querySelector('tbody');
+            const tabelaGleisi = document.getElementById('tabelaEB').querySelector('tbody');
             tabelaEB.innerHTML = '';
 
             const ebData = [];
@@ -1593,7 +1603,7 @@ IEB = (perf_2010 × 0.10) +<br>
                 }
             });
 
-            // Chart EB (2010-2022)
+            // Chart Gleisi (2010-2022)
             const contexto = document.getElementById('historicaEBChart').getContext('2d');
             if (chartsInstances.historicaEB) {
                 chartsInstances.historicaEB.destroy();
@@ -1606,7 +1616,7 @@ IEB = (perf_2010 × 0.10) +<br>
                 mun.eb[2022]?.votos_pct || 0
             ];
 
-            chartsInstances.historicaEB = new Chart(contexto, {
+            chartsInstances.historicaGleisi = new Chart(contexto, {
                 type: 'line',
                 data: {
                     labels: ['2010', '2014', '2018', '2022'],
@@ -1750,7 +1760,7 @@ IEB = (perf_2010 × 0.10) +<br>
                         <strong>${m.name}</strong><br>
                         <small>${m.eixo_label}</small><br>
                         <small>IN: ${m.indice_nacional.toFixed(3)}</small><br>
-                        <small>IEB: ${m.indice_eb.toFixed(3)}</small>
+                        <small>IGH: ${m.indice_eb.toFixed(3)}</small>
                     </div>
                 `);
             });
