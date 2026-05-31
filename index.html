@@ -1241,12 +1241,6 @@ IGleisi = (perf_2010 × 0.10) +<br>
         function populateMunicipoSelect() {
             const select = document.getElementById('municipioSelect');
 
-            // Adicionar opção ESTADO (Geral) como padrão
-            const optionEstado = document.createElement('option');
-            optionEstado.value = 'ESTADO';
-            optionEstado.textContent = '🎯 ESTADO (Geral)';
-            select.appendChild(optionEstado);
-
             const municipios = getMunicipios();
 
             municipios.forEach(mun => {
@@ -1263,9 +1257,11 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 }
             });
 
-            // Carregar ESTADO por padrão
-            select.value = 'ESTADO';
-            updateHistoricoCharts('ESTADO');
+            // Carregar primeiro município por padrão
+            if (municipios.length > 0) {
+                select.value = municipios[0].name;
+                updateHistoricoCharts(municipios[0].name);
+            }
         }
 
         // ============= TABELAS =============
@@ -1488,55 +1484,8 @@ IGleisi = (perf_2010 × 0.10) +<br>
             if (!municipio) return;
 
             // Se for ESTADO, agregar dados de todos os municípios
-            let mun;
-            if (municipio === 'ESTADO') {
-                // Criar agregado estadual a partir de todos os municípios
-                const allMunicipios = Object.values(DASHBOARD_DATA.municipios);
-
-                // Calcular médias
-                let avgPt2010 = 0, avgBolso2010 = 0, avgGleisi2010 = 0;
-                let avgPt2014 = 0, avgBolso2014 = 0, avgGleisi2014 = 0;
-                let avgPt2018 = 0, avgBolso2018 = 0, avgGleisi2018 = 0;
-                let avgPt2022 = 0, avgBolso2022 = 0, avgGleisi2022 = 0;
-
-                allMunicipios.forEach(m => {
-                    avgPt2010 += m.presidencial['2010']?.pt_pct || 0;
-                    avgBolso2010 += m.presidencial['2010']?.oposicao_pct || 0;
-                    avgGleisi2010 += m.gleisi['2010'] || 0;
-
-                    avgPt2014 += m.presidencial['2014']?.pt_pct || 0;
-                    avgBolso2014 += m.presidencial['2014']?.oposicao_pct || 0;
-                    avgGleisi2014 += m.gleisi['2014'] || 0;
-
-                    avgPt2018 += m.presidencial['2018']?.pt_pct || 0;
-                    avgBolso2018 += m.presidencial['2018']?.oposicao_pct || 0;
-                    avgGleisi2018 += m.gleisi['2018'] || 0;
-
-                    avgPt2022 += m.presidencial['2022']?.pt_pct || 0;
-                    avgBolso2022 += m.presidencial['2022']?.oposicao_pct || 0;
-                    avgGleisi2022 += m.gleisi['2022'] || 0;
-                });
-
-                const n = allMunicipios.length;
-                mun = {
-                    municipio: 'PARANÁ',
-                    presidencial: {
-                        '2010': { pt_pct: avgPt2010/n, oposicao_pct: avgBolso2010/n, margem: (avgPt2010-avgBolso2010)/n },
-                        '2014': { pt_pct: avgPt2014/n, oposicao_pct: avgBolso2014/n, margem: (avgPt2014-avgBolso2014)/n },
-                        '2018': { pt_pct: avgPt2018/n, oposicao_pct: avgBolso2018/n, margem: (avgPt2018-avgBolso2018)/n },
-                        '2022': { pt_pct: avgPt2022/n, oposicao_pct: avgBolso2022/n, margem: (avgPt2022-avgBolso2022)/n }
-                    },
-                    gleisi: {
-                        '2010': avgGleisi2010/n,
-                        '2014': avgGleisi2014/n,
-                        '2018': avgGleisi2018/n,
-                        '2022': avgGleisi2022/n
-                    }
-                };
-            } else {
-                mun = DASHBOARD_DATA.municipios[municipio];
-                if (!mun) return;
-            }
+            const mun = DASHBOARD_DATA.municipios[municipio];
+            if (!mun) return;
 
             // ============= MOSTRAR INFORMAÇÕES DO MUNICÍPIO =============
             document.getElementById('municipioInfo').style.display = 'grid';
