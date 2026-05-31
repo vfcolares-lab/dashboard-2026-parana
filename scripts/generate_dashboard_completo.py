@@ -50,7 +50,7 @@ for year in [2010, 2014, 2018, 2022]:
 print("\n📥 Carregando dados presidenciais nacionais (Paraná)...")
 
 dfs_br = {}
-for year in [2010, 2014]:
+for year in [2010, 2014, 2018, 2022]:
     try:
         filepath = BASE_PATH_BR / f'votacao_secao_{year}_BR' / f'votacao_secao_{year}_BR.csv'
         if not filepath.exists():
@@ -59,6 +59,7 @@ for year in [2010, 2014]:
             continue
 
         # Read full file and filter for PR
+        print(f"  Lendo {filepath} (pode levar um tempo)...")
         df = pd.read_csv(
             filepath,
             delimiter=';',
@@ -74,18 +75,6 @@ for year in [2010, 2014]:
     except Exception as e:
         print(f"  ✗ {year}: {e}")
         dfs_br[year] = pd.DataFrame()
-
-# Para 2018 e 2022, vamos usar os dados do Paraná se tiverem presidential
-print("  ℹ️  2018 e 2022: Procurando em dados do Paraná...")
-for year in [2018, 2022]:
-    if year in dfs_pr and len(dfs_pr[year]) > 0:
-        df_pres = dfs_pr[year][dfs_pr[year]['DS_CARGO'].str.contains('PRESIDENTE', na=False)]
-        if len(df_pres) > 0:
-            dfs_br[year] = dfs_pr[year]
-            print(f"  ✓ {year}: {len(df_pres):,} registros presidenciais")
-        else:
-            print(f"  ⚠️  {year}: Dados presidenciais não encontrados")
-            dfs_br[year] = pd.DataFrame()
 
 # ===========================================================================
 # EXTRACT PRESIDENTIAL DATA
