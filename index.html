@@ -1556,15 +1556,14 @@ IGleisi = (perf_2010 × 0.10) +<br>
             const anos = [2010, 2014, 2018, 2022];
 
             anos.forEach(ano => {
-                // Tentar acessar com chave inteira ou string (para compatibilidade com ESTADO)
-                const data = mun.presidente[ano] || mun.presidente[String(ano)];
-                // Só incluir se NÃO for zero (pois dados antigos não foram carregados)
-                if (data && (data.pt > 0 || data.direita > 0)) {
+                // Acessar presidencial (campo correto)
+                const presAno = mun.presidencial && mun.presidencial[String(ano)];
+                if (presAno) {
                     presData.push({
                         ano: ano,
-                        pt: data.pt,
-                        direita: data.direita,
-                        margem: data.margem
+                        pt: presAno.pt_pct || 0,
+                        direita: presAno.oposicao_pct || 0,
+                        margem: presAno.margem || 0
                     });
                 }
             });
@@ -1618,99 +1617,56 @@ IGleisi = (perf_2010 × 0.10) +<br>
             `;
             tabelaPres.appendChild(tr2026);
 
-            // ============= TABELA EDUARDO BRAGA =============
+            // ============= TABELA GLEISI HOFFMANN =============
             const tabelaGleisi = document.getElementById('tabelaGleisi').querySelector('tbody');
             tabelaGleisi.innerHTML = '';
 
-            const ebData = [];
+            const gleisiData = [];
             const cargos = {
-                2010: 'Senador',
-                2014: 'Governador',
-                2018: 'Senador',
-                2022: 'Governador'
-            };
-            const adversarios = {
-                2010: 'Arthur Virgílio',
-                2014: 'José Melo',
-                2018: 'Plínio Valério',
-                2022: 'Wilson Lima'
+                2010: 'Senadora',
+                2014: 'Governadora',
+                2018: 'Deputada Federal',
+                2022: 'Deputada Federal'
             };
 
             anos.forEach(ano => {
-                // Tentar acessar com chave inteira ou string (para compatibilidade com ESTADO)
-                const data = mun.gleisi[ano] || mun.gleisi[String(ano)];
-                if (data) {
-                    ebData.push({
+                // Acessar % de Gleisi para o ano
+                const gleisiPct = mun.gleisi && mun.gleisi[String(ano)];
+                if (gleisiPct !== undefined) {
+                    gleisiData.push({
                         ano: ano,
-                        votos_pct: data.votos_pct,
-                        media_estado: data.media_estado,
-                        diff: data.diff,
-                        cargo: cargos[ano],
-                        adversario: adversarios[ano],
-                        adversario_pct: data.adversario_pct || 0
+                        gleisi_pct: gleisiPct,
+                        cargo: cargos[ano]
                     });
                 }
             });
 
-            // Se faltou 2022, adicionar com dados placeholder
-            if (!ebData.find(d => d.ano === 2022)) {
-                ebData.push({
-                    ano: 2022,
-                    votos_pct: 0,
-                    media_estado: 0,
-                    diff: 0,
-                    cargo: cargos[2022],
-                    adversario: adversarios[2022]
-                });
-            }
-
-            // Calcular variação
-            ebData.forEach((row, idx) => {
-                let variacao = '—';
-                if (idx > 0 && row.votos_pct > 0) {
-                    variacao = (row.votos_pct - ebData[idx-1].votos_pct).toFixed(1);
-                }
-
+            // Renderizar dados de Gleisi histórico
+            gleisiData.forEach((row) => {
                 const tr = document.createElement('tr');
-
-                // Coluna de Adversário com tooltip - usar percentual real do adversário
-                const advPct = row.adversario_pct > 0 ? row.adversario_pct.toFixed(1) : '—';
-                const advTooltip = row.adversario_pct > 0 ? `title="${row.adversario}"` : '';
-
-                // SALDO = Gleisi% - Adversário%
-                const saldo = row.votos_pct - row.adversario_pct;
-                const saldoColor = saldo > 0 ? '#27AE60' : saldo < 0 ? '#E74C3C' : '#F4D03F';
-                const saldoText = row.votos_pct > 0 && row.adversario_pct > 0 ? (saldo > 0 ? '+' : '') + saldo.toFixed(1) : '—';
+                const gleisiPct = row.gleisi_pct || 0;
+                const gleisiColor = gleisiPct > 10 ? '#27AE60' : gleisiPct > 5 ? '#F39C12' : '#E74C3C';
 
                 tr.innerHTML = `
                     <td><strong>${row.ano}</strong></td>
-                    <td style="color: var(--accent-red);">${row.votos_pct > 0 ? row.votos_pct.toFixed(1) + '%' : '—'}</td>
-                    <td style="cursor: help;" ${advTooltip}>${advPct}${advPct !== '—' ? '%' : ''}</td>
-                    <td style="font-size: 0.8rem; color: var(--text-muted);">${row.media_estado > 0 ? row.media_estado.toFixed(1) + '%' : '—'}</td>
-                    <td style="font-weight: 600; color: ${saldoColor};">${saldoText}</td>
+                    <td style="color: ${gleisiColor}; font-weight: 600;">${gleisiPct.toFixed(2)}%</td>
                     <td style="font-size: 0.75rem;">${row.cargo}</td>
                 `;
                 tabelaGleisi.appendChild(tr);
             });
 
             // Linha preditiva 2026 para Gleisi
-            const trEB2026 = document.createElement('tr');
-            trEB2026.style.borderTop = '2px solid #2A3144';
-            trEB2026.style.fontWeight = '700';
+            const trPred2026 = document.createElement('tr');
+            trPred2026.style.borderTop = '2px solid #2A3144';
+            trPred2026.style.fontWeight = '700';
             const pred2026 = mun.preditivo_2026 || {};
             const pred2026Class = pred2026.classificacao ? pred2026.classificacao : '—';
-            const eb2026 = (pred2026.eb_projecao !== undefined) ? pred2026.eb_projecao : '—';
-            const adv2026 = (pred2026.adversario_projecao !== undefined) ? pred2026.adversario_projecao : '—';
-            const saldoEB2026 = (eb2026 !== '—' && adv2026 !== '—') ? (eb2026 - adv2026).toFixed(1) : '—';
-            trEB2026.innerHTML = `
+            trPred2026.innerHTML = `
                 <td style="background: var(--bg-primary);">2026*</td>
-                <td style="background: var(--bg-primary); color: var(--accent-red);">${eb2026 !== '—' ? eb2026.toFixed(1) + '%' : '—'}</td>
-                <td style="background: var(--bg-primary);">${adv2026 !== '—' ? adv2026.toFixed(1) + '%' : '—'}</td>
-                <td style="background: var(--bg-primary);">—</td>
-                <td style="background: var(--bg-primary); color: #F39C12; font-weight: 700;">${saldoEB2026 !== '—' ? (saldoEB2026 > 0 ? '+' : '') + saldoEB2026 : '—'}</td>
-                <td style="background: var(--bg-primary); color: #F39C12; font-size: 0.85rem;">${pred2026Class}</td>
+                <td style="background: var(--bg-primary); color: var(--accent-red);">Prognóstico</td>
+                <td style="background: var(--bg-primary); color: #F39C12; font-weight: 700;">${pred2026Class}</td>
             `;
-            tabelaGleisi.appendChild(trEB2026);
+            tabelaGleisi.appendChild(trPred2026);
 
             // ============= GRÁFICOS =============
             // Chart Presidente (2010-2022)
@@ -1720,10 +1676,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
             }
 
             const presValues = [
-                mun.presidente[2010]?.pt - mun.presidente[2010]?.direita || 0,
-                mun.presidente[2014]?.pt - mun.presidente[2014]?.direita || 0,
-                mun.presidente[2018]?.pt - mun.presidente[2018]?.direita || 0,
-                mun.presidente[2022]?.pt - mun.presidente[2022]?.direita || 0
+                ((mun.presidencial?.['2010']?.pt_pct || 0) - (mun.presidencial?.['2010']?.oposicao_pct || 0)) || 0,
+                ((mun.presidencial?.['2014']?.pt_pct || 0) - (mun.presidencial?.['2014']?.oposicao_pct || 0)) || 0,
+                ((mun.presidencial?.['2018']?.pt_pct || 0) - (mun.presidencial?.['2018']?.oposicao_pct || 0)) || 0,
+                ((mun.presidencial?.['2022']?.pt_pct || 0) - (mun.presidencial?.['2022']?.oposicao_pct || 0)) || 0
             ];
 
             chartsInstances.historicaPres = new Chart(presContext, {
