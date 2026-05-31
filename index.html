@@ -66,15 +66,26 @@
             gap: 10px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         select, input {
-            padding: 8px 12px;
+            padding: 10px 12px;
             background: #1a1f2e;
             color: #e8ecf1;
             border: 1px solid #333;
             border-radius: 4px;
             font-size: 0.95em;
+            min-width: 200px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        select {
+            min-width: 220px;
         }
 
         select:focus, input:focus {
