@@ -1522,7 +1522,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 const advPct = row.adversario_pct > 0 ? row.adversario_pct.toFixed(1) : '—';
                 const advTooltip = row.adversario_pct > 0 ? `title="${row.adversario}"` : '';
 
-                // SALDO = EB% - Adversário%
+                // SALDO = Gleisi% - Adversário%
                 const saldo = row.votos_pct - row.adversario_pct;
                 const saldoColor = saldo > 0 ? '#27AE60' : saldo < 0 ? '#E74C3C' : '#F4D03F';
                 const saldoText = row.votos_pct > 0 && row.adversario_pct > 0 ? (saldo > 0 ? '+' : '') + saldo.toFixed(1) : '—';
