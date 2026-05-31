@@ -583,40 +583,40 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         </p>
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <div style="background: var(--bg-primary); border: 2px solid #27AE60; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #27AE60; margin-bottom: 0.5rem;">🟢 SEGURO Gleisi — 14 municípios (Top 23%)</div>
+                            <div style="background: var(--bg-primary); border: 2px solid #27AE60; border-radius: 6px; padding: 1rem;" data-card-type="seguro">
+                                <div style="font-weight: 700; color: #27AE60; margin-bottom: 0.5rem;" data-card-title="true" data-base-text="🟢 SEGURO Gleisi">🟢 SEGURO Gleisi — 14 municípios (Top 23%)</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
                                     Melhor correlação de Gleisi com Lula e desempenho histórico positivo. <strong>Tendência favorável.</strong> <br><br>
                                     <strong>Ação:</strong> Consolidar votação, manter mobilização, ampliar margem.
                                 </p>
                             </div>
 
-                            <div style="background: var(--bg-primary); border: 2px solid #F39C12; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #F39C12; margin-bottom: 0.5rem;">🟡 COMPETITIVO PRÓ-Gleisi — 12 municípios</div>
+                            <div style="background: var(--bg-primary); border: 2px solid #F39C12; border-radius: 6px; padding: 1rem;" data-card-type="competitivo-pro">
+                                <div style="font-weight: 700; color: #F39C12; margin-bottom: 0.5rem;" data-card-title="true" data-base-text="🟡 COMPETITIVO PRÓ-Gleisi">🟡 COMPETITIVO PRÓ-Gleisi — 12 municípios</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
                                     Gleisi com <strong>boas chances</strong>. Desempenho positivo em 2022, mas com alguma volatilidade. <br><br>
                                     <strong>Ação:</strong> Campanha ativa, não relaxar, acompanhar tendências locais.
                                 </p>
                             </div>
 
-                            <div style="background: var(--bg-primary); border: 2px solid #E67E22; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #E67E22; margin-bottom: 0.5rem;">🔴 BATTLEGROUND — 12 municípios</div>
+                            <div style="background: var(--bg-primary); border: 2px solid #E67E22; border-radius: 6px; padding: 1rem;" data-card-type="battleground">
+                                <div style="font-weight: 700; color: #E67E22; margin-bottom: 0.5rem;" data-card-title="true" data-base-text="🔴 BATTLEGROUND">🔴 BATTLEGROUND — 12 municípios</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
                                     <strong>Disputa aberta</strong> — Desempenho próximo ao neutro. Qualquer um pode vencer. <br><br>
                                     <strong>Ação:</strong> ⚡ MÁXIMA PRIORIDADE. Investir recursos, cobertura total, mobilização máxima.
                                 </p>
                             </div>
 
-                            <div style="background: var(--bg-primary); border: 2px solid #E74C3C; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #E74C3C; margin-bottom: 0.5rem;">🔴 COMPETITIVO CONTRA — 12 municípios</div>
+                            <div style="background: var(--bg-primary); border: 2px solid #E74C3C; border-radius: 6px; padding: 1rem;" data-card-type="competitivo-contra">
+                                <div style="font-weight: 700; color: #E74C3C; margin-bottom: 0.5rem;" data-card-title="true" data-base-text="🔴 COMPETITIVO CONTRA">🔴 COMPETITIVO CONTRA — 12 municípios</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
                                     Candidato <strong>rival tem vantagem</strong>. Gleisi abaixo da média estadual. Precisa de esforço especial. <br><br>
                                     <strong>Ação:</strong> Focar em votação móvel, atração de apoios estratégicos.
                                 </p>
                             </div>
 
-                            <div style="background: var(--bg-primary); border: 2px solid #95A5A6; border-radius: 6px; padding: 1rem;">
-                                <div style="font-weight: 700; color: #95A5A6; margin-bottom: 0.5rem;">⚫ DIFÍCIL — 12 municípios (Bottom 19%)</div>
+                            <div style="background: var(--bg-primary); border: 2px solid #95A5A6; border-radius: 6px; padding: 1rem;" data-card-type="dificil">
+                                <div style="font-weight: 700; color: #95A5A6; margin-bottom: 0.5rem;" data-card-title="true" data-base-text="⚫ DIFÍCIL">⚫ DIFÍCIL — 12 municípios (Bottom 19%)</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
                                     Chances <strong>reduzidas</strong> para Gleisi. Ranking baixo, tendência negativa ou fraca. <br><br>
                                     <strong>Ação:</strong> Análise detalhada, possível realocação de recursos.
@@ -991,35 +991,46 @@ IGleisi = (perf_2010 × 0.10) +<br>
         function populateKPIs() {
             const municipios = getMunicipios();
             const totalMunicipios = municipios.length;
+            const { counts: predCounts, quintilSize } = calculatePreditivoGleisi();
 
             let counts = {
                 bastiao_petista: 0,
                 tendencia_petista: 0,
-                seguro_eb: 0,
+                seguro_gleisi: 0,
+                competitivo_pro: 0,
+                battleground: 0,
+                competitivo_contra: 0,
                 dificil: 0
             };
 
             municipios.forEach(mun => {
-                // Contar Bastião Lulista
-                if (mun.classificacao_nacional === 'Bastião Lulista') {
+                // Contar Bastião Petista
+                if (mun.classificacao === 'Bastião Petista') {
                     counts.bastiao_petista++;
                 }
 
-                // Contar Tendência Lulista
-                if (mun.classificacao_nacional === 'Tendência Lulista') {
+                // Contar Tendência Petista
+                if (mun.classificacao === 'Tendência Petista') {
                     counts.tendencia_petista++;
                 }
 
-                // Contar Seguro Gleisi (preditivo 2026)
+                // Contar por preditivo 2026
                 if (mun.preditivo_2026?.classificacao === 'SEGURO GLEISI') {
-                    counts.seguro_eb++;
-                }
-
-                // Contar Difícil (preditivo 2026)
-                if (mun.preditivo_2026?.classificacao === 'DIFÍCIL') {
+                    counts.seguro_gleisi++;
+                } else if (mun.preditivo_2026?.classificacao === 'COMPETITIVO PRÓ-GLEISI') {
+                    counts.competitivo_pro++;
+                } else if (mun.preditivo_2026?.classificacao === 'BATTLEGROUND') {
+                    counts.battleground++;
+                } else if (mun.preditivo_2026?.classificacao === 'COMPETITIVO CONTRA') {
+                    counts.competitivo_contra++;
+                } else if (mun.preditivo_2026?.classificacao === 'DIFÍCIL') {
                     counts.dificil++;
                 }
             });
+
+            // Calcular percentuais
+            const seguroPct = ((counts.seguro_gleisi / totalMunicipios) * 100).toFixed(0);
+            const dificilPct = ((counts.dificil / totalMunicipios) * 100).toFixed(0);
 
             // Atualizar header
             document.getElementById('headerSubtitle').textContent = `Inteligência Estratégica — ${totalMunicipios} Municípios | 4 Eleições | Modelo Preditivo 2026`;
@@ -1030,10 +1041,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 <div class="kpi-card bastiao-petista">
                     <div class="kpi-number">${counts.bastiao_petista}</div>
                     <div class="kpi-label">
-                        Bastião Lulista
+                        Bastião Petista
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text">Municípios onde PT tem votação historicamente muito forte. Índice Nacional > +0.20. Base consolidada para Gleisi.</span>
+                            <span class="tooltip-text">Municípios onde PT venceu por >10pp em 2022. Base consolidada para Gleisi no contexto federal.</span>
                         </div>
                     </div>
                 </div>
@@ -1041,21 +1052,21 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 <div class="kpi-card tendencia-petista">
                     <div class="kpi-number">${counts.tendencia_petista}</div>
                     <div class="kpi-label">
-                        Tendência Lulista
+                        Tendência Petista
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text">Municípios com tendência favorável ao PT. Índice Nacional entre +0.05 e +0.20. Espaço para expansão de votação.</span>
+                            <span class="tooltip-text">Municípios onde PT venceu por 5-10pp em 2022. Espaço para expansão de votação para Gleisi.</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="kpi-card seguro-gleisi">
-                    <div class="kpi-number" style="color: var(--bastiao-gleisi);">${counts.seguro_eb}</div>
+                    <div class="kpi-number" style="color: var(--bastiao-gleisi);">${counts.seguro_gleisi}</div>
                     <div class="kpi-label">
                         Seguro Gleisi 2026
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text"><strong>PROGNÓSTICO 2026:</strong> Top 23% (14 municípios) com melhor correlação Gleisi-PT e desempenho histórico. Reeleição viável. Consolidar base.</span>
+                            <span class="tooltip-text"><strong>PROGNÓSTICO 2026:</strong> Top ${seguroPct}% (${counts.seguro_gleisi} municípios) com melhor performance histórica de Gleisi. Reeleição viável. Consolidar base.</span>
                         </div>
                     </div>
                 </div>
@@ -1066,11 +1077,40 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         Difícil 2026
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text"><strong>ZONA DE RISCO:</strong> Bottom 19% (12 municípios) com menor correlação com Lula e desempenho histórico fraco. Requer análise e alocação estratégica.</span>
+                            <span class="tooltip-text"><strong>ZONA DE RISCO:</strong> Bottom ${dificilPct}% (${counts.dificil} municípios) com menor histórico de Gleisi. Requer análise detalhada e alocação estratégica.</span>
                         </div>
                     </div>
                 </div>
             `;
+
+            // Atualizar cards da section na Overview
+            updateOverviewCards(counts, totalMunicipios);
+        }
+
+        function updateOverviewCards(counts, total) {
+            // Atualizar cards de preditivo 2026 com números reais
+            const cards = document.querySelectorAll('[data-card-type]');
+
+            const cardUpdates = {
+                'seguro': { count: counts.seguro_gleisi, pct: ((counts.seguro_gleisi / total) * 100).toFixed(1) },
+                'competitivo-pro': { count: counts.competitivo_pro, pct: ((counts.competitivo_pro / total) * 100).toFixed(1) },
+                'battleground': { count: counts.battleground, pct: ((counts.battleground / total) * 100).toFixed(1) },
+                'competitivo-contra': { count: counts.competitivo_contra, pct: ((counts.competitivo_contra / total) * 100).toFixed(1) },
+                'dificil': { count: counts.dificil, pct: ((counts.dificil / total) * 100).toFixed(1) }
+            };
+
+            cards.forEach(card => {
+                const type = card.getAttribute('data-card-type');
+                if (cardUpdates[type]) {
+                    const titleEl = card.querySelector('[data-card-title]');
+                    if (titleEl) {
+                        const baseText = titleEl.getAttribute('data-base-text');
+                        titleEl.textContent = `${baseText} — ${cardUpdates[type].count} municípios (${cardUpdates[type].pct}%)`;
+                    }
+                }
+            });
+
+            console.log('✅ Cards de Overview atualizados com números reais:', cardUpdates);
         }
 
         // ============= NAVEGAÇÃO =============
@@ -1102,12 +1142,69 @@ IGleisi = (perf_2010 × 0.10) +<br>
             }
         }
 
+        // ============= CÁLCULO DINÂMICO DE QUINTIS GLEISI =============
+        function calculatePreditivoGleisi() {
+            if (!DASHBOARD_DATA || !DASHBOARD_DATA.municipios) return {};
+
+            const municipios = Object.entries(DASHBOARD_DATA.municipios);
+
+            // Extrair valores de Gleisi 2022 e ordenar
+            const gleisiValues = municipios
+                .map(([name, data]) => ({
+                    name,
+                    gleisi: data.gleisi['2022'] || 0
+                }))
+                .sort((a, b) => b.gleisi - a.gleisi);
+
+            // Calcular quintis (5 faixas de ~80 municípios cada)
+            const quintilSize = Math.ceil(gleisiValues.length / 5);
+
+            const preditivo = {};
+            const counts = {
+                'SEGURO GLEISI': 0,
+                'COMPETITIVO PRÓ-GLEISI': 0,
+                'BATTLEGROUND': 0,
+                'COMPETITIVO CONTRA': 0,
+                'DIFÍCIL': 0
+            };
+
+            gleisiValues.forEach((item, index) => {
+                let classificacao;
+                const quintil = Math.floor(index / quintilSize);
+
+                if (quintil === 0) {
+                    classificacao = 'SEGURO GLEISI';
+                } else if (quintil === 1) {
+                    classificacao = 'COMPETITIVO PRÓ-GLEISI';
+                } else if (quintil === 2) {
+                    classificacao = 'BATTLEGROUND';
+                } else if (quintil === 3) {
+                    classificacao = 'COMPETITIVO CONTRA';
+                } else {
+                    classificacao = 'DIFÍCIL';
+                }
+
+                preditivo[item.name] = {
+                    classificacao,
+                    score: item.gleisi / 100,
+                    tendencia: item.gleisi > 15 ? 'positiva' : item.gleisi > 8 ? 'neutra' : 'negativa'
+                };
+                counts[classificacao]++;
+            });
+
+            return { preditivo, counts, quintilSize };
+        }
+
         // ============= DADOS =============
         function getMunicipios() {
             if (!DASHBOARD_DATA || !DASHBOARD_DATA.municipios) {
                 console.error('❌ DASHBOARD_DATA não carregado!');
                 return [];
             }
+
+            // Calcular preditivo uma única vez
+            const { preditivo } = calculatePreditivoGleisi();
+
             return Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => ({
                 name,
                 ...data,
@@ -1115,13 +1212,9 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 indice_eb: (data.gleisi['2022'] || 0),  // Usar % de Gleisi como "índice"
                 indice_nacional: (data.presidencial['2022']?.pt_pct || 0),  // PT %
                 margem: (data.presidencial['2022']?.margem || 0),  // Margem PT-Bolsonaro
-                classificacao: data.classificacao_2022 || 'N/A'
-            }));
-        }
-            const municipios = DASHBOARD_DATA.municipios || {};
-            return Object.entries(municipios).map(([name, data]) => ({
-                name,
-                ...data
+                classificacao: data.classificacao_2022 || 'N/A',
+                classificacao_nacional: data.classificacao_2022 || 'N/A',
+                preditivo_2026: preditivo[name] || { classificacao: 'N/A', score: 0, tendencia: 'neutra' }
             }));
         }
 
