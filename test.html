@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+    <style>
+        body { background: #0f1419; color: #e8ecf1; font-family: Arial; padding: 20px; }
+        h1 { color: #d4a843; }
+        input, select { padding: 10px; margin: 10px 0; width: 300px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #333; text-align: left; }
+        .loading { font-size: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>🎯 Dashboard - Teste Direto</h1>
+
+    <div id="loading" class="loading">⏳ Carregando...</div>
+
+    <div id="content" style="display:none;">
+        <h2>✅ Dados Carregados!</h2>
+
+        <p>Total: <strong id="total">-</strong> municípios</p>
+
+        <h3>🔍 Menu de Busca</h3>
+        <input type="text" id="search" placeholder="Buscar município..." />
+
+        <h3>🏛️ Filtro por Classificação</h3>
+        <select id="filter">
+            <option value="">Todas</option>
+            <option value="Bastião Petista">Bastião Petista</option>
+            <option value="Tendência Petista">Tendência Petista</option>
+            <option value="Swing">Swing</option>
+            <option value="Tendência Bolsonarista">Tendência Bolsonarista</option>
+            <option value="Bastião Bolsonarista">Bastião Bolsonarista</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Município</th>
+                    <th>Classificação</th>
+                    <th>PT%</th>
+                    <th>Bolsonaro%</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        let todosData = [];
+
+        function carregar() {
+            try {
+                if (typeof DASHBOARD_DATA === 'undefined') {
+                    console.log('Aguardando data.js...');
+                    setTimeout(carregar, 100);
+                    return;
+                }
+
+                todosData = Object.values(DASHBOARD_DATA.municipios);
+                document.getElementById('total').textContent = todosData.length;
+                renderizar();
+
+                document.getElementById('search').addEventListener('input', renderizar);
+                document.getElementById('filter').addEventListener('change', renderizar);
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+
+            } catch (e) {
+                document.getElementById('loading').innerHTML = '❌ Erro: ' + e.message;
+                console.error(e);
+            }
+        }
+
+        function renderizar() {
+            const search = document.getElementById('search').value.toLowerCase();
+            const filter = document.getElementById('filter').value;
+
+            const filtered = todosData.filter(m => {
+                const matchSearch = !search || m.municipio.toLowerCase().includes(search);
+                const matchFilter = !filter || m.classificacao_2022 === filter;
+                return matchSearch && matchFilter;
+            });
+
+            const tbody = document.getElementById('tbody');
+            tbody.innerHTML = '';
+
+            filtered.slice(0, 50).forEach(m => {
+                const p = m.presidencial['2022'] || {};
+                const row = `
+                    <tr>
+                        <td>${m.municipio}</td>
+                        <td>${m.classificacao_2022}</td>
+                        <td>${(p.pt_pct || 0).toFixed(2)}%</td>
+                        <td>${(p.oposicao_pct || 0).toFixed(2)}%</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+
+            tbody.innerHTML += `<tr><td colspan="4" style="text-align:center; color:#8b95a5;">Mostrando ${filtered.slice(0,50).length} de ${filtered.length}</td></tr>`;
+        }
+
+        carregar();
+    </script>
+</body>
+</html>

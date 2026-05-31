@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Paraná - Teste Simples</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0f1419;
+            color: #e8ecf1;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { text-align: center; color: #d4a843; margin-bottom: 20px; }
+        .loading { 
+            text-align: center; 
+            padding: 40px; 
+            font-size: 20px;
+            color: #8b95a5;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat {
+            background: #1a1f2e;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a843;
+        }
+        .stat-label { font-size: 12px; color: #8b95a5; }
+        .stat-value { font-size: 28px; font-weight: bold; margin-top: 5px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1f2e;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #252d40;
+        }
+        th {
+            background: #252d40;
+            font-weight: bold;
+        }
+        tr:hover { background: #252d40; }
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Dashboard Paraná 2026 - Teste</h1>
+        <div id="loading" class="loading">⏳ Carregando dados...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="content" style="display: none;">
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-label">Municípios</div>
+                    <div class="stat-value" id="count">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">PT Médio</div>
+                    <div class="stat-value" id="pt">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Bolsonaro Médio</div>
+                    <div class="stat-value" id="bolso">-</div>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Município</th>
+                        <th>Classificação</th>
+                        <th>PT%</th>
+                        <th>Bolsonaro%</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="http://localhost:8001/data.js"></script>
+    <script>
+        function iniciar() {
+            try {
+                if (typeof DASHBOARD_DATA === 'undefined') {
+                    throw new Error('DASHBOARD_DATA não carregado');
+                }
+
+                const muns = Object.values(DASHBOARD_DATA.municipios);
+                const avgPT = (muns.reduce((s, m) => s + (m.presidencial['2022']?.pt_pct || 0), 0) / muns.length).toFixed(2);
+                const avgBolso = (muns.reduce((s, m) => s + (m.presidencial['2022']?.oposicao_pct || 0), 0) / muns.length).toFixed(2);
+
+                document.getElementById('count').textContent = muns.length;
+                document.getElementById('pt').textContent = avgPT + '%';
+                document.getElementById('bolso').textContent = avgBolso + '%';
+
+                const tbody = document.getElementById('tbody');
+                muns.slice(0, 20).forEach(m => {
+                    const row = tbody.insertRow();
+                    const p = m.presidencial['2022'] || {};
+                    row.innerHTML = `
+                        <td>${m.municipio}</td>
+                        <td>${m.classificacao_2022}</td>
+                        <td>${(p.pt_pct || 0).toFixed(2)}%</td>
+                        <td>${(p.oposicao_pct || 0).toFixed(2)}%</td>
+                    `;
+                });
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                console.log('✅ Dashboard carregado com sucesso!');
+
+            } catch (e) {
+                console.error('Erro:', e);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = '❌ Erro: ' + e.message;
+            }
+        }
+
+        // Aguardar data.js
+        let tentativas = 0;
+        function esperar() {
+            tentativas++;
+            if (typeof DASHBOARD_DATA === 'undefined') {
+                if (tentativas < 100) {
+                    setTimeout(esperar, 50);
+                } else {
+                    document.getElementById('error').style.display = 'block';
+                    document.getElementById('error').textContent = '❌ data.js não carregou. Tente F5.';
+                    document.getElementById('loading').style.display = 'none';
+                }
+            } else {
+                iniciar();
+            }
+        }
+        esperar();
+    </script>
+</body>
+</html>

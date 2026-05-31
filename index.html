@@ -883,6 +883,16 @@ IGleisi = (perf_2010 × 0.10) +<br>
     <!-- DATA -->
     <script src="data.js"></script>
     <script src="secoes_2022.js"></script>
+    <script>
+        // Carregar coords.json dinamicamente
+        fetch('coords.json')
+            .then(response => response.json())
+            .then(data => {
+                window.MUNICIPIOS_COORDS = data;
+                console.log('✅ Coordenadas dos municípios carregadas:', Object.keys(data).length, 'cidades');
+            })
+            .catch(err => console.error('❌ Erro ao carregar coords.json:', err));
+    </script>
 
     <!-- SCRIPTS -->
     <script>
@@ -1818,7 +1828,8 @@ IGleisi = (perf_2010 × 0.10) +<br>
         function initMaps() {
             if (mapInstance) return;
 
-            mapInstance = L.map('map').setView([-3.119, -60.022], 6);
+            // Coordenadas corretas para Paraná (centro aproximadamente)
+            mapInstance = L.map('map').setView([-25.5, -51.5], 7);
 
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 19,
@@ -1828,15 +1839,33 @@ IGleisi = (perf_2010 × 0.10) +<br>
             // Add markers com coordenadas reais
             const municipios = getMunicipios();
 
-            municipios.forEach(m => {
-                const coords = MUNICIPIOS_COORDS[m.name];
-                if (!coords) return; // Skip se não tiver coordenadas
+            if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
+                console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado. Aguardando...');
+                setTimeout(() => initMaps(), 500);
+                return;
+            }
 
-                let color = '#E74C3C';
-                if (m.eixo_estrategico === 'E5') {
-                    color = '#2E86C1';
-                } else if (m.eixo_estrategico === 'E6') {
-                    color = '#5DADE2';
+            municipios.forEach(m => {
+                const coords = window.MUNICIPIOS_COORDS[m.name];
+                if (!coords) {
+                    console.warn(`⚠️ Sem coordenadas para: ${m.name}`);
+                    return;
+                }
+
+                // Determinar cor baseada na classificação preditiva 2026
+                let color = '#888888'; // Cinza padrão
+                let label = m.preditivo_2026?.classificacao || 'N/A';
+
+                if (m.preditivo_2026?.classificacao === 'SEGURO GLEISI') {
+                    color = '#27AE60'; // Verde - SEGURO
+                } else if (m.preditivo_2026?.classificacao === 'COMPETITIVO PRÓ-GLEISI') {
+                    color = '#F39C12'; // Laranja - COMPETITIVO PRÓ
+                } else if (m.preditivo_2026?.classificacao === 'BATTLEGROUND') {
+                    color = '#E67E22'; // Laranja escuro - BATTLEGROUND
+                } else if (m.preditivo_2026?.classificacao === 'COMPETITIVO CONTRA') {
+                    color = '#E74C3C'; // Vermelho - COMPETITIVO CONTRA
+                } else if (m.preditivo_2026?.classificacao === 'DIFÍCIL') {
+                    color = '#95A5A6'; // Cinza - DIFÍCIL
                 }
 
                 const marker = L.circleMarker(coords, {
@@ -1848,48 +1877,61 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     fillOpacity: 0.7
                 }).addTo(mapInstance);
 
+                // Popup com informações de Gleisi
+                const gleisiPct = (m.gleisi?.['2022'] || 0).toFixed(2);
+                const ptPct = (m.indice_nacional || 0).toFixed(2);
+                const margem = (m.margem || 0).toFixed(2);
+
                 marker.bindPopup(`
-                    <div style="font-size: 0.9rem;">
-                        <strong>${m.name}</strong><br>
-                        <small>${m.eixo_label}</small><br>
-                        <small>IN: ${m.indice_nacional.toFixed(3)}</small><br>
-                        <small>IGH: ${m.indice_eb.toFixed(3)}</small>
+                    <div style="font-size: 0.85rem; width: 180px;">
+                        <strong style="color: ${color};">${m.name}</strong><br>
+                        <small><strong>Gleisi 2026:</strong> ${label}</small><br>
+                        <small>Gleisi 2022: ${gleisiPct}%</small><br>
+                        <small>PT 2022: ${ptPct}%</small><br>
+                        <small>Margem PT-Bolso: ${margem}pp</small>
                     </div>
                 `);
             });
+
+            console.log('✅ Mapa do Paraná inicializado com', municipios.length, 'marcadores');
         }
 
         function initMapSecoes() {
             if (mapSecoesInstance) return;
 
-            mapSecoesInstance = L.map('map-secoes').setView([-3.119, -60.022], 6);
+            // Coordenadas corretas para Paraná
+            mapSecoesInstance = L.map('map-secoes').setView([-25.5, -51.5], 7);
 
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 19,
                 attribution: '© OpenStreetMap'
             }).addTo(mapSecoesInstance);
 
-            // Add markers com coordenadas reais - Mapa de Seções Eleitorais
+            // Add markers com coordenadas reais - Mapa com Classificação Federal (PT vs Bolsonaro)
             const municipios = getMunicipios();
 
+            if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
+                console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado para initMapSecoes. Aguardando...');
+                setTimeout(() => initMapSecoes(), 500);
+                return;
+            }
+
             municipios.forEach(m => {
-                const coords = MUNICIPIOS_COORDS[m.name];
+                const coords = window.MUNICIPIOS_COORDS[m.name];
                 if (!coords) return;
 
-                // Cores baseadas em Eixo Estratégico
-                let color = '#E74C3C';
-                if (m.eixo_estrategico === 'E1') {
-                    color = '#E74C3C';  // Vermelho - Lulismo
-                } else if (m.eixo_estrategico === 'E2') {
-                    color = '#FF6B6B';  // Vermelho claro
-                } else if (m.eixo_estrategico === 'E3') {
-                    color = '#F39C12';  // Laranja
-                } else if (m.eixo_estrategico === 'E4') {
-                    color = '#F1C40F';  // Amarelo
-                } else if (m.eixo_estrategico === 'E5') {
-                    color = '#2E86C1';  // Azul
-                } else if (m.eixo_estrategico === 'E6') {
-                    color = '#5DADE2';  // Azul claro - Bolsonarismo
+                // Cores baseadas em Classificação Federal (Bastião/Tendência Petista ou Bolsonarista)
+                let color = '#888888'; // Cinza padrão
+                if (m.classificacao === 'Bastião Petista') {
+                    color = '#27AE60';  // Verde - Bastião Petista
+                } else if (m.classificacao === 'Tendência Petista') {
+                    color = '#82E0AA';  // Verde claro - Tendência Petista
+                } else if (m.classificacao === 'Swing') {
+                    color = '#F4D03F';  // Amarelo - Swing
+                } else if (m.classificacao === 'Tendência Bolsonarista') {
+                    color = '#E59866';  // Laranja - Tendência Bolsonarista
+                } else if (m.classificacao === 'Bastião Bolsonarista') {
+                    color = '#E74C3C';  // Vermelho - Bastião Bolsonarista
                 }
 
                 const marker = L.circleMarker(coords, {
@@ -1901,15 +1943,22 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     fillOpacity: 0.8
                 }).addTo(mapSecoesInstance);
 
+                // Popup com informações federais + Gleisi
+                const gleisiPct = (m.gleisi?.['2022'] || 0).toFixed(2);
+                const preditivo = m.preditivo_2026?.classificacao || 'N/A';
+
                 marker.bindPopup(`
-                    <div style="font-size: 0.9rem;">
-                        <strong>${m.name}</strong><br>
-                        <small style="color: ${color}; font-weight: 600;">${m.eixo_label}</small><br>
-                        <small>Preditivo: ${m.preditivo_2026.classificacao}</small><br>
-                        <small>Score: ${(m.preditivo_2026.score * 100).toFixed(0)}%</small>
+                    <div style="font-size: 0.85rem; width: 180px;">
+                        <strong style="color: ${color};">${m.name}</strong><br>
+                        <small><strong>Federal 2022:</strong> ${m.classificacao}</small><br>
+                        <small><strong>Gleisi 2026:</strong> ${preditivo}</small><br>
+                        <small>Gleisi 2022: ${gleisiPct}%</small><br>
+                        <small>Margem PT-Bolso: ${(m.margem || 0).toFixed(2)}pp</small>
                     </div>
                 `);
             });
+
+            console.log('✅ Mapa de Seções (Federal) do Paraná inicializado');
         }
 
         // ============= PREDITIVO =============
