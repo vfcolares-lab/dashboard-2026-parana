@@ -831,7 +831,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             </select>
                         </div>
                         <div style="padding-top: 1.5rem;">
-                            <button id="downloadSecoesCsv" style="padding: 0.75rem 1.5rem; background: #27AE60; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.background='#229954'" onmouseout="this.style.background='#27AE60';">
+                            <button id="downloadSecoesCsv" onclick="downloadSecoesCsv()" style="padding: 0.75rem 1.5rem; background: #27AE60; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.background='#229954'" onmouseout="this.style.background='#27AE60';">
                                 ⬇️ Baixar CSV
                             </button>
                         </div>
@@ -1215,17 +1215,27 @@ IGleisi = (perf_2010 × 0.10) +<br>
             // Calcular preditivo uma única vez
             const { preditivo } = calculatePreditivoGleisi();
 
-            return Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => ({
-                name,
-                ...data,
-                // Adicionar campos compatíveis com o resto do código
-                indice_eb: (data.gleisi['2022'] || 0),  // Usar % de Gleisi como "índice"
-                indice_nacional: (data.presidencial['2022']?.pt_pct || 0),  // PT %
-                margem: (data.presidencial['2022']?.margem || 0),  // Margem PT-Bolsonaro
-                classificacao: data.classificacao_2022 || 'N/A',
-                classificacao_nacional: data.classificacao_2022 || 'N/A',
-                preditivo_2026: preditivo[name] || { classificacao: 'N/A', score: 0, tendencia: 'neutra' }
-            }));
+            return Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => {
+                // Calcular Índice Nacional (IN): Margem PT-Bolsonaro normalizada para -1 a +1
+                const margem = (data.presidencial['2022']?.margem || 0) / 100;  // Converte percentual para -1 a +1
+
+                // Calcular Índice de Gleisi (IG): Variação de Gleisi relativa à média estadual
+                // Para simplificar, usar a % de Gleisi normalizada (-0.5 a +0.5)
+                const gleisiPct = (data.gleisi['2022'] || 0);  // 0-100
+                const gleisiNormalizado = (gleisiPct / 100) - 0.5;  // -0.5 a +0.5
+
+                return {
+                    name,
+                    ...data,
+                    // Adicionar campos compatíveis com o resto do código
+                    indice_eb: gleisiNormalizado,  // Índice de Gleisi (-0.5 a +0.5)
+                    indice_nacional: margem,  // Índice Nacional (-1 a +1)
+                    margem: (data.presidencial['2022']?.margem || 0),  // Margem PT-Bolsonaro (percentual)
+                    classificacao: data.classificacao_2022 || 'N/A',
+                    classificacao_nacional: data.classificacao_2022 || 'N/A',
+                    preditivo_2026: preditivo[name] || { classificacao: 'N/A', score: 0, tendencia: 'neutra' }
+                };
+            });
         }
 
         function populateMunicipoSelect() {
@@ -1428,7 +1438,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         },
                         plugins: {
                             legend: {
-                                labels: { color: 'var(--text-primary)' }
+                                labels: { color: '#E8ECF1' }
                             },
                             filler: { propagate: false }
                         },
@@ -1440,10 +1450,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                 title: {
                                     display: true,
                                     text: '← Bolsonarista | Lulista →',
-                                    color: 'var(--text-secondary)',
+                                    color: '#E8ECF1',
                                     font: { size: 12 }
                                 },
-                                ticks: { color: 'var(--text-secondary)' },
+                                ticks: { color: '#E8ECF1' },
                                 grid: { color: '#2A3144' }
                             },
                             y: {
@@ -1453,10 +1463,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                 title: {
                                     display: true,
                                     text: '← Anti-Gleisi | Pro-Gleisi →',
-                                    color: 'var(--text-secondary)',
+                                    color: '#E8ECF1',
                                     font: { size: 12 }
                                 },
-                                ticks: { color: 'var(--text-secondary)' },
+                                ticks: { color: '#E8ECF1' },
                                 grid: { color: '#2A3144' }
                             }
                         }
@@ -1464,7 +1474,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 });
 
                 chartsInstances.scatter = scatterChart;
-                console.log('✅ Scatter chart inicializado com', e1Data.length + e5Data.length + e6Data.length, 'pontos totais');
+                console.log('✅ Scatter chart inicializado com', bastiaoPetista.length + bastiaoBolsonarista.length + swing.length, 'pontos totais');
 
                 // Inicializar também o gráfico preditivo
                 initPreditivoChart();
@@ -1698,16 +1708,16 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     maintainAspectRatio: false,
                     indexAxis: 'x',
                     plugins: {
-                        legend: { labels: { color: 'var(--text-primary)' } },
-                        title: { display: true, text: `${municipio} - Saldo Presidencial`, color: 'var(--text-primary)' }
+                        legend: { labels: { color: '#E8ECF1' } },
+                        title: { display: true, text: `${municipio} - Saldo Presidencial`, color: '#E8ECF1', font: { size: 14, weight: 'bold' } }
                     },
                     scales: {
                         y: {
-                            ticks: { color: 'var(--text-secondary)' },
+                            ticks: { color: '#E8ECF1' },
                             grid: { color: '#2A3144' }
                         },
                         x: {
-                            ticks: { color: 'var(--text-secondary)' },
+                            ticks: { color: '#E8ECF1' },
                             grid: { color: '#2A3144' }
                         }
                     }
@@ -1747,18 +1757,18 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { labels: { color: 'var(--text-primary)' } },
-                        title: { display: true, text: `${municipio} - Gleisi Hoffmann`, color: 'var(--text-primary)' }
+                        legend: { labels: { color: '#E8ECF1' } },
+                        title: { display: true, text: `${municipio} - Gleisi Hoffmann`, color: '#E8ECF1', font: { size: 14, weight: 'bold' } }
                     },
                     scales: {
                         y: {
                             min: 0,
                             max: 100,
-                            ticks: { color: 'var(--text-secondary)' },
+                            ticks: { color: '#E8ECF1' },
                             grid: { color: '#2A3144' }
                         },
                         x: {
-                            ticks: { color: 'var(--text-secondary)' },
+                            ticks: { color: '#E8ECF1' },
                             grid: { color: '#2A3144' }
                         }
                     }
@@ -1836,7 +1846,16 @@ IGleisi = (perf_2010 × 0.10) +<br>
         function initMaps() {
             if (mapInstance) return;
 
-            // Coordenadas corretas para Paraná (centro aproximadamente)
+            // Verificar se coordenadas estão carregadas ANTES de criar o mapa
+            if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
+                console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado. Aguardando...');
+                setTimeout(() => initMaps(), 500);
+                return;
+            }
+
+            console.log('✅ MUNICIPIOS_COORDS disponível, iniciando mapa com', Object.keys(window.MUNICIPIOS_COORDS).length, 'coordenadas');
+
+            // Criar o mapa DEPOIS de confirmar que coords foram carregadas
             mapInstance = L.map('map').setView([-25.5, -51.5], 7);
 
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -1846,14 +1865,6 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             // Add markers com coordenadas reais
             const municipios = getMunicipios();
-
-            if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
-                console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado. Aguardando...');
-                setTimeout(() => initMaps(), 1000);
-                return;
-            }
-
-            console.log('✅ MUNICIPIOS_COORDS disponível, iniciando mapa com', Object.keys(window.MUNICIPIOS_COORDS).length, 'coordenadas');
 
             let marcadoresCount = 0;
             let semCoordsCount = 0;
@@ -1925,58 +1936,20 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 attribution: '© OpenStreetMap'
             }).addTo(mapSecoesInstance);
 
-            // Add markers com coordenadas reais - Mapa com Classificação Federal (PT vs Bolsonaro)
-            const municipios = getMunicipios();
-
-            if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
-                console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado para initMapSecoes. Aguardando...');
+            // Verificar se SECOES_2022 foi carregado
+            if (typeof SECOES_2022 === 'undefined' || !SECOES_2022) {
+                console.warn('⚠️ SECOES_2022 ainda não carregado. Aguardando...');
                 setTimeout(() => initMapSecoes(), 500);
                 return;
             }
 
-            municipios.forEach(m => {
-                const coords = window.MUNICIPIOS_COORDS[m.name];
-                if (!coords) return;
+            // Populara seletor de município
+            populateMunicipoImpulsionamento();
 
-                // Cores baseadas em Classificação Federal (Bastião/Tendência Petista ou Bolsonarista)
-                let color = '#888888'; // Cinza padrão
-                if (m.classificacao === 'Bastião Petista') {
-                    color = '#27AE60';  // Verde - Bastião Petista
-                } else if (m.classificacao === 'Tendência Petista') {
-                    color = '#82E0AA';  // Verde claro - Tendência Petista
-                } else if (m.classificacao === 'Swing') {
-                    color = '#F4D03F';  // Amarelo - Swing
-                } else if (m.classificacao === 'Tendência Bolsonarista') {
-                    color = '#E59866';  // Laranja - Tendência Bolsonarista
-                } else if (m.classificacao === 'Bastião Bolsonarista') {
-                    color = '#E74C3C';  // Vermelho - Bastião Bolsonarista
-                }
+            // Plotar todas as seções inicialmente
+            plotarSecoes();
 
-                const marker = L.circleMarker(coords, {
-                    radius: 8,
-                    fillColor: color,
-                    color: color,
-                    weight: 2,
-                    opacity: 0.9,
-                    fillOpacity: 0.8
-                }).addTo(mapSecoesInstance);
-
-                // Popup com informações federais + Gleisi
-                const gleisiPct = (m.gleisi?.['2022'] || 0).toFixed(2);
-                const preditivo = m.preditivo_2026?.classificacao || 'N/A';
-
-                marker.bindPopup(`
-                    <div style="font-size: 0.85rem; width: 180px;">
-                        <strong style="color: ${color};">${m.name}</strong><br>
-                        <small><strong>Federal 2022:</strong> ${m.classificacao}</small><br>
-                        <small><strong>Gleisi 2026:</strong> ${preditivo}</small><br>
-                        <small>Gleisi 2022: ${gleisiPct}%</small><br>
-                        <small>Margem PT-Bolso: ${(m.margem || 0).toFixed(2)}pp</small>
-                    </div>
-                `);
-            });
-
-            console.log('✅ Mapa de Seções (Federal) do Paraná inicializado');
+            console.log('✅ Mapa de Seções do Paraná inicializado');
         }
 
         // ============= PREDITIVO =============
@@ -2071,23 +2044,6 @@ IGleisi = (perf_2010 × 0.10) +<br>
         let secoesMarcadores = [];
         let municipioFiltroAtual = null;
 
-        function initMapSecoes() {
-            if (mapSecoesInstance) return;
-
-            mapSecoesInstance = L.map('map-secoes').setView([-3.119, -60.022], 6);
-
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                maxZoom: 19,
-                attribution: '© OpenStreetMap'
-            }).addTo(mapSecoesInstance);
-
-            // Populara seletor de município
-            populateMunicipoImpulsionamento();
-
-            // Plotar todas as seções inicialmente
-            plotarSecoes();
-        }
-
         function populateMunicipoImpulsionamento() {
             const select = document.getElementById('municipioImpulsionamentoSelect');
 
@@ -2153,23 +2109,48 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             // Plotar cada seção
             secoes_a_plotar.forEach(secao => {
+                // Validar coordenadas
+                if (!secao.latitude || !secao.longitude || isNaN(secao.latitude) || isNaN(secao.longitude)) {
+                    console.warn(`⚠️ Seção ${secao.numero_secao} sem coordenadas válidas`);
+                    return;
+                }
+
+                // Definir cor baseada na classificação
+                let color = '#888888'; // Cinza padrão
+                let classificacao = secao.classificacao_secao || 'swing';
+
+                if (classificacao === 'seguro_gleisi') {
+                    color = '#27AE60'; // Verde - Seguro Gleisi
+                } else if (classificacao === 'competitivo_pro') {
+                    color = '#F39C12'; // Laranja - Competitivo Pró
+                } else if (classificacao === 'swing') {
+                    color = '#F4D03F'; // Amarelo - Swing
+                } else if (classificacao === 'competitivo_contra') {
+                    color = '#E59866'; // Laranja escuro - Competitivo Contra
+                } else if (classificacao === 'dificil') {
+                    color = '#E74C3C'; // Vermelho - DIFÍCIL (Bolsonarista)
+                }
+
                 const marker = L.circleMarker([secao.latitude, secao.longitude], {
                     radius: municipioFiltroAtual ? 8 : 4,
-                    fillColor: secao.cor,
-                    color: secao.cor,
+                    fillColor: color,
+                    color: color,
                     weight: 2,
                     opacity: 0.9,
                     fillOpacity: 0.8
                 }).addTo(mapSecoesInstance);
 
                 // Popup com informações
+                const scoreText = secao.preditivo_2026?.score
+                    ? `<br><small style="color: #888;">Score: ${(secao.preditivo_2026.score * 100).toFixed(0)}%</small>`
+                    : '';
+
                 const popup = `
                     <div style="font-size: 0.9rem; font-weight: 600;">
                         <strong>Seção ${secao.numero_secao}</strong><br>
                         <small>${secao.municipio}</small><br><br>
                         <small style="color: #888;">📍 ${secao.endereco}</small><br>
-                        <small style="color: #888;">📊 ${secao.categoria}</small><br>
-                        <small style="color: #888;">Score: ${(secao.preditivo_2026.score * 100).toFixed(0)}%</small>
+                        <small style="color: #888;">📊 ${secao.categoria}</small>${scoreText}
                     </div>
                 `;
 
@@ -2190,46 +2171,69 @@ IGleisi = (perf_2010 × 0.10) +<br>
         }
 
         function downloadSecoesCsv() {
-            if (!SECOES_2022) return;
+            console.log('🔍 downloadSecoesCsv() chamado');
 
-            let csv = 'numero_secao,municipio,categoria,latitude,longitude,raio_km,endereco,indice_nacional,indice_eb,preditivo_classificacao,preditivo_score\n';
+            if (!SECOES_2022) {
+                alert('⚠️ Dados das seções ainda não foram carregados. Por favor, aguarde alguns segundos e tente novamente.');
+                console.error('❌ SECOES_2022 não carregado');
+                return;
+            }
+
+            console.log('✅ SECOES_2022 carregado, gerando CSV...');
+
+            let csv = 'numero_secao,municipio,endereco,latitude,longitude,gleisi_2022_pct,classificacao_secao,trajetoria,volatilidade,raio_km\n';
 
             const secoes_para_baixar = municipioFiltroAtual
                 ? (SECOES_2022[municipioFiltroAtual] || [])
                 : Object.values(SECOES_2022).flat();
 
+            console.log(`📊 Total de seções para baixar: ${secoes_para_baixar.length}`);
+
+            let linhas_geradas = 0;
             secoes_para_baixar.forEach(secao => {
+                if (!secao) return;
+
+                const gleisiPct = secao.votos_gleisi?.['2022_pct'] || 0;
+                const classificacao = secao.classificacao_secao || 'N/A';
+
                 const linha = [
                     secao.numero_secao,
                     secao.municipio,
-                    secao.categoria,
-                    secao.latitude,
-                    secao.longitude,
-                    secao.raio_km,
-                    `"${secao.endereco.replace(/"/g, '""')}"`,
-                    secao.indice_nacional,
-                    secao.indice_eb,
-                    secao.preditivo_2026.classificacao,
-                    secao.preditivo_2026.score
+                    `"${(secao.endereco || '').replace(/"/g, '""')}"`,
+                    secao.latitude || '',
+                    secao.longitude || '',
+                    gleisiPct.toFixed(2),
+                    classificacao,
+                    secao.trajetoria || '',
+                    (secao.volatilidade || 0).toFixed(3),
+                    secao.raio_km || ''
                 ].join(',');
                 csv += linha + '\n';
+                linhas_geradas++;
             });
 
+            console.log(`✏️ Linhas geradas: ${linhas_geradas}`);
+
             // Download
-            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            const url = URL.createObjectURL(blob);
+            try {
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const link = document.createElement('a');
+                const url = URL.createObjectURL(blob);
 
-            const municipio_suffix = municipioFiltroAtual ? `_${municipioFiltroAtual}` : '_todos_municipios';
-            link.setAttribute('href', url);
-            link.setAttribute('download', `secoes_2022${municipio_suffix}.csv`);
-            link.style.visibility = 'hidden';
+                const municipio_suffix = municipioFiltroAtual ? `_${municipioFiltroAtual}` : '_todos_municipios';
+                link.setAttribute('href', url);
+                link.setAttribute('download', `secoes_2022${municipio_suffix}.csv`);
+                link.style.visibility = 'hidden';
 
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
 
-            console.log(`✅ Download iniciado: ${secoes_para_baixar.length} seções`);
+                console.log(`✅ Download iniciado: ${linhas_geradas} seções`);
+            } catch (err) {
+                console.error('❌ Erro ao fazer download:', err);
+                alert('❌ Erro ao gerar o arquivo CSV. Verifique o console para mais detalhes.');
+            }
         }
 
         // Botão de download
