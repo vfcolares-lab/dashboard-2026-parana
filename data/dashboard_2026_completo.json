@@ -1,4 +1,4 @@
-const DASHBOARD_DATA = {
+{
   "metadata": {
     "projeto": "Dashboard Eleitoral Paraná 2026",
     "analise": "Bidimensional: Presidencial (PT vs Bolsonaro) + Gleisi Hoffmann",
@@ -15608,4 +15608,4 @@ const DASHBOARD_DATA = {
       "gleisi_classification": "Difícil Gleisi"
     }
   }
-};
+}
