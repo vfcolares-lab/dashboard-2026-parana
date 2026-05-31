@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎯 Dashboard Paraná 2026 — Gleisi + Presidencial</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
     <style>
+        :root {
+            --bg-primary: #0F1419;
+            --bg-secondary: #1A1F2E;
+            --bg-card: #1E2538;
+            --bg-hover: #252D40;
+            --text-primary: #E8ECF1;
+            --text-secondary: #8B95A5;
+            --text-muted: #5A6474;
+            --accent-gold: #D4A843;
+            --accent-red: #C41E3A;
+            --bastiao: #27AE60;
+            --tendencia: #82E0AA;
+            --swing: #F4D03F;
+            --bolso-light: #E59866;
+            --bolso-dark: #E74C3C;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,48 +30,146 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #0f1419;
-            color: #e8ecf1;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+        /* ============= LAYOUT ============= */
+        .app-container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2em;
+        .sidebar {
+            width: 250px;
+            background: var(--bg-secondary);
+            border-right: 1px solid #2A3144;
+            overflow-y: auto;
+            padding: 2rem 0;
         }
 
-        .subtitle {
-            text-align: center;
-            color: #8b95a5;
-            margin-bottom: 30px;
-            font-size: 0.9em;
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #2A3144;
+            margin-bottom: 1rem;
         }
 
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-section {
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid #2A3144;
+        }
+
+        .nav-section-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            padding-left: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .nav-btn.active {
+            background: var(--bg-card);
+            color: var(--accent-red);
+            border-left: 3px solid var(--accent-red);
+            padding-left: calc(1rem - 3px);
+            font-weight: 600;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-bottom: 1px solid #2A3144;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Cards */
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
         .stat-card {
-            background: #1a1f2e;
+            background: var(--bg-card);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #d4a843;
+            border-left: 4px solid var(--accent-gold);
         }
 
         .stat-label {
             font-size: 0.85em;
-            color: #8b95a5;
-            margin-bottom: 5px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
         }
 
         .stat-value {
@@ -61,268 +177,239 @@
             font-weight: bold;
         }
 
-        .controls {
-            display: flex;
-            gap: 10px;
-            padding: 15px;
-            background: #1a1f2e;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-            border: 1px solid #333;
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-        }
-
-        select, input {
-            padding: 12px 15px;
-            background: #252d40;
-            color: #e8ecf1;
-            border: 2px solid #333;
-            border-radius: 6px;
-            font-size: 1em;
-        }
-
-        input[type="text"] {
-            flex: 1;
-            min-width: 280px;
-            max-width: 400px;
-        }
-
-        select {
-            min-width: 280px;
-        }
-
-        select:hover, input:hover {
-            border-color: #555;
-        }
-
-        select:focus, input:focus {
-            outline: none;
-            border-color: #d4a843;
-            background: #2a3548;
-            box-shadow: 0 0 8px rgba(212, 168, 67, 0.3);
+        .section-title {
+            font-size: 1.2em;
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+            font-weight: 600;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #1a1f2e;
+            background: var(--bg-card);
             border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        thead {
+            background: var(--bg-hover);
         }
 
         th {
-            background: #252d40;
             padding: 12px;
             text-align: left;
             font-weight: 600;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #2A3144;
         }
 
         td {
             padding: 12px;
-            border-bottom: 1px solid #252d40;
+            border-bottom: 1px solid #2A3144;
         }
 
         tr:hover {
-            background: #252d40;
+            background: var(--bg-hover);
         }
 
-        .bastiao-petista { color: #27ae60; font-weight: bold; }
-        .tendencia-petista { color: #82e0aa; }
-        .swing { color: #f4d03f; }
-        .tendencia-bolsonarista { color: #e59866; }
-        .bastiao-bolsonarista { color: #e74c3c; font-weight: bold; }
+        .bastiao { color: var(--bastiao); font-weight: bold; }
+        .tendencia { color: var(--tendencia); }
+        .swing { color: var(--swing); }
+        .bolso-light { color: var(--bolso-light); }
+        .bolso-dark { color: var(--bolso-dark); font-weight: bold; }
 
         .loading {
             text-align: center;
             padding: 40px;
-            color: #8b95a5;
+            color: var(--text-secondary);
         }
 
         .error {
-            background: #e74c3c;
-            padding: 20px;
+            background: var(--bolso-dark);
+            color: white;
+            padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
-        }
-
-        .section-title {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            border-bottom: 2px solid #d4a843;
-            padding-bottom: 10px;
-            color: #d4a843;
-            font-weight: 600;
-        }
-
-        .pagination {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .pagination button {
-            padding: 10px 15px;
-            background: #252d40;
-            color: #e8ecf1;
-            border: 1px solid #333;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.95em;
-        }
-
-        .pagination button:hover {
-            background: #2a3548;
-            border-color: #555;
-        }
-
-        .pagination button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .pagination button.active {
-            background: #d4a843;
-            color: #0f1419;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎯 Dashboard Eleitoral Paraná 2026</h1>
-        <p class="subtitle">Análise: Presidencial (PT vs Bolsonaro) + Gleisi Hoffmann</p>
-
-        <div id="loading" class="loading">⏳ Carregando dados...</div>
-        <div id="error" class="error" style="display: none;"></div>
-
-        <div id="content" style="display: none;">
-            <!-- ESTATÍSTICAS GERAIS -->
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-label">Municípios Mapeados</div>
-                    <div class="stat-value" id="stat-municipios">-</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">PT 2022</div>
-                    <div class="stat-value" id="stat-pt">-</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">Bolsonaro 2022</div>
-                    <div class="stat-value" id="stat-bolso">-</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">Gleisi 2022</div>
-                    <div class="stat-value" id="stat-gleisi">-</div>
-                </div>
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">🎯 Paraná 2026</div>
+                <div class="sidebar-subtitle">Gleisi Hoffmann</div>
             </div>
 
-            <!-- DISTRIBUIÇÃO PRESIDENCIAL -->
-            <div class="section-title">📊 Distribuição Federal (2022) - PT vs Bolsonaro</div>
-            <table id="distributionTable">
-                <thead>
-                    <tr>
-                        <th>Classificação</th>
-                        <th>Municípios</th>
-                        <th>%</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-
-            <!-- CONTROLES -->
-            <div class="section-title">🔍 Dados dos Municípios</div>
-            <div class="controls">
-                <input type="text" id="searchInput" placeholder="Buscar município...">
-                <select id="filterClassificacao">
-                    <option value="">Todas as classificações</option>
-                    <option value="Bastião Petista">Bastião Petista</option>
-                    <option value="Tendência Petista">Tendência Petista</option>
-                    <option value="Swing">Swing</option>
-                    <option value="Tendência Bolsonarista">Tendência Bolsonarista</option>
-                    <option value="Bastião Bolsonarista">Bastião Bolsonarista</option>
-                </select>
+            <div class="nav-section">
+                <div class="nav-section-title">Principal</div>
+                <button class="nav-btn active" onclick="switchSection('overview')">📊 Overview</button>
+                <button class="nav-btn" onclick="switchSection('municipios')">🏛️ Municípios</button>
+                <button class="nav-btn" onclick="switchSection('distribuicao')">📈 Distribuição</button>
             </div>
 
-            <!-- TABELA DE MUNICÍPIOS -->
-            <table id="municipiosTable">
-                <thead>
-                    <tr>
-                        <th>Município</th>
-                        <th>Classificação 2022</th>
-                        <th>Margem PT-Bolso (2022)</th>
-                        <th>PT 2022</th>
-                        <th>Bolsonaro 2022</th>
-                        <th>Gleisi 2022</th>
-                        <th>Trajetória</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="nav-section">
+                <div class="nav-section-title">Análise</div>
+                <button class="nav-btn" onclick="switchSection('preditiva')">🎯 Preditiva</button>
+                <button class="nav-btn" onclick="switchSection('impulsionamento')">📍 Impulsionamento</button>
+                <button class="nav-btn" onclick="switchSection('dados')">📋 Dados Brutos</button>
+            </div>
+        </div>
 
-            <!-- PAGINAÇÃO -->
-            <div class="pagination" id="paginationControls"></div>
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="header">
+                <h1>🎯 Dashboard Eleitoral Paraná 2026</h1>
+                <p>Análise: Presidencial (PT vs Bolsonaro) + Gleisi Hoffmann</p>
+            </div>
+
+            <div class="content">
+                <!-- 1. OVERVIEW -->
+                <div id="overview" class="section active">
+                    <div id="loading" class="loading">⏳ Carregando dados...</div>
+                    <div id="error" class="error" style="display: none;"></div>
+                    <div id="overview-content" style="display: none;">
+                        <div class="stats">
+                            <div class="stat-card">
+                                <div class="stat-label">Municípios Mapeados</div>
+                                <div class="stat-value" id="stat-municipios">-</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">PT 2022 (médio)</div>
+                                <div class="stat-value" id="stat-pt">-</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">Bolsonaro 2022 (médio)</div>
+                                <div class="stat-value" id="stat-bolso">-</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">Gleisi 2022 (médio)</div>
+                                <div class="stat-value" id="stat-gleisi">-</div>
+                            </div>
+                        </div>
+
+                        <div class="section-title">📊 Distribuição Federal (2022)</div>
+                        <table id="distributionTable">
+                            <thead>
+                                <tr>
+                                    <th>Classificação</th>
+                                    <th>Municípios</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 2. MUNICÍPIOS -->
+                <div id="municipios" class="section">
+                    <div class="section-title">🔍 Busca de Municípios</div>
+                    <input type="text" id="searchInput" placeholder="Buscar município..." style="width: 300px; padding: 10px; margin-bottom: 20px;">
+                    <select id="filterClassificacao" style="width: 300px; padding: 10px; margin-bottom: 20px; margin-left: 10px;">
+                        <option value="">Todas as classificações</option>
+                        <option value="Bastião Petista">Bastião Petista</option>
+                        <option value="Tendência Petista">Tendência Petista</option>
+                        <option value="Swing">Swing</option>
+                        <option value="Tendência Bolsonarista">Tendência Bolsonarista</option>
+                        <option value="Bastião Bolsonarista">Bastião Bolsonarista</option>
+                    </select>
+
+                    <table id="municipiosTable">
+                        <thead>
+                            <tr>
+                                <th>Município</th>
+                                <th>Classificação</th>
+                                <th>Margem (2022)</th>
+                                <th>PT%</th>
+                                <th>Bolsonaro%</th>
+                                <th>Gleisi%</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <!-- 3. DISTRIBUIÇÃO -->
+                <div id="distribuicao" class="section">
+                    <div class="section-title">📊 Análise de Distribuição</div>
+                    <canvas id="distributionChart" style="max-width: 600px; margin: 20px 0;"></canvas>
+                </div>
+
+                <!-- 4. PREDITIVA -->
+                <div id="preditiva" class="section">
+                    <div class="section-title">🎯 Análise Preditiva 2026</div>
+                    <p style="color: var(--text-secondary); margin: 20px 0;">📊 Análise baseada em tendências históricas (2010-2022)</p>
+                </div>
+
+                <!-- 5. IMPULSIONAMENTO -->
+                <div id="impulsionamento" class="section">
+                    <div class="section-title">📍 Estratégia de Impulsionamento</div>
+                    <p style="color: var(--text-secondary); margin: 20px 0;">🎯 Municípios com maior potencial de crescimento</p>
+                </div>
+
+                <!-- 6. DADOS BRUTOS -->
+                <div id="dados" class="section">
+                    <div class="section-title">📋 Dados Brutos - Exportar</div>
+                    <button onclick="exportCSV()" style="padding: 10px 20px; background: var(--accent-gold); color: #0f1419; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                        📥 Baixar CSV
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="data.js"></script>
     <script>
-        function formatarPercentual(valor) {
-            return (typeof valor === 'number' ? valor.toFixed(2) : valor) + '%';
-        }
+        let todosData = [];
+        let distributionChart = null;
 
         function getClassColor(classificacao) {
             const classes = {
-                'Bastião Petista': 'bastiao-petista',
-                'Tendência Petista': 'tendencia-petista',
+                'Bastião Petista': 'bastiao',
+                'Tendência Petista': 'tendencia',
                 'Swing': 'swing',
-                'Tendência Bolsonarista': 'tendencia-bolsonarista',
-                'Bastião Bolsonarista': 'bastiao-bolsonarista'
+                'Tendência Bolsonarista': 'bolso-light',
+                'Bastião Bolsonarista': 'bolso-dark'
             };
             return classes[classificacao] || '';
         }
 
-        function inicializar() {
+        function carregar() {
             try {
                 if (typeof DASHBOARD_DATA === 'undefined') {
-                    throw new Error('DASHBOARD_DATA não carregado');
+                    setTimeout(carregar, 100);
+                    return;
                 }
 
-                console.log('✅ Dashboard V4 carregado');
-                const municipios = DASHBOARD_DATA.municipios;
-                const municiPiosArray = Object.values(municipios);
+                console.log('✅ Dados carregados');
+                todosData = Object.values(DASHBOARD_DATA.municipios);
 
-                // ESTATÍSTICAS
-                document.getElementById('stat-municipios').textContent = municiPiosArray.length;
+                // Estatísticas
+                const avgPT = (todosData.reduce((s, m) => s + (m.presidencial['2022']?.pt_pct || 0), 0) / todosData.length).toFixed(2);
+                const avgBolso = (todosData.reduce((s, m) => s + (m.presidencial['2022']?.oposicao_pct || 0), 0) / todosData.length).toFixed(2);
+                const avgGleisi = (todosData.reduce((s, m) => s + (m.gleisi['2022'] || 0), 0) / todosData.length).toFixed(2);
 
-                const avgPT = (municiPiosArray.reduce((sum, m) => sum + (m.presidencial['2022']?.pt_pct || 0), 0) / municiPiosArray.length).toFixed(2);
-                const avgBolso = (municiPiosArray.reduce((sum, m) => sum + (m.presidencial['2022']?.oposicao_pct || 0), 0) / municiPiosArray.length).toFixed(2);
-                const avgGleisi = (municiPiosArray.reduce((sum, m) => sum + (m.gleisi['2022'] || 0), 0) / municiPiosArray.length).toFixed(2);
-
+                document.getElementById('stat-municipios').textContent = todosData.length;
                 document.getElementById('stat-pt').textContent = avgPT + '%';
                 document.getElementById('stat-bolso').textContent = avgBolso + '%';
                 document.getElementById('stat-gleisi').textContent = avgGleisi + '%';
 
-                // DISTRIBUIÇÃO
-                const distribuicao = {};
-                municiPiosArray.forEach(m => {
-                    const classe = m.classificacao_2022 || 'N/A';
-                    distribuicao[classe] = (distribuicao[classe] || 0) + 1;
+                // Distribuição
+                const dist = {};
+                todosData.forEach(m => {
+                    const c = m.classificacao_2022 || 'N/A';
+                    dist[c] = (dist[c] || 0) + 1;
                 });
 
-                const distTable = document.getElementById('distributionTable').querySelector('tbody');
-                Object.entries(distribuicao).sort((a, b) => b[1] - a[1]).forEach(([classe, count]) => {
-                    const pct = ((count / municiPiosArray.length) * 100).toFixed(1);
-                    const row = distTable.insertRow();
+                const distTbody = document.getElementById('distributionTable').querySelector('tbody');
+                Object.entries(dist).sort((a, b) => b[1] - a[1]).forEach(([classe, count]) => {
+                    const pct = ((count / todosData.length) * 100).toFixed(1);
+                    const row = distTbody.insertRow();
                     row.innerHTML = `
                         <td><span class="${getClassColor(classe)}">${classe}</span></td>
                         <td>${count}</td>
@@ -330,193 +417,111 @@
                     `;
                 });
 
-                // TABELA DE MUNICÍPIOS
-                renderTabela(municiPiosArray);
-
-                // CONTROLES
-                document.getElementById('searchInput').addEventListener('input', (e) => {
-                    renderTabela(municiPiosArray, e.target.value, document.getElementById('filterClassificacao').value);
+                // Chart
+                const labels = Object.keys(dist).sort((a, b) => dist[b] - dist[a]);
+                const data = labels.map(l => dist[l]);
+                const colors = labels.map(l => {
+                    const colorMap = {
+                        'Bastião Petista': '#27AE60',
+                        'Tendência Petista': '#82E0AA',
+                        'Swing': '#F4D03F',
+                        'Tendência Bolsonarista': '#E59866',
+                        'Bastião Bolsonarista': '#E74C3C'
+                    };
+                    return colorMap[l] || '#999';
                 });
 
-                document.getElementById('filterClassificacao').addEventListener('change', (e) => {
-                    renderTabela(municiPiosArray, document.getElementById('searchInput').value, e.target.value);
-                });
+                const ctx = document.getElementById('distributionChart');
+                if (ctx) {
+                    distributionChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Municípios',
+                                data: data,
+                                backgroundColor: colors,
+                                borderRadius: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: { legend: { display: false } },
+                            scales: {
+                                y: { beginAtZero: true }
+                            }
+                        }
+                    });
+                }
 
-                // MOSTRAR CONTEÚDO
+                // Tabela de municípios
+                renderMunicipios();
+
+                // Event listeners
+                document.getElementById('searchInput').addEventListener('input', renderMunicipios);
+                document.getElementById('filterClassificacao').addEventListener('change', renderMunicipios);
+
                 document.getElementById('loading').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
+                document.getElementById('overview-content').style.display = 'block';
 
-            } catch (error) {
-                console.error('❌ Erro:', error);
+            } catch (e) {
+                console.error('Erro:', e);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('error').style.display = 'block';
-                document.getElementById('error').textContent = '❌ Erro ao carregar: ' + error.message;
+                document.getElementById('error').textContent = '❌ Erro: ' + e.message;
             }
         }
 
-        let currentPage = 1;
-        const ROWS_PER_PAGE = 50;
-        let lastFilteredMunicipios = [];
+        function renderMunicipios() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const filter = document.getElementById('filterClassificacao').value;
 
-        function renderTabela(municipios, searchText = '', filterClass = '') {
-            const filtered = municipios.filter(m => {
-                const matchSearch = !searchText || m.municipio.toLowerCase().includes(searchText.toLowerCase());
-                const matchFilter = !filterClass || m.classificacao_2022 === filterClass;
+            const filtered = todosData.filter(m => {
+                const matchSearch = !search || m.municipio.toLowerCase().includes(search);
+                const matchFilter = !filter || m.classificacao_2022 === filter;
                 return matchSearch && matchFilter;
             });
 
-            lastFilteredMunicipios = filtered;
-            currentPage = 1;
-            renderPage();
-        }
-
-        function renderPage() {
             const tbody = document.getElementById('municipiosTable').querySelector('tbody');
             tbody.innerHTML = '';
 
-            const start = (currentPage - 1) * ROWS_PER_PAGE;
-            const end = start + ROWS_PER_PAGE;
-            const pageData = lastFilteredMunicipios.slice(start, end);
-
-            pageData.forEach(m => {
+            filtered.slice(0, 100).forEach(m => {
+                const p = m.presidencial['2022'] || {};
                 const row = tbody.insertRow();
-                const pres2022 = m.presidencial['2022'] || {};
-                const gleisi2022 = m.gleisi['2022'] || 0;
-
-                const trajCount = {};
-                (m.historico_federal || []).forEach(h => {
-                    trajCount[h.classificacao] = (trajCount[h.classificacao] || 0) + 1;
-                });
-                const trajetoria = Object.entries(trajCount)
-                    .sort((a, b) => b[1] - a[1])
-                    .map(([k, v]) => k)
-                    .slice(0, 2)
-                    .join(' → ');
-
                 row.innerHTML = `
                     <td><strong>${m.municipio}</strong></td>
                     <td><span class="${getClassColor(m.classificacao_2022)}">${m.classificacao_2022}</span></td>
-                    <td>${(pres2022.margem || 0).toFixed(2)}pp</td>
-                    <td>${formatarPercentual(pres2022.pt_pct || 0)}</td>
-                    <td>${formatarPercentual(pres2022.oposicao_pct || 0)}</td>
-                    <td>${formatarPercentual(gleisi2022)}</td>
-                    <td style="font-size: 0.85em; color: #8b95a5;">${trajetoria || 'N/A'}</td>
+                    <td>${(p.margem || 0).toFixed(2)}pp</td>
+                    <td>${(p.pt_pct || 0).toFixed(2)}%</td>
+                    <td>${(p.oposicao_pct || 0).toFixed(2)}%</td>
+                    <td>${(m.gleisi['2022'] || 0).toFixed(2)}%</td>
                 `;
             });
-
-            // Mostrar informação de paginação
-            const totalPages = Math.ceil(lastFilteredMunicipios.length / ROWS_PER_PAGE);
-            const infoText = `Mostrando ${start + 1}-${Math.min(end, lastFilteredMunicipios.length)} de ${lastFilteredMunicipios.length} municípios`;
-
-            let paginationRow = document.getElementById('paginationInfo');
-            if (!paginationRow) {
-                paginationRow = document.createElement('tr');
-                paginationRow.id = 'paginationInfo';
-                tbody.appendChild(paginationRow);
-            }
-            paginationRow.innerHTML = `<td colspan="7" style="text-align: center; padding: 20px; color: #8b95a5; border: none;">${infoText}</td>`;
-
-            // Gerar botões de paginação
-            const paginationDiv = document.getElementById('paginationControls');
-            paginationDiv.innerHTML = '';
-
-            if (totalPages > 1) {
-                // Botão Anterior
-                const prevBtn = document.createElement('button');
-                prevBtn.textContent = '← Anterior';
-                prevBtn.disabled = currentPage === 1;
-                prevBtn.onclick = () => {
-                    if (currentPage > 1) {
-                        currentPage--;
-                        renderPage();
-                    }
-                };
-                paginationDiv.appendChild(prevBtn);
-
-                // Botões de página
-                const startPage = Math.max(1, currentPage - 2);
-                const endPage = Math.min(totalPages, currentPage + 2);
-
-                if (startPage > 1) {
-                    const firstBtn = document.createElement('button');
-                    firstBtn.textContent = '1';
-                    firstBtn.onclick = () => {
-                        currentPage = 1;
-                        renderPage();
-                    };
-                    paginationDiv.appendChild(firstBtn);
-
-                    if (startPage > 2) {
-                        const dots = document.createElement('span');
-                        dots.textContent = ' ... ';
-                        dots.style.color = '#8b95a5';
-                        paginationDiv.appendChild(dots);
-                    }
-                }
-
-                for (let i = startPage; i <= endPage; i++) {
-                    const pageBtn = document.createElement('button');
-                    pageBtn.textContent = i;
-                    if (i === currentPage) {
-                        pageBtn.classList.add('active');
-                    }
-                    pageBtn.onclick = () => {
-                        currentPage = i;
-                        renderPage();
-                    };
-                    paginationDiv.appendChild(pageBtn);
-                }
-
-                if (endPage < totalPages) {
-                    if (endPage < totalPages - 1) {
-                        const dots = document.createElement('span');
-                        dots.textContent = ' ... ';
-                        dots.style.color = '#8b95a5';
-                        paginationDiv.appendChild(dots);
-                    }
-
-                    const lastBtn = document.createElement('button');
-                    lastBtn.textContent = totalPages;
-                    lastBtn.onclick = () => {
-                        currentPage = totalPages;
-                        renderPage();
-                    };
-                    paginationDiv.appendChild(lastBtn);
-                }
-
-                // Botão Próximo
-                const nextBtn = document.createElement('button');
-                nextBtn.textContent = 'Próximo →';
-                nextBtn.disabled = currentPage === totalPages;
-                nextBtn.onclick = () => {
-                    if (currentPage < totalPages) {
-                        currentPage++;
-                        renderPage();
-                    }
-                };
-                paginationDiv.appendChild(nextBtn);
-            }
         }
 
-        // Iniciar quando TUDO estiver carregado (incluindo scripts)
-        function aguardarDados() {
-            if (typeof DASHBOARD_DATA === 'undefined') {
-                // Tentar novamente em 100ms
-                setTimeout(aguardarDados, 100);
-            } else {
-                console.log('✅ data.js carregado, iniciando dashboard...');
-                inicializar();
-            }
+        function switchSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
         }
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', aguardarDados);
-        } else if (document.readyState === 'interactive') {
-            aguardarDados();
-        } else {
-            window.addEventListener('load', aguardarDados);
-            aguardarDados(); // Tentar imediatamente também
+        function exportCSV() {
+            let csv = 'Município,Classificação,PT%,Bolsonaro%,Gleisi%,Margem\n';
+            todosData.forEach(m => {
+                const p = m.presidencial['2022'] || {};
+                csv += `${m.municipio},"${m.classificacao_2022}",${(p.pt_pct || 0).toFixed(2)},${(p.oposicao_pct || 0).toFixed(2)},${(m.gleisi['2022'] || 0).toFixed(2)},${(p.margem || 0).toFixed(2)}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'parana-2026.csv';
+            a.click();
         }
+
+        carregar();
     </script>
 </body>
 </html>
