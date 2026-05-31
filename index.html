@@ -1731,10 +1731,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
             }
 
             const ebValues = [
-                mun.gleisi[2010]?.votos_pct || 0,
-                mun.gleisi[2014]?.votos_pct || 0,
-                mun.gleisi[2018]?.votos_pct || 0,
-                mun.gleisi[2022]?.votos_pct || 0
+                mun.gleisi?.['2010'] || 0,
+                mun.gleisi?.['2014'] || 0,
+                mun.gleisi?.['2018'] || 0,
+                mun.gleisi?.['2022'] || 0
             ];
 
             chartsInstances.historicaGleisi = new Chart(contexto, {

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>⏳ Test Loading</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1419;
+            color: #e8ecf1;
+            padding: 20px;
+        }
+        h1 { color: #d4a843; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .status-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #1a1f2e;
+            border-radius: 8px;
+            border-left: 4px solid #d4a843;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .loading { border-left-color: #F39C12; }
+        .loaded { border-left-color: #27AE60; }
+        .error { border-left-color: #E74C3C; }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #252d40;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #F39C12, #27AE60);
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⏳ Status de Carregamento do Dashboard</h1>
+        
+        <div id="status1" class="status-item loading">
+            <strong>📦 1. data.js (DASHBOARD_DATA)</strong>
+            <div class="progress-bar"><div class="progress-fill" id="p1"></div></div>
+            <span id="t1">⏳ Carregando...</span>
+        </div>
+
+        <div id="status2" class="status-item loading">
+            <strong>🗺️ 2. coords.json (MUNICIPIOS_COORDS)</strong>
+            <div class="progress-bar"><div class="progress-fill" id="p2"></div></div>
+            <span id="t2">⏳ Carregando...</span>
+        </div>
+
+        <div id="status3" class="status-item loading">
+            <strong>📊 3. secoes_2022.json (SECOES_2022) — 10.7 MB</strong>
+            <div class="progress-bar"><div class="progress-fill" id="p3"></div></div>
+            <span id="t3">⏳ Carregando (pode levar 5-30 segundos)...</span>
+        </div>
+
+        <div id="status4" class="status-item loading">
+            <strong>✅ DOM Ready (DOMContentLoaded)</strong>
+            <div class="progress-bar"><div class="progress-fill" id="p4"></div></div>
+            <span id="t4">⏳ Aguardando...</span>
+        </div>
+
+        <div id="summary" style="margin-top: 30px; padding: 20px; background: #1a1f2e; border-radius: 8px;">
+            <h2>📊 Resumo</h2>
+            <p id="summaryText">Carregando...</p>
+        </div>
+    </div>
+
+    <script>
+        const startTime = Date.now();
+        let stats = {
+            data: 0,
+            coords: 0,
+            secoes: 0,
+            dom: 0
+        };
+
+        function elapsed() {
+            return Date.now() - startTime;
+        }
+
+        function updateStatus(key, isLoaded, message) {
+            const statusEl = document.getElementById(`status${key}`);
+            const textEl = document.getElementById(`t${key}`);
+            const barEl = document.getElementById(`p${key}`);
+
+            statusEl.className = 'status-item ' + (isLoaded ? 'loaded' : 'error');
+            textEl.textContent = message;
+            barEl.style.width = isLoaded ? '100%' : '50%';
+        }
+
+        // ====== MONITORAR data.js ======
+        setTimeout(() => {
+            if (typeof DASHBOARD_DATA !== 'undefined') {
+                stats.data = elapsed();
+                updateStatus(1, true, `✅ Carregado em ${stats.data}ms - ${Object.keys(DASHBOARD_DATA.municipios).length} municípios`);
+            } else {
+                updateStatus(1, false, `❌ Não carregou após 5s`);
+            }
+        }, 5000);
+
+        // ====== MONITORAR coords.json ======
+        setTimeout(() => {
+            if (typeof window.MUNICIPIOS_COORDS !== 'undefined') {
+                stats.coords = elapsed();
+                updateStatus(2, true, `✅ Carregado em ${stats.coords}ms - ${Object.keys(window.MUNICIPIOS_COORDS).length} coordenadas`);
+            } else {
+                updateStatus(2, false, `❌ Não carregou após 5s`);
+            }
+        }, 5000);
+
+        // ====== MONITORAR secoes_2022.json (com timeout de 35s) ======
+        let secoesCheckCount = 0;
+        function checkSecoes() {
+            secoesCheckCount++;
+            const elapsed_s = (elapsed() / 1000).toFixed(1);
+
+            if (typeof SECOES_2022 !== 'undefined') {
+                stats.secoes = elapsed();
+                updateStatus(3, true, `✅ Carregado em ${stats.secoes}ms (${(stats.secoes/1000).toFixed(1)}s) - ${Object.keys(SECOES_2022).length} entradas`);
+            } else if (secoesCheckCount < 70) {
+                document.getElementById('p3').style.width = Math.min(100, secoesCheckCount) + '%';
+                document.getElementById('t3').textContent = `⏳ Carregando (${elapsed_s}s)...`;
+                setTimeout(checkSecoes, 500);
+            } else {
+                updateStatus(3, false, `⏳ Ainda carregando ou tamanho do arquivo muito grande (${elapsed_s}s)`);
+            }
+        }
+        checkSecoes();
+
+        // ====== MONITORAR DOM ======
+        document.addEventListener('DOMContentLoaded', () => {
+            stats.dom = elapsed();
+            updateStatus(4, true, `✅ DOM Ready em ${stats.dom}ms`);
+
+            // Summary
+            setTimeout(() => {
+                const summary = `
+                    ✅ Carregamento Concluído!
+                    <br><br>
+                    <strong>Timings:</strong>
+                    <br>- data.js: ${stats.data}ms
+                    <br>- coords.json: ${stats.coords}ms
+                    <br>- secoes_2022.json: ${stats.secoes ? stats.secoes + 'ms' : 'ainda carregando...'}
+                    <br>- DOM Ready: ${stats.dom}ms
+                    <br><br>
+                    <strong>Status:</strong>
+                    <br>- DASHBOARD_DATA: ${typeof DASHBOARD_DATA !== 'undefined' ? '✅' : '❌'}
+                    <br>- MUNICIPIOS_COORDS: ${typeof window.MUNICIPIOS_COORDS !== 'undefined' ? '✅' : '❌'}
+                    <br>- SECOES_2022: ${typeof SECOES_2022 !== 'undefined' ? '✅' : '⏳'}
+                `;
+                document.getElementById('summaryText').innerHTML = summary;
+            }, 2000);
+        });
+    </script>
+
+    <script src="data.js"></script>
+    <script src="secoes_2022.js"></script>
+</body>
+</html>

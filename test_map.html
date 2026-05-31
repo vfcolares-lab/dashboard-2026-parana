@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🗺️ Test Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1419;
+            color: #e8ecf1;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 { color: #d4a843; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #map {
+            width: 100%;
+            height: 600px;
+            background: #1a1f2e;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1a1f2e;
+            border-radius: 8px;
+            border-left: 4px solid #d4a843;
+        }
+        .debug-info {
+            background: #252d40;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+        .pass { border-left-color: #27AE60; }
+        .fail { border-left-color: #E74C3C; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Teste do Mapa - Dashboard Paraná</h1>
+        
+        <div id="status" class="status">
+            <p>⏳ Carregando dados...</p>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="debug" class="debug-info">
+            <strong>Debug Info:</strong>
+            <pre id="debugText"></pre>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        let debugLog = [];
+
+        function log(msg) {
+            console.log(msg);
+            debugLog.push(msg);
+            document.getElementById('debugText').textContent = debugLog.join('\n');
+        }
+
+        function updateStatus(msg, isPass = true) {
+            const el = document.getElementById('status');
+            el.className = 'status ' + (isPass ? 'pass' : 'fail');
+            el.innerHTML = `<p>${msg}</p>`;
+        }
+
+        // ==== STEP 1: Verificar data.js ====
+        log('📍 STEP 1: Verificar data.js');
+        if (typeof DASHBOARD_DATA !== 'undefined' && DASHBOARD_DATA.municipios) {
+            const municCount = Object.keys(DASHBOARD_DATA.municipios).length;
+            log(`✅ DASHBOARD_DATA carregado: ${municCount} municípios`);
+        } else {
+            log('❌ DASHBOARD_DATA não encontrado');
+            updateStatus('❌ DASHBOARD_DATA não carregado', false);
+        }
+
+        // ==== STEP 2: Simular getMunicipios() ====
+        log('\n📍 STEP 2: Simular getMunicipios()');
+
+        function calculatePreditivoGleisi() {
+            const municipios = Object.values(DASHBOARD_DATA.municipios);
+            const gleisiScores = municipios.map(m => ({
+                name: m.municipio,
+                score: m.gleisi['2022'] || 0
+            })).sort((a, b) => b.score - a.score);
+
+            const quintilSize = Math.ceil(municipios.length / 5);
+            const preditivo = {};
+
+            gleisiScores.forEach((item, idx) => {
+                let classificacao;
+                if (idx < quintilSize) classificacao = 'SEGURO GLEISI';
+                else if (idx < quintilSize * 2) classificacao = 'COMPETITIVO PRÓ-GLEISI';
+                else if (idx < quintilSize * 3) classificacao = 'BATTLEGROUND';
+                else if (idx < quintilSize * 4) classificacao = 'COMPETITIVO CONTRA';
+                else classificacao = 'DIFÍCIL';
+
+                preditivo[item.name] = {
+                    classificacao,
+                    score: item.score,
+                    tendencia: 'neutra'
+                };
+            });
+
+            return preditivo;
+        }
+
+        function getMunicipios() {
+            if (!DASHBOARD_DATA || !DASHBOARD_DATA.municipios) {
+                log('❌ DASHBOARD_DATA não disponível em getMunicipios');
+                return [];
+            }
+            const { preditivo } = { preditivo: calculatePreditivoGleisi() };
+            const result = Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => ({
+                name,
+                ...data,
+                indice_eb: (data.gleisi['2022'] || 0),
+                indice_nacional: (data.presidencial['2022']?.pt_pct || 0),
+                margem: (data.presidencial['2022']?.margem || 0),
+                classificacao: data.classificacao_2022 || 'N/A',
+                classificacao_nacional: data.classificacao_2022 || 'N/A',
+                preditivo_2026: preditivo[name] || { classificacao: 'N/A', score: 0, tendencia: 'neutra' }
+            }));
+            return result;
+        }
+
+        const municipios = getMunicipios();
+        log(`✅ getMunicipios() retornou ${municipios.length} municípios`);
+
+        // ==== STEP 3: Carregar coords.json ====
+        log('\n📍 STEP 3: Carregar coords.json');
+        fetch('coords.json')
+            .then(r => r.json())
+            .then(coords => {
+                log(`✅ coords.json carregado: ${Object.keys(coords).length} coordenadas`);
+                window.MUNICIPIOS_COORDS = coords;
+
+                // ==== STEP 4: Inicializar mapa ====
+                log('\n📍 STEP 4: Inicializar mapa Leaflet');
+                
+                const mapInstance = L.map('map').setView([-25.5, -51.5], 7);
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    maxZoom: 19,
+                    attribution: '© OpenStreetMap'
+                }).addTo(mapInstance);
+
+                log(`✅ Leaflet mapa inicializado`);
+
+                // ==== STEP 5: Adicionar marcadores ====
+                log('\n📍 STEP 5: Adicionar marcadores');
+                
+                let marcadoresCount = 0;
+                let semCoordsCount = 0;
+                const semCoordsMunics = [];
+
+                municipios.forEach(m => {
+                    const coord = coords[m.name];
+                    if (!coord) {
+                        semCoordsCount++;
+                        if (semCoordsMunics.length < 5) semCoordsMunics.push(m.name);
+                        return;
+                    }
+
+                    marcadoresCount++;
+                    let color = '#888888';
+                    const classif = m.preditivo_2026?.classificacao;
+                    
+                    if (classif === 'SEGURO GLEISI') color = '#27AE60';
+                    else if (classif === 'COMPETITIVO PRÓ-GLEISI') color = '#F39C12';
+                    else if (classif === 'BATTLEGROUND') color = '#E67E22';
+                    else if (classif === 'COMPETITIVO CONTRA') color = '#E74C3C';
+                    else if (classif === 'DIFÍCIL') color = '#95A5A6';
+
+                    const marker = L.circleMarker(coord, {
+                        radius: 6,
+                        fillColor: color,
+                        color: color,
+                        weight: 2,
+                        opacity: 0.9,
+                        fillOpacity: 0.7
+                    }).addTo(mapInstance);
+
+                    marker.bindPopup(`<div style="font-size: 0.85rem;"><strong>${m.name}</strong><br>${classif}</div>`);
+                });
+
+                log(`✅ ${marcadoresCount} marcadores plotados`);
+                log(`⚠️ ${semCoordsCount} municípios sem coordenadas`);
+                if (semCoordsMunics.length > 0) {
+                    log(`   Exemplos: ${semCoordsMunics.join(', ')}`);
+                }
+
+                // ==== RESULTADO FINAL ====
+                updateStatus(`✅ Mapa Completo! ${marcadoresCount} marcadores visíveis`, true);
+                log(`\n✅ TESTE COMPLETO - Mapa renderizado com sucesso!`);
+            })
+            .catch(err => {
+                log(`❌ Erro ao carregar coords.json: ${err.message}`);
+                updateStatus(`❌ Erro: ${err.message}`, false);
+            });
+    </script>
+</body>
+</html>

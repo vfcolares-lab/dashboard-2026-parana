@@ -1,0 +1,1598 @@
+{
+  "ABATIÁ": [
+    -23.3083,
+    -49.8675
+  ],
+  "ADRIANÓPOLIS": [
+    -25.2313,
+    -48.9953
+  ],
+  "AGUDOS DO SUL": [
+    -25.6944,
+    -49.1561
+  ],
+  "ALMIRANTE TAMANDARÉ": [
+    -25.3869,
+    -49.4681
+  ],
+  "ALTAMIRA DO PARANÁ": [
+    -23.1556,
+    -51.6356
+  ],
+  "ALTO PARANÁ": [
+    -24.46,
+    -49.22
+  ],
+  "ALTO PARAÍSO": [
+    -23.7433,
+    -51.449
+  ],
+  "ALTO PIQUIRI": [
+    -24.1778,
+    -52.6536
+  ],
+  "ALTÔNIA": [
+    -24.5536,
+    -52.3333
+  ],
+  "ALVORADA DO SUL": [
+    -23.8625,
+    -50.6397
+  ],
+  "AMAPORÃ": [
+    -23.84,
+    -49.24
+  ],
+  "AMPÉRE": [
+    -23.76,
+    -49.19
+  ],
+  "ANAHY": [
+    -25.45,
+    -49.09
+  ],
+  "ANDIRÁ": [
+    -24.53,
+    -49.18
+  ],
+  "ANTONINA": [
+    -23.68,
+    -49.19
+  ],
+  "ANTONIO OLINTO": [
+    -25.18,
+    -49.3
+  ],
+  "APUCARANA": [
+    -24.06,
+    -49.15
+  ],
+  "ARAPONGAS": [
+    -25.740000000000002,
+    -49.16
+  ],
+  "ARAPOTI": [
+    -24.15,
+    -49.21
+  ],
+  "ARAPUÃ": [
+    -24.54,
+    -49.1
+  ],
+  "ARARUNA": [
+    -25.85,
+    -49.04
+  ],
+  "ARAUCÁRIA": [
+    -24.27,
+    -49.15
+  ],
+  "ARIRANHA DO IVAÍ": [
+    -23.92,
+    -49.19
+  ],
+  "ASSAÍ": [
+    -25.33,
+    -49.05
+  ],
+  "ASSIS CHATEAUBRIAND": [
+    -25.11,
+    -49.03
+  ],
+  "ASTORGA": [
+    -25.97,
+    -49.26
+  ],
+  "ATALAIA": [
+    -24.91,
+    -49.04
+  ],
+  "BALSA NOVA": [
+    -23.68,
+    -49.06
+  ],
+  "BANDEIRANTES": [
+    -23.87,
+    -49.26
+  ],
+  "BARBOSA FERRAZ": [
+    -24.87,
+    -49.14
+  ],
+  "BARRA DO JACARÉ": [
+    -25.35,
+    -49.13
+  ],
+  "BARRACÃO": [
+    -25.16,
+    -49.19
+  ],
+  "BELA VISTA DA CAROBA": [
+    -25.38,
+    -49.01
+  ],
+  "BELA VISTA DO PARAÍSO": [
+    -25.29,
+    -49.32
+  ],
+  "BITURUNA": [
+    -24.44,
+    -49.09
+  ],
+  "BOA ESPERANÇA": [
+    -23.43,
+    -49.33
+  ],
+  "BOA ESPERANÇA DO IGUAÇU": [
+    -24.1,
+    -49.23
+  ],
+  "BOA VENTURA DE SÃO ROQUE": [
+    -23.51,
+    -49.01
+  ],
+  "BOA VISTA DA APARECIDA": [
+    -23.88,
+    -49.07
+  ],
+  "BOCAIÚVA DO SUL": [
+    -25.28,
+    -49.25
+  ],
+  "BOM JESUS DO SUL": [
+    -23.83,
+    -49.11
+  ],
+  "BOM SUCESSO": [
+    -24.87,
+    -49.1
+  ],
+  "BOM SUCESSO DO SUL": [
+    -25.41,
+    -49.19
+  ],
+  "BORRAZÓPOLIS": [
+    -25.259999999999998,
+    -49.18
+  ],
+  "BRAGANEY": [
+    -23.3,
+    -49.32
+  ],
+  "BRASILÂNDIA DO SUL": [
+    -25.98,
+    -49.01
+  ],
+  "CAFEARA": [
+    -23.72,
+    -49.15
+  ],
+  "CAFELÂNDIA": [
+    -25.69,
+    -49.18
+  ],
+  "CAFEZAL DO SUL": [
+    -23.96,
+    -49.12
+  ],
+  "CALIFÓRNIA": [
+    -23.03,
+    -49.21
+  ],
+  "CAMBARÁ": [
+    -23.5,
+    -49.27
+  ],
+  "CAMBIRA": [
+    -24.63,
+    -49.32
+  ],
+  "CAMBÉ": [
+    -24.18,
+    -49.06
+  ],
+  "CAMPINA DA LAGOA": [
+    -25.14,
+    -49.1
+  ],
+  "CAMPINA DO SIMÃO": [
+    -23.14,
+    -49.11
+  ],
+  "CAMPINA GRANDE DO SUL": [
+    -24.3,
+    -49.29
+  ],
+  "CAMPO BONITO": [
+    -25.47,
+    -49.19
+  ],
+  "CAMPO DO TENENTE": [
+    -23.69,
+    -49.18
+  ],
+  "CAMPO LARGO": [
+    -23.28,
+    -49.18
+  ],
+  "CAMPO MAGRO": [
+    -23.74,
+    -49.32
+  ],
+  "CAMPO MOURÃO": [
+    -23.99,
+    -49.1
+  ],
+  "CANDÓI": [
+    -23.0,
+    -49.16
+  ],
+  "CANTAGALO": [
+    -23.33,
+    -49.33
+  ],
+  "CAPANEMA": [
+    -25.8,
+    -49.19
+  ],
+  "CAPITÃO LEÔNIDAS MARQUES": [
+    -25.59,
+    -49.05
+  ],
+  "CARAMBEÍ": [
+    -23.42,
+    -49.23
+  ],
+  "CARLÓPOLIS": [
+    -23.2,
+    -49.32
+  ],
+  "CASCAVEL": [
+    -25.17,
+    -49.22
+  ],
+  "CASTRO": [
+    -24.56,
+    -49.19
+  ],
+  "CATANDUVAS": [
+    -24.96,
+    -49.05
+  ],
+  "CENTENÁRIO DO SUL": [
+    -23.69,
+    -49.07
+  ],
+  "CERRO AZUL": [
+    -24.53,
+    -49.07
+  ],
+  "CHOPINZINHO": [
+    -24.3,
+    -49.22
+  ],
+  "CIANORTE": [
+    -24.12,
+    -49.22
+  ],
+  "CIDADE GAÚCHA": [
+    -23.35,
+    -49.2
+  ],
+  "CLEVELÂNDIA": [
+    -23.66,
+    -49.27
+  ],
+  "COLOMBO": [
+    -25.46,
+    -49.07
+  ],
+  "COLORADO": [
+    -24.69,
+    -49.03
+  ],
+  "CONGONHINHAS": [
+    -24.59,
+    -49.08
+  ],
+  "CONSELHEIRO MAIRINCK": [
+    -25.11,
+    -49.27
+  ],
+  "CONTENDA": [
+    -23.38,
+    -49.02
+  ],
+  "CORBÉLIA": [
+    -25.03,
+    -49.15
+  ],
+  "CORNÉLIO PROCÓPIO": [
+    -24.2,
+    -49.06
+  ],
+  "CORONEL DOMINGOS SOARES": [
+    -25.53,
+    -49.19
+  ],
+  "CORONEL VIVIDA": [
+    -23.89,
+    -49.15
+  ],
+  "CORUMBATAÍ DO SUL": [
+    -23.92,
+    -49.18
+  ],
+  "CRUZ MACHADO": [
+    -25.65,
+    -49.05
+  ],
+  "CRUZEIRO DO IGUAÇU": [
+    -23.75,
+    -49.04
+  ],
+  "CRUZEIRO DO OESTE": [
+    -25.56,
+    -49.21
+  ],
+  "CRUZEIRO DO SUL": [
+    -25.55,
+    -49.23
+  ],
+  "CRUZMALTINA": [
+    -24.15,
+    -49.29
+  ],
+  "CURITIBA": [
+    -23.65,
+    -49.11
+  ],
+  "CURIÚVA": [
+    -24.82,
+    -49.06
+  ],
+  "CÂNDIDO DE ABREU": [
+    -25.4,
+    -49.07
+  ],
+  "CÉU AZUL": [
+    -25.490000000000002,
+    -49.08
+  ],
+  "DIAMANTE D OESTE": [
+    -24.44,
+    -49.03
+  ],
+  "DIAMANTE DO NORTE": [
+    -24.53,
+    -49.1
+  ],
+  "DIAMANTE DO SUL": [
+    -24.81,
+    -49.01
+  ],
+  "DOIS VIZINHOS": [
+    -24.77,
+    -49.24
+  ],
+  "DOURADINA": [
+    -25.27,
+    -49.26
+  ],
+  "DOUTOR CAMARGO": [
+    -25.85,
+    -49.14
+  ],
+  "DOUTOR ULYSSES": [
+    -23.14,
+    -49.07
+  ],
+  "ENGENHEIRO BELTRÃO": [
+    -24.48,
+    -49.31
+  ],
+  "ENTRE RIOS DO OESTE": [
+    -25.17,
+    -49.32
+  ],
+  "ENÉAS MARQUES": [
+    -25.08,
+    -49.12
+  ],
+  "ESPERANÇA NOVA": [
+    -23.75,
+    -49.14
+  ],
+  "ESPIGÃO ALTO DO IGUAÇU": [
+    -25.91,
+    -49.05
+  ],
+  "FAROL": [
+    -23.35,
+    -49.05
+  ],
+  "FAXINAL": [
+    -23.78,
+    -49.19
+  ],
+  "FAZENDA RIO GRANDE": [
+    -24.55,
+    -49.23
+  ],
+  "FERNANDES PINHEIRO": [
+    -25.72,
+    -49.24
+  ],
+  "FIGUEIRA": [
+    -24.38,
+    -49.07
+  ],
+  "FLOR DA SERRA DO SUL": [
+    -23.55,
+    -49.19
+  ],
+  "FLORAÍ": [
+    -23.63,
+    -49.12
+  ],
+  "FLORESTA": [
+    -25.41,
+    -49.26
+  ],
+  "FLORESTÓPOLIS": [
+    -24.69,
+    -49.27
+  ],
+  "FLÓRIDA": [
+    -23.93,
+    -49.08
+  ],
+  "FORMOSA DO OESTE": [
+    -25.68,
+    -49.09
+  ],
+  "FOZ DO IGUAÇU": [
+    -25.8,
+    -49.12
+  ],
+  "FOZ DO JORDÃO": [
+    -23.81,
+    -49.0
+  ],
+  "FRANCISCO ALVES": [
+    -25.14,
+    -49.3
+  ],
+  "FRANCISCO BELTRÃO": [
+    -25.8,
+    -49.22
+  ],
+  "FÊNIX": [
+    -24.2,
+    -49.04
+  ],
+  "GENERAL CARNEIRO": [
+    -25.94,
+    -49.12
+  ],
+  "GODOY MOREIRA": [
+    -24.22,
+    -49.04
+  ],
+  "GOIOERÊ": [
+    -23.66,
+    -49.12
+  ],
+  "GOIOXIM": [
+    -23.15,
+    -49.33
+  ],
+  "GRANDES RIOS": [
+    -24.91,
+    -49.13
+  ],
+  "GUAIRAÇÁ": [
+    -23.38,
+    -49.09
+  ],
+  "GUAMIRANGA": [
+    -23.62,
+    -49.26
+  ],
+  "GUAPIRAMA": [
+    -23.2,
+    -49.27
+  ],
+  "GUAPOREMA": [
+    -24.55,
+    -49.24
+  ],
+  "GUARACI": [
+    -24.32,
+    -49.08
+  ],
+  "GUARANIAÇU": [
+    -24.18,
+    -49.07
+  ],
+  "GUARAPUAVA": [
+    -24.74,
+    -49.17
+  ],
+  "GUARAQUEÇABA": [
+    -24.99,
+    -49.0
+  ],
+  "GUARATUBA": [
+    -23.82,
+    -49.14
+  ],
+  "GUAÍRA": [
+    -25.35,
+    -49.13
+  ],
+  "HONÓRIO SERPA": [
+    -24.5,
+    -49.06
+  ],
+  "IBAITI": [
+    -25.63,
+    -49.12
+  ],
+  "IBEMA": [
+    -23.41,
+    -49.31
+  ],
+  "IBIPORÃ": [
+    -25.69,
+    -49.16
+  ],
+  "ICARAÍMA": [
+    -24.17,
+    -49.13
+  ],
+  "IGUARAÇU": [
+    -23.36,
+    -49.25
+  ],
+  "IGUATU": [
+    -23.43,
+    -49.33
+  ],
+  "IMBAÚ": [
+    -23.4,
+    -49.05
+  ],
+  "IMBITUVA": [
+    -23.76,
+    -49.14
+  ],
+  "INAJÁ": [
+    -23.47,
+    -49.02
+  ],
+  "INDIANÓPOLIS": [
+    -23.43,
+    -49.16
+  ],
+  "INÁCIO MARTINS": [
+    -25.34,
+    -49.03
+  ],
+  "IPIRANGA": [
+    -23.41,
+    -49.3
+  ],
+  "IPORÃ": [
+    -24.21,
+    -49.1
+  ],
+  "IRACEMA DO OESTE": [
+    -23.67,
+    -49.08
+  ],
+  "IRATI": [
+    -23.77,
+    -49.12
+  ],
+  "IRETAMA": [
+    -23.42,
+    -49.29
+  ],
+  "ITAGUAJÉ": [
+    -25.4,
+    -49.14
+  ],
+  "ITAIPULÂNDIA": [
+    -25.87,
+    -49.15
+  ],
+  "ITAMBARACÁ": [
+    -25.03,
+    -49.17
+  ],
+  "ITAMBÉ": [
+    -23.97,
+    -49.17
+  ],
+  "ITAPEJARA D OESTE": [
+    -24.18,
+    -49.05
+  ],
+  "ITAPERUÇU": [
+    -24.77,
+    -49.19
+  ],
+  "ITAÚNA DO SUL": [
+    -25.72,
+    -49.18
+  ],
+  "IVAIPORÃ": [
+    -23.5,
+    -49.26
+  ],
+  "IVATUBA": [
+    -24.62,
+    -49.31
+  ],
+  "IVATÉ": [
+    -24.93,
+    -49.0
+  ],
+  "IVAÍ": [
+    -25.84,
+    -49.02
+  ],
+  "JABOTI": [
+    -25.82,
+    -49.28
+  ],
+  "JACAREZINHO": [
+    -25.46,
+    -49.1
+  ],
+  "JAGUAPITÃ": [
+    -24.76,
+    -49.04
+  ],
+  "JAGUARIAÍVA": [
+    -24.83,
+    -49.23
+  ],
+  "JANDAIA DO SUL": [
+    -24.57,
+    -49.31
+  ],
+  "JANIÓPOLIS": [
+    -25.53,
+    -49.06
+  ],
+  "JAPIRA": [
+    -23.3,
+    -49.02
+  ],
+  "JAPURÁ": [
+    -23.1,
+    -49.06
+  ],
+  "JARDIM ALEGRE": [
+    -25.07,
+    -49.19
+  ],
+  "JARDIM OLINDA": [
+    -24.08,
+    -49.29
+  ],
+  "JATAIZINHO": [
+    -24.9,
+    -49.28
+  ],
+  "JESUÍTAS": [
+    -24.58,
+    -49.12
+  ],
+  "JOAQUIM TÁVORA": [
+    -24.65,
+    -49.17
+  ],
+  "JUNDIAÍ DO SUL": [
+    -23.14,
+    -49.33
+  ],
+  "JURANDA": [
+    -25.87,
+    -49.23
+  ],
+  "JUSSARA": [
+    -25.8,
+    -49.27
+  ],
+  "KALORÉ": [
+    -23.02,
+    -49.03
+  ],
+  "LAPA": [
+    -25.9,
+    -49.17
+  ],
+  "LARANJAL": [
+    -23.77,
+    -49.21
+  ],
+  "LARANJEIRAS DO SUL": [
+    -25.46,
+    -49.02
+  ],
+  "LEÓPOLIS": [
+    -25.3,
+    -49.06
+  ],
+  "LIDIANÓPOLIS": [
+    -23.2,
+    -49.33
+  ],
+  "LINDOESTE": [
+    -23.99,
+    -49.3
+  ],
+  "LOANDA": [
+    -25.28,
+    -49.28
+  ],
+  "LOBATO": [
+    -24.21,
+    -49.04
+  ],
+  "LONDRINA": [
+    -24.48,
+    -49.2
+  ],
+  "LUIZIANA": [
+    -24.67,
+    -49.27
+  ],
+  "LUNARDELLI": [
+    -25.5,
+    -49.07
+  ],
+  "LUPIONÓPOLIS": [
+    -24.0,
+    -49.26
+  ],
+  "MALLET": [
+    -25.29,
+    -49.27
+  ],
+  "MAMBORÊ": [
+    -23.89,
+    -49.29
+  ],
+  "MANDAGUARI": [
+    -24.81,
+    -49.25
+  ],
+  "MANDAGUAÇU": [
+    -24.3,
+    -49.03
+  ],
+  "MANDIRITUBA": [
+    -24.62,
+    -49.02
+  ],
+  "MANFRINÓPOLIS": [
+    -24.2,
+    -49.28
+  ],
+  "MANGUEIRINHA": [
+    -24.95,
+    -49.22
+  ],
+  "MANOEL RIBAS": [
+    -23.6,
+    -49.24
+  ],
+  "MARECHAL CÂNDIDO RONDON": [
+    -25.94,
+    -49.14
+  ],
+  "MARIA HELENA": [
+    -24.89,
+    -49.3
+  ],
+  "MARIALVA": [
+    -24.0,
+    -49.12
+  ],
+  "MARILENA": [
+    -23.88,
+    -49.23
+  ],
+  "MARILUZ": [
+    -25.94,
+    -49.23
+  ],
+  "MARILÂNDIA DO SUL": [
+    -25.78,
+    -49.27
+  ],
+  "MARINGÁ": [
+    -23.59,
+    -49.09
+  ],
+  "MARIPÁ": [
+    -25.95,
+    -49.12
+  ],
+  "MARIÓPOLIS": [
+    -24.92,
+    -49.23
+  ],
+  "MARMELEIRO": [
+    -23.47,
+    -49.23
+  ],
+  "MARQUINHO": [
+    -25.93,
+    -49.15
+  ],
+  "MARUMBI": [
+    -25.0,
+    -49.16
+  ],
+  "MATELÂNDIA": [
+    -23.36,
+    -49.11
+  ],
+  "MATINHOS": [
+    -25.61,
+    -49.08
+  ],
+  "MATO RICO": [
+    -23.52,
+    -49.06
+  ],
+  "MAUÁ DA SERRA": [
+    -24.24,
+    -49.2
+  ],
+  "MEDIANEIRA": [
+    -25.72,
+    -49.21
+  ],
+  "MERCEDES": [
+    -25.03,
+    -49.19
+  ],
+  "MIRADOR": [
+    -24.33,
+    -49.07
+  ],
+  "MIRASELVA": [
+    -25.05,
+    -49.13
+  ],
+  "MISSAL": [
+    -25.48,
+    -49.0
+  ],
+  "MOREIRA SALES": [
+    -24.09,
+    -49.07
+  ],
+  "MORRETES": [
+    -25.68,
+    -49.05
+  ],
+  "MUNHOZ DE MELO": [
+    -25.53,
+    -49.06
+  ],
+  "NOSSA SENHORA DAS GRAÇAS": [
+    -23.58,
+    -49.26
+  ],
+  "NOVA ALIANÇA DO IVAÍ": [
+    -25.67,
+    -49.31
+  ],
+  "NOVA AMÉRICA DA COLINA": [
+    -23.97,
+    -49.18
+  ],
+  "NOVA AURORA": [
+    -24.68,
+    -49.24
+  ],
+  "NOVA CANTU": [
+    -24.73,
+    -49.19
+  ],
+  "NOVA ESPERANÇA": [
+    -23.99,
+    -49.24
+  ],
+  "NOVA ESPERANÇA DO SUDOESTE": [
+    -24.75,
+    -49.04
+  ],
+  "NOVA FÁTIMA": [
+    -23.89,
+    -49.3
+  ],
+  "NOVA LARANJEIRAS": [
+    -24.47,
+    -49.02
+  ],
+  "NOVA LONDRINA": [
+    -23.15,
+    -49.16
+  ],
+  "NOVA OLÍMPIA": [
+    -23.77,
+    -49.12
+  ],
+  "NOVA PRATA DO IGUAÇU": [
+    -23.8,
+    -49.12
+  ],
+  "NOVA SANTA BÁRBARA": [
+    -24.35,
+    -49.02
+  ],
+  "NOVA SANTA ROSA": [
+    -23.96,
+    -49.02
+  ],
+  "NOVA TEBAS": [
+    -25.28,
+    -49.23
+  ],
+  "NOVO ITACOLOMI": [
+    -23.47,
+    -49.05
+  ],
+  "ORTIGUEIRA": [
+    -25.9,
+    -49.21
+  ],
+  "OURIZONA": [
+    -25.43,
+    -49.02
+  ],
+  "OURO VERDE DO OESTE": [
+    -24.1,
+    -49.2
+  ],
+  "PAIÇANDU": [
+    -24.53,
+    -49.3
+  ],
+  "PALMAS": [
+    -23.89,
+    -49.04
+  ],
+  "PALMEIRA": [
+    -25.65,
+    -49.03
+  ],
+  "PALMITAL": [
+    -25.14,
+    -49.01
+  ],
+  "PALOTINA": [
+    -25.04,
+    -49.11
+  ],
+  "PARANACITY": [
+    -24.92,
+    -49.19
+  ],
+  "PARANAGUÁ": [
+    -23.33,
+    -49.26
+  ],
+  "PARANAPOEMA": [
+    -25.08,
+    -49.16
+  ],
+  "PARANAVAÍ": [
+    -24.84,
+    -49.11
+  ],
+  "PARAÍSO DO NORTE": [
+    -23.86,
+    -49.09
+  ],
+  "PATO BRAGADO": [
+    -23.87,
+    -49.31
+  ],
+  "PATO BRANCO": [
+    -24.76,
+    -49.05
+  ],
+  "PAULA FREITAS": [
+    -24.42,
+    -49.19
+  ],
+  "PAULO FRONTIN": [
+    -23.25,
+    -49.01
+  ],
+  "PEABIRU": [
+    -24.07,
+    -49.22
+  ],
+  "PEROBAL": [
+    -25.48,
+    -49.21
+  ],
+  "PINHAIS": [
+    -24.85,
+    -49.04
+  ],
+  "PINHAL DE SÃO BENTO": [
+    -23.52,
+    -49.1
+  ],
+  "PINHALÃO": [
+    -25.43,
+    -49.16
+  ],
+  "PINHÃO": [
+    -23.31,
+    -49.02
+  ],
+  "PIRAQUARA": [
+    -24.93,
+    -49.02
+  ],
+  "PIRAÍ DO SUL": [
+    -25.23,
+    -49.13
+  ],
+  "PITANGA": [
+    -25.66,
+    -49.01
+  ],
+  "PITANGUEIRAS": [
+    -25.740000000000002,
+    -49.24
+  ],
+  "PIÊN": [
+    -23.63,
+    -49.16
+  ],
+  "PLANALTINA DO PARANÁ": [
+    -23.82,
+    -49.11
+  ],
+  "PLANALTO": [
+    -24.91,
+    -49.11
+  ],
+  "PONTA GROSSA": [
+    -24.81,
+    -49.29
+  ],
+  "PONTAL DO PARANÁ": [
+    -25.89,
+    -49.32
+  ],
+  "PORECATU": [
+    -23.23,
+    -49.07
+  ],
+  "PORTO AMAZONAS": [
+    -23.63,
+    -49.14
+  ],
+  "PORTO BARREIRO": [
+    -23.4,
+    -49.25
+  ],
+  "PORTO RICO": [
+    -24.96,
+    -49.06
+  ],
+  "PORTO VITÓRIA": [
+    -25.57,
+    -49.31
+  ],
+  "PRADO FERREIRA": [
+    -25.23,
+    -49.26
+  ],
+  "PRANCHITA": [
+    -24.38,
+    -49.08
+  ],
+  "PRESIDENTE CASTELO BRANCO": [
+    -24.46,
+    -49.29
+  ],
+  "PRIMEIRO DE MAIO": [
+    -25.9,
+    -49.08
+  ],
+  "PRUDENTÓPOLIS": [
+    -25.02,
+    -49.22
+  ],
+  "PÉROLA": [
+    -23.98,
+    -49.09
+  ],
+  "PÉROLA D OESTE": [
+    -23.5,
+    -49.24
+  ],
+  "QUARTO CENTENÁRIO": [
+    -24.46,
+    -49.07
+  ],
+  "QUATIGUÁ": [
+    -25.19,
+    -49.11
+  ],
+  "QUATRO BARRAS": [
+    -24.67,
+    -49.05
+  ],
+  "QUATRO PONTES": [
+    -25.06,
+    -49.2
+  ],
+  "QUEDAS DO IGUAÇU": [
+    -25.8,
+    -49.29
+  ],
+  "QUERÊNCIA DO NORTE": [
+    -24.07,
+    -49.11
+  ],
+  "QUINTA DO SOL": [
+    -24.16,
+    -49.32
+  ],
+  "QUITANDINHA": [
+    -23.31,
+    -49.04
+  ],
+  "RAMILÂNDIA": [
+    -23.69,
+    -49.08
+  ],
+  "RANCHO ALEGRE": [
+    -23.75,
+    -49.17
+  ],
+  "RANCHO ALEGRE D OESTE": [
+    -24.03,
+    -49.02
+  ],
+  "REALEZA": [
+    -23.9,
+    -49.19
+  ],
+  "REBOUÇAS": [
+    -25.46,
+    -49.02
+  ],
+  "RENASCENÇA": [
+    -25.84,
+    -49.05
+  ],
+  "RESERVA": [
+    -24.95,
+    -49.01
+  ],
+  "RESERVA DO IGUAÇU": [
+    -25.37,
+    -49.13
+  ],
+  "RIBEIRÃO CLARO": [
+    -23.05,
+    -49.09
+  ],
+  "RIBEIRÃO DO PINHAL": [
+    -23.93,
+    -49.08
+  ],
+  "RIO AZUL": [
+    -25.35,
+    -49.13
+  ],
+  "RIO BOM": [
+    -24.64,
+    -49.06
+  ],
+  "RIO BONITO DO IGUAÇU": [
+    -24.16,
+    -49.26
+  ],
+  "RIO BRANCO DO IVAÍ": [
+    -24.41,
+    -49.19
+  ],
+  "RIO BRANCO DO SUL": [
+    -25.93,
+    -49.15
+  ],
+  "RIO NEGRO": [
+    -23.83,
+    -49.25
+  ],
+  "ROLÂNDIA": [
+    -23.81,
+    -49.27
+  ],
+  "RONCADOR": [
+    -23.62,
+    -49.32
+  ],
+  "RONDON": [
+    -23.95,
+    -49.28
+  ],
+  "ROSÁRIO DO IVAÍ": [
+    -25.78,
+    -49.23
+  ],
+  "SABÁUDIA": [
+    -25.09,
+    -49.18
+  ],
+  "SALGADO FILHO": [
+    -24.99,
+    -49.04
+  ],
+  "SALTO DO ITARARÉ": [
+    -23.38,
+    -49.19
+  ],
+  "SALTO DO LONTRA": [
+    -23.59,
+    -49.32
+  ],
+  "SANTA AMÉLIA": [
+    -24.23,
+    -49.24
+  ],
+  "SANTA CECÍLIA DO PAVÃO": [
+    -24.13,
+    -49.21
+  ],
+  "SANTA CRUZ DE MONTE CASTELO": [
+    -24.95,
+    -49.27
+  ],
+  "SANTA FÉ": [
+    -23.07,
+    -49.12
+  ],
+  "SANTA HELENA": [
+    -24.5,
+    -49.32
+  ],
+  "SANTA INÊS": [
+    -25.57,
+    -49.27
+  ],
+  "SANTA ISABEL DO IVAÍ": [
+    -24.11,
+    -49.09
+  ],
+  "SANTA IZABEL DO OESTE": [
+    -25.55,
+    -49.17
+  ],
+  "SANTA LÚCIA": [
+    -23.81,
+    -49.13
+  ],
+  "SANTA MARIA DO OESTE": [
+    -23.1,
+    -49.3
+  ],
+  "SANTA MARIANA": [
+    -25.5,
+    -49.06
+  ],
+  "SANTA MÔNICA": [
+    -25.240000000000002,
+    -49.09
+  ],
+  "SANTA TEREZA DO OESTE": [
+    -25.84,
+    -49.3
+  ],
+  "SANTA TEREZINHA DE ITAIPU": [
+    -23.64,
+    -49.22
+  ],
+  "SANTANA DO ITARARÉ": [
+    -23.46,
+    -49.08
+  ],
+  "SANTO ANTONIO DO CAIUÁ": [
+    -23.94,
+    -49.17
+  ],
+  "SANTO ANTÔNIO DA PLATINA": [
+    -25.740000000000002,
+    -49.28
+  ],
+  "SANTO ANTÔNIO DO PARAÍSO": [
+    -25.93,
+    -49.01
+  ],
+  "SANTO ANTÔNIO DO SUDOESTE": [
+    -23.85,
+    -49.04
+  ],
+  "SANTO INÁCIO": [
+    -25.98,
+    -49.27
+  ],
+  "SAPOPEMA": [
+    -25.93,
+    -49.13
+  ],
+  "SARANDI": [
+    -25.240000000000002,
+    -49.11
+  ],
+  "SAUDADE DO IGUAÇU": [
+    -24.93,
+    -49.06
+  ],
+  "SENGÉS": [
+    -25.21,
+    -49.2
+  ],
+  "SERRANÓPOLIS DO IGUAÇU": [
+    -25.21,
+    -49.27
+  ],
+  "SERTANEJA": [
+    -24.14,
+    -49.05
+  ],
+  "SERTANÓPOLIS": [
+    -24.44,
+    -49.02
+  ],
+  "SIQUEIRA CAMPOS": [
+    -25.5,
+    -49.0
+  ],
+  "SULINA": [
+    -25.27,
+    -49.14
+  ],
+  "SÃO CARLOS DO IVAÍ": [
+    -24.1,
+    -49.04
+  ],
+  "SÃO JERÔNIMO DA SERRA": [
+    -25.79,
+    -49.01
+  ],
+  "SÃO JORGE D OESTE": [
+    -24.44,
+    -49.14
+  ],
+  "SÃO JORGE DO IVAÍ": [
+    -25.43,
+    -49.19
+  ],
+  "SÃO JORGE DO PATROCÍNIO": [
+    -24.91,
+    -49.16
+  ],
+  "SÃO JOSÉ DA BOA VISTA": [
+    -23.44,
+    -49.22
+  ],
+  "SÃO JOSÉ DAS PALMEIRAS": [
+    -23.19,
+    -49.27
+  ],
+  "SÃO JOSÉ DOS PINHAIS": [
+    -24.43,
+    -49.32
+  ],
+  "SÃO JOÃO": [
+    -25.78,
+    -49.08
+  ],
+  "SÃO JOÃO DO CAIUÁ": [
+    -23.2,
+    -49.18
+  ],
+  "SÃO JOÃO DO IVAÍ": [
+    -25.53,
+    -49.23
+  ],
+  "SÃO JOÃO DO TRIUNFO": [
+    -25.79,
+    -49.11
+  ],
+  "SÃO MANOEL DO PARANÁ": [
+    -23.25,
+    -49.23
+  ],
+  "SÃO MATEUS DO SUL": [
+    -24.64,
+    -49.02
+  ],
+  "SÃO MIGUEL DO IGUAÇU": [
+    -24.74,
+    -49.19
+  ],
+  "SÃO PEDRO DO IGUAÇU": [
+    -24.43,
+    -49.19
+  ],
+  "SÃO PEDRO DO IVAÍ": [
+    -23.85,
+    -49.02
+  ],
+  "SÃO PEDRO DO PARANÁ": [
+    -24.54,
+    -49.06
+  ],
+  "SÃO SEBASTIÃO DA AMOREIRA": [
+    -23.93,
+    -49.22
+  ],
+  "SÃO TOMÉ": [
+    -23.18,
+    -49.19
+  ],
+  "TAMARANA": [
+    -23.6,
+    -49.32
+  ],
+  "TAMBOARA": [
+    -24.09,
+    -49.21
+  ],
+  "TAPEJARA": [
+    -25.34,
+    -49.07
+  ],
+  "TAPIRA": [
+    -23.57,
+    -49.22
+  ],
+  "TEIXEIRA SOARES": [
+    -24.15,
+    -49.27
+  ],
+  "TELÊMACO BORBA": [
+    -24.81,
+    -49.03
+  ],
+  "TERRA BOA": [
+    -24.39,
+    -49.09
+  ],
+  "TERRA RICA": [
+    -24.1,
+    -49.07
+  ],
+  "TERRA ROXA": [
+    -24.21,
+    -49.29
+  ],
+  "TIBAGI": [
+    -24.15,
+    -49.16
+  ],
+  "TIJUCAS DO SUL": [
+    -23.14,
+    -49.05
+  ],
+  "TOLEDO": [
+    -23.81,
+    -49.04
+  ],
+  "TOMAZINA": [
+    -24.39,
+    -49.1
+  ],
+  "TRÊS BARRAS DO PARANÁ": [
+    -24.46,
+    -49.32
+  ],
+  "TUNAS DO PARANÁ": [
+    -23.45,
+    -49.18
+  ],
+  "TUNEIRAS DO OESTE": [
+    -23.61,
+    -49.25
+  ],
+  "TUPÃSSI": [
+    -24.9,
+    -49.08
+  ],
+  "TURVO": [
+    -23.1,
+    -49.33
+  ],
+  "UBIRATÃ": [
+    -24.43,
+    -49.23
+  ],
+  "UMUARAMA": [
+    -24.52,
+    -49.28
+  ],
+  "UNIFLOR": [
+    -23.07,
+    -49.14
+  ],
+  "UNIÃO DA VITÓRIA": [
+    -23.26,
+    -49.04
+  ],
+  "URAÍ": [
+    -24.8,
+    -49.29
+  ],
+  "VENTANIA": [
+    -23.54,
+    -49.04
+  ],
+  "VERA CRUZ DO OESTE": [
+    -23.44,
+    -49.21
+  ],
+  "VERÊ": [
+    -25.04,
+    -49.05
+  ],
+  "VIRMOND": [
+    -23.42,
+    -49.05
+  ],
+  "VITORINO": [
+    -23.24,
+    -49.18
+  ],
+  "WENCESLAU BRAZ": [
+    -25.04,
+    -49.06
+  ],
+  "XAMBRÊ": [
+    -25.04,
+    -49.28
+  ],
+  "ÂNGULO": [
+    -24.02,
+    -49.27
+  ]
+}

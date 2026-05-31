@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🗺️ Debug Mapa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f1419;
+            color: #e8ecf1;
+            padding: 20px;
+        }
+        h1 { color: #d4a843; }
+        #map {
+            width: 100%;
+            height: 600px;
+            background: #1a1f2e;
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .log {
+            background: #1a1f2e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            border-left: 4px solid #d4a843;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .success { border-left-color: #27AE60; }
+        .error { border-left-color: #E74C3C; }
+    </style>
+</head>
+<body>
+    <h1>🗺️ Debug: Mapa + Marcadores</h1>
+    <div id="map"></div>
+    <div id="log" class="log"></div>
+
+    <script src="data.js"></script>
+    <script>
+        const logEl = document.getElementById('log');
+        const logs = [];
+
+        function log(msg, isError = false) {
+            console.log(msg);
+            logs.push(msg);
+            logEl.className = `log ${isError ? 'error' : 'success'}`;
+            logEl.innerHTML = logs.map(l => `<div>${l}</div>`).join('');
+            logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        log('📍 Iniciando debug do mapa...');
+
+        // Step 1: Verificar data.js
+        if (typeof DASHBOARD_DATA === 'undefined') {
+            log('❌ DASHBOARD_DATA não carregou', true);
+        } else {
+            const numMun = Object.keys(DASHBOARD_DATA.municipios).length;
+            log(`✅ DASHBOARD_DATA carregou: ${numMun} municípios`);
+        }
+
+        // Step 2: Carregar coords.json
+        log('\n📍 Carregando coords.json...');
+        fetch('coords.json')
+            .then(r => {
+                log(`✅ Response recebido (status ${r.status})`);
+                return r.json();
+            })
+            .then(coords => {
+                log(`✅ coords.json parseado: ${Object.keys(coords).length} coordenadas`);
+                window.MUNICIPIOS_COORDS = coords;
+
+                // Step 3: Criar mapa Leaflet
+                log('\n📍 Criando mapa Leaflet...');
+                const map = L.map('map').setView([-25.5, -51.5], 7);
+                log('✅ Mapa inicializado em [-25.5, -51.5], zoom 7');
+
+                // Adicionar tile layer
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    maxZoom: 19,
+                    attribution: '© OpenStreetMap'
+                }).addTo(map);
+                log('✅ Tile layer adicionado');
+
+                // Step 4: Adicionar marcadores
+                log('\n📍 Adicionando marcadores...');
+                const municipios = Object.values(DASHBOARD_DATA.municipios);
+                let added = 0;
+                let skipped = 0;
+                const errors = [];
+
+                municipios.forEach((m, idx) => {
+                    try {
+                        const coord = coords[m.municipio];
+                        if (!coord) {
+                            skipped++;
+                            if (skipped <= 3) errors.push(`Sem coordenada: ${m.municipio}`);
+                            return;
+                        }
+
+                        const marker = L.circleMarker(coord, {
+                            radius: 6,
+                            fillColor: '#27AE60',
+                            color: '#27AE60',
+                            weight: 2,
+                            opacity: 0.9,
+                            fillOpacity: 0.7
+                        }).addTo(map);
+
+                        marker.bindPopup(`<div><strong>${m.municipio}</strong><br>${m.classificacao_2022 || 'N/A'}</div>`);
+                        added++;
+
+                        if (idx % 50 === 0) {
+                            log(`  ... ${idx}/${municipios.length} processados`);
+                        }
+                    } catch (e) {
+                        errors.push(`Erro em ${m.municipio}: ${e.message}`);
+                    }
+                });
+
+                log(`\n✅ Marcadores adicionados: ${added}`);
+                log(`⚠️ Sem coordenadas: ${skipped}`);
+                
+                if (errors.length > 0) {
+                    log(`\n❌ Erros encontrados:`);
+                    errors.forEach(e => log(`   ${e}`, true));
+                }
+
+                // Step 5: Validar mapa
+                log('\n📍 Validando mapa...');
+                const bounds = map.getBounds();
+                log(`✅ Bounds do mapa: ${bounds}`);
+
+                // Tentar clicar em um marcador
+                log('\n📍 Teste de interatividade: abra o console e digite:');
+                log('   map._leaflet_map ? "Mapa está ok" : "Erro no mapa"');
+                log('   (ou verifique se há pontos coloridos no mapa acima)');
+
+                log('\n✅ DEBUG COMPLETO!');
+            })
+            .catch(err => {
+                log(`\n❌ Erro ao carregar coords.json: ${err.message}`, true);
+                log(`Stack: ${err.stack}`, true);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Names Match</title>
+    <style>
+        body { background: #0f1419; color: #e8ecf1; font-family: Arial; padding: 20px; }
+        .card { background: #1a1f2e; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #d4a843; }
+        .pass { border-left-color: #27AE60; }
+        .fail { border-left-color: #E74C3C; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Teste: Nomes em data.js vs coords.json</h1>
+    <div id="results"></div>
+
+    <script src="data.js"></script>
+    <script>
+        const results = document.getElementById('results');
+
+        // Carregar coords.json
+        fetch('coords.json')
+            .then(r => r.json())
+            .then(coords => {
+                // Extrair nomes de data.js
+                const namesFromData = Object.keys(DASHBOARD_DATA.municipios);
+                const namesFromCoords = Object.keys(coords);
+
+                const card1 = document.createElement('div');
+                card1.className = `card ${namesFromData.length === 399 ? 'pass' : 'fail'}`;
+                card1.innerHTML = `<strong>data.js:</strong> ${namesFromData.length} nomes<br><small>${namesFromData.slice(0, 3).join(', ')} ... ${namesFromData.slice(-3).join(', ')}</small>`;
+                results.appendChild(card1);
+
+                const card2 = document.createElement('div');
+                card2.className = `card ${namesFromCoords.length === 399 ? 'pass' : 'fail'}`;
+                card2.innerHTML = `<strong>coords.json:</strong> ${namesFromCoords.length} nomes<br><small>${namesFromCoords.slice(0, 3).join(', ')} ... ${namesFromCoords.slice(-3).join(', ')}</small>`;
+                results.appendChild(card2);
+
+                // Comparar
+                const mismatches = [];
+                namesFromData.forEach(name => {
+                    if (!coords[name]) {
+                        mismatches.push(name);
+                    }
+                });
+
+                const card3 = document.createElement('div');
+                card3.className = `card ${mismatches.length === 0 ? 'pass' : 'fail'}`;
+                if (mismatches.length === 0) {
+                    card3.innerHTML = `<strong>✅ PERFEITO!</strong><br>Todos os ${namesFromData.length} nomes batem!`;
+                } else {
+                    card3.innerHTML = `<strong>❌ ${mismatches.length} DESACERTOS:</strong><br><small>${mismatches.slice(0, 10).join(', ')}</small>`;
+                }
+                results.appendChild(card3);
+
+                // Teste de getMunicipios
+                window.MUNICIPIOS_COORDS = coords;
+                
+                function getMunicipios() {
+                    const { preditivo } = { preditivo: {} };
+                    return Object.entries(DASHBOARD_DATA.municipios).map(([name, data]) => ({
+                        name,
+                        ...data,
+                        preditivo_2026: preditivo[name] || { classificacao: 'N/A', score: 0, tendencia: 'neutra' }
+                    }));
+                }
+
+                const muns = getMunicipios();
+                let foundCoords = 0;
+                muns.forEach(m => {
+                    const key = m.name || m.municipio;
+                    if (window.MUNICIPIOS_COORDS[key]) {
+                        foundCoords++;
+                    }
+                });
+
+                const card4 = document.createElement('div');
+                card4.className = `card ${foundCoords === 399 ? 'pass' : 'fail'}`;
+                card4.innerHTML = `<strong>getMunicipios():</strong> ${foundCoords}/${muns.length} com coordenadas<br><small>${foundCoords === 399 ? '✅ Todos encontrados!' : `❌ Faltam ${399 - foundCoords}`}</small>`;
+                results.appendChild(card4);
+
+            })
+            .catch(err => {
+                const card = document.createElement('div');
+                card.className = 'card fail';
+                card.innerHTML = `<strong>❌ Erro ao carregar coords.json:</strong><br>${err.message}`;
+                results.appendChild(card);
+            });
+    </script>
+</body>
+</html>

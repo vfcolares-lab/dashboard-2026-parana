@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Coords</title>
+    <style>
+        body { background: #0f1419; color: #e8ecf1; font-family: Arial; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; background: #1a1f2e; border-radius: 5px; }
+        .pass { border-left: 4px solid #27AE60; }
+        .fail { border-left: 4px solid #E74C3C; }
+        .info { color: #8b95a5; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test: coords.json + dashboard</h1>
+    <div id="results"></div>
+
+    <script src="data.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        let passed = 0, failed = 0;
+
+        function addTest(name, success, details) {
+            const div = document.createElement('div');
+            div.className = 'test ' + (success ? 'pass' : 'fail');
+            div.innerHTML = `<strong>${success ? '✅' : '❌'} ${name}</strong><br><small class="info">${details}</small>`;
+            results.appendChild(div);
+            if (success) passed++; else failed++;
+        }
+
+        // Test 1: DASHBOARD_DATA carregado
+        if (typeof DASHBOARD_DATA !== 'undefined') {
+            const municCount = Object.keys(DASHBOARD_DATA.municipios).length;
+            addTest('DASHBOARD_DATA carregado', true, `${municCount} municípios em data.js`);
+        } else {
+            addTest('DASHBOARD_DATA carregado', false, 'data.js não foi carregado');
+        }
+
+        // Test 2: coords.json carregando
+        fetch('coords.json')
+            .then(r => r.json())
+            .then(coords => {
+                const coordCount = Object.keys(coords).length;
+                addTest('coords.json carregado', true, `${coordCount} coordenadas carregadas via fetch`);
+                
+                // Test 3: Comparar contagem
+                const municCount = Object.keys(DASHBOARD_DATA.municipios).length;
+                const match = coordCount === municCount;
+                addTest('Contagem de municípios bate', match, 
+                    `data.js: ${municCount}, coords.json: ${coordCount}`);
+                
+                // Test 4: Verificar alguns nomes
+                const sampleMunics = ['CURITIBA', 'LONDRINA', 'ABATIÁ', 'MARINGÁ'];
+                const allFound = sampleMunics.every(m => coords[m]);
+                addTest('Amostra de cidades encontradas', allFound,
+                    `Procurando: ${sampleMunics.join(', ')}`);
+                
+                // Test 5: window.MUNICIPIOS_COORDS
+                window.MUNICIPIOS_COORDS = coords;
+                addTest('window.MUNICIPIOS_COORDS populado', true,
+                    `Pode ser acessado no console`);
+                
+                // Summary
+                setTimeout(() => {
+                    const summary = document.createElement('div');
+                    summary.style.marginTop = '30px';
+                    summary.innerHTML = `<h2>📊 Resumo: ${passed} ✅ / ${failed} ❌</h2>`;
+                    results.appendChild(summary);
+                }, 100);
+            })
+            .catch(err => {
+                addTest('coords.json carregado', false, `Erro: ${err.message}`);
+            });
+    </script>
+</body>
+</html>

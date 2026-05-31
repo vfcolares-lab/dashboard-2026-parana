@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🎯 Test 399 Municípios</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f1419;
+            color: #e8ecf1;
+            padding: 20px;
+        }
+        h1 { color: #d4a843; margin-bottom: 5px; }
+        .subtitle { color: #8b95a5; margin-bottom: 30px; }
+        .card {
+            background: #1a1f2e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #d4a843;
+        }
+        .pass { border-left-color: #27AE60; background: #0f2818; }
+        .fail { border-left-color: #E74C3C; background: #280f0f; }
+        .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #27AE60;
+            margin: 10px 0;
+        }
+        .label { color: #8b95a5; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>🎯 Dashboard Paraná 2026 — 399 Municípios</h1>
+    <p class="subtitle">Verificação de dados completos</p>
+
+    <div id="cards"></div>
+
+    <script src="data.js"></script>
+    <script>
+        const results = document.getElementById('cards');
+
+        // Verificar data.js
+        if (typeof DASHBOARD_DATA === 'undefined') {
+            results.innerHTML = '<div class="card fail"><h3>❌ data.js não carregou</h3></div>';
+        } else {
+            const municipios = Object.keys(DASHBOARD_DATA.municipios);
+            const count = municipios.length;
+
+            // Card 1: Total de municípios
+            let card1 = document.createElement('div');
+            card1.className = `card ${count === 399 ? 'pass' : 'fail'}`;
+            card1.innerHTML = `
+                <div class="label">📊 Municípios em data.js</div>
+                <div class="value">${count}</div>
+                <small>${count === 399 ? '✅ PERFEITO' : `❌ Esperado 399, encontrado ${count}`}</small>
+            `;
+            results.appendChild(card1);
+
+            // Card 2: Primeiros e últimos
+            let card2 = document.createElement('div');
+            card2.className = 'card';
+            card2.innerHTML = `
+                <div class="label">🗺️ Amostra de Municípios</div>
+                <small><strong>Primeiros 3:</strong></small><br>
+                <small>${municipios.slice(0, 3).join(', ')}</small><br><br>
+                <small><strong>Últimos 3:</strong></small><br>
+                <small>${municipios.slice(-3).join(', ')}</small>
+            `;
+            results.appendChild(card2);
+
+            // Card 3: Categorias Gleisi (preditivo)
+            const preditivoCount = {};
+            municipios.forEach(m => {
+                const data = DASHBOARD_DATA.municipios[m];
+                const gleisi = data.gleisi?.['2022'] || 0;
+                // Aproximação simples de categorias
+                if (gleisi >= 10) preditivoCount['SEGURO'] = (preditivoCount['SEGURO'] || 0) + 1;
+                else if (gleisi >= 5) preditivoCount['COMPETITIVO PRÓ'] = (preditivoCount['COMPETITIVO PRÓ'] || 0) + 1;
+                else if (gleisi >= 2) preditivoCount['BATTLEGROUND'] = (preditivoCount['BATTLEGROUND'] || 0) + 1;
+                else preditivoCount['COMPETITIVO CONTRA'] = (preditivoCount['COMPETITIVO CONTRA'] || 0) + 1;
+            });
+
+            let card3 = document.createElement('div');
+            card3.className = 'card';
+            card3.innerHTML = `
+                <div class="label">📈 Distribuição por Gleisi 2022</div>
+                ${Object.entries(preditivoCount).map(([cat, c]) => 
+                    `<small>${cat}: ${c} (${(c/count*100).toFixed(1)}%)</small><br>`
+                ).join('')}
+            `;
+            results.appendChild(card3);
+
+            // Card 4: Dados presidenciais
+            let hasAllYears = 0;
+            municipios.forEach(m => {
+                const data = DASHBOARD_DATA.municipios[m];
+                if (data.presidencial?.['2010'] && 
+                    data.presidencial?.['2014'] && 
+                    data.presidencial?.['2018'] && 
+                    data.presidencial?.['2022']) {
+                    hasAllYears++;
+                }
+            });
+
+            let card4 = document.createElement('div');
+            card4.className = `card ${hasAllYears === 399 ? 'pass' : ''}`;
+            card4.innerHTML = `
+                <div class="label">🗳️ Municípios com dados 2010-2022</div>
+                <div class="value">${hasAllYears}</div>
+                <small>${hasAllYears === 399 ? '✅ TODOS OS 399' : `⚠️ ${hasAllYears} de 399`}</small>
+            `;
+            results.appendChild(card4);
+
+            // Summary
+            let summary = document.createElement('div');
+            summary.className = 'card pass';
+            summary.innerHTML = `
+                <h2>✅ Status: ${count === 399 && hasAllYears === 399 ? 'PRONTO!' : 'INCOMPLETO'}</h2>
+                <p>✅ ${count} municípios carregados</p>
+                <p>✅ ${hasAllYears} com dados históricos completos</p>
+                <p>Próximo: Testar mapa com coords.json (399 coordenadas)</p>
+            `;
+            results.appendChild(summary);
+        }
+    </script>
+</body>
+</html>
