@@ -689,8 +689,8 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             </div>
                             <div>
                                 <div style="color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Classificação Gleisi</div>
-                                <div style="font-size: 1.1rem; font-weight: 700;" id="municClassEB">—</div>
-                                <div style="font-size: 0.85rem; color: var(--text-secondary);" id="municIndiceEB">—</div>
+                                <div style="font-size: 1.1rem; font-weight: 700;" id="municClassGleisi">—</div>
+                                <div style="font-size: 0.85rem; color: var(--text-secondary);" id="municIndiceGleisi">—</div>
                             </div>
                             <div>
                                 <div style="color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Prognóstico 2026</div>
@@ -723,7 +723,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         <!-- TABELA EDUARDO BRAGA -->
                         <div class="table-wrapper">
                             <h4 style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid #2A3144;">🎯 Evolução: Gleisi Hoffmann</h4>
-                            <table id="tabelaEB" style="font-size: 0.85rem;">
+                            <table id="tabelaGleisi" style="font-size: 0.85rem;">
                                 <thead>
                                     <tr>
                                         <th>Ano</th>
@@ -745,7 +745,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             <canvas id="historicaPresChart"></canvas>
                         </div>
                         <div class="chart-container">
-                            <canvas id="historicaEBChart"></canvas>
+                            <canvas id="historicaGleisiChart"></canvas>
                         </div>
                     </div>
                 </section>
@@ -843,9 +843,9 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     <div style="background: var(--bg-card); border: 1px solid #2A3144; border-radius: 8px; padding: 1.5rem;">
                         <h3 style="margin-bottom: 1rem;">📋 Legenda de Conteúdo</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                            <div><span class="badge badge-bastiao-gleisi">LULA+EB</span><br><small style="color: var(--text-secondary);">Fotos com Lula, obras federais</small></div>
-                            <div><span class="badge" style="background: #3498DB; color: white;">EB_PURO</span><br><small style="color: var(--text-secondary);">Entregas regionais, BR-319</small></div>
-                            <div><span class="badge" style="background: #8E44AD; color: white;">BOLSO+EB</span><br><small style="color: var(--text-secondary);">Independência de Gleisi</small></div>
+                            <div><span class="badge badge-bastiao-gleisi">PT+GLEISI</span><br><small style="color: var(--text-secondary);">Fotos com Lula, obras federais</small></div>
+                            <div><span class="badge" style="background: #3498DB; color: white;">GLEISI_PURO</span><br><small style="color: var(--text-secondary);">Entregas regionais, BR-319</small></div>
+                            <div><span class="badge" style="background: #8E44AD; color: white;">BOLSO+GLEISI</span><br><small style="color: var(--text-secondary);">Independência de Gleisi</small></div>
                             <div><span class="badge badge-swing">PURO_SWING</span><br><small style="color: var(--text-secondary);">Mix de conteúdo, máx. prioridade</small></div>
                         </div>
                     </div>
@@ -1194,14 +1194,14 @@ IGleisi = (perf_2010 × 0.10) +<br>
             municipios.forEach(m => {
                 const row = munTable.insertRow();
                 const classeNacBadge = `badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}`;
-                const classeEBBadge = `badge-${m.classificacao_eb.toLowerCase().replace(/ /g, '-')}`;
+                const classeEBBadge = `badge-${m.classificacao_gleisi.toLowerCase().replace(/ /g, '-')}`;
 
                 row.innerHTML = `
                     <td><strong>${m.name}</strong></td>
                     <td>${m.indice_nacional.toFixed(3)}</td>
                     <td><span class="badge ${classeNacBadge}">${m.classificacao_nacional}</span></td>
                     <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge ${classeEBBadge}">${m.classificacao_eb}</span></td>
+                    <td><span class="badge ${classeEBBadge}">${m.classificacao_gleisi}</span></td>
                     <td><span class="badge badge-${m.eixo_estrategico.toLowerCase()}">${m.eixo_estrategico}</span></td>
                     <td><span class="badge" style="background: #F39C12; color: white;">${m.preditivo_2026.classificacao}</span></td>
                 `;
@@ -1231,7 +1231,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     <td>${m.indice_nacional.toFixed(3)}</td>
                     <td><span class="badge badge-${m.classificacao_nacional.toLowerCase().replace(/ /g, '-')}">${m.classificacao_nacional}</span></td>
                     <td>${m.indice_eb.toFixed(3)}</td>
-                    <td><span class="badge badge-${m.classificacao_eb.toLowerCase().replace(/ /g, '-')}">${m.classificacao_eb}</span></td>
+                    <td><span class="badge badge-${m.classificacao_gleisi.toLowerCase().replace(/ /g, '-')}">${m.classificacao_gleisi}</span></td>
                     <td>${m.eixo_estrategico}</td>
                     <td>${m.preditivo_2026.classificacao}</td>
                 `;
@@ -1388,8 +1388,8 @@ IGleisi = (perf_2010 × 0.10) +<br>
             document.getElementById('municEixoLabel').textContent = mun.eixo_label || '—';
             document.getElementById('municClassNac').textContent = mun.classificacao_nacional || '—';
             document.getElementById('municIndiceNac').textContent = `IN: ${(mun.indice_nacional || 0).toFixed(3)}`;
-            document.getElementById('municClassEB').textContent = mun.classificacao_eb || '—';
-            document.getElementById('municIndiceEB').textContent = `IGH: ${(mun.indice_eb || 0).toFixed(3)}`;
+            document.getElementById('municClassGleisi').textContent = mun.classificacao_gleisi || '—';
+            document.getElementById('municIndiceGleisi').textContent = `IGH: ${(mun.indice_eb || 0).toFixed(3)}`;
             document.getElementById('municPred26').textContent = (mun.preditivo_2026 && mun.preditivo_2026.classificacao) ? mun.preditivo_2026.classificacao : '—';
             document.getElementById('municPredScore').textContent = (mun.preditivo_2026 && mun.preditivo_2026.score !== undefined) ? `Score: ${(mun.preditivo_2026.score * 100).toFixed(1)}%` : 'Score: —';
 
@@ -1464,7 +1464,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
             tabelaPres.appendChild(tr2026);
 
             // ============= TABELA EDUARDO BRAGA =============
-            const tabelaGleisi = document.getElementById('tabelaEB').querySelector('tbody');
+            const tabelaGleisi = document.getElementById('tabelaGleisi').querySelector('tbody');
             tabelaGleisi.innerHTML = '';
 
             const ebData = [];
@@ -1604,7 +1604,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
             });
 
             // Chart Gleisi (2010-2022)
-            const contexto = document.getElementById('historicaEBChart').getContext('2d');
+            const contexto = document.getElementById('historicaGleisiChart').getContext('2d');
             if (chartsInstances.historicaEB) {
                 chartsInstances.historicaGleisi.destroy();
             }
