@@ -518,7 +518,7 @@
                             <!-- ÍNDICE NACIONAL -->
                             <div class="index-box">
                                 <h4>📊 Índice Nacional (IN)</h4>
-                                <p><strong>Mede:</strong> Força do PT/Lula vs Direita/Bolsonaro em cada município (escala -1 a +1)</p>
+                                <p><strong>Mede:</strong> Força do PT vs Direita/Bolsonaro em cada município (escala -1 a +1)</p>
 
                                 <div class="index-formula">
 margem_ano = (% votos PT - % votos Direita) / 100<br><br>
@@ -563,7 +563,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                     <li><span style="color: #E74C3C;">▪ IGleisi &lt; -0.05</span> = Tendência Anti-Gleisi (Gleisi abaixo do estado)</li>
                                 </ul>
                                 <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">
-                                    <em>Nota: Gleisi tem desempenho muito próximo à média estadual em 2010-2022. Todos os 62 municípios estão no Swing EB.</em>
+                                    <em>Nota: Gleisi tem desempenho muito próximo à média estadual em 2010-2022. Todos os 62 municípios estão no Swing Gleisi.</em>
                                 </p>
                             </div>
                         </div>
@@ -618,7 +618,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             <div style="background: var(--bg-primary); border: 2px solid #95A5A6; border-radius: 6px; padding: 1rem;">
                                 <div style="font-weight: 700; color: #95A5A6; margin-bottom: 0.5rem;">⚫ DIFÍCIL — 12 municípios (Bottom 19%)</div>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-                                    Chances <strong>reduzidas</strong> para EB. Ranking baixo, tendência negativa ou fraca. <br><br>
+                                    Chances <strong>reduzidas</strong> para Gleisi. Ranking baixo, tendência negativa ou fraca. <br><br>
                                     <strong>Ação:</strong> Análise detalhada, possível realocação de recursos.
                                 </p>
                             </div>
@@ -630,7 +630,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     <div id="map"></div>
 
                     <!-- Scatter -->
-                    <h3 style="margin: 2rem 0 1rem;">📍 Posicionamento: Índice Nacional × Índice EB</h3>
+                    <h3 style="margin: 2rem 0 1rem;">📍 Posicionamento: Índice Nacional × Índice de Gleisi</h3>
                     <div class="chart-container">
                         <canvas id="scatterChart" width="800" height="400"></canvas>
                     </div>
@@ -642,7 +642,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             <div class="table-wrapper">
                                 <table id="topFavoraveis">
                                     <thead>
-                                        <tr><th>Município</th><th>Índice EB</th></tr>
+                                        <tr><th>Município</th><th>Índice de Gleisi</th></tr>
                                     </thead>
                                     <tbody></tbody>
                                 </table>
@@ -653,7 +653,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                             <div class="table-wrapper">
                                 <table id="topDificeis">
                                     <thead>
-                                        <tr><th>Município</th><th>Índice EB</th></tr>
+                                        <tr><th>Município</th><th>Índice de Gleisi</th></tr>
                                     </thead>
                                     <tbody></tbody>
                                 </table>
@@ -688,7 +688,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                 <div style="font-size: 0.85rem; color: var(--text-secondary);" id="municIndiceNac">—</div>
                             </div>
                             <div>
-                                <div style="color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Classificação EB</div>
+                                <div style="color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Classificação Gleisi</div>
                                 <div style="font-size: 1.1rem; font-weight: 700;" id="municClassEB">—</div>
                                 <div style="font-size: 0.85rem; color: var(--text-secondary);" id="municIndiceEB">—</div>
                             </div>
@@ -761,7 +761,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                     <th>Município</th>
                                     <th>Índice Nacional</th>
                                     <th>Classificação</th>
-                                    <th>Índice EB</th>
+                                    <th>Índice de Gleisi</th>
                                     <th>EB</th>
                                     <th>Eixo</th>
                                     <th>Prognóstico 2026</th>
@@ -845,7 +845,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                             <div><span class="badge badge-bastiao-gleisi">LULA+EB</span><br><small style="color: var(--text-secondary);">Fotos com Lula, obras federais</small></div>
                             <div><span class="badge" style="background: #3498DB; color: white;">EB_PURO</span><br><small style="color: var(--text-secondary);">Entregas regionais, BR-319</small></div>
-                            <div><span class="badge" style="background: #8E44AD; color: white;">BOLSO+EB</span><br><small style="color: var(--text-secondary);">Independência de EB</small></div>
+                            <div><span class="badge" style="background: #8E44AD; color: white;">BOLSO+EB</span><br><small style="color: var(--text-secondary);">Independência de Gleisi</small></div>
                             <div><span class="badge badge-swing">PURO_SWING</span><br><small style="color: var(--text-secondary);">Mix de conteúdo, máx. prioridade</small></div>
                         </div>
                     </div>
@@ -867,7 +867,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                     <th>IN</th>
                                     <th>Classe Nac.</th>
                                     <th>IGH</th>
-                                    <th>Classe EB</th>
+                                    <th>Classe Gleisi</th>
                                     <th>Eixo</th>
                                     <th>Pred. 2026</th>
                                 </tr>
@@ -1011,7 +1011,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 }
 
                 // Contar Seguro Gleisi (preditivo 2026)
-                if (mun.preditivo_2026?.classificacao === 'SEGURO EB') {
+                if (mun.preditivo_2026?.classificacao === 'SEGURO GLEISI') {
                     counts.seguro_eb++;
                 }
 
@@ -1033,7 +1033,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         Bastião Lulista
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text">Municípios onde PT/Lula tem votação historicamente muito forte. Índice Nacional > +0.20. Base consolidada para EB.</span>
+                            <span class="tooltip-text">Municípios onde PT tem votação historicamente muito forte. Índice Nacional > +0.20. Base consolidada para Gleisi.</span>
                         </div>
                     </div>
                 </div>
@@ -1044,7 +1044,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         Tendência Lulista
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text">Municípios com tendência favorável ao PT/Lula. Índice Nacional entre +0.05 e +0.20. Espaço para expansão de votação.</span>
+                            <span class="tooltip-text">Municípios com tendência favorável ao PT. Índice Nacional entre +0.05 e +0.20. Espaço para expansão de votação.</span>
                         </div>
                     </div>
                 </div>
@@ -1055,7 +1055,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                         Seguro Gleisi 2026
                         <div class="tooltip-container">
                             <span class="tooltip-icon">?</span>
-                            <span class="tooltip-text"><strong>PROGNÓSTICO 2026:</strong> Top 23% (14 municípios) com melhor correlação EB-Lula e desempenho histórico. Reeleição viável. Consolidar base.</span>
+                            <span class="tooltip-text"><strong>PROGNÓSTICO 2026:</strong> Top 23% (14 municípios) com melhor correlação Gleisi-PT e desempenho histórico. Reeleição viável. Consolidar base.</span>
                         </div>
                     </div>
                 </div>
@@ -1465,7 +1465,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             // ============= TABELA EDUARDO BRAGA =============
             const tabelaGleisi = document.getElementById('tabelaEB').querySelector('tbody');
-            tabelaEB.innerHTML = '';
+            tabelaGleisi.innerHTML = '';
 
             const ebData = [];
             const cargos = {
@@ -1535,10 +1535,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     <td style="font-weight: 600; color: ${saldoColor};">${saldoText}</td>
                     <td style="font-size: 0.75rem;">${row.cargo}</td>
                 `;
-                tabelaEB.appendChild(tr);
+                tabelaGleisi.appendChild(tr);
             });
 
-            // Linha preditiva 2026 para EB
+            // Linha preditiva 2026 para Gleisi
             const trEB2026 = document.createElement('tr');
             trEB2026.style.borderTop = '2px solid #2A3144';
             trEB2026.style.fontWeight = '700';
@@ -1555,7 +1555,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 <td style="background: var(--bg-primary); color: #F39C12; font-weight: 700;">${saldoEB2026 !== '—' ? (saldoEB2026 > 0 ? '+' : '') + saldoEB2026 : '—'}</td>
                 <td style="background: var(--bg-primary); color: #F39C12; font-size: 0.85rem;">${pred2026Class}</td>
             `;
-            tabelaEB.appendChild(trEB2026);
+            tabelaGleisi.appendChild(trEB2026);
 
             // ============= GRÁFICOS =============
             // Chart Presidente (2010-2022)
@@ -1606,7 +1606,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
             // Chart Gleisi (2010-2022)
             const contexto = document.getElementById('historicaEBChart').getContext('2d');
             if (chartsInstances.historicaEB) {
-                chartsInstances.historicaEB.destroy();
+                chartsInstances.historicaGleisi.destroy();
             }
 
             const ebValues = [
@@ -1854,12 +1854,12 @@ IGleisi = (perf_2010 × 0.10) +<br>
             if (tendenciaGeral > 0) {
                 tendenciaElement.textContent = '+' + tendenciaGeral;
                 tendenciaElement.style.color = '#27AE60';
-                tendenciaLabel.textContent = '📈 Positiva para EB';
+                tendenciaLabel.textContent = '📈 Positiva para Gleisi';
                 tendenciaLabel.style.color = '#27AE60';
             } else if (tendenciaGeral < 0) {
                 tendenciaElement.textContent = tendenciaGeral;
                 tendenciaElement.style.color = '#E74C3C';
-                tendenciaLabel.textContent = '📉 Negativa para EB';
+                tendenciaLabel.textContent = '📉 Negativa para Gleisi';
                 tendenciaLabel.style.color = '#E74C3C';
             } else {
                 tendenciaElement.textContent = '0';
