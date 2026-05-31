@@ -1849,16 +1849,26 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             if (!window.MUNICIPIOS_COORDS || Object.keys(window.MUNICIPIOS_COORDS).length === 0) {
                 console.warn('⚠️ MUNICIPIOS_COORDS ainda não carregado. Aguardando...');
-                setTimeout(() => initMaps(), 500);
+                setTimeout(() => initMaps(), 1000);
                 return;
             }
+
+            console.log('✅ MUNICIPIOS_COORDS disponível, iniciando mapa com', Object.keys(window.MUNICIPIOS_COORDS).length, 'coordenadas');
+
+            let marcadoresCount = 0;
+            let semCoordsCount = 0;
 
             municipios.forEach(m => {
                 const coords = window.MUNICIPIOS_COORDS[m.name];
                 if (!coords) {
-                    console.warn(`⚠️ Sem coordenadas para: ${m.name}`);
+                    semCoordsCount++;
+                    if (semCoordsCount <= 5) {
+                        console.warn(`⚠️ Sem coordenadas para: ${m.name}`);
+                    }
                     return;
                 }
+
+                marcadoresCount++;
 
                 // Determinar cor baseada na classificação preditiva 2026
                 let color = '#888888'; // Cinza padrão
@@ -1901,7 +1911,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                 `);
             });
 
-            console.log('✅ Mapa do Paraná inicializado com', municipios.length, 'marcadores');
+            console.log(`✅ Mapa do Paraná inicializado: ${marcadoresCount} marcadores plotados, ${semCoordsCount} sem coordenadas`);
         }
 
         function initMapSecoes() {
