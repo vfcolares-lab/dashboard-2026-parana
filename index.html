@@ -343,7 +343,7 @@
 
         .kpi-card.bastiao-petista .kpi-number { color: var(--e1); }
         .kpi-card.tendencia-petista .kpi-number { color: #FF6B6B; }
-        .kpi-card.seguro-eb .kpi-number { color: var(--bastiao-gleisi); }
+        .kpi-card.seguro-gleisi .kpi-number { color: var(--bastiao-gleisi); }
         .kpi-card.dificil .kpi-number { color: #E74C3C; }
 
         /* ============= TABELAS ============= */
@@ -762,7 +762,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                                     <th>Índice Nacional</th>
                                     <th>Classificação</th>
                                     <th>Índice de Gleisi</th>
-                                    <th>EB</th>
+                                    <th>Gleisi</th>
                                     <th>Eixo</th>
                                     <th>Prognóstico 2026</th>
                                 </tr>
@@ -1049,7 +1049,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
                     </div>
                 </div>
 
-                <div class="kpi-card seguro-eb">
+                <div class="kpi-card seguro-gleisi">
                     <div class="kpi-number" style="color: var(--bastiao-gleisi);">${counts.seguro_eb}</div>
                     <div class="kpi-label">
                         Seguro Gleisi 2026
@@ -1210,7 +1210,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
             // Prioridades
             const priorTable = document.querySelector('#prioridades tbody');
             municipios
-                .filter(m => m.preditivo_2026.classificacao.includes('BATTLEGROUND') || m.preditivo_2026.classificacao === 'COMPETITIVO PRÓ-EB')
+                .filter(m => m.preditivo_2026.classificacao.includes('GLEISTA') || m.preditivo_2026.classificacao === 'COMPETITIVO PRÓ-GLEISI')
                 .sort((a, b) => b.preditivo_2026.score - a.preditivo_2026.score)
                 .forEach(m => {
                     const row = priorTable.insertRow();
@@ -1483,7 +1483,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
 
             anos.forEach(ano => {
                 // Tentar acessar com chave inteira ou string (para compatibilidade com ESTADO)
-                const data = mun.eb[ano] || mun.eb[String(ano)];
+                const data = mun.gleisi[ano] || mun.gleisi[String(ano)];
                 if (data) {
                     ebData.push({
                         ano: ano,
@@ -1610,10 +1610,10 @@ IGleisi = (perf_2010 × 0.10) +<br>
             }
 
             const ebValues = [
-                mun.eb[2010]?.votos_pct || 0,
-                mun.eb[2014]?.votos_pct || 0,
-                mun.eb[2018]?.votos_pct || 0,
-                mun.eb[2022]?.votos_pct || 0
+                mun.gleisi[2010]?.votos_pct || 0,
+                mun.gleisi[2014]?.votos_pct || 0,
+                mun.gleisi[2018]?.votos_pct || 0,
+                mun.gleisi[2022]?.votos_pct || 0
             ];
 
             chartsInstances.historicaGleisi = new Chart(contexto, {
@@ -1832,7 +1832,7 @@ IGleisi = (perf_2010 × 0.10) +<br>
             // ===== CALCULAR RESUMO DE CENÁRIOS =====
             // 1. Municípios Competitivos
             const competitivos = (classficacoes['BATTLEGROUND'] || 0) +
-                                (classficacoes['COMPETITIVO PRÓ-EB'] || 0) +
+                                (classficacoes['COMPETITIVO PRÓ-GLEISI'] || 0) +
                                 (classficacoes['COMPETITIVO CONTRA'] || 0);
             document.getElementById('municipiosCompetitivos').textContent = competitivos;
 
