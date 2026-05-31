@@ -498,11 +498,24 @@
             }
         }
 
-        // Iniciar quando DOM estiver pronto
+        // Iniciar quando TUDO estiver carregado (incluindo scripts)
+        function aguardarDados() {
+            if (typeof DASHBOARD_DATA === 'undefined') {
+                // Tentar novamente em 100ms
+                setTimeout(aguardarDados, 100);
+            } else {
+                console.log('✅ data.js carregado, iniciando dashboard...');
+                inicializar();
+            }
+        }
+
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', inicializar);
+            document.addEventListener('DOMContentLoaded', aguardarDados);
+        } else if (document.readyState === 'interactive') {
+            aguardarDados();
         } else {
-            inicializar();
+            window.addEventListener('load', aguardarDados);
+            aguardarDados(); // Tentar imediatamente também
         }
     </script>
 </body>
