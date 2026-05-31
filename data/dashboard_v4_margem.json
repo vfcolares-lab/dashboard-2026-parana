@@ -1,4 +1,4 @@
-const DASHBOARD_DATA = {
+{
   "metadata": {
     "projeto": "Dashboard Eleitoral Paraná 2026",
     "analise": "Presidencial (por MARGEM) | Gleisi Hoffmann",
@@ -23149,4 +23149,4 @@ const DASHBOARD_DATA = {
       "classificacao_2022": "Bastião Bolsonarista"
     }
   }
-};
+}
