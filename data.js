@@ -1,7619 +1,12802 @@
 const DASHBOARD_DATA = {
   "metadata": {
-    "generated_at": "2026-05-30T00:00:00",
-    "version": "1.0",
-    "state": "Paraná",
-    "total_municipalities": 399,
-    "total_sections": 20232,
-    "candidate": "Gleisi Hoffmann",
-    "elections": [
+    "projeto": "Dashboard Eleitoral Paraná 2026",
+    "analise": "Gleisi Hoffmann",
+    "anos": [
       2010,
       2014,
       2018,
       2022
-    ]
+    ],
+    "municipios_total": 399,
+    "data_geracao": "2026-05-30",
+    "versao": "2.0-gleisi"
   },
   "estado": {
-    "gleisi": {
-      "2010": {
-        "votos_pct": 137311100.0,
-        "total_votos": 1373111
-      },
-      "2014": {
-        "votos_pct": 76984300.0,
-        "total_votos": 769843
-      },
-      "2018": {
-        "votos_pct": 20555700.0,
-        "total_votos": 205557
-      },
-      "2022": {
-        "votos_pct": 26124700.0,
-        "total_votos": 261247
-      }
+    "media_estadual": {
+      "2010_senado": 29.5,
+      "2014_governador": 14.87,
+      "2018_deputado": 3.71,
+      "2022_deputado": 4.26
+    },
+    "municipios_count": 399,
+    "gleisi_distribution": {
+      "Swing": 290,
+      "Difícil Gleisi": 54,
+      "Seguro Gleisi": 55
+    },
+    "trajetoria_distribution": {
+      "Decrescente": 399
     }
   },
   "municipios": {
     "ABATIÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.2
+      "municipio": "ABATIÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.78,
+          "gleisi_index": 8.274,
+          "votos": 3168,
+          "total_votos": 8386
         },
-        "2014": {
-          "votos_pct": 9.6
+        "2014_governador": {
+          "gleisi_pct": 11.37,
+          "gleisi_index": -3.505,
+          "votos": 500,
+          "total_votos": 4399
         },
-        "2018": {
-          "votos_pct": 6.8
+        "2018_deputado": {
+          "gleisi_pct": 5.96,
+          "gleisi_index": 2.259,
+          "votos": 256,
+          "total_votos": 4292
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 2.27,
+          "gleisi_index": -1.988,
+          "votos": 97,
+          "total_votos": 4266
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.26
     },
     "ADRIANÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "ADRIANÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.18,
+          "gleisi_index": 2.678,
+          "votos": 2067,
+          "total_votos": 6423
         },
-        "2014": {
-          "votos_pct": 41.6
+        "2014_governador": {
+          "gleisi_pct": 35.85,
+          "gleisi_index": 20.974,
+          "votos": 1308,
+          "total_votos": 3649
         },
-        "2018": {
-          "votos_pct": 6.9
+        "2018_deputado": {
+          "gleisi_pct": 5.11,
+          "gleisi_index": 1.399,
+          "votos": 189,
+          "total_votos": 3702
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 2.36,
+          "gleisi_index": -1.903,
+          "votos": 94,
+          "total_votos": 3985
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.06,
-      "num_secoes": 22
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.787
     },
     "AGUDOS DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.6
+      "municipio": "AGUDOS DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 22.34,
+          "gleisi_index": -7.161,
+          "votos": 2162,
+          "total_votos": 9677
         },
-        "2014": {
-          "votos_pct": 10.0
+        "2014_governador": {
+          "gleisi_pct": 11.2,
+          "gleisi_index": -3.67,
+          "votos": 607,
+          "total_votos": 5419
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 2.4,
+          "gleisi_index": -1.302,
+          "votos": 119,
+          "total_votos": 4949
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 2.71,
+          "gleisi_index": -1.547,
+          "votos": 162,
+          "total_votos": 5968
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 24
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.42
     },
     "ALMIRANTE TAMANDARÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "ALMIRANTE TAMANDARÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.09,
+          "gleisi_index": 1.588,
+          "votos": 27608,
+          "total_votos": 88799
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 13.53,
+          "gleisi_index": -1.343,
+          "votos": 6872,
+          "total_votos": 50799
         },
-        "2018": {
-          "votos_pct": 4.6
+        "2018_deputado": {
+          "gleisi_pct": 4.76,
+          "gleisi_index": 1.058,
+          "votos": 2221,
+          "total_votos": 46624
         },
-        "2022": {
-          "votos_pct": 7.0
+        "2022_deputado": {
+          "gleisi_pct": 6.76,
+          "gleisi_index": 2.497,
+          "votos": 3474,
+          "total_votos": 51402
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 194
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.95
     },
     "ALTAMIRA DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.0
+      "municipio": "ALTAMIRA DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 22.47,
+          "gleisi_index": -7.035,
+          "votos": 1160,
+          "total_votos": 5163
         },
-        "2014": {
-          "votos_pct": 9.7
+        "2014_governador": {
+          "gleisi_pct": 10.43,
+          "gleisi_index": -4.437,
+          "votos": 279,
+          "total_votos": 2674
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 1.04,
+          "gleisi_index": -2.671,
+          "votos": 26,
+          "total_votos": 2512
         },
-        "2022": {
-          "votos_pct": 0.4
+        "2022_deputado": {
+          "gleisi_pct": 0.58,
+          "gleisi_index": -3.677,
+          "votos": 15,
+          "total_votos": 2568
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -4.455
     },
     "ALTO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "ALTO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.56,
+          "gleisi_index": 4.054,
+          "votos": 4803,
+          "total_votos": 14313
         },
-        "2014": {
-          "votos_pct": 17.3
+        "2014_governador": {
+          "gleisi_pct": 17.24,
+          "gleisi_index": 2.369,
+          "votos": 1307,
+          "total_votos": 7581
         },
-        "2018": {
-          "votos_pct": 5.6
+        "2018_deputado": {
+          "gleisi_pct": 3.12,
+          "gleisi_index": -0.582,
+          "votos": 214,
+          "total_votos": 6851
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 3.22,
+          "gleisi_index": -1.041,
+          "votos": 244,
+          "total_votos": 7576
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.2
     },
     "ALTO PARAÍSO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "ALTO PARAÍSO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.9,
+          "gleisi_index": -2.607,
+          "votos": 986,
+          "total_votos": 3666
         },
-        "2014": {
-          "votos_pct": 40.4
+        "2014_governador": {
+          "gleisi_pct": 18.87,
+          "gleisi_index": 4.001,
+          "votos": 378,
+          "total_votos": 2003
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 0.61,
+          "gleisi_index": -3.097,
+          "votos": 13,
+          "total_votos": 2134
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 0.37,
+          "gleisi_index": -3.888,
+          "votos": 8,
+          "total_votos": 2141
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.398
     },
     "ALTO PIQUIRI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.3
+      "municipio": "ALTO PIQUIRI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.62,
+          "gleisi_index": 8.113,
+          "votos": 3780,
+          "total_votos": 10049
         },
-        "2014": {
-          "votos_pct": 15.7
+        "2014_governador": {
+          "gleisi_pct": 21.82,
+          "gleisi_index": 6.945,
+          "votos": 1146,
+          "total_votos": 5253
         },
-        "2018": {
-          "votos_pct": 2.1
+        "2018_deputado": {
+          "gleisi_pct": 6.98,
+          "gleisi_index": 3.269,
+          "votos": 363,
+          "total_votos": 5204
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 1.39,
+          "gleisi_index": -2.875,
+          "votos": 73,
+          "total_votos": 5264
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.863
     },
     "ALTÔNIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "ALTÔNIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.55,
+          "gleisi_index": 3.049,
+          "votos": 6855,
+          "total_votos": 21059
         },
-        "2014": {
-          "votos_pct": 14.2
+        "2014_governador": {
+          "gleisi_pct": 12.43,
+          "gleisi_index": -2.441,
+          "votos": 1424,
+          "total_votos": 11456
         },
-        "2018": {
-          "votos_pct": 6.4
+        "2018_deputado": {
+          "gleisi_pct": 2.49,
+          "gleisi_index": -1.216,
+          "votos": 269,
+          "total_votos": 10804
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 1.46,
+          "gleisi_index": -2.806,
+          "votos": 153,
+          "total_votos": 10509
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 49
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.853
     },
     "ALVORADA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.8
+      "municipio": "ALVORADA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.6,
+          "gleisi_index": 2.097,
+          "votos": 2880,
+          "total_votos": 9114
         },
-        "2014": {
-          "votos_pct": 11.7
+        "2014_governador": {
+          "gleisi_pct": 14.52,
+          "gleisi_index": -0.355,
+          "votos": 756,
+          "total_votos": 5208
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 3.36,
+          "gleisi_index": -0.348,
+          "votos": 165,
+          "total_votos": 4914
         },
-        "2022": {
-          "votos_pct": 4.8
+        "2022_deputado": {
+          "gleisi_pct": 3.86,
+          "gleisi_index": -0.406,
+          "votos": 197,
+          "total_votos": 5109
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.247
     },
     "AMAPORÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "AMAPORÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.54,
+          "gleisi_index": 2.035,
+          "votos": 1645,
+          "total_votos": 5216
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 18.84,
+          "gleisi_index": 3.968,
+          "votos": 555,
+          "total_votos": 2946
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 2.01,
+          "gleisi_index": -1.7,
+          "votos": 57,
+          "total_votos": 2841
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.41,
+          "gleisi_index": -2.856,
+          "votos": 42,
+          "total_votos": 2989
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.362
     },
     "AMPÉRE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.3
+      "municipio": "AMPÉRE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.38,
+          "gleisi_index": 7.873,
+          "votos": 7017,
+          "total_votos": 18774
         },
-        "2014": {
-          "votos_pct": 17.0
+        "2014_governador": {
+          "gleisi_pct": 19.88,
+          "gleisi_index": 5.007,
+          "votos": 2055,
+          "total_votos": 10338
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 4.66,
+          "gleisi_index": 0.954,
+          "votos": 482,
+          "total_votos": 10343
         },
-        "2022": {
-          "votos_pct": 5.8
+        "2022_deputado": {
+          "gleisi_pct": 7.39,
+          "gleisi_index": 3.13,
+          "votos": 826,
+          "total_votos": 11175
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 47
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.241
     },
     "ANAHY": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "ANAHY",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.75,
+          "gleisi_index": 0.247,
+          "votos": 1104,
+          "total_votos": 3711
         },
-        "2014": {
-          "votos_pct": 17.2
+        "2014_governador": {
+          "gleisi_pct": 14.85,
+          "gleisi_index": -0.023,
+          "votos": 298,
+          "total_votos": 2007
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 1.07,
+          "gleisi_index": -2.632,
+          "votos": 22,
+          "total_votos": 2049
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 3.76,
+          "gleisi_index": -0.5,
+          "votos": 79,
+          "total_votos": 2100
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.727
     },
     "ANDIRÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.4
+      "municipio": "ANDIRÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.61,
+          "gleisi_index": -1.893,
+          "votos": 5985,
+          "total_votos": 21677
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 13.3,
+          "gleisi_index": -1.573,
+          "votos": 1491,
+          "total_votos": 11212
         },
-        "2018": {
-          "votos_pct": 9.7
+        "2018_deputado": {
+          "gleisi_pct": 7.57,
+          "gleisi_index": 3.868,
+          "votos": 854,
+          "total_votos": 11275
         },
-        "2022": {
-          "votos_pct": 12.2
+        "2022_deputado": {
+          "gleisi_pct": 12.44,
+          "gleisi_index": 8.175,
+          "votos": 1437,
+          "total_votos": 11555
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 55
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.144
     },
     "ANTONINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.4
+      "municipio": "ANTONINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.25,
+          "gleisi_index": -4.254,
+          "votos": 5446,
+          "total_votos": 21569
         },
-        "2014": {
-          "votos_pct": 12.1
+        "2014_governador": {
+          "gleisi_pct": 14.34,
+          "gleisi_index": -0.526,
+          "votos": 1631,
+          "total_votos": 11370
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 2.63,
+          "gleisi_index": -1.072,
+          "votos": 277,
+          "total_votos": 10516
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 3.6,
+          "gleisi_index": -0.661,
+          "votos": 400,
+          "total_votos": 11110
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 50
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.628
     },
     "ANTONIO OLINTO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.3
+      "municipio": "ANTONIO OLINTO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.04,
+          "gleisi_index": -0.468,
+          "votos": 2540,
+          "total_votos": 8748
         },
-        "2014": {
-          "votos_pct": 7.6
+        "2014_governador": {
+          "gleisi_pct": 11.02,
+          "gleisi_index": -3.849,
+          "votos": 538,
+          "total_votos": 4881
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 2.23,
+          "gleisi_index": -1.48,
+          "votos": 98,
+          "total_votos": 4403
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 1.92,
+          "gleisi_index": -2.337,
+          "votos": 92,
+          "total_votos": 4781
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.034
     },
     "APUCARANA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.1
+      "municipio": "APUCARANA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.19,
+          "gleisi_index": -2.309,
+          "votos": 33781,
+          "total_votos": 124225
         },
-        "2014": {
-          "votos_pct": 14.4
+        "2014_governador": {
+          "gleisi_pct": 16.32,
+          "gleisi_index": 1.446,
+          "votos": 11260,
+          "total_votos": 69007
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 1.439,
+          "votos": 3229,
+          "total_votos": 62762
         },
-        "2022": {
-          "votos_pct": 2.5
+        "2022_deputado": {
+          "gleisi_pct": 3.66,
+          "gleisi_index": -0.603,
+          "votos": 2470,
+          "total_votos": 67513
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 281
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.007
     },
     "ARAPONGAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.2
+      "municipio": "ARAPONGAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.84,
+          "gleisi_index": -3.665,
+          "votos": 26084,
+          "total_votos": 100954
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 8.4,
+          "gleisi_index": -6.471,
+          "votos": 4898,
+          "total_votos": 58307
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 2.26,
+          "gleisi_index": -1.449,
+          "votos": 1246,
+          "total_votos": 55200
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 2.94,
+          "gleisi_index": -1.319,
+          "votos": 1724,
+          "total_votos": 58599
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 239
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.226
     },
     "ARAPOTI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "ARAPOTI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.43,
+          "gleisi_index": -4.075,
+          "votos": 6548,
+          "total_votos": 25751
         },
-        "2014": {
-          "votos_pct": 10.1
+        "2014_governador": {
+          "gleisi_pct": 11.95,
+          "gleisi_index": -2.917,
+          "votos": 1619,
+          "total_votos": 13543
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 2.13,
+          "gleisi_index": -1.577,
+          "votos": 283,
+          "total_votos": 13293
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 3.16,
+          "gleisi_index": -1.106,
+          "votos": 420,
+          "total_votos": 13312
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 64
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.419
     },
     "ARAPUÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.9
+      "municipio": "ARAPUÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.15,
+          "gleisi_index": 11.649,
+          "votos": 2030,
+          "total_votos": 4933
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 8.07,
+          "gleisi_index": -6.801,
+          "votos": 207,
+          "total_votos": 2565
         },
-        "2018": {
-          "votos_pct": 7.3
+        "2018_deputado": {
+          "gleisi_pct": 3.58,
+          "gleisi_index": -0.13,
+          "votos": 87,
+          "total_votos": 2433
         },
-        "2022": {
-          "votos_pct": 5.6
+        "2022_deputado": {
+          "gleisi_pct": 4.43,
+          "gleisi_index": 0.169,
+          "votos": 112,
+          "total_votos": 2528
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.222
     },
     "ARARUNA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.8
+      "municipio": "ARARUNA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.73,
+          "gleisi_index": 0.231,
+          "votos": 4348,
+          "total_votos": 14623
         },
-        "2014": {
-          "votos_pct": 12.4
+        "2014_governador": {
+          "gleisi_pct": 12.5,
+          "gleisi_index": -2.376,
+          "votos": 987,
+          "total_votos": 7899
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 1.94,
+          "gleisi_index": -1.768,
+          "votos": 141,
+          "total_votos": 7275
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.8,
+          "gleisi_index": -2.466,
+          "votos": 147,
+          "total_votos": 8186
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 34
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.595
     },
     "ARAUCÁRIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.8
+      "municipio": "ARAUCÁRIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.85,
+          "gleisi_index": 6.344,
+          "votos": 45340,
+          "total_votos": 126483
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 18.1,
+          "gleisi_index": 3.232,
+          "votos": 12777,
+          "total_votos": 70578
         },
-        "2018": {
-          "votos_pct": 6.1
+        "2018_deputado": {
+          "gleisi_pct": 6.85,
+          "gleisi_index": 3.14,
+          "votos": 4282,
+          "total_votos": 62545
         },
-        "2022": {
-          "votos_pct": 8.4
+        "2022_deputado": {
+          "gleisi_pct": 8.66,
+          "gleisi_index": 4.399,
+          "votos": 6279,
+          "total_votos": 72503
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 316
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.279
     },
     "ARIRANHA DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "ARIRANHA DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.38,
+          "gleisi_index": 4.875,
+          "votos": 1086,
+          "total_votos": 3159
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 10.06,
+          "gleisi_index": -4.807,
+          "votos": 174,
+          "total_votos": 1729
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 2.39,
+          "gleisi_index": -1.321,
+          "votos": 41,
+          "total_votos": 1719
         },
-        "2022": {
-          "votos_pct": 3.4
+        "2022_deputado": {
+          "gleisi_pct": 3.92,
+          "gleisi_index": -0.341,
+          "votos": 73,
+          "total_votos": 1862
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.399
     },
     "ASSAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "ASSAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.58,
+          "gleisi_index": 2.075,
+          "votos": 5446,
+          "total_votos": 17246
         },
-        "2014": {
-          "votos_pct": 5.5
+        "2014_governador": {
+          "gleisi_pct": 5.71,
+          "gleisi_index": -9.157,
+          "votos": 567,
+          "total_votos": 9922
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 1.31,
+          "gleisi_index": -2.392,
+          "votos": 118,
+          "total_votos": 8983
         },
-        "2022": {
-          "votos_pct": 4.1
+        "2022_deputado": {
+          "gleisi_pct": 2.12,
+          "gleisi_index": -2.144,
+          "votos": 189,
+          "total_votos": 8926
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 43
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.905
     },
     "ASSIS CHATEAUBRIAND": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "ASSIS CHATEAUBRIAND",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.06,
+          "gleisi_index": 7.553,
+          "votos": 13263,
+          "total_votos": 35792
         },
-        "2014": {
-          "votos_pct": 5.5
+        "2014_governador": {
+          "gleisi_pct": 10.18,
+          "gleisi_index": -4.695,
+          "votos": 1977,
+          "total_votos": 19428
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 5.02,
+          "gleisi_index": 1.31,
+          "votos": 923,
+          "total_votos": 18400
         },
-        "2022": {
-          "votos_pct": 2.5
+        "2022_deputado": {
+          "gleisi_pct": 3.35,
+          "gleisi_index": -0.909,
+          "votos": 673,
+          "total_votos": 20075
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 83
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.815
     },
     "ASTORGA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.6
+      "municipio": "ASTORGA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 22.98,
+          "gleisi_index": -6.525,
+          "votos": 6316,
+          "total_votos": 27487
         },
-        "2014": {
-          "votos_pct": 8.1
+        "2014_governador": {
+          "gleisi_pct": 9.94,
+          "gleisi_index": -4.93,
+          "votos": 1502,
+          "total_votos": 15109
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.25,
+          "gleisi_index": -2.461,
+          "votos": 173,
+          "total_votos": 13895
         },
-        "2022": {
-          "votos_pct": 0.4
+        "2022_deputado": {
+          "gleisi_pct": 1.29,
+          "gleisi_index": -2.968,
+          "votos": 187,
+          "total_votos": 14453
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 62
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.221
     },
     "ATALAIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "ATALAIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.11,
+          "gleisi_index": 4.605,
+          "votos": 1761,
+          "total_votos": 5163
         },
-        "2014": {
-          "votos_pct": 19.6
+        "2014_governador": {
+          "gleisi_pct": 17.03,
+          "gleisi_index": 2.163,
+          "votos": 479,
+          "total_votos": 2812
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 0.78,
+          "gleisi_index": -2.929,
+          "votos": 21,
+          "total_votos": 2702
         },
-        "2022": {
-          "votos_pct": 1.8
+        "2022_deputado": {
+          "gleisi_pct": 1.29,
+          "gleisi_index": -2.972,
+          "votos": 36,
+          "total_votos": 2791
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.217
     },
     "BALSA NOVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "BALSA NOVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.85,
+          "gleisi_index": 2.345,
+          "votos": 4158,
+          "total_votos": 13056
         },
-        "2014": {
-          "votos_pct": 7.7
+        "2014_governador": {
+          "gleisi_pct": 9.9,
+          "gleisi_index": -4.976,
+          "votos": 804,
+          "total_votos": 8125
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 3.86,
+          "gleisi_index": 0.152,
+          "votos": 300,
+          "total_votos": 7776
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 5.42,
+          "gleisi_index": 1.156,
+          "votos": 441,
+          "total_votos": 8140
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.331
     },
     "BANDEIRANTES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "BANDEIRANTES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.57,
+          "gleisi_index": 9.07,
+          "votos": 13777,
+          "total_votos": 35717
         },
-        "2014": {
-          "votos_pct": 2.9
+        "2014_governador": {
+          "gleisi_pct": 4.85,
+          "gleisi_index": -10.017,
+          "votos": 918,
+          "total_votos": 18910
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 2.8,
+          "gleisi_index": -0.903,
+          "votos": 520,
+          "total_votos": 18550
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 2.79,
+          "gleisi_index": -1.469,
+          "votos": 504,
+          "total_votos": 18050
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 81
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.83
     },
     "BARBOSA FERRAZ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.9
+      "municipio": "BARBOSA FERRAZ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.86,
+          "gleisi_index": 5.361,
+          "votos": 4107,
+          "total_votos": 11780
         },
-        "2014": {
-          "votos_pct": 13.7
+        "2014_governador": {
+          "gleisi_pct": 14.7,
+          "gleisi_index": -0.171,
+          "votos": 897,
+          "total_votos": 6102
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.74,
+          "gleisi_index": -1.967,
+          "votos": 105,
+          "total_votos": 6039
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 1.95,
+          "gleisi_index": -2.316,
+          "votos": 120,
+          "total_votos": 6168
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.227
     },
     "BARRA DO JACARÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.9
+      "municipio": "BARRA DO JACARÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.83,
+          "gleisi_index": 4.322,
+          "votos": 1100,
+          "total_votos": 3252
         },
-        "2014": {
-          "votos_pct": 8.0
+        "2014_governador": {
+          "gleisi_pct": 8.4,
+          "gleisi_index": -6.472,
+          "votos": 160,
+          "total_votos": 1905
         },
-        "2018": {
-          "votos_pct": 3.2
+        "2018_deputado": {
+          "gleisi_pct": 3.07,
+          "gleisi_index": -0.638,
+          "votos": 57,
+          "total_votos": 1858
         },
-        "2022": {
-          "votos_pct": 5.7
+        "2022_deputado": {
+          "gleisi_pct": 3.99,
+          "gleisi_index": -0.275,
+          "votos": 80,
+          "total_votos": 2007
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.766
     },
     "BARRACÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "BARRACÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.92,
+          "gleisi_index": 1.415,
+          "votos": 2944,
+          "total_votos": 9522
         },
-        "2014": {
-          "votos_pct": 18.8
+        "2014_governador": {
+          "gleisi_pct": 17.01,
+          "gleisi_index": 2.141,
+          "votos": 953,
+          "total_votos": 5602
         },
-        "2018": {
-          "votos_pct": 4.4
+        "2018_deputado": {
+          "gleisi_pct": 5.06,
+          "gleisi_index": 1.354,
+          "votos": 276,
+          "total_votos": 5455
         },
-        "2022": {
-          "votos_pct": 6.0
+        "2022_deputado": {
+          "gleisi_pct": 5.23,
+          "gleisi_index": 0.971,
+          "votos": 297,
+          "total_votos": 5676
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.47
     },
     "BELA VISTA DA CAROBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "BELA VISTA DA CAROBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.23,
+          "gleisi_index": 4.728,
+          "votos": 1665,
+          "total_votos": 4864
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 28.44,
+          "gleisi_index": 13.572,
+          "votos": 727,
+          "total_votos": 2556
         },
-        "2018": {
-          "votos_pct": 9.3
+        "2018_deputado": {
+          "gleisi_pct": 9.63,
+          "gleisi_index": 5.926,
+          "votos": 225,
+          "total_votos": 2336
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 4.65,
+          "gleisi_index": 0.393,
+          "votos": 111,
+          "total_votos": 2385
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.06,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 6.155
     },
     "BELA VISTA DO PARAÍSO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.7
+      "municipio": "BELA VISTA DO PARAÍSO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.63,
+          "gleisi_index": -3.871,
+          "votos": 4211,
+          "total_votos": 16429
         },
-        "2014": {
-          "votos_pct": 3.9
+        "2014_governador": {
+          "gleisi_pct": 9.63,
+          "gleisi_index": -5.238,
+          "votos": 912,
+          "total_votos": 9467
         },
-        "2018": {
-          "votos_pct": 3.2
+        "2018_deputado": {
+          "gleisi_pct": 3.81,
+          "gleisi_index": 0.103,
+          "votos": 324,
+          "total_votos": 8506
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 2.75,
+          "gleisi_index": -1.513,
+          "votos": 245,
+          "total_votos": 8915
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 43
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.63
     },
     "BITURUNA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "BITURUNA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.96,
+          "gleisi_index": 8.459,
+          "votos": 6520,
+          "total_votos": 17175
         },
-        "2014": {
-          "votos_pct": 18.0
+        "2014_governador": {
+          "gleisi_pct": 20.15,
+          "gleisi_index": 5.281,
+          "votos": 1879,
+          "total_votos": 9324
         },
-        "2018": {
-          "votos_pct": 8.5
+        "2018_deputado": {
+          "gleisi_pct": 7.73,
+          "gleisi_index": 4.028,
+          "votos": 659,
+          "total_votos": 8521
         },
-        "2022": {
-          "votos_pct": 5.1
+        "2022_deputado": {
+          "gleisi_pct": 5.23,
+          "gleisi_index": 0.973,
+          "votos": 473,
+          "total_votos": 9037
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 42
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.685
     },
     "BOA ESPERANÇA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 7.4
+      "municipio": "BOA ESPERANÇA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 15.61,
+          "gleisi_index": -13.894,
+          "votos": 861,
+          "total_votos": 5516
         },
-        "2014": {
-          "votos_pct": 3.2
+        "2014_governador": {
+          "gleisi_pct": 4.44,
+          "gleisi_index": -10.43,
+          "votos": 134,
+          "total_votos": 3017
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.4,
+          "gleisi_index": -3.309,
+          "votos": 11,
+          "total_votos": 2768
         },
-        "2022": {
-          "votos_pct": 0.4
+        "2022_deputado": {
+          "gleisi_pct": 0.34,
+          "gleisi_index": -3.92,
+          "votos": 10,
+          "total_votos": 2928
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -7.888
     },
     "BOA ESPERANÇA DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.1
+      "municipio": "BOA ESPERANÇA DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.03,
+          "gleisi_index": 11.53,
+          "votos": 1517,
+          "total_votos": 3697
         },
-        "2014": {
-          "votos_pct": 32.7
+        "2014_governador": {
+          "gleisi_pct": 36.7,
+          "gleisi_index": 21.831,
+          "votos": 719,
+          "total_votos": 1959
         },
-        "2018": {
-          "votos_pct": 5.9
+        "2018_deputado": {
+          "gleisi_pct": 7.22,
+          "gleisi_index": 3.519,
+          "votos": 132,
+          "total_votos": 1827
         },
-        "2022": {
-          "votos_pct": 6.3
+        "2022_deputado": {
+          "gleisi_pct": 6.27,
+          "gleisi_index": 2.008,
+          "votos": 120,
+          "total_votos": 1914
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 9.722
     },
     "BOA VENTURA DE SÃO ROQUE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.3
+      "municipio": "BOA VENTURA DE SÃO ROQUE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.97,
+          "gleisi_index": 10.462,
+          "votos": 2762,
+          "total_votos": 6911
         },
-        "2014": {
-          "votos_pct": 19.5
+        "2014_governador": {
+          "gleisi_pct": 24.49,
+          "gleisi_index": 9.616,
+          "votos": 931,
+          "total_votos": 3802
         },
-        "2018": {
-          "votos_pct": 11.0
+        "2018_deputado": {
+          "gleisi_pct": 15.93,
+          "gleisi_index": 12.226,
+          "votos": 582,
+          "total_votos": 3653
         },
-        "2022": {
-          "votos_pct": 8.5
+        "2022_deputado": {
+          "gleisi_pct": 12.96,
+          "gleisi_index": 8.697,
+          "votos": 509,
+          "total_votos": 3928
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 20
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 10.25
     },
     "BOA VISTA DA APARECIDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.0
+      "municipio": "BOA VISTA DA APARECIDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.99,
+          "gleisi_index": 7.485,
+          "votos": 3229,
+          "total_votos": 8730
         },
-        "2014": {
-          "votos_pct": 14.3
+        "2014_governador": {
+          "gleisi_pct": 13.22,
+          "gleisi_index": -1.649,
+          "votos": 641,
+          "total_votos": 4848
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 4.08,
+          "gleisi_index": 0.373,
+          "votos": 193,
+          "total_votos": 4732
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 3.88,
+          "gleisi_index": -0.378,
+          "votos": 200,
+          "total_votos": 5150
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 20
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.458
     },
     "BOCAIÚVA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "BOCAIÚVA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.32,
+          "gleisi_index": 3.812,
+          "votos": 3652,
+          "total_votos": 10962
         },
-        "2014": {
-          "votos_pct": 9.7
+        "2014_governador": {
+          "gleisi_pct": 13.17,
+          "gleisi_index": -1.699,
+          "votos": 853,
+          "total_votos": 6476
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 4.33,
+          "gleisi_index": 0.619,
+          "votos": 266,
+          "total_votos": 6150
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 4.2,
+          "gleisi_index": -0.065,
+          "votos": 280,
+          "total_votos": 6673
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 30
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.667
     },
     "BOM JESUS DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.6
+      "municipio": "BOM JESUS DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.08,
+          "gleisi_index": 12.575,
+          "votos": 2130,
+          "total_votos": 5062
         },
-        "2014": {
-          "votos_pct": 12.5
+        "2014_governador": {
+          "gleisi_pct": 13.71,
+          "gleisi_index": -1.163,
+          "votos": 380,
+          "total_votos": 2772
         },
-        "2018": {
-          "votos_pct": 8.8
+        "2018_deputado": {
+          "gleisi_pct": 8.03,
+          "gleisi_index": 4.323,
+          "votos": 224,
+          "total_votos": 2790
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.88,
+          "gleisi_index": -2.381,
+          "votos": 54,
+          "total_votos": 2871
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.07,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.338
     },
     "BOM SUCESSO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.9
+      "municipio": "BOM SUCESSO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.08,
+          "gleisi_index": 7.577,
+          "votos": 2636,
+          "total_votos": 7109
         },
-        "2014": {
-          "votos_pct": 5.7
+        "2014_governador": {
+          "gleisi_pct": 9.01,
+          "gleisi_index": -5.86,
+          "votos": 339,
+          "total_votos": 3762
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 2.96,
+          "gleisi_index": -0.743,
+          "votos": 109,
+          "total_votos": 3679
         },
-        "2022": {
-          "votos_pct": 3.5
+        "2022_deputado": {
+          "gleisi_pct": 4.37,
+          "gleisi_index": 0.112,
+          "votos": 171,
+          "total_votos": 3910
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.271
     },
     "BOM SUCESSO DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.9
+      "municipio": "BOM SUCESSO DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.65,
+          "gleisi_index": 10.15,
+          "votos": 1805,
+          "total_votos": 4552
         },
-        "2014": {
-          "votos_pct": 9.1
+        "2014_governador": {
+          "gleisi_pct": 11.33,
+          "gleisi_index": -3.543,
+          "votos": 261,
+          "total_votos": 2304
         },
-        "2018": {
-          "votos_pct": 1.7
+        "2018_deputado": {
+          "gleisi_pct": 2.58,
+          "gleisi_index": -1.131,
+          "votos": 60,
+          "total_votos": 2330
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 3.05,
+          "gleisi_index": -1.208,
+          "votos": 73,
+          "total_votos": 2391
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.067
     },
     "BORRAZÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "BORRAZÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.66,
+          "gleisi_index": 2.157,
+          "votos": 2857,
+          "total_votos": 9024
         },
-        "2014": {
-          "votos_pct": 11.7
+        "2014_governador": {
+          "gleisi_pct": 15.1,
+          "gleisi_index": 0.226,
+          "votos": 747,
+          "total_votos": 4948
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.92,
+          "gleisi_index": -1.783,
+          "votos": 85,
+          "total_votos": 4421
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 3.18,
+          "gleisi_index": -1.077,
+          "votos": 157,
+          "total_votos": 4930
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.119
     },
     "BRAGANEY": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.1
+      "municipio": "BRAGANEY",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.42,
+          "gleisi_index": 6.918,
+          "votos": 2367,
+          "total_votos": 6499
         },
-        "2014": {
-          "votos_pct": 12.7
+        "2014_governador": {
+          "gleisi_pct": 15.35,
+          "gleisi_index": 0.483,
+          "votos": 542,
+          "total_votos": 3530
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 2.34,
+          "gleisi_index": -1.37,
+          "votos": 76,
+          "total_votos": 3254
         },
-        "2022": {
-          "votos_pct": 5.3
+        "2022_deputado": {
+          "gleisi_pct": 3.96,
+          "gleisi_index": -0.298,
+          "votos": 130,
+          "total_votos": 3280
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.433
     },
     "BRASILÂNDIA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.4
+      "municipio": "BRASILÂNDIA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.53,
+          "gleisi_index": 7.031,
+          "votos": 1427,
+          "total_votos": 3906
         },
-        "2014": {
-          "votos_pct": 7.4
+        "2014_governador": {
+          "gleisi_pct": 10.03,
+          "gleisi_index": -4.836,
+          "votos": 230,
+          "total_votos": 2292
         },
-        "2018": {
-          "votos_pct": 3.1
+        "2018_deputado": {
+          "gleisi_pct": 2.25,
+          "gleisi_index": -1.452,
+          "votos": 50,
+          "total_votos": 2218
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 1.16,
+          "gleisi_index": -3.105,
+          "votos": 28,
+          "total_votos": 2422
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.591
     },
     "CAFEARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "CAFEARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.57,
+          "gleisi_index": -0.936,
+          "votos": 825,
+          "total_votos": 2888
         },
-        "2014": {
-          "votos_pct": 14.8
+        "2014_governador": {
+          "gleisi_pct": 13.97,
+          "gleisi_index": -0.904,
+          "votos": 232,
+          "total_votos": 1661
         },
-        "2018": {
-          "votos_pct": 11.6
+        "2018_deputado": {
+          "gleisi_pct": 9.97,
+          "gleisi_index": 6.261,
+          "votos": 152,
+          "total_votos": 1525
         },
-        "2022": {
-          "votos_pct": 13.6
+        "2022_deputado": {
+          "gleisi_pct": 12.88,
+          "gleisi_index": 8.616,
+          "votos": 222,
+          "total_votos": 1724
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.259
     },
     "CAFELÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "CAFELÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.13,
+          "gleisi_index": 4.63,
+          "votos": 5066,
+          "total_votos": 14842
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 12.64,
+          "gleisi_index": -2.233,
+          "votos": 1085,
+          "total_votos": 8585
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 2.46,
+          "gleisi_index": -1.245,
+          "votos": 213,
+          "total_votos": 8654
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 3.54,
+          "gleisi_index": -0.721,
+          "votos": 347,
+          "total_votos": 9800
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 40
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.108
     },
     "CAFEZAL DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.5
+      "municipio": "CAFEZAL DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.37,
+          "gleisi_index": 1.862,
+          "votos": 1583,
+          "total_votos": 5047
         },
-        "2014": {
-          "votos_pct": 18.8
+        "2014_governador": {
+          "gleisi_pct": 18.52,
+          "gleisi_index": 3.647,
+          "votos": 530,
+          "total_votos": 2862
         },
-        "2018": {
-          "votos_pct": 0.8
+        "2018_deputado": {
+          "gleisi_pct": 0.69,
+          "gleisi_index": -3.018,
+          "votos": 20,
+          "total_votos": 2907
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 0.54,
+          "gleisi_index": -3.719,
+          "votos": 17,
+          "total_votos": 3136
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.307
     },
     "CALIFÓRNIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "CALIFÓRNIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.74,
+          "gleisi_index": -0.765,
+          "votos": 2639,
+          "total_votos": 9183
         },
-        "2014": {
-          "votos_pct": 6.8
+        "2014_governador": {
+          "gleisi_pct": 5.16,
+          "gleisi_index": -9.708,
+          "votos": 262,
+          "total_votos": 5074
         },
-        "2018": {
-          "votos_pct": 4.1
+        "2018_deputado": {
+          "gleisi_pct": 4.06,
+          "gleisi_index": 0.359,
+          "votos": 193,
+          "total_votos": 4748
         },
-        "2022": {
-          "votos_pct": 6.1
+        "2022_deputado": {
+          "gleisi_pct": 5.62,
+          "gleisi_index": 1.357,
+          "votos": 284,
+          "total_votos": 5055
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.189
     },
     "CAMBARÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.9
+      "municipio": "CAMBARÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 20.62,
+          "gleisi_index": -8.879,
+          "votos": 5306,
+          "total_votos": 25728
         },
-        "2014": {
-          "votos_pct": 3.9
+        "2014_governador": {
+          "gleisi_pct": 6.27,
+          "gleisi_index": -8.603,
+          "votos": 825,
+          "total_votos": 13162
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 3.26,
+          "gleisi_index": -0.448,
+          "votos": 389,
+          "total_votos": 11938
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 4.39,
+          "gleisi_index": 0.131,
+          "votos": 539,
+          "total_votos": 12272
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 55
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.45
     },
     "CAMBIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "CAMBIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.87,
+          "gleisi_index": 4.371,
+          "votos": 3006,
+          "total_votos": 8874
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 10.78,
+          "gleisi_index": -4.095,
+          "votos": 507,
+          "total_votos": 4705
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 4.6,
+          "gleisi_index": 0.891,
+          "votos": 186,
+          "total_votos": 4046
         },
-        "2022": {
-          "votos_pct": 9.4
+        "2022_deputado": {
+          "gleisi_pct": 6.29,
+          "gleisi_index": 2.032,
+          "votos": 292,
+          "total_votos": 4640
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.05,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.8
     },
     "CAMBÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.0
+      "municipio": "CAMBÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.81,
+          "gleisi_index": -0.693,
+          "votos": 26879,
+          "total_votos": 93297
         },
-        "2014": {
-          "votos_pct": 11.4
+        "2014_governador": {
+          "gleisi_pct": 10.62,
+          "gleisi_index": -4.246,
+          "votos": 5839,
+          "total_votos": 54956
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 2.0,
+          "gleisi_index": -1.71,
+          "votos": 983,
+          "total_votos": 49243
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 2.65,
+          "gleisi_index": -1.608,
+          "votos": 1385,
+          "total_votos": 52192
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 208
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.064
     },
     "CAMPINA DA LAGOA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.0
+      "municipio": "CAMPINA DA LAGOA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.91,
+          "gleisi_index": -0.597,
+          "votos": 4801,
+          "total_votos": 16609
         },
-        "2014": {
-          "votos_pct": 7.8
+        "2014_governador": {
+          "gleisi_pct": 8.7,
+          "gleisi_index": -6.166,
+          "votos": 773,
+          "total_votos": 8880
         },
-        "2018": {
-          "votos_pct": 1.7
+        "2018_deputado": {
+          "gleisi_pct": 1.36,
+          "gleisi_index": -2.349,
+          "votos": 116,
+          "total_votos": 8546
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 1.67,
+          "gleisi_index": -2.594,
+          "votos": 147,
+          "total_votos": 8817
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 40
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.926
     },
     "CAMPINA DO SIMÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 23.5
+      "municipio": "CAMPINA DO SIMÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.97,
+          "gleisi_index": 10.471,
+          "votos": 1850,
+          "total_votos": 4628
         },
-        "2014": {
-          "votos_pct": 30.0
+        "2014_governador": {
+          "gleisi_pct": 41.42,
+          "gleisi_index": 26.547,
+          "votos": 1057,
+          "total_votos": 2552
         },
-        "2018": {
-          "votos_pct": 10.9
+        "2018_deputado": {
+          "gleisi_pct": 14.41,
+          "gleisi_index": 10.699,
+          "votos": 362,
+          "total_votos": 2513
         },
-        "2022": {
-          "votos_pct": 8.4
+        "2022_deputado": {
+          "gleisi_pct": 17.46,
+          "gleisi_index": 13.201,
+          "votos": 468,
+          "total_votos": 2680
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 15.229
     },
     "CAMPINA GRANDE DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "CAMPINA GRANDE DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.98,
+          "gleisi_index": 1.481,
+          "votos": 12627,
+          "total_votos": 40754
         },
-        "2014": {
-          "votos_pct": 11.4
+        "2014_governador": {
+          "gleisi_pct": 14.2,
+          "gleisi_index": -0.674,
+          "votos": 3279,
+          "total_votos": 23097
         },
-        "2018": {
-          "votos_pct": 4.3
+        "2018_deputado": {
+          "gleisi_pct": 4.93,
+          "gleisi_index": 1.222,
+          "votos": 1058,
+          "total_votos": 21470
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 5.51,
+          "gleisi_index": 1.251,
+          "votos": 1312,
+          "total_votos": 23799
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 93
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.82
     },
     "CAMPO BONITO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "CAMPO BONITO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.15,
+          "gleisi_index": 5.652,
+          "votos": 1898,
+          "total_votos": 5399
         },
-        "2014": {
-          "votos_pct": 18.2
+        "2014_governador": {
+          "gleisi_pct": 22.49,
+          "gleisi_index": 7.615,
+          "votos": 644,
+          "total_votos": 2864
         },
-        "2018": {
-          "votos_pct": 5.1
+        "2018_deputado": {
+          "gleisi_pct": 7.15,
+          "gleisi_index": 3.445,
+          "votos": 185,
+          "total_votos": 2587
         },
-        "2022": {
-          "votos_pct": 9.2
+        "2022_deputado": {
+          "gleisi_pct": 10.17,
+          "gleisi_index": 5.912,
+          "votos": 281,
+          "total_votos": 2762
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.656
     },
     "CAMPO DO TENENTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.7
+      "municipio": "CAMPO DO TENENTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.01,
+          "gleisi_index": -1.496,
+          "votos": 2210,
+          "total_votos": 7891
         },
-        "2014": {
-          "votos_pct": 10.2
+        "2014_governador": {
+          "gleisi_pct": 13.69,
+          "gleisi_index": -1.177,
+          "votos": 612,
+          "total_votos": 4469
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 1.35,
+          "gleisi_index": -2.36,
+          "votos": 59,
+          "total_votos": 4383
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 1.7,
+          "gleisi_index": -2.558,
+          "votos": 81,
+          "total_votos": 4756
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.898
     },
     "CAMPO LARGO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.4
+      "municipio": "CAMPO LARGO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.95,
+          "gleisi_index": 2.448,
+          "votos": 35701,
+          "total_votos": 111736
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 12.59,
+          "gleisi_index": -2.283,
+          "votos": 7926,
+          "total_votos": 62963
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 4.11,
+          "gleisi_index": 0.399,
+          "votos": 2372,
+          "total_votos": 57777
         },
-        "2022": {
-          "votos_pct": 4.6
+        "2022_deputado": {
+          "gleisi_pct": 5.29,
+          "gleisi_index": 1.029,
+          "votos": 3310,
+          "total_votos": 62568
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 268
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.398
     },
     "CAMPO MAGRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "CAMPO MAGRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.39,
+          "gleisi_index": 2.886,
+          "votos": 7749,
+          "total_votos": 23925
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.46,
+          "gleisi_index": -2.408,
+          "votos": 1752,
+          "total_votos": 14057
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 3.92,
+          "gleisi_index": 0.218,
+          "votos": 516,
+          "total_votos": 13149
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 4.56,
+          "gleisi_index": 0.296,
+          "votos": 658,
+          "total_votos": 14437
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 54
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.248
     },
     "CAMPO MOURÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "CAMPO MOURÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.38,
+          "gleisi_index": 1.874,
+          "votos": 28963,
+          "total_votos": 92307
         },
-        "2014": {
-          "votos_pct": 15.1
+        "2014_governador": {
+          "gleisi_pct": 17.48,
+          "gleisi_index": 2.613,
+          "votos": 8647,
+          "total_votos": 49456
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 2.19,
+          "gleisi_index": -1.515,
+          "votos": 1069,
+          "total_votos": 48798
         },
-        "2022": {
-          "votos_pct": 5.2
+        "2022_deputado": {
+          "gleisi_pct": 3.37,
+          "gleisi_index": -0.888,
+          "votos": 1726,
+          "total_votos": 51163
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 207
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.521
     },
     "CANDÓI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "CANDÓI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.9,
+          "gleisi_index": 5.4,
+          "votos": 5321,
+          "total_votos": 15245
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 30.33,
+          "gleisi_index": 15.462,
+          "votos": 2534,
+          "total_votos": 8354
         },
-        "2018": {
-          "votos_pct": 8.9
+        "2018_deputado": {
+          "gleisi_pct": 3.21,
+          "gleisi_index": -0.501,
+          "votos": 264,
+          "total_votos": 8236
         },
-        "2022": {
-          "votos_pct": 7.1
+        "2022_deputado": {
+          "gleisi_pct": 3.03,
+          "gleisi_index": -1.227,
+          "votos": 263,
+          "total_votos": 8666
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 40
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.784
     },
     "CANTAGALO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.9
+      "municipio": "CANTAGALO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.15,
+          "gleisi_index": 10.65,
+          "votos": 5050,
+          "total_votos": 12577
         },
-        "2014": {
-          "votos_pct": 17.1
+        "2014_governador": {
+          "gleisi_pct": 21.29,
+          "gleisi_index": 6.421,
+          "votos": 1430,
+          "total_votos": 6716
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 5.28,
+          "gleisi_index": 1.578,
+          "votos": 340,
+          "total_votos": 6434
         },
-        "2022": {
-          "votos_pct": 5.5
+        "2022_deputado": {
+          "gleisi_pct": 3.7,
+          "gleisi_index": -0.566,
+          "votos": 242,
+          "total_votos": 6548
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 30
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.521
     },
     "CAPANEMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.7
+      "municipio": "CAPANEMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.42,
+          "gleisi_index": 8.915,
+          "votos": 8239,
+          "total_votos": 21446
         },
-        "2014": {
-          "votos_pct": 30.0
+        "2014_governador": {
+          "gleisi_pct": 29.9,
+          "gleisi_index": 15.03,
+          "votos": 3424,
+          "total_votos": 11451
         },
-        "2018": {
-          "votos_pct": 6.3
+        "2018_deputado": {
+          "gleisi_pct": 8.37,
+          "gleisi_index": 4.666,
+          "votos": 890,
+          "total_votos": 10631
         },
-        "2022": {
-          "votos_pct": 11.4
+        "2022_deputado": {
+          "gleisi_pct": 10.52,
+          "gleisi_index": 6.26,
+          "votos": 1210,
+          "total_votos": 11500
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.05,
-      "num_secoes": 52
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 8.718
     },
     "CAPITÃO LEÔNIDAS MARQUES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "CAPITÃO LEÔNIDAS MARQUES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.67,
+          "gleisi_index": 9.168,
+          "votos": 6315,
+          "total_votos": 16330
         },
-        "2014": {
-          "votos_pct": 19.0
+        "2014_governador": {
+          "gleisi_pct": 20.99,
+          "gleisi_index": 6.12,
+          "votos": 1809,
+          "total_votos": 8618
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 5.21,
+          "gleisi_index": 1.508,
+          "votos": 410,
+          "total_votos": 7863
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 4.15,
+          "gleisi_index": -0.11,
+          "votos": 357,
+          "total_votos": 8600
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.171
     },
     "CARAMBEÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "CARAMBEÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.81,
+          "gleisi_index": -0.697,
+          "votos": 5656,
+          "total_votos": 19635
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 11.78,
+          "gleisi_index": -3.095,
+          "votos": 1325,
+          "total_votos": 11252
         },
-        "2018": {
-          "votos_pct": 1.6
+        "2018_deputado": {
+          "gleisi_pct": 1.04,
+          "gleisi_index": -2.663,
+          "votos": 124,
+          "total_votos": 11891
         },
-        "2022": {
-          "votos_pct": 0.4
+        "2022_deputado": {
+          "gleisi_pct": 1.18,
+          "gleisi_index": -3.084,
+          "votos": 144,
+          "total_votos": 12234
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 46
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.385
     },
     "CARLÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.0
+      "municipio": "CARLÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.33,
+          "gleisi_index": -2.173,
+          "votos": 3874,
+          "total_votos": 14175
         },
-        "2014": {
-          "votos_pct": 11.6
+        "2014_governador": {
+          "gleisi_pct": 9.74,
+          "gleisi_index": -5.135,
+          "votos": 761,
+          "total_votos": 7816
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 2.39,
+          "gleisi_index": -1.318,
+          "votos": 189,
+          "total_votos": 7915
         },
-        "2022": {
-          "votos_pct": 7.4
+        "2022_deputado": {
+          "gleisi_pct": 7.61,
+          "gleisi_index": 3.351,
+          "votos": 624,
+          "total_votos": 8197
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": -1.319
     },
     "CASCAVEL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.0
+      "municipio": "CASCAVEL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.57,
+          "gleisi_index": 2.07,
+          "votos": 89070,
+          "total_votos": 282109
         },
-        "2014": {
-          "votos_pct": 16.3
+        "2014_governador": {
+          "gleisi_pct": 18.55,
+          "gleisi_index": 3.68,
+          "votos": 29072,
+          "total_votos": 156716
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 5.01,
+          "gleisi_index": 1.305,
+          "votos": 7898,
+          "total_votos": 157603
         },
-        "2022": {
-          "votos_pct": 3.7
+        "2022_deputado": {
+          "gleisi_pct": 6.19,
+          "gleisi_index": 1.925,
+          "votos": 10616,
+          "total_votos": 171588
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 491
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.245
     },
     "CASTRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.1
+      "municipio": "CASTRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.93,
+          "gleisi_index": -1.569,
+          "votos": 19490,
+          "total_votos": 69773
         },
-        "2014": {
-          "votos_pct": 7.7
+        "2014_governador": {
+          "gleisi_pct": 9.4,
+          "gleisi_index": -5.467,
+          "votos": 3634,
+          "total_votos": 38644
         },
-        "2018": {
-          "votos_pct": 1.6
+        "2018_deputado": {
+          "gleisi_pct": 1.73,
+          "gleisi_index": -1.978,
+          "votos": 657,
+          "total_votos": 38026
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 2.49,
+          "gleisi_index": -1.768,
+          "votos": 965,
+          "total_votos": 38702
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 177
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.696
     },
     "CATANDUVAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.5
+      "municipio": "CATANDUVAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.31,
+          "gleisi_index": 2.808,
+          "votos": 3255,
+          "total_votos": 10074
         },
-        "2014": {
-          "votos_pct": 9.5
+        "2014_governador": {
+          "gleisi_pct": 10.65,
+          "gleisi_index": -4.222,
+          "votos": 556,
+          "total_votos": 5221
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 2.34,
+          "gleisi_index": -1.366,
+          "votos": 114,
+          "total_votos": 4872
         },
-        "2022": {
-          "votos_pct": 7.8
+        "2022_deputado": {
+          "gleisi_pct": 5.44,
+          "gleisi_index": 1.175,
+          "votos": 278,
+          "total_votos": 5114
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.07,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.401
     },
     "CENTENÁRIO DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.5
+      "municipio": "CENTENÁRIO DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.78,
+          "gleisi_index": 3.274,
+          "votos": 4023,
+          "total_votos": 12274
         },
-        "2014": {
-          "votos_pct": 9.4
+        "2014_governador": {
+          "gleisi_pct": 11.85,
+          "gleisi_index": -3.022,
+          "votos": 780,
+          "total_votos": 6583
         },
-        "2018": {
-          "votos_pct": 12.9
+        "2018_deputado": {
+          "gleisi_pct": 15.39,
+          "gleisi_index": 11.681,
+          "votos": 928,
+          "total_votos": 6031
         },
-        "2022": {
-          "votos_pct": 15.1
+        "2022_deputado": {
+          "gleisi_pct": 13.43,
+          "gleisi_index": 9.174,
+          "votos": 837,
+          "total_votos": 6230
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.277
     },
     "CERRO AZUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.7
+      "municipio": "CERRO AZUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.15,
+          "gleisi_index": 11.65,
+          "votos": 7280,
+          "total_votos": 17690
         },
-        "2014": {
-          "votos_pct": 7.1
+        "2014_governador": {
+          "gleisi_pct": 5.0,
+          "gleisi_index": -9.875,
+          "votos": 501,
+          "total_votos": 10027
         },
-        "2018": {
-          "votos_pct": 3.5
+        "2018_deputado": {
+          "gleisi_pct": 5.3,
+          "gleisi_index": 1.589,
+          "votos": 461,
+          "total_votos": 8706
         },
-        "2022": {
-          "votos_pct": 9.8
+        "2022_deputado": {
+          "gleisi_pct": 11.0,
+          "gleisi_index": 6.734,
+          "votos": 1022,
+          "total_votos": 9295
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.06,
-      "num_secoes": 46
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.525
     },
     "CHOPINZINHO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "CHOPINZINHO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.08,
+          "gleisi_index": 9.582,
+          "votos": 8483,
+          "total_votos": 21704
         },
-        "2014": {
-          "votos_pct": 8.5
+        "2014_governador": {
+          "gleisi_pct": 9.76,
+          "gleisi_index": -5.111,
+          "votos": 1181,
+          "total_votos": 12100
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 3.05,
+          "gleisi_index": -0.654,
+          "votos": 362,
+          "total_votos": 11859
         },
-        "2022": {
-          "votos_pct": 2.5
+        "2022_deputado": {
+          "gleisi_pct": 3.53,
+          "gleisi_index": -0.729,
+          "votos": 438,
+          "total_votos": 12399
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 52
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.772
     },
     "CIANORTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "CIANORTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.38,
+          "gleisi_index": -1.123,
+          "votos": 19749,
+          "total_votos": 69588
         },
-        "2014": {
-          "votos_pct": 13.4
+        "2014_governador": {
+          "gleisi_pct": 14.63,
+          "gleisi_index": -0.238,
+          "votos": 5717,
+          "total_votos": 39068
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.32,
+          "gleisi_index": -2.385,
+          "votos": 531,
+          "total_votos": 40191
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 1.11,
+          "gleisi_index": -3.152,
+          "votos": 457,
+          "total_votos": 41187
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 183
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.724
     },
     "CIDADE GAÚCHA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.9
+      "municipio": "CIDADE GAÚCHA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.64,
+          "gleisi_index": 5.14,
+          "votos": 4417,
+          "total_votos": 12750
         },
-        "2014": {
-          "votos_pct": 20.2
+        "2014_governador": {
+          "gleisi_pct": 22.24,
+          "gleisi_index": 7.372,
+          "votos": 1531,
+          "total_votos": 6883
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.97,
+          "gleisi_index": -2.74,
+          "votos": 61,
+          "total_votos": 6313
         },
-        "2022": {
-          "votos_pct": 0.6
+        "2022_deputado": {
+          "gleisi_pct": 0.88,
+          "gleisi_index": -3.379,
+          "votos": 57,
+          "total_votos": 6461
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.598
     },
     "CLEVELÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "CLEVELÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.48,
+          "gleisi_index": 3.978,
+          "votos": 6052,
+          "total_votos": 18076
         },
-        "2014": {
-          "votos_pct": 9.1
+        "2014_governador": {
+          "gleisi_pct": 13.06,
+          "gleisi_index": -1.809,
+          "votos": 1254,
+          "total_votos": 9600
         },
-        "2018": {
-          "votos_pct": 11.0
+        "2018_deputado": {
+          "gleisi_pct": 8.88,
+          "gleisi_index": 5.175,
+          "votos": 791,
+          "total_votos": 8907
         },
-        "2022": {
-          "votos_pct": 7.7
+        "2022_deputado": {
+          "gleisi_pct": 7.23,
+          "gleisi_index": 2.971,
+          "votos": 668,
+          "total_votos": 9236
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 48
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.579
     },
     "COLOMBO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "COLOMBO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.41,
+          "gleisi_index": 4.906,
+          "votos": 67176,
+          "total_votos": 195229
         },
-        "2014": {
-          "votos_pct": 14.1
+        "2014_governador": {
+          "gleisi_pct": 16.59,
+          "gleisi_index": 1.716,
+          "votos": 17795,
+          "total_votos": 107280
         },
-        "2018": {
-          "votos_pct": 5.1
+        "2018_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 1.43,
+          "votos": 5064,
+          "total_votos": 98606
         },
-        "2022": {
-          "votos_pct": 6.0
+        "2022_deputado": {
+          "gleisi_pct": 5.03,
+          "gleisi_index": 0.768,
+          "votos": 5500,
+          "total_votos": 109365
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 301
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.205
     },
     "COLORADO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.9
+      "municipio": "COLORADO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.06,
+          "gleisi_index": 3.553,
+          "votos": 7995,
+          "total_votos": 24186
         },
-        "2014": {
-          "votos_pct": 20.2
+        "2014_governador": {
+          "gleisi_pct": 17.57,
+          "gleisi_index": 2.7,
+          "votos": 2316,
+          "total_votos": 13181
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 4.69,
+          "gleisi_index": 0.983,
+          "votos": 536,
+          "total_votos": 11431
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 5.3,
+          "gleisi_index": 1.035,
+          "votos": 686,
+          "total_votos": 12953
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 58
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.068
     },
     "CONGONHINHAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.4
+      "municipio": "CONGONHINHAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.94,
+          "gleisi_index": 4.442,
+          "votos": 3072,
+          "total_votos": 9050
         },
-        "2014": {
-          "votos_pct": 8.8
+        "2014_governador": {
+          "gleisi_pct": 12.06,
+          "gleisi_index": -2.815,
+          "votos": 581,
+          "total_votos": 4819
         },
-        "2018": {
-          "votos_pct": 3.4
+        "2018_deputado": {
+          "gleisi_pct": 6.22,
+          "gleisi_index": 2.51,
+          "votos": 296,
+          "total_votos": 4762
         },
-        "2022": {
-          "votos_pct": 7.8
+        "2022_deputado": {
+          "gleisi_pct": 6.26,
+          "gleisi_index": 1.995,
+          "votos": 299,
+          "total_votos": 4779
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.533
     },
     "CONSELHEIRO MAIRINCK": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "CONSELHEIRO MAIRINCK",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.44,
+          "gleisi_index": 7.94,
+          "votos": 1634,
+          "total_votos": 4364
         },
-        "2014": {
-          "votos_pct": 10.0
+        "2014_governador": {
+          "gleisi_pct": 8.99,
+          "gleisi_index": -5.879,
+          "votos": 206,
+          "total_votos": 2291
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 1.3,
+          "gleisi_index": -2.409,
+          "votos": 28,
+          "total_votos": 2159
         },
-        "2022": {
-          "votos_pct": 7.9
+        "2022_deputado": {
+          "gleisi_pct": 7.67,
+          "gleisi_index": 3.41,
+          "votos": 169,
+          "total_votos": 2203
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.07,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 0.766
     },
     "CONTENDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "CONTENDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.0,
+          "gleisi_index": 4.498,
+          "votos": 5384,
+          "total_votos": 15835
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 17.08,
+          "gleisi_index": 2.21,
+          "votos": 1498,
+          "total_votos": 8770
         },
-        "2018": {
-          "votos_pct": 3.5
+        "2018_deputado": {
+          "gleisi_pct": 3.91,
+          "gleisi_index": 0.202,
+          "votos": 325,
+          "total_votos": 8316
         },
-        "2022": {
-          "votos_pct": 6.3
+        "2022_deputado": {
+          "gleisi_pct": 6.76,
+          "gleisi_index": 2.502,
+          "votos": 607,
+          "total_votos": 8975
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 36
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.353
     },
     "CORBÉLIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.4
+      "municipio": "CORBÉLIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.56,
+          "gleisi_index": -1.939,
+          "votos": 5418,
+          "total_votos": 19656
         },
-        "2014": {
-          "votos_pct": 8.1
+        "2014_governador": {
+          "gleisi_pct": 10.48,
+          "gleisi_index": -4.389,
+          "votos": 1134,
+          "total_votos": 10818
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 2.09,
+          "gleisi_index": -1.614,
+          "votos": 211,
+          "total_votos": 10087
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 3.13,
+          "gleisi_index": -1.131,
+          "votos": 327,
+          "total_votos": 10445
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 43
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.268
     },
     "CORNÉLIO PROCÓPIO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "CORNÉLIO PROCÓPIO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.58,
+          "gleisi_index": 1.08,
+          "votos": 15672,
+          "total_votos": 51245
         },
-        "2014": {
-          "votos_pct": 9.0
+        "2014_governador": {
+          "gleisi_pct": 9.97,
+          "gleisi_index": -4.903,
+          "votos": 2691,
+          "total_votos": 26996
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 2.77,
+          "gleisi_index": -0.935,
+          "votos": 715,
+          "total_votos": 25804
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 4.07,
+          "gleisi_index": -0.194,
+          "votos": 1046,
+          "total_votos": 25715
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 112
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.238
     },
     "CORONEL DOMINGOS SOARES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "CORONEL DOMINGOS SOARES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.48,
+          "gleisi_index": 6.979,
+          "votos": 2460,
+          "total_votos": 6743
         },
-        "2014": {
-          "votos_pct": 20.6
+        "2014_governador": {
+          "gleisi_pct": 25.71,
+          "gleisi_index": 10.838,
+          "votos": 952,
+          "total_votos": 3703
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 5.81,
+          "gleisi_index": 2.099,
+          "votos": 209,
+          "total_votos": 3600
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 4.67,
+          "gleisi_index": 0.406,
+          "votos": 176,
+          "total_votos": 3771
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.08
     },
     "CORONEL VIVIDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.1
+      "municipio": "CORONEL VIVIDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.05,
+          "gleisi_index": 7.544,
+          "votos": 8999,
+          "total_votos": 24291
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 15.43,
+          "gleisi_index": 0.555,
+          "votos": 2053,
+          "total_votos": 13309
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 5.72,
+          "gleisi_index": 2.018,
+          "votos": 725,
+          "total_votos": 12665
         },
-        "2022": {
-          "votos_pct": 4.0
+        "2022_deputado": {
+          "gleisi_pct": 6.34,
+          "gleisi_index": 2.082,
+          "votos": 829,
+          "total_votos": 13069
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 55
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.05
     },
     "CORUMBATAÍ DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.5
+      "municipio": "CORUMBATAÍ DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.99,
+          "gleisi_index": 2.483,
+          "votos": 1464,
+          "total_votos": 4577
         },
-        "2014": {
-          "votos_pct": 9.8
+        "2014_governador": {
+          "gleisi_pct": 10.85,
+          "gleisi_index": -4.022,
+          "votos": 267,
+          "total_votos": 2461
         },
-        "2018": {
-          "votos_pct": 5.4
+        "2018_deputado": {
+          "gleisi_pct": 4.01,
+          "gleisi_index": 0.307,
+          "votos": 100,
+          "total_votos": 2492
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 1.49,
+          "gleisi_index": -2.768,
+          "votos": 40,
+          "total_votos": 2679
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.0
     },
     "CRUZ MACHADO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "CRUZ MACHADO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.94,
+          "gleisi_index": 0.438,
+          "votos": 5411,
+          "total_votos": 18072
         },
-        "2014": {
-          "votos_pct": 15.9
+        "2014_governador": {
+          "gleisi_pct": 20.66,
+          "gleisi_index": 5.785,
+          "votos": 2210,
+          "total_votos": 10699
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.94,
+          "gleisi_index": -2.762,
+          "votos": 84,
+          "total_votos": 8899
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.05,
+          "gleisi_index": -3.207,
+          "votos": 104,
+          "total_votos": 9861
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 49
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.064
     },
     "CRUZEIRO DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 21.0
+      "municipio": "CRUZEIRO DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.35,
+          "gleisi_index": 12.844,
+          "votos": 2097,
+          "total_votos": 4952
         },
-        "2014": {
-          "votos_pct": 13.6
+        "2014_governador": {
+          "gleisi_pct": 19.72,
+          "gleisi_index": 4.852,
+          "votos": 542,
+          "total_votos": 2748
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 6.19,
+          "gleisi_index": 2.484,
+          "votos": 161,
+          "total_votos": 2601
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 8.38,
+          "gleisi_index": 4.122,
+          "votos": 238,
+          "total_votos": 2839
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 6.075
     },
     "CRUZEIRO DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.8
+      "municipio": "CRUZEIRO DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.45,
+          "gleisi_index": 9.946,
+          "votos": 8682,
+          "total_votos": 22008
         },
-        "2014": {
-          "votos_pct": 13.3
+        "2014_governador": {
+          "gleisi_pct": 22.0,
+          "gleisi_index": 7.132,
+          "votos": 2529,
+          "total_votos": 11494
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.41,
+          "gleisi_index": -3.298,
+          "votos": 47,
+          "total_votos": 11509
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 0.45,
+          "gleisi_index": -3.811,
+          "votos": 54,
+          "total_votos": 11998
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 56
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 2.492
     },
     "CRUZEIRO DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.8
+      "municipio": "CRUZEIRO DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.97,
+          "gleisi_index": -1.534,
+          "votos": 1630,
+          "total_votos": 5828
         },
-        "2014": {
-          "votos_pct": 31.8
+        "2014_governador": {
+          "gleisi_pct": 32.27,
+          "gleisi_index": 17.396,
+          "votos": 1029,
+          "total_votos": 3189
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 2.6,
+          "gleisi_index": -1.107,
+          "votos": 76,
+          "total_votos": 2924
         },
-        "2022": {
-          "votos_pct": 2.1
+        "2022_deputado": {
+          "gleisi_pct": 3.07,
+          "gleisi_index": -1.191,
+          "votos": 89,
+          "total_votos": 2899
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.391
     },
     "CRUZMALTINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.2
+      "municipio": "CRUZMALTINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.05,
+          "gleisi_index": -4.457,
+          "votos": 950,
+          "total_votos": 3793
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 7.77,
+          "gleisi_index": -7.105,
+          "votos": 162,
+          "total_votos": 2086
         },
-        "2018": {
-          "votos_pct": 7.8
+        "2018_deputado": {
+          "gleisi_pct": 8.99,
+          "gleisi_index": 5.287,
+          "votos": 167,
+          "total_votos": 1857
         },
-        "2022": {
-          "votos_pct": 8.1
+        "2022_deputado": {
+          "gleisi_pct": 4.92,
+          "gleisi_index": 0.658,
+          "votos": 101,
+          "total_votos": 2053
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.404
     },
     "CURITIBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.2
+      "municipio": "CURITIBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 22.06,
+          "gleisi_index": -7.443,
+          "votos": 413993,
+          "total_votos": 1876712
         },
-        "2014": {
-          "votos_pct": 10.6
+        "2014_governador": {
+          "gleisi_pct": 11.65,
+          "gleisi_index": -3.225,
+          "votos": 112729,
+          "total_votos": 967925
         },
-        "2018": {
-          "votos_pct": 4.9
+        "2018_deputado": {
+          "gleisi_pct": 3.44,
+          "gleisi_index": -0.27,
+          "votos": 32633,
+          "total_votos": 949803
         },
-        "2022": {
-          "votos_pct": 8.4
+        "2022_deputado": {
+          "gleisi_pct": 4.39,
+          "gleisi_index": 0.125,
+          "votos": 44886,
+          "total_votos": 1023234
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 830
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.703
     },
     "CURIÚVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "CURIÚVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.52,
+          "gleisi_index": -0.981,
+          "votos": 4047,
+          "total_votos": 14189
         },
-        "2014": {
-          "votos_pct": 15.1
+        "2014_governador": {
+          "gleisi_pct": 16.17,
+          "gleisi_index": 1.299,
+          "votos": 1216,
+          "total_votos": 7520
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 2.01,
+          "gleisi_index": -1.693,
+          "votos": 140,
+          "total_votos": 6956
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 2.1,
+          "gleisi_index": -2.166,
+          "votos": 152,
+          "total_votos": 7254
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 33
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.885
     },
     "CÂNDIDO DE ABREU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.1
+      "municipio": "CÂNDIDO DE ABREU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.38,
+          "gleisi_index": -1.123,
+          "votos": 4795,
+          "total_votos": 16896
         },
-        "2014": {
-          "votos_pct": 11.0
+        "2014_governador": {
+          "gleisi_pct": 11.05,
+          "gleisi_index": -3.824,
+          "votos": 946,
+          "total_votos": 8563
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 3.09,
+          "gleisi_index": -0.611,
+          "votos": 249,
+          "total_votos": 8046
         },
-        "2022": {
-          "votos_pct": 4.2
+        "2022_deputado": {
+          "gleisi_pct": 3.17,
+          "gleisi_index": -1.091,
+          "votos": 269,
+          "total_votos": 8484
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 47
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.662
     },
     "CÉU AZUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "CÉU AZUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.92,
+          "gleisi_index": -2.585,
+          "votos": 3271,
+          "total_votos": 12152
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 11.2,
+          "gleisi_index": -3.666,
+          "votos": 745,
+          "total_votos": 6649
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 1.16,
+          "gleisi_index": -2.547,
+          "votos": 74,
+          "total_votos": 6384
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 1.46,
+          "gleisi_index": -2.801,
+          "votos": 98,
+          "total_votos": 6708
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.9
     },
     "DIAMANTE D OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "DIAMANTE D OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.17,
+          "gleisi_index": 11.664,
+          "votos": 2216,
+          "total_votos": 5383
         },
-        "2014": {
-          "votos_pct": 18.4
+        "2014_governador": {
+          "gleisi_pct": 20.69,
+          "gleisi_index": 5.82,
+          "votos": 599,
+          "total_votos": 2895
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 3.58,
+          "gleisi_index": -0.123,
+          "votos": 96,
+          "total_votos": 2679
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 4.41,
+          "gleisi_index": 0.144,
+          "votos": 126,
+          "total_votos": 2860
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.376
     },
     "DIAMANTE DO NORTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.5
+      "municipio": "DIAMANTE DO NORTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.94,
+          "gleisi_index": 7.436,
+          "votos": 2312,
+          "total_votos": 6259
         },
-        "2014": {
-          "votos_pct": 16.4
+        "2014_governador": {
+          "gleisi_pct": 16.81,
+          "gleisi_index": 1.944,
+          "votos": 548,
+          "total_votos": 3259
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.78,
+          "gleisi_index": -2.922,
+          "votos": 24,
+          "total_votos": 3061
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 0.65,
+          "gleisi_index": -3.612,
+          "votos": 21,
+          "total_votos": 3234
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.711
     },
     "DIAMANTE DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "DIAMANTE DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.35,
+          "gleisi_index": 0.852,
+          "votos": 1284,
+          "total_votos": 4230
         },
-        "2014": {
-          "votos_pct": 25.3
+        "2014_governador": {
+          "gleisi_pct": 18.62,
+          "gleisi_index": 3.752,
+          "votos": 422,
+          "total_votos": 2266
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 1.1,
+          "gleisi_index": -2.611,
+          "votos": 25,
+          "total_votos": 2282
         },
-        "2022": {
-          "votos_pct": 7.3
+        "2022_deputado": {
+          "gleisi_pct": 5.67,
+          "gleisi_index": 1.409,
+          "votos": 137,
+          "total_votos": 2416
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.851
     },
     "DOIS VIZINHOS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.5
+      "municipio": "DOIS VIZINHOS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.69,
+          "gleisi_index": 5.187,
+          "votos": 13728,
+          "total_votos": 39574
         },
-        "2014": {
-          "votos_pct": 17.7
+        "2014_governador": {
+          "gleisi_pct": 24.98,
+          "gleisi_index": 10.109,
+          "votos": 5542,
+          "total_votos": 22186
         },
-        "2018": {
-          "votos_pct": 7.9
+        "2018_deputado": {
+          "gleisi_pct": 11.32,
+          "gleisi_index": 7.615,
+          "votos": 2397,
+          "total_votos": 21173
         },
-        "2022": {
-          "votos_pct": 11.7
+        "2022_deputado": {
+          "gleisi_pct": 10.07,
+          "gleisi_index": 5.809,
+          "votos": 2485,
+          "total_votos": 24675
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 96
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 7.18
     },
     "DOURADINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.1
+      "municipio": "DOURADINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.83,
+          "gleisi_index": 3.33,
+          "votos": 2712,
+          "total_votos": 8260
         },
-        "2014": {
-          "votos_pct": 15.4
+        "2014_governador": {
+          "gleisi_pct": 22.68,
+          "gleisi_index": 7.811,
+          "votos": 1047,
+          "total_votos": 4616
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 1.39,
+          "gleisi_index": -2.314,
+          "votos": 71,
+          "total_votos": 5101
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 1.18,
+          "gleisi_index": -3.083,
+          "votos": 60,
+          "total_votos": 5091
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.436
     },
     "DOUTOR CAMARGO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "DOUTOR CAMARGO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.53,
+          "gleisi_index": -2.975,
+          "votos": 1866,
+          "total_votos": 7034
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 9.26,
+          "gleisi_index": -5.614,
+          "votos": 355,
+          "total_votos": 3835
         },
-        "2018": {
-          "votos_pct": 3.5
+        "2018_deputado": {
+          "gleisi_pct": 1.68,
+          "gleisi_index": -2.021,
+          "votos": 54,
+          "total_votos": 3205
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 3.05,
+          "gleisi_index": -1.211,
+          "votos": 113,
+          "total_votos": 3704
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.955
     },
     "DOUTOR ULYSSES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 21.7
+      "municipio": "DOUTOR ULYSSES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.53,
+          "gleisi_index": 9.026,
+          "votos": 2598,
+          "total_votos": 6743
         },
-        "2014": {
-          "votos_pct": 5.6
+        "2014_governador": {
+          "gleisi_pct": 4.52,
+          "gleisi_index": -10.347,
+          "votos": 167,
+          "total_votos": 3691
         },
-        "2018": {
-          "votos_pct": 5.1
+        "2018_deputado": {
+          "gleisi_pct": 4.0,
+          "gleisi_index": 0.293,
+          "votos": 133,
+          "total_votos": 3326
         },
-        "2022": {
-          "votos_pct": 17.7
+        "2022_deputado": {
+          "gleisi_pct": 6.35,
+          "gleisi_index": 2.085,
+          "votos": 235,
+          "total_votos": 3703
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.13,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.264
     },
     "ENGENHEIRO BELTRÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.3
+      "municipio": "ENGENHEIRO BELTRÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.4,
+          "gleisi_index": 0.897,
+          "votos": 4716,
+          "total_votos": 15513
         },
-        "2014": {
-          "votos_pct": 13.0
+        "2014_governador": {
+          "gleisi_pct": 15.34,
+          "gleisi_index": 0.464,
+          "votos": 1265,
+          "total_votos": 8249
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 1.74,
+          "gleisi_index": -1.966,
+          "votos": 128,
+          "total_votos": 7355
         },
-        "2022": {
-          "votos_pct": 2.5
+        "2022_deputado": {
+          "gleisi_pct": 1.36,
+          "gleisi_index": -2.902,
+          "votos": 108,
+          "total_votos": 7942
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.877
     },
     "ENTRE RIOS DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "ENTRE RIOS DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.62,
+          "gleisi_index": 4.12,
+          "votos": 1664,
+          "total_votos": 4949
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.18,
+          "gleisi_index": -2.694,
+          "votos": 335,
+          "total_votos": 2751
         },
-        "2018": {
-          "votos_pct": 2.9
+        "2018_deputado": {
+          "gleisi_pct": 3.3,
+          "gleisi_index": -0.401,
+          "votos": 85,
+          "total_votos": 2572
         },
-        "2022": {
-          "votos_pct": 4.9
+        "2022_deputado": {
+          "gleisi_pct": 3.6,
+          "gleisi_index": -0.661,
+          "votos": 106,
+          "total_votos": 2944
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.091
     },
     "ENÉAS MARQUES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "ENÉAS MARQUES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.77,
+          "gleisi_index": 1.27,
+          "votos": 2420,
+          "total_votos": 7864
         },
-        "2014": {
-          "votos_pct": 18.5
+        "2014_governador": {
+          "gleisi_pct": 17.81,
+          "gleisi_index": 2.935,
+          "votos": 766,
+          "total_votos": 4302
         },
-        "2018": {
-          "votos_pct": 12.9
+        "2018_deputado": {
+          "gleisi_pct": 11.57,
+          "gleisi_index": 7.866,
+          "votos": 432,
+          "total_votos": 3733
         },
-        "2022": {
-          "votos_pct": 7.5
+        "2022_deputado": {
+          "gleisi_pct": 7.33,
+          "gleisi_index": 3.065,
+          "votos": 308,
+          "total_votos": 4204
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.05,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.784
     },
     "ESPERANÇA NOVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.9
+      "municipio": "ESPERANÇA NOVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.9,
+          "gleisi_index": 11.398,
+          "votos": 1108,
+          "total_votos": 2709
         },
-        "2014": {
-          "votos_pct": 10.9
+        "2014_governador": {
+          "gleisi_pct": 10.29,
+          "gleisi_index": -4.579,
+          "votos": 148,
+          "total_votos": 1438
         },
-        "2018": {
-          "votos_pct": 0.8
+        "2018_deputado": {
+          "gleisi_pct": 0.21,
+          "gleisi_index": -3.494,
+          "votos": 3,
+          "total_votos": 1416
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 0.58,
+          "gleisi_index": -3.678,
+          "votos": 9,
+          "total_votos": 1543
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.088
     },
     "ESPIGÃO ALTO DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.5
+      "municipio": "ESPIGÃO ALTO DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.35,
+          "gleisi_index": 2.852,
+          "votos": 1741,
+          "total_votos": 5381
         },
-        "2014": {
-          "votos_pct": 14.5
+        "2014_governador": {
+          "gleisi_pct": 14.69,
+          "gleisi_index": -0.179,
+          "votos": 460,
+          "total_votos": 3131
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 4.21,
+          "gleisi_index": 0.502,
+          "votos": 132,
+          "total_votos": 3137
         },
-        "2022": {
-          "votos_pct": 3.7
+        "2022_deputado": {
+          "gleisi_pct": 6.76,
+          "gleisi_index": 2.494,
+          "votos": 213,
+          "total_votos": 3153
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.417
     },
     "FAROL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "FAROL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.17,
+          "gleisi_index": 6.668,
+          "votos": 1449,
+          "total_votos": 4006
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 14.09,
+          "gleisi_index": -0.78,
+          "votos": 310,
+          "total_votos": 2200
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 1.68,
+          "gleisi_index": -2.03,
+          "votos": 35,
+          "total_votos": 2088
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 1.25,
+          "gleisi_index": -3.008,
+          "votos": 27,
+          "total_votos": 2154
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.213
     },
     "FAXINAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.8
+      "municipio": "FAXINAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.93,
+          "gleisi_index": 2.426,
+          "votos": 5251,
+          "total_votos": 16446
         },
-        "2014": {
-          "votos_pct": 4.6
+        "2014_governador": {
+          "gleisi_pct": 6.75,
+          "gleisi_index": -8.117,
+          "votos": 602,
+          "total_votos": 8913
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 2.36,
+          "gleisi_index": -1.343,
+          "votos": 204,
+          "total_votos": 8633
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 3.95,
+          "gleisi_index": -0.309,
+          "votos": 357,
+          "total_votos": 9033
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 45
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.836
     },
     "FAZENDA RIO GRANDE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.3
+      "municipio": "FAZENDA RIO GRANDE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.4,
+          "gleisi_index": 7.896,
+          "votos": 28813,
+          "total_votos": 77043
         },
-        "2014": {
-          "votos_pct": 17.2
+        "2014_governador": {
+          "gleisi_pct": 21.04,
+          "gleisi_index": 6.171,
+          "votos": 9808,
+          "total_votos": 46612
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 4.79,
+          "gleisi_index": 1.087,
+          "votos": 2218,
+          "total_votos": 46277
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 5.9,
+          "gleisi_index": 1.642,
+          "votos": 3275,
+          "total_votos": 55475
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 226
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.199
     },
     "FERNANDES PINHEIRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.5
+      "municipio": "FERNANDES PINHEIRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.72,
+          "gleisi_index": -0.783,
+          "votos": 2133,
+          "total_votos": 7427
         },
-        "2014": {
-          "votos_pct": 10.8
+        "2014_governador": {
+          "gleisi_pct": 12.66,
+          "gleisi_index": -2.213,
+          "votos": 539,
+          "total_votos": 4258
         },
-        "2018": {
-          "votos_pct": 7.0
+        "2018_deputado": {
+          "gleisi_pct": 6.76,
+          "gleisi_index": 3.059,
+          "votos": 271,
+          "total_votos": 4006
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 5.19,
+          "gleisi_index": 0.931,
+          "votos": 218,
+          "total_votos": 4198
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.249
     },
     "FIGUEIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.8
+      "municipio": "FIGUEIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.01,
+          "gleisi_index": 5.51,
+          "votos": 3218,
+          "total_votos": 9191
         },
-        "2014": {
-          "votos_pct": 6.8
+        "2014_governador": {
+          "gleisi_pct": 8.9,
+          "gleisi_index": -5.973,
+          "votos": 436,
+          "total_votos": 4900
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 1.75,
+          "gleisi_index": -1.958,
+          "votos": 86,
+          "total_votos": 4921
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 4.12,
+          "gleisi_index": -0.145,
+          "votos": 194,
+          "total_votos": 4713
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 23
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.642
     },
     "FLOR DA SERRA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "FLOR DA SERRA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.12,
+          "gleisi_index": 5.613,
+          "votos": 2180,
+          "total_votos": 6208
         },
-        "2014": {
-          "votos_pct": 9.7
+        "2014_governador": {
+          "gleisi_pct": 16.38,
+          "gleisi_index": 1.508,
+          "votos": 569,
+          "total_votos": 3474
         },
-        "2018": {
-          "votos_pct": 10.0
+        "2018_deputado": {
+          "gleisi_pct": 4.26,
+          "gleisi_index": 0.549,
+          "votos": 148,
+          "total_votos": 3478
         },
-        "2022": {
-          "votos_pct": 12.7
+        "2022_deputado": {
+          "gleisi_pct": 4.95,
+          "gleisi_index": 0.69,
+          "votos": 174,
+          "total_votos": 3514
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.09
     },
     "FLORAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "FLORAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.25,
+          "gleisi_index": 1.748,
+          "votos": 1961,
+          "total_votos": 6275
         },
-        "2014": {
-          "votos_pct": 14.2
+        "2014_governador": {
+          "gleisi_pct": 13.06,
+          "gleisi_index": -1.807,
+          "votos": 475,
+          "total_votos": 3636
         },
-        "2018": {
-          "votos_pct": 2.9
+        "2018_deputado": {
+          "gleisi_pct": 2.59,
+          "gleisi_index": -1.119,
+          "votos": 88,
+          "total_votos": 3401
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 2.36,
+          "gleisi_index": -1.901,
+          "votos": 82,
+          "total_votos": 3474
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.77
     },
     "FLORESTA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "FLORESTA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.38,
+          "gleisi_index": -2.119,
+          "votos": 1973,
+          "total_votos": 7205
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 11.28,
+          "gleisi_index": -3.592,
+          "votos": 471,
+          "total_votos": 4176
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 1.08,
+          "gleisi_index": -2.622,
+          "votos": 47,
+          "total_votos": 4334
         },
-        "2022": {
-          "votos_pct": 2.1
+        "2022_deputado": {
+          "gleisi_pct": 1.5,
+          "gleisi_index": -2.759,
+          "votos": 81,
+          "total_votos": 5390
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.773
     },
     "FLORESTÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.3
+      "municipio": "FLORESTÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.81,
+          "gleisi_index": 1.304,
+          "votos": 4328,
+          "total_votos": 14049
         },
-        "2014": {
-          "votos_pct": 10.3
+        "2014_governador": {
+          "gleisi_pct": 7.97,
+          "gleisi_index": -6.9,
+          "votos": 593,
+          "total_votos": 7439
         },
-        "2018": {
-          "votos_pct": 7.4
+        "2018_deputado": {
+          "gleisi_pct": 8.38,
+          "gleisi_index": 4.678,
+          "votos": 603,
+          "total_votos": 7192
         },
-        "2022": {
-          "votos_pct": 10.6
+        "2022_deputado": {
+          "gleisi_pct": 9.93,
+          "gleisi_index": 5.665,
+          "votos": 732,
+          "total_votos": 7374
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 34
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 1.187
     },
     "FLÓRIDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "FLÓRIDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.68,
+          "gleisi_index": 8.179,
+          "votos": 1245,
+          "total_votos": 3304
         },
-        "2014": {
-          "votos_pct": 16.9
+        "2014_governador": {
+          "gleisi_pct": 15.56,
+          "gleisi_index": 0.688,
+          "votos": 281,
+          "total_votos": 1806
         },
-        "2018": {
-          "votos_pct": 7.4
+        "2018_deputado": {
+          "gleisi_pct": 7.65,
+          "gleisi_index": 3.945,
+          "votos": 129,
+          "total_votos": 1686
         },
-        "2022": {
-          "votos_pct": 1.0
+        "2022_deputado": {
+          "gleisi_pct": 1.26,
+          "gleisi_index": -2.997,
+          "votos": 24,
+          "total_votos": 1898
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.06,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.454
     },
     "FORMOSA DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.5
+      "municipio": "FORMOSA DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.45,
+          "gleisi_index": -3.055,
+          "votos": 2183,
+          "total_votos": 8254
         },
-        "2014": {
-          "votos_pct": 18.6
+        "2014_governador": {
+          "gleisi_pct": 25.83,
+          "gleisi_index": 10.956,
+          "votos": 1202,
+          "total_votos": 4654
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 1.7,
+          "gleisi_index": -2.005,
+          "votos": 71,
+          "total_votos": 4174
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 0.74,
+          "gleisi_index": -3.524,
+          "votos": 33,
+          "total_votos": 4477
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.593
     },
     "FOZ DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.0
+      "municipio": "FOZ DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.25,
+          "gleisi_index": 5.748,
+          "votos": 90507,
+          "total_votos": 256750
         },
-        "2014": {
-          "votos_pct": 22.2
+        "2014_governador": {
+          "gleisi_pct": 22.01,
+          "gleisi_index": 7.134,
+          "votos": 30535,
+          "total_votos": 138761
         },
-        "2018": {
-          "votos_pct": 4.2
+        "2018_deputado": {
+          "gleisi_pct": 3.29,
+          "gleisi_index": -0.417,
+          "votos": 4315,
+          "total_votos": 131183
         },
-        "2022": {
-          "votos_pct": 8.6
+        "2022_deputado": {
+          "gleisi_pct": 6.94,
+          "gleisi_index": 2.68,
+          "votos": 10020,
+          "total_votos": 144348
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 396
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.786
     },
     "FOZ DO JORDÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "FOZ DO JORDÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.41,
+          "gleisi_index": 8.91,
+          "votos": 1961,
+          "total_votos": 5105
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 19.91,
+          "gleisi_index": 5.039,
+          "votos": 579,
+          "total_votos": 2908
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 4.0,
+          "gleisi_index": 0.295,
+          "votos": 115,
+          "total_votos": 2874
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 3.33,
+          "gleisi_index": -0.928,
+          "votos": 106,
+          "total_votos": 3180
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.329
     },
     "FRANCISCO ALVES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.4
+      "municipio": "FRANCISCO ALVES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.1,
+          "gleisi_index": 5.592,
+          "votos": 2430,
+          "total_votos": 6924
         },
-        "2014": {
-          "votos_pct": 14.2
+        "2014_governador": {
+          "gleisi_pct": 14.75,
+          "gleisi_index": -0.124,
+          "votos": 571,
+          "total_votos": 3872
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 1.18,
+          "gleisi_index": -2.524,
+          "votos": 50,
+          "total_votos": 4231
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 2.05,
+          "gleisi_index": -2.209,
+          "votos": 89,
+          "total_votos": 4337
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.184
     },
     "FRANCISCO BELTRÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.4
+      "municipio": "FRANCISCO BELTRÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.05,
+          "gleisi_index": 5.544,
+          "votos": 29220,
+          "total_votos": 83374
         },
-        "2014": {
-          "votos_pct": 10.8
+        "2014_governador": {
+          "gleisi_pct": 18.1,
+          "gleisi_index": 3.233,
+          "votos": 8397,
+          "total_votos": 46381
         },
-        "2018": {
-          "votos_pct": 5.9
+        "2018_deputado": {
+          "gleisi_pct": 11.55,
+          "gleisi_index": 7.846,
+          "votos": 5373,
+          "total_votos": 46511
         },
-        "2022": {
-          "votos_pct": 5.9
+        "2022_deputado": {
+          "gleisi_pct": 15.5,
+          "gleisi_index": 11.242,
+          "votos": 7768,
+          "total_votos": 50105
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 204
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 6.966
     },
     "FÊNIX": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "FÊNIX",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.23,
+          "gleisi_index": 6.726,
+          "votos": 2027,
+          "total_votos": 5595
         },
-        "2014": {
-          "votos_pct": 7.8
+        "2014_governador": {
+          "gleisi_pct": 12.31,
+          "gleisi_index": -2.559,
+          "votos": 369,
+          "total_votos": 2997
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 2.49,
+          "gleisi_index": -1.219,
+          "votos": 71,
+          "total_votos": 2855
         },
-        "2022": {
-          "votos_pct": 5.6
+        "2022_deputado": {
+          "gleisi_pct": 3.65,
+          "gleisi_index": -0.609,
+          "votos": 108,
+          "total_votos": 2957
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.585
     },
     "GENERAL CARNEIRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.0
+      "municipio": "GENERAL CARNEIRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.99,
+          "gleisi_index": 2.487,
+          "votos": 4239,
+          "total_votos": 13251
         },
-        "2014": {
-          "votos_pct": 32.6
+        "2014_governador": {
+          "gleisi_pct": 32.09,
+          "gleisi_index": 17.215,
+          "votos": 2256,
+          "total_votos": 7031
         },
-        "2018": {
-          "votos_pct": 6.4
+        "2018_deputado": {
+          "gleisi_pct": 9.2,
+          "gleisi_index": 5.493,
+          "votos": 549,
+          "total_votos": 5968
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 4.55,
+          "gleisi_index": 0.285,
+          "votos": 272,
+          "total_votos": 5983
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 6.37
     },
     "GODOY MOREIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 21.3
+      "municipio": "GODOY MOREIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.79,
+          "gleisi_index": 13.291,
+          "votos": 1746,
+          "total_votos": 4080
         },
-        "2014": {
-          "votos_pct": 12.5
+        "2014_governador": {
+          "gleisi_pct": 10.84,
+          "gleisi_index": -4.036,
+          "votos": 227,
+          "total_votos": 2095
         },
-        "2018": {
-          "votos_pct": 3.5
+        "2018_deputado": {
+          "gleisi_pct": 4.34,
+          "gleisi_index": 0.629,
+          "votos": 90,
+          "total_votos": 2076
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 4.05,
+          "gleisi_index": -0.207,
+          "votos": 84,
+          "total_votos": 2072
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.419
     },
     "GOIOERÊ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.3
+      "municipio": "GOIOERÊ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.49,
+          "gleisi_index": 8.983,
+          "votos": 12048,
+          "total_votos": 31305
         },
-        "2014": {
-          "votos_pct": 11.0
+        "2014_governador": {
+          "gleisi_pct": 11.73,
+          "gleisi_index": -3.144,
+          "votos": 1923,
+          "total_votos": 16398
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 1.26,
+          "gleisi_index": -2.448,
+          "votos": 193,
+          "total_votos": 15335
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 1.38,
+          "gleisi_index": -2.882,
+          "votos": 219,
+          "total_votos": 15880
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 72
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.127
     },
     "GOIOXIM": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.6
+      "municipio": "GOIOXIM",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.24,
+          "gleisi_index": 11.735,
+          "votos": 3071,
+          "total_votos": 7447
         },
-        "2014": {
-          "votos_pct": 22.9
+        "2014_governador": {
+          "gleisi_pct": 31.64,
+          "gleisi_index": 16.77,
+          "votos": 1278,
+          "total_votos": 4039
         },
-        "2018": {
-          "votos_pct": 6.2
+        "2018_deputado": {
+          "gleisi_pct": 8.65,
+          "gleisi_index": 4.948,
+          "votos": 342,
+          "total_votos": 3952
         },
-        "2022": {
-          "votos_pct": 5.0
+        "2022_deputado": {
+          "gleisi_pct": 7.47,
+          "gleisi_index": 3.212,
+          "votos": 304,
+          "total_votos": 4068
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.166
     },
     "GRANDES RIOS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.6
+      "municipio": "GRANDES RIOS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.09,
+          "gleisi_index": 8.587,
+          "votos": 2744,
+          "total_votos": 7204
         },
-        "2014": {
-          "votos_pct": 6.3
+        "2014_governador": {
+          "gleisi_pct": 4.73,
+          "gleisi_index": -10.139,
+          "votos": 181,
+          "total_votos": 3825
         },
-        "2018": {
-          "votos_pct": 3.4
+        "2018_deputado": {
+          "gleisi_pct": 1.65,
+          "gleisi_index": -2.055,
+          "votos": 58,
+          "total_votos": 3512
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 2.44,
+          "gleisi_index": -1.826,
+          "votos": 89,
+          "total_votos": 3654
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.358
     },
     "GUAIRAÇÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.1
+      "municipio": "GUAIRAÇÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.27,
+          "gleisi_index": -5.229,
+          "votos": 1655,
+          "total_votos": 6818
         },
-        "2014": {
-          "votos_pct": 8.9
+        "2014_governador": {
+          "gleisi_pct": 8.51,
+          "gleisi_index": -6.363,
+          "votos": 324,
+          "total_votos": 3808
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 1.54,
+          "gleisi_index": -2.164,
+          "votos": 55,
+          "total_votos": 3567
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.41,
+          "gleisi_index": -1.856,
+          "votos": 92,
+          "total_votos": 3825
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.903
     },
     "GUAMIRANGA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.9
+      "municipio": "GUAMIRANGA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.45,
+          "gleisi_index": -5.051,
+          "votos": 2175,
+          "total_votos": 8895
         },
-        "2014": {
-          "votos_pct": 10.6
+        "2014_governador": {
+          "gleisi_pct": 10.83,
+          "gleisi_index": -4.039,
+          "votos": 534,
+          "total_votos": 4930
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 3.32,
+          "gleisi_index": -0.39,
+          "votos": 153,
+          "total_votos": 4614
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 2.31,
+          "gleisi_index": -1.955,
+          "votos": 115,
+          "total_votos": 4986
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.859
     },
     "GUAPIRAMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "GUAPIRAMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.94,
+          "gleisi_index": 0.435,
+          "votos": 1446,
+          "total_votos": 4830
         },
-        "2014": {
-          "votos_pct": 5.6
+        "2014_governador": {
+          "gleisi_pct": 7.02,
+          "gleisi_index": -7.846,
+          "votos": 187,
+          "total_votos": 2662
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 1.65,
+          "gleisi_index": -2.059,
+          "votos": 43,
+          "total_votos": 2611
         },
-        "2022": {
-          "votos_pct": 0.9
+        "2022_deputado": {
+          "gleisi_pct": 1.7,
+          "gleisi_index": -2.557,
+          "votos": 49,
+          "total_votos": 2875
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.007
     },
     "GUAPOREMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.8
+      "municipio": "GUAPOREMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.82,
+          "gleisi_index": 5.313,
+          "votos": 1002,
+          "total_votos": 2878
         },
-        "2014": {
-          "votos_pct": 4.3
+        "2014_governador": {
+          "gleisi_pct": 5.93,
+          "gleisi_index": -8.943,
+          "votos": 92,
+          "total_votos": 1552
         },
-        "2018": {
-          "votos_pct": 0.4
+        "2018_deputado": {
+          "gleisi_pct": 0.34,
+          "gleisi_index": -3.363,
+          "votos": 5,
+          "total_votos": 1458
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 0.78,
+          "gleisi_index": -3.477,
+          "votos": 12,
+          "total_votos": 1530
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 6
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.618
     },
     "GUARACI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "GUARACI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.37,
+          "gleisi_index": 0.871,
+          "votos": 1902,
+          "total_votos": 6262
         },
-        "2014": {
-          "votos_pct": 5.6
+        "2014_governador": {
+          "gleisi_pct": 4.91,
+          "gleisi_index": -9.958,
+          "votos": 166,
+          "total_votos": 3379
         },
-        "2018": {
-          "votos_pct": 3.2
+        "2018_deputado": {
+          "gleisi_pct": 2.53,
+          "gleisi_index": -1.171,
+          "votos": 82,
+          "total_votos": 3235
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 3.85,
+          "gleisi_index": -0.412,
+          "votos": 125,
+          "total_votos": 3247
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.667
     },
     "GUARANIAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.2
+      "municipio": "GUARANIAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.81,
+          "gleisi_index": 1.304,
+          "votos": 5129,
+          "total_votos": 16649
         },
-        "2014": {
-          "votos_pct": 8.7
+        "2014_governador": {
+          "gleisi_pct": 12.34,
+          "gleisi_index": -2.534,
+          "votos": 1069,
+          "total_votos": 8665
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 4.86,
+          "gleisi_index": 1.153,
+          "votos": 399,
+          "total_votos": 8211
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 3.87,
+          "gleisi_index": -0.395,
+          "votos": 322,
+          "total_votos": 8328
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 40
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.118
     },
     "GUARAPUAVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 9.0
+      "municipio": "GUARAPUAVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.59,
+          "gleisi_index": 5.089,
+          "votos": 57744,
+          "total_votos": 166928
         },
-        "2014": {
-          "votos_pct": 10.5
+        "2014_governador": {
+          "gleisi_pct": 19.78,
+          "gleisi_index": 4.909,
+          "votos": 17864,
+          "total_votos": 90313
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 7.55,
+          "gleisi_index": 3.84,
+          "votos": 6817,
+          "total_votos": 90341
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 8.09,
+          "gleisi_index": 3.83,
+          "votos": 7669,
+          "total_votos": 94784
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 321
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.417
     },
     "GUARAQUEÇABA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "GUARAQUEÇABA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.78,
+          "gleisi_index": 3.275,
+          "votos": 2870,
+          "total_votos": 8756
         },
-        "2014": {
-          "votos_pct": 7.9
+        "2014_governador": {
+          "gleisi_pct": 10.25,
+          "gleisi_index": -4.622,
+          "votos": 502,
+          "total_votos": 4898
         },
-        "2018": {
-          "votos_pct": 4.7
+        "2018_deputado": {
+          "gleisi_pct": 3.71,
+          "gleisi_index": 0.007,
+          "votos": 175,
+          "total_votos": 4713
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.71,
+          "gleisi_index": -1.551,
+          "votos": 138,
+          "total_votos": 5091
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.723
     },
     "GUARATUBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "GUARATUBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.73,
+          "gleisi_index": -2.772,
+          "votos": 8697,
+          "total_votos": 32535
         },
-        "2014": {
-          "votos_pct": 18.9
+        "2014_governador": {
+          "gleisi_pct": 14.72,
+          "gleisi_index": -0.153,
+          "votos": 2643,
+          "total_votos": 17958
         },
-        "2018": {
-          "votos_pct": 6.5
+        "2018_deputado": {
+          "gleisi_pct": 3.49,
+          "gleisi_index": -0.213,
+          "votos": 608,
+          "total_votos": 17406
         },
-        "2022": {
-          "votos_pct": 8.4
+        "2022_deputado": {
+          "gleisi_pct": 4.49,
+          "gleisi_index": 0.232,
+          "votos": 912,
+          "total_votos": 20298
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 79
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.726
     },
     "GUAÍRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "GUAÍRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.02,
+          "gleisi_index": 3.516,
+          "votos": 10047,
+          "total_votos": 30428
         },
-        "2014": {
-          "votos_pct": 23.3
+        "2014_governador": {
+          "gleisi_pct": 26.13,
+          "gleisi_index": 11.26,
+          "votos": 4287,
+          "total_votos": 16406
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 4.29,
+          "gleisi_index": 0.58,
+          "votos": 697,
+          "total_votos": 16262
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 2.74,
+          "gleisi_index": -1.522,
+          "votos": 469,
+          "total_votos": 17123
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 79
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.458
     },
     "HONÓRIO SERPA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "HONÓRIO SERPA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.01,
+          "gleisi_index": 9.509,
+          "votos": 2590,
+          "total_votos": 6639
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 22.44,
+          "gleisi_index": 7.574,
+          "votos": 773,
+          "total_votos": 3444
         },
-        "2018": {
-          "votos_pct": 4.7
+        "2018_deputado": {
+          "gleisi_pct": 3.88,
+          "gleisi_index": 0.177,
+          "votos": 126,
+          "total_votos": 3245
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 2.23,
+          "gleisi_index": -2.028,
+          "votos": 76,
+          "total_votos": 3403
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.808
     },
     "IBAITI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "IBAITI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.15,
+          "gleisi_index": 3.645,
+          "votos": 10260,
+          "total_votos": 30952
         },
-        "2014": {
-          "votos_pct": 6.8
+        "2014_governador": {
+          "gleisi_pct": 10.79,
+          "gleisi_index": -4.078,
+          "votos": 1698,
+          "total_votos": 15732
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 2.96,
+          "gleisi_index": -0.747,
+          "votos": 429,
+          "total_votos": 14497
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 4.1,
+          "gleisi_index": -0.161,
+          "votos": 611,
+          "total_votos": 14901
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 70
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.335
     },
     "IBEMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "IBEMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.9,
+          "gleisi_index": 7.396,
+          "votos": 2387,
+          "total_votos": 6469
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 13.12,
+          "gleisi_index": -1.752,
+          "votos": 487,
+          "total_votos": 3712
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 5.23,
+          "gleisi_index": 1.52,
+          "votos": 176,
+          "total_votos": 3368
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 2.75,
+          "gleisi_index": -1.511,
+          "votos": 101,
+          "total_votos": 3672
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 20
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.413
     },
     "IBIPORÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.2
+      "municipio": "IBIPORÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.19,
+          "gleisi_index": -3.31,
+          "votos": 12347,
+          "total_votos": 47138
         },
-        "2014": {
-          "votos_pct": 11.5
+        "2014_governador": {
+          "gleisi_pct": 10.37,
+          "gleisi_index": -4.497,
+          "votos": 2885,
+          "total_votos": 27810
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 1.1,
+          "gleisi_index": -2.602,
+          "votos": 299,
+          "total_votos": 27071
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 2.21,
+          "gleisi_index": -2.047,
+          "votos": 605,
+          "total_votos": 27326
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 112
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.114
     },
     "ICARAÍMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.9
+      "municipio": "ICARAÍMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.2,
+          "gleisi_index": -2.303,
+          "votos": 2593,
+          "total_votos": 9533
         },
-        "2014": {
-          "votos_pct": 12.4
+        "2014_governador": {
+          "gleisi_pct": 12.87,
+          "gleisi_index": -2.004,
+          "votos": 662,
+          "total_votos": 5145
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 1.15,
+          "gleisi_index": -2.556,
+          "votos": 58,
+          "total_votos": 5043
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.16,
+          "gleisi_index": -3.104,
+          "votos": 60,
+          "total_votos": 5183
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.492
     },
     "IGUARAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.1
+      "municipio": "IGUARAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.93,
+          "gleisi_index": 2.424,
+          "votos": 1529,
+          "total_votos": 4789
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 14.21,
+          "gleisi_index": -0.658,
+          "votos": 389,
+          "total_votos": 2737
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 1.73,
+          "gleisi_index": -1.98,
+          "votos": 45,
+          "total_votos": 2607
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 3.76,
+          "gleisi_index": -0.499,
+          "votos": 109,
+          "total_votos": 2897
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.178
     },
     "IGUATU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.4
+      "municipio": "IGUATU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.74,
+          "gleisi_index": 1.233,
+          "votos": 919,
+          "total_votos": 2990
         },
-        "2014": {
-          "votos_pct": 26.7
+        "2014_governador": {
+          "gleisi_pct": 26.43,
+          "gleisi_index": 11.555,
+          "votos": 417,
+          "total_votos": 1578
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 2.79,
+          "gleisi_index": -0.916,
+          "votos": 43,
+          "total_votos": 1541
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 3.01,
+          "gleisi_index": -1.252,
+          "votos": 48,
+          "total_votos": 1595
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.655
     },
     "IMBAÚ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.1
+      "municipio": "IMBAÚ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.22,
+          "gleisi_index": 5.72,
+          "votos": 3740,
+          "total_votos": 10618
         },
-        "2014": {
-          "votos_pct": 16.1
+        "2014_governador": {
+          "gleisi_pct": 19.47,
+          "gleisi_index": 4.595,
+          "votos": 1122,
+          "total_votos": 5764
         },
-        "2018": {
-          "votos_pct": 5.6
+        "2018_deputado": {
+          "gleisi_pct": 5.38,
+          "gleisi_index": 1.673,
+          "votos": 311,
+          "total_votos": 5782
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.93,
+          "gleisi_index": -1.334,
+          "votos": 184,
+          "total_votos": 6285
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.663
     },
     "IMBITUVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.0
+      "municipio": "IMBITUVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.03,
+          "gleisi_index": 4.531,
+          "votos": 9766,
+          "total_votos": 28695
         },
-        "2014": {
-          "votos_pct": 5.9
+        "2014_governador": {
+          "gleisi_pct": 8.01,
+          "gleisi_index": -6.864,
+          "votos": 1340,
+          "total_votos": 16736
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 1.64,
+          "gleisi_index": -2.066,
+          "votos": 279,
+          "total_votos": 17016
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 1.84,
+          "gleisi_index": -2.425,
+          "votos": 317,
+          "total_votos": 17263
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 71
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.706
     },
     "INAJÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.1
+      "municipio": "INAJÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.18,
+          "gleisi_index": 7.675,
+          "votos": 1283,
+          "total_votos": 3451
         },
-        "2014": {
-          "votos_pct": 11.5
+        "2014_governador": {
+          "gleisi_pct": 12.04,
+          "gleisi_index": -2.831,
+          "votos": 239,
+          "total_votos": 1985
         },
-        "2018": {
-          "votos_pct": 4.6
+        "2018_deputado": {
+          "gleisi_pct": 2.04,
+          "gleisi_index": -1.661,
+          "votos": 40,
+          "total_votos": 1956
         },
-        "2022": {
-          "votos_pct": 4.9
+        "2022_deputado": {
+          "gleisi_pct": 4.07,
+          "gleisi_index": -0.193,
+          "votos": 76,
+          "total_votos": 1868
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.747
     },
     "INDIANÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 9.3
+      "municipio": "INDIANÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 18.43,
+          "gleisi_index": -11.07,
+          "votos": 880,
+          "total_votos": 4774
         },
-        "2014": {
-          "votos_pct": 8.3
+        "2014_governador": {
+          "gleisi_pct": 8.42,
+          "gleisi_index": -6.45,
+          "votos": 225,
+          "total_votos": 2672
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 0.54,
+          "gleisi_index": -3.166,
+          "votos": 15,
+          "total_votos": 2780
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 0.47,
+          "gleisi_index": -3.795,
+          "votos": 13,
+          "total_votos": 2785
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -6.12
     },
     "INÁCIO MARTINS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "INÁCIO MARTINS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.59,
+          "gleisi_index": 6.091,
+          "votos": 4231,
+          "total_votos": 11887
         },
-        "2014": {
-          "votos_pct": 12.5
+        "2014_governador": {
+          "gleisi_pct": 14.33,
+          "gleisi_index": -0.541,
+          "votos": 913,
+          "total_votos": 6371
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 6.96,
+          "gleisi_index": 3.252,
+          "votos": 439,
+          "total_votos": 6309
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 3.08,
+          "gleisi_index": -1.184,
+          "votos": 194,
+          "total_votos": 6304
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.904
     },
     "IPIRANGA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.8
+      "municipio": "IPIRANGA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.52,
+          "gleisi_index": -0.985,
+          "votos": 4102,
+          "total_votos": 14384
         },
-        "2014": {
-          "votos_pct": 4.9
+        "2014_governador": {
+          "gleisi_pct": 8.82,
+          "gleisi_index": -6.047,
+          "votos": 716,
+          "total_votos": 8114
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 0.79,
+          "gleisi_index": -2.913,
+          "votos": 63,
+          "total_votos": 7945
         },
-        "2022": {
-          "votos_pct": 0.9
+        "2022_deputado": {
+          "gleisi_pct": 0.91,
+          "gleisi_index": -3.354,
+          "votos": 77,
+          "total_votos": 8484
         }
       },
-      "trajetoria": "estavel",
-      "volatilidade": 0.0,
-      "num_secoes": 38
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -3.325
     },
     "IPORÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "IPORÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.02,
+          "gleisi_index": -2.487,
+          "votos": 4472,
+          "total_votos": 16553
         },
-        "2014": {
-          "votos_pct": 8.8
+        "2014_governador": {
+          "gleisi_pct": 8.55,
+          "gleisi_index": -6.322,
+          "votos": 755,
+          "total_votos": 8831
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.18,
+          "gleisi_index": -2.53,
+          "votos": 104,
+          "total_votos": 8842
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 1.81,
+          "gleisi_index": -2.452,
+          "votos": 158,
+          "total_votos": 8734
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 43
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.448
     },
     "IRACEMA DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "IRACEMA DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.96,
+          "gleisi_index": 5.458,
+          "votos": 1210,
+          "total_votos": 3461
         },
-        "2014": {
-          "votos_pct": 8.3
+        "2014_governador": {
+          "gleisi_pct": 7.45,
+          "gleisi_index": -7.419,
+          "votos": 136,
+          "total_votos": 1825
         },
-        "2018": {
-          "votos_pct": 4.2
+        "2018_deputado": {
+          "gleisi_pct": 2.75,
+          "gleisi_index": -0.957,
+          "votos": 46,
+          "total_votos": 1673
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 2.02,
+          "gleisi_index": -2.244,
+          "votos": 36,
+          "total_votos": 1784
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.29
     },
     "IRATI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.5
+      "municipio": "IRATI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.36,
+          "gleisi_index": 2.858,
+          "votos": 19440,
+          "total_votos": 60072
         },
-        "2014": {
-          "votos_pct": 13.5
+        "2014_governador": {
+          "gleisi_pct": 14.64,
+          "gleisi_index": -0.229,
+          "votos": 4877,
+          "total_votos": 33307
         },
-        "2018": {
-          "votos_pct": 0
+        "2018_deputado": {
+          "gleisi_pct": 3.38,
+          "gleisi_index": -0.329,
+          "votos": 1135,
+          "total_votos": 33605
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 3.27,
+          "gleisi_index": -0.987,
+          "votos": 1102,
+          "total_votos": 33650
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 150
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.328
     },
     "IRETAMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.1
+      "municipio": "IRETAMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.84,
+          "gleisi_index": -2.66,
+          "votos": 2972,
+          "total_votos": 11072
         },
-        "2014": {
-          "votos_pct": 4.8
+        "2014_governador": {
+          "gleisi_pct": 8.04,
+          "gleisi_index": -6.835,
+          "votos": 477,
+          "total_votos": 5936
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 2.56,
+          "gleisi_index": -1.142,
+          "votos": 144,
+          "total_votos": 5617
         },
-        "2022": {
-          "votos_pct": 5.0
+        "2022_deputado": {
+          "gleisi_pct": 7.37,
+          "gleisi_index": 3.108,
+          "votos": 415,
+          "total_votos": 5631
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": -1.882
     },
     "ITAGUAJÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.3
+      "municipio": "ITAGUAJÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.88,
+          "gleisi_index": 2.379,
+          "votos": 1662,
+          "total_votos": 5213
         },
-        "2014": {
-          "votos_pct": 15.4
+        "2014_governador": {
+          "gleisi_pct": 14.65,
+          "gleisi_index": -0.216,
+          "votos": 397,
+          "total_votos": 2709
         },
-        "2018": {
-          "votos_pct": 4.3
+        "2018_deputado": {
+          "gleisi_pct": 3.15,
+          "gleisi_index": -0.556,
+          "votos": 75,
+          "total_votos": 2381
         },
-        "2022": {
-          "votos_pct": 5.4
+        "2022_deputado": {
+          "gleisi_pct": 3.2,
+          "gleisi_index": -1.065,
+          "votos": 83,
+          "total_votos": 2597
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.135
     },
     "ITAIPULÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "ITAIPULÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.06,
+          "gleisi_index": 6.554,
+          "votos": 3963,
+          "total_votos": 10991
         },
-        "2014": {
-          "votos_pct": 13.8
+        "2014_governador": {
+          "gleisi_pct": 15.49,
+          "gleisi_index": 0.621,
+          "votos": 991,
+          "total_votos": 6397
         },
-        "2018": {
-          "votos_pct": 5.6
+        "2018_deputado": {
+          "gleisi_pct": 3.94,
+          "gleisi_index": 0.234,
+          "votos": 252,
+          "total_votos": 6396
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 2.25,
+          "gleisi_index": -2.011,
+          "votos": 164,
+          "total_votos": 7286
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 29
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.35
     },
     "ITAMBARACÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "ITAMBARACÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.31,
+          "gleisi_index": 4.809,
+          "votos": 2466,
+          "total_votos": 7187
         },
-        "2014": {
-          "votos_pct": 4.9
+        "2014_governador": {
+          "gleisi_pct": 5.33,
+          "gleisi_index": -9.546,
+          "votos": 203,
+          "total_votos": 3812
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 1.2,
+          "gleisi_index": -2.508,
+          "votos": 44,
+          "total_votos": 3674
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 1.82,
+          "gleisi_index": -2.442,
+          "votos": 66,
+          "total_votos": 3628
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.422
     },
     "ITAMBÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.0
+      "municipio": "ITAMBÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.13,
+          "gleisi_index": -4.369,
+          "votos": 1779,
+          "total_votos": 7078
         },
-        "2014": {
-          "votos_pct": 22.0
+        "2014_governador": {
+          "gleisi_pct": 20.71,
+          "gleisi_index": 5.843,
+          "votos": 801,
+          "total_votos": 3867
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 1.0,
+          "gleisi_index": -2.703,
+          "votos": 35,
+          "total_votos": 3490
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 1.43,
+          "gleisi_index": -2.828,
+          "votos": 55,
+          "total_votos": 3837
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.014
     },
     "ITAPEJARA D OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "ITAPEJARA D OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.33,
+          "gleisi_index": 10.827,
+          "votos": 4936,
+          "total_votos": 12239
         },
-        "2014": {
-          "votos_pct": 30.3
+        "2014_governador": {
+          "gleisi_pct": 27.94,
+          "gleisi_index": 13.07,
+          "votos": 1881,
+          "total_votos": 6732
         },
-        "2018": {
-          "votos_pct": 4.1
+        "2018_deputado": {
+          "gleisi_pct": 7.18,
+          "gleisi_index": 3.478,
+          "votos": 463,
+          "total_votos": 6445
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 5.65,
+          "gleisi_index": 1.393,
+          "votos": 386,
+          "total_votos": 6826
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 7.192
     },
     "ITAPERUÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.9
+      "municipio": "ITAPERUÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.32,
+          "gleisi_index": 8.812,
+          "votos": 9837,
+          "total_votos": 25674
         },
-        "2014": {
-          "votos_pct": 22.8
+        "2014_governador": {
+          "gleisi_pct": 10.15,
+          "gleisi_index": -4.718,
+          "votos": 1479,
+          "total_votos": 14567
         },
-        "2018": {
-          "votos_pct": 6.2
+        "2018_deputado": {
+          "gleisi_pct": 11.5,
+          "gleisi_index": 7.792,
+          "votos": 1630,
+          "total_votos": 14176
         },
-        "2022": {
-          "votos_pct": 7.4
+        "2022_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 0.878,
+          "votos": 803,
+          "total_votos": 15623
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 55
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.191
     },
     "ITAÚNA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.5
+      "municipio": "ITAÚNA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.24,
+          "gleisi_index": 9.736,
+          "votos": 1537,
+          "total_votos": 3917
         },
-        "2014": {
-          "votos_pct": 17.7
+        "2014_governador": {
+          "gleisi_pct": 17.72,
+          "gleisi_index": 2.853,
+          "votos": 377,
+          "total_votos": 2127
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 2.37,
+          "gleisi_index": -1.341,
+          "votos": 46,
+          "total_votos": 1945
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 0.86,
+          "gleisi_index": -3.399,
+          "votos": 18,
+          "total_votos": 2088
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.962
     },
     "IVAIPORÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "IVAIPORÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.21,
+          "gleisi_index": 4.707,
+          "votos": 11285,
+          "total_votos": 32988
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 9.16,
+          "gleisi_index": -5.709,
+          "votos": 1679,
+          "total_votos": 18326
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 2.36,
+          "gleisi_index": -1.348,
+          "votos": 399,
+          "total_votos": 16924
         },
-        "2022": {
-          "votos_pct": 3.4
+        "2022_deputado": {
+          "gleisi_pct": 5.75,
+          "gleisi_index": 1.486,
+          "votos": 1053,
+          "total_votos": 18322
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 82
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.216
     },
     "IVATUBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.9
+      "municipio": "IVATUBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.26,
+          "gleisi_index": 3.756,
+          "votos": 1040,
+          "total_votos": 3127
         },
-        "2014": {
-          "votos_pct": 26.0
+        "2014_governador": {
+          "gleisi_pct": 19.36,
+          "gleisi_index": 4.491,
+          "votos": 328,
+          "total_votos": 1694
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 1.9,
+          "gleisi_index": -1.802,
+          "votos": 32,
+          "total_votos": 1681
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 1.54,
+          "gleisi_index": -2.719,
+          "votos": 30,
+          "total_votos": 1945
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.932
     },
     "IVATÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.1
+      "municipio": "IVATÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.04,
+          "gleisi_index": 6.535,
+          "votos": 2852,
+          "total_votos": 7914
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 15.09,
+          "gleisi_index": 0.224,
+          "votos": 653,
+          "total_votos": 4326
         },
-        "2018": {
-          "votos_pct": 4.3
+        "2018_deputado": {
+          "gleisi_pct": 1.97,
+          "gleisi_index": -1.735,
+          "votos": 81,
+          "total_votos": 4110
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.47,
+          "gleisi_index": -2.796,
+          "votos": 62,
+          "total_votos": 4232
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.557
     },
     "IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.81,
+          "gleisi_index": -4.69,
+          "votos": 3487,
+          "total_votos": 14053
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 9.38,
+          "gleisi_index": -5.49,
+          "votos": 749,
+          "total_votos": 7984
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 6.08,
+          "gleisi_index": 2.375,
+          "votos": 485,
+          "total_votos": 7975
         },
-        "2022": {
-          "votos_pct": 6.4
+        "2022_deputado": {
+          "gleisi_pct": 5.24,
+          "gleisi_index": 0.983,
+          "votos": 428,
+          "total_votos": 8161
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 33
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.706
     },
     "JABOTI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.0
+      "municipio": "JABOTI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.87,
+          "gleisi_index": 2.369,
+          "votos": 1658,
+          "total_votos": 5202
         },
-        "2014": {
-          "votos_pct": 6.5
+        "2014_governador": {
+          "gleisi_pct": 6.83,
+          "gleisi_index": -8.045,
+          "votos": 203,
+          "total_votos": 2974
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 1.96,
+          "gleisi_index": -1.745,
+          "votos": 58,
+          "total_votos": 2957
         },
-        "2022": {
-          "votos_pct": 3.8
+        "2022_deputado": {
+          "gleisi_pct": 3.58,
+          "gleisi_index": -0.678,
+          "votos": 116,
+          "total_votos": 3237
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.025
     },
     "JACAREZINHO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.6
+      "municipio": "JACAREZINHO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.3,
+          "gleisi_index": 2.796,
+          "votos": 13486,
+          "total_votos": 41754
         },
-        "2014": {
-          "votos_pct": 21.2
+        "2014_governador": {
+          "gleisi_pct": 21.01,
+          "gleisi_index": 6.135,
+          "votos": 4658,
+          "total_votos": 22175
         },
-        "2018": {
-          "votos_pct": 4.9
+        "2018_deputado": {
+          "gleisi_pct": 5.6,
+          "gleisi_index": 1.89,
+          "votos": 1192,
+          "total_votos": 21302
         },
-        "2022": {
-          "votos_pct": 5.5
+        "2022_deputado": {
+          "gleisi_pct": 9.61,
+          "gleisi_index": 5.345,
+          "votos": 2031,
+          "total_votos": 21141
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 97
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.042
     },
     "JAGUAPITÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.4
+      "municipio": "JAGUAPITÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.72,
+          "gleisi_index": -3.783,
+          "votos": 3244,
+          "total_votos": 12613
         },
-        "2014": {
-          "votos_pct": 10.0
+        "2014_governador": {
+          "gleisi_pct": 10.14,
+          "gleisi_index": -4.731,
+          "votos": 716,
+          "total_votos": 7061
         },
-        "2018": {
-          "votos_pct": 6.5
+        "2018_deputado": {
+          "gleisi_pct": 5.91,
+          "gleisi_index": 2.205,
+          "votos": 406,
+          "total_votos": 6869
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 2.13,
+          "gleisi_index": -2.128,
+          "votos": 156,
+          "total_votos": 7313
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 30
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.109
     },
     "JAGUARIAÍVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "JAGUARIAÍVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.23,
+          "gleisi_index": -2.269,
+          "votos": 9289,
+          "total_votos": 34108
         },
-        "2014": {
-          "votos_pct": 23.6
+        "2014_governador": {
+          "gleisi_pct": 23.09,
+          "gleisi_index": 8.215,
+          "votos": 4352,
+          "total_votos": 18851
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 1.51,
+          "gleisi_index": -2.193,
+          "votos": 277,
+          "total_votos": 18308
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 4.16,
+          "gleisi_index": -0.097,
+          "votos": 763,
+          "total_votos": 18322
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 81
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.914
     },
     "JANDAIA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "JANDAIA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.71,
+          "gleisi_index": 1.205,
+          "votos": 6884,
+          "total_votos": 22418
         },
-        "2014": {
-          "votos_pct": 14.9
+        "2014_governador": {
+          "gleisi_pct": 10.95,
+          "gleisi_index": -3.922,
+          "votos": 1336,
+          "total_votos": 12202
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 2.31,
+          "gleisi_index": -1.396,
+          "votos": 257,
+          "total_votos": 11127
         },
-        "2022": {
-          "votos_pct": 3.5
+        "2022_deputado": {
+          "gleisi_pct": 3.06,
+          "gleisi_index": -1.202,
+          "votos": 366,
+          "total_votos": 11961
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 56
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.329
     },
     "JANIÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.1
+      "municipio": "JANIÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.9,
+          "gleisi_index": 5.399,
+          "votos": 2692,
+          "total_votos": 7713
         },
-        "2014": {
-          "votos_pct": 9.5
+        "2014_governador": {
+          "gleisi_pct": 14.61,
+          "gleisi_index": -0.26,
+          "votos": 596,
+          "total_votos": 4079
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 1.12,
+          "gleisi_index": -2.587,
+          "votos": 40,
+          "total_votos": 3574
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 1.08,
+          "gleisi_index": -3.177,
+          "votos": 39,
+          "total_votos": 3596
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.156
     },
     "JAPIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.3
+      "municipio": "JAPIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.42,
+          "gleisi_index": 1.914,
+          "votos": 1732,
+          "total_votos": 5513
         },
-        "2014": {
-          "votos_pct": 8.8
+        "2014_governador": {
+          "gleisi_pct": 5.94,
+          "gleisi_index": -8.928,
+          "votos": 183,
+          "total_votos": 3079
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 1.21,
+          "gleisi_index": -2.496,
+          "votos": 32,
+          "total_votos": 2645
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 2.71,
+          "gleisi_index": -1.548,
+          "votos": 73,
+          "total_votos": 2690
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.765
     },
     "JAPURÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.9
+      "municipio": "JAPURÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.01,
+          "gleisi_index": -0.492,
+          "votos": 2832,
+          "total_votos": 9762
         },
-        "2014": {
-          "votos_pct": 17.2
+        "2014_governador": {
+          "gleisi_pct": 14.36,
+          "gleisi_index": -0.509,
+          "votos": 776,
+          "total_votos": 5403
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.59,
+          "gleisi_index": -2.114,
+          "votos": 81,
+          "total_votos": 5089
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 0.59,
+          "gleisi_index": -3.674,
+          "votos": 32,
+          "total_votos": 5444
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 23
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.697
     },
     "JARDIM ALEGRE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "JARDIM ALEGRE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.13,
+          "gleisi_index": 5.624,
+          "votos": 4569,
+          "total_votos": 13007
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 14.74,
+          "gleisi_index": -0.13,
+          "votos": 1009,
+          "total_votos": 6845
         },
-        "2018": {
-          "votos_pct": 4.8
+        "2018_deputado": {
+          "gleisi_pct": 11.64,
+          "gleisi_index": 7.933,
+          "votos": 718,
+          "total_votos": 6169
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 11.37,
+          "gleisi_index": 7.113,
+          "votos": 773,
+          "total_votos": 6796
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.135
     },
     "JARDIM OLINDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.9
+      "municipio": "JARDIM OLINDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.1,
+          "gleisi_index": 0.597,
+          "votos": 605,
+          "total_votos": 2010
         },
-        "2014": {
-          "votos_pct": 28.6
+        "2014_governador": {
+          "gleisi_pct": 24.95,
+          "gleisi_index": 10.08,
+          "votos": 254,
+          "total_votos": 1018
         },
-        "2018": {
-          "votos_pct": 4.9
+        "2018_deputado": {
+          "gleisi_pct": 3.15,
+          "gleisi_index": -0.552,
+          "votos": 31,
+          "total_votos": 983
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 2.68,
+          "gleisi_index": -1.586,
+          "votos": 27,
+          "total_votos": 1009
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 5
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.135
     },
     "JATAIZINHO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "JATAIZINHO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.74,
+          "gleisi_index": 3.242,
+          "votos": 4098,
+          "total_votos": 12515
         },
-        "2014": {
-          "votos_pct": 12.5
+        "2014_governador": {
+          "gleisi_pct": 11.1,
+          "gleisi_index": -3.771,
+          "votos": 798,
+          "total_votos": 7189
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 1.29,
+          "gleisi_index": -2.417,
+          "votos": 88,
+          "total_votos": 6828
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 2.43,
+          "gleisi_index": -1.834,
+          "votos": 164,
+          "total_votos": 6755
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.195
     },
     "JESUÍTAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "JESUÍTAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.41,
+          "gleisi_index": 0.905,
+          "votos": 2952,
+          "total_votos": 9708
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 10.98,
+          "gleisi_index": -3.89,
+          "votos": 602,
+          "total_votos": 5482
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 3.01,
+          "gleisi_index": -0.695,
+          "votos": 154,
+          "total_votos": 5114
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 2.09,
+          "gleisi_index": -2.175,
+          "votos": 114,
+          "total_votos": 5465
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.464
     },
     "JOAQUIM TÁVORA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "JOAQUIM TÁVORA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.85,
+          "gleisi_index": 0.347,
+          "votos": 3402,
+          "total_votos": 11397
         },
-        "2014": {
-          "votos_pct": 4.3
+        "2014_governador": {
+          "gleisi_pct": 6.07,
+          "gleisi_index": -8.806,
+          "votos": 380,
+          "total_votos": 6265
         },
-        "2018": {
-          "votos_pct": 4.9
+        "2018_deputado": {
+          "gleisi_pct": 2.73,
+          "gleisi_index": -0.975,
+          "votos": 165,
+          "total_votos": 6042
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 4.59,
+          "gleisi_index": 0.325,
+          "votos": 298,
+          "total_votos": 6497
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.277
     },
     "JUNDIAÍ DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.0
+      "municipio": "JUNDIAÍ DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.7,
+          "gleisi_index": 7.196,
+          "votos": 1345,
+          "total_votos": 3665
         },
-        "2014": {
-          "votos_pct": 22.2
+        "2014_governador": {
+          "gleisi_pct": 20.28,
+          "gleisi_index": 5.413,
+          "votos": 386,
+          "total_votos": 1903
         },
-        "2018": {
-          "votos_pct": 1.7
+        "2018_deputado": {
+          "gleisi_pct": 1.48,
+          "gleisi_index": -2.229,
+          "votos": 29,
+          "total_votos": 1963
         },
-        "2022": {
-          "votos_pct": 5.1
+        "2022_deputado": {
+          "gleisi_pct": 5.35,
+          "gleisi_index": 1.085,
+          "votos": 105,
+          "total_votos": 1964
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.866
     },
     "JURANDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.0
+      "municipio": "JURANDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.18,
+          "gleisi_index": -4.32,
+          "votos": 2172,
+          "total_votos": 8625
         },
-        "2014": {
-          "votos_pct": 11.4
+        "2014_governador": {
+          "gleisi_pct": 8.48,
+          "gleisi_index": -6.393,
+          "votos": 401,
+          "total_votos": 4730
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 0.76,
+          "gleisi_index": -2.945,
+          "votos": 35,
+          "total_votos": 4597
         },
-        "2022": {
-          "votos_pct": 0.6
+        "2022_deputado": {
+          "gleisi_pct": 2.47,
+          "gleisi_index": -1.793,
+          "votos": 114,
+          "total_votos": 4619
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.863
     },
     "JUSSARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "JUSSARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.62,
+          "gleisi_index": 3.113,
+          "votos": 2501,
+          "total_votos": 7668
         },
-        "2014": {
-          "votos_pct": 15.9
+        "2014_governador": {
+          "gleisi_pct": 12.3,
+          "gleisi_index": -2.568,
+          "votos": 516,
+          "total_votos": 4194
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 2.0,
+          "gleisi_index": -1.709,
+          "votos": 77,
+          "total_votos": 3855
         },
-        "2022": {
-          "votos_pct": 1.2
+        "2022_deputado": {
+          "gleisi_pct": 1.98,
+          "gleisi_index": -2.285,
+          "votos": 80,
+          "total_votos": 4048
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.862
     },
     "KALORÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.9
+      "municipio": "KALORÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.06,
+          "gleisi_index": -0.445,
+          "votos": 1638,
+          "total_votos": 5637
         },
-        "2014": {
-          "votos_pct": 4.6
+        "2014_governador": {
+          "gleisi_pct": 4.37,
+          "gleisi_index": -10.504,
+          "votos": 126,
+          "total_votos": 2885
         },
-        "2018": {
-          "votos_pct": 1.7
+        "2018_deputado": {
+          "gleisi_pct": 2.92,
+          "gleisi_index": -0.782,
+          "votos": 80,
+          "total_votos": 2736
         },
-        "2022": {
-          "votos_pct": 5.0
+        "2022_deputado": {
+          "gleisi_pct": 2.55,
+          "gleisi_index": -1.716,
+          "votos": 76,
+          "total_votos": 2986
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.362
     },
     "LAPA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.4
+      "municipio": "LAPA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.9,
+          "gleisi_index": 0.397,
+          "votos": 15070,
+          "total_votos": 50402
         },
-        "2014": {
-          "votos_pct": 10.7
+        "2014_governador": {
+          "gleisi_pct": 14.17,
+          "gleisi_index": -0.702,
+          "votos": 3866,
+          "total_votos": 27284
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 3.05,
+          "gleisi_index": -0.658,
+          "votos": 750,
+          "total_votos": 24603
         },
-        "2022": {
-          "votos_pct": 6.5
+        "2022_deputado": {
+          "gleisi_pct": 4.14,
+          "gleisi_index": -0.122,
+          "votos": 1062,
+          "total_votos": 25657
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.05,
-      "num_secoes": 111
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.271
     },
     "LARANJAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 24.2
+      "municipio": "LARANJAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.53,
+          "gleisi_index": 10.027,
+          "votos": 2473,
+          "total_votos": 6256
         },
-        "2014": {
-          "votos_pct": 55.0
+        "2014_governador": {
+          "gleisi_pct": 17.84,
+          "gleisi_index": 2.969,
+          "votos": 608,
+          "total_votos": 3408
         },
-        "2018": {
-          "votos_pct": 11.7
+        "2018_deputado": {
+          "gleisi_pct": 5.56,
+          "gleisi_index": 1.856,
+          "votos": 188,
+          "total_votos": 3380
         },
-        "2022": {
-          "votos_pct": 4.0
+        "2022_deputado": {
+          "gleisi_pct": 3.13,
+          "gleisi_index": -1.13,
+          "votos": 109,
+          "total_votos": 3481
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.08,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.43
     },
     "LARANJEIRAS DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "LARANJEIRAS DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.6,
+          "gleisi_index": 8.094,
+          "votos": 11719,
+          "total_votos": 31170
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 16.99,
+          "gleisi_index": 2.118,
+          "votos": 2969,
+          "total_votos": 17476
         },
-        "2018": {
-          "votos_pct": 11.4
+        "2018_deputado": {
+          "gleisi_pct": 14.36,
+          "gleisi_index": 10.653,
+          "votos": 2533,
+          "total_votos": 17640
         },
-        "2022": {
-          "votos_pct": 13.7
+        "2022_deputado": {
+          "gleisi_pct": 14.09,
+          "gleisi_index": 9.829,
+          "votos": 2521,
+          "total_votos": 17891
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 82
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 7.674
     },
     "LEÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "LEÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.34,
+          "gleisi_index": -0.164,
+          "votos": 1437,
+          "total_votos": 4898
         },
-        "2014": {
-          "votos_pct": 5.3
+        "2014_governador": {
+          "gleisi_pct": 10.31,
+          "gleisi_index": -4.559,
+          "votos": 274,
+          "total_votos": 2657
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 2.26,
+          "gleisi_index": -1.446,
+          "votos": 59,
+          "total_votos": 2611
         },
-        "2022": {
-          "votos_pct": 8.0
+        "2022_deputado": {
+          "gleisi_pct": 8.74,
+          "gleisi_index": 4.479,
+          "votos": 229,
+          "total_votos": 2620
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.07,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": -0.422
     },
     "LIDIANÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "LIDIANÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.0,
+          "gleisi_index": 3.495,
+          "votos": 1671,
+          "total_votos": 5064
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 13.17,
+          "gleisi_index": -1.7,
+          "votos": 336,
+          "total_votos": 2551
         },
-        "2018": {
-          "votos_pct": 3.4
+        "2018_deputado": {
+          "gleisi_pct": 5.23,
+          "gleisi_index": 1.528,
+          "votos": 125,
+          "total_votos": 2388
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 2.74,
+          "gleisi_index": -1.523,
+          "votos": 69,
+          "total_votos": 2520
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.45
     },
     "LINDOESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.2
+      "municipio": "LINDOESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.93,
+          "gleisi_index": 10.424,
+          "votos": 2610,
+          "total_votos": 6537
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 21.56,
+          "gleisi_index": 6.684,
+          "votos": 812,
+          "total_votos": 3767
         },
-        "2018": {
-          "votos_pct": 5.3
+        "2018_deputado": {
+          "gleisi_pct": 10.01,
+          "gleisi_index": 6.308,
+          "votos": 354,
+          "total_votos": 3535
         },
-        "2022": {
-          "votos_pct": 4.7
+        "2022_deputado": {
+          "gleisi_pct": 6.75,
+          "gleisi_index": 2.487,
+          "votos": 254,
+          "total_votos": 3764
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 6.476
     },
     "LOANDA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.9
+      "municipio": "LOANDA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.18,
+          "gleisi_index": 0.675,
+          "votos": 6522,
+          "total_votos": 21612
         },
-        "2014": {
-          "votos_pct": 11.4
+        "2014_governador": {
+          "gleisi_pct": 13.59,
+          "gleisi_index": -1.281,
+          "votos": 1560,
+          "total_votos": 11479
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 1.53,
+          "gleisi_index": -2.181,
+          "votos": 171,
+          "total_votos": 11210
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 1.09,
+          "gleisi_index": -3.17,
+          "votos": 127,
+          "total_votos": 11640
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 54
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.489
     },
     "LOBATO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "LOBATO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.15,
+          "gleisi_index": -1.355,
+          "votos": 1567,
+          "total_votos": 5567
         },
-        "2014": {
-          "votos_pct": 6.6
+        "2014_governador": {
+          "gleisi_pct": 9.81,
+          "gleisi_index": -5.056,
+          "votos": 286,
+          "total_votos": 2914
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 2.99,
+          "gleisi_index": -0.718,
+          "votos": 80,
+          "total_votos": 2677
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 2.77,
+          "gleisi_index": -1.487,
+          "votos": 81,
+          "total_votos": 2920
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.154
     },
     "LONDRINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.7
+      "municipio": "LONDRINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 19.99,
+          "gleisi_index": -9.512,
+          "votos": 91526,
+          "total_votos": 457850
         },
-        "2014": {
-          "votos_pct": 5.7
+        "2014_governador": {
+          "gleisi_pct": 6.88,
+          "gleisi_index": -7.994,
+          "votos": 18420,
+          "total_votos": 267847
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 1.86,
+          "gleisi_index": -1.849,
+          "votos": 4991,
+          "total_votos": 268776
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 2.09,
+          "gleisi_index": -2.169,
+          "votos": 5904,
+          "total_votos": 282185
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 408
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -5.381
     },
     "LUIZIANA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.1
+      "municipio": "LUIZIANA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.49,
+          "gleisi_index": 3.992,
+          "votos": 2764,
+          "total_votos": 8252
         },
-        "2014": {
-          "votos_pct": 14.6
+        "2014_governador": {
+          "gleisi_pct": 11.64,
+          "gleisi_index": -3.227,
+          "votos": 517,
+          "total_votos": 4440
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 2.07,
+          "gleisi_index": -1.633,
+          "votos": 84,
+          "total_votos": 4051
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 1.34,
+          "gleisi_index": -2.926,
+          "votos": 57,
+          "total_votos": 4267
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.949
     },
     "LUNARDELLI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.1
+      "municipio": "LUNARDELLI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.07,
+          "gleisi_index": 3.571,
+          "votos": 1867,
+          "total_votos": 5645
         },
-        "2014": {
-          "votos_pct": 6.8
+        "2014_governador": {
+          "gleisi_pct": 7.9,
+          "gleisi_index": -6.974,
+          "votos": 246,
+          "total_votos": 3115
         },
-        "2018": {
-          "votos_pct": 7.0
+        "2018_deputado": {
+          "gleisi_pct": 9.83,
+          "gleisi_index": 6.124,
+          "votos": 295,
+          "total_votos": 3001
         },
-        "2022": {
-          "votos_pct": 6.8
+        "2022_deputado": {
+          "gleisi_pct": 10.16,
+          "gleisi_index": 5.898,
+          "votos": 319,
+          "total_votos": 3140
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.155
     },
     "LUPIONÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "LUPIONÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.26,
+          "gleisi_index": 7.756,
+          "votos": 1990,
+          "total_votos": 5341
         },
-        "2014": {
-          "votos_pct": 9.6
+        "2014_governador": {
+          "gleisi_pct": 11.38,
+          "gleisi_index": -3.487,
+          "votos": 334,
+          "total_votos": 2934
         },
-        "2018": {
-          "votos_pct": 10.7
+        "2018_deputado": {
+          "gleisi_pct": 6.01,
+          "gleisi_index": 2.3,
+          "votos": 166,
+          "total_votos": 2764
         },
-        "2022": {
-          "votos_pct": 5.4
+        "2022_deputado": {
+          "gleisi_pct": 5.72,
+          "gleisi_index": 1.454,
+          "votos": 169,
+          "total_votos": 2957
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.006
     },
     "MALLET": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "MALLET",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.27,
+          "gleisi_index": 2.766,
+          "votos": 4447,
+          "total_votos": 13781
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 10.33,
+          "gleisi_index": -4.537,
+          "votos": 796,
+          "total_votos": 7703
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 1.9,
+          "gleisi_index": -1.803,
+          "votos": 129,
+          "total_votos": 6777
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.62,
+          "gleisi_index": -2.64,
+          "votos": 121,
+          "total_votos": 7462
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 36
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.554
     },
     "MAMBORÊ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "MAMBORÊ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.98,
+          "gleisi_index": 1.481,
+          "votos": 4883,
+          "total_votos": 15760
         },
-        "2014": {
-          "votos_pct": 8.0
+        "2014_governador": {
+          "gleisi_pct": 7.89,
+          "gleisi_index": -6.983,
+          "votos": 654,
+          "total_votos": 8291
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 1.59,
+          "gleisi_index": -2.112,
+          "votos": 131,
+          "total_votos": 8216
         },
-        "2022": {
-          "votos_pct": 1.0
+        "2022_deputado": {
+          "gleisi_pct": 1.91,
+          "gleisi_index": -2.356,
+          "votos": 155,
+          "total_votos": 8134
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 38
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.492
     },
     "MANDAGUARI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.1
+      "municipio": "MANDAGUARI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.41,
+          "gleisi_index": -4.088,
+          "votos": 9113,
+          "total_votos": 35857
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 16.51,
+          "gleisi_index": 1.638,
+          "votos": 3193,
+          "total_votos": 19341
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 5.01,
+          "gleisi_index": 1.301,
+          "votos": 903,
+          "total_votos": 18034
         },
-        "2022": {
-          "votos_pct": 5.2
+        "2022_deputado": {
+          "gleisi_pct": 7.88,
+          "gleisi_index": 3.618,
+          "votos": 1512,
+          "total_votos": 19190
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 79
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 0.617
     },
     "MANDAGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.7
+      "municipio": "MANDAGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.12,
+          "gleisi_index": -0.385,
+          "votos": 6166,
+          "total_votos": 21176
         },
-        "2014": {
-          "votos_pct": 22.3
+        "2014_governador": {
+          "gleisi_pct": 23.53,
+          "gleisi_index": 8.658,
+          "votos": 2827,
+          "total_votos": 12015
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 4.15,
+          "gleisi_index": 0.441,
+          "votos": 471,
+          "total_votos": 11358
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 2.87,
+          "gleisi_index": -1.387,
+          "votos": 375,
+          "total_votos": 13044
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 62
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.832
     },
     "MANDIRITUBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.2
+      "municipio": "MANDIRITUBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.42,
+          "gleisi_index": 2.919,
+          "votos": 7769,
+          "total_votos": 23962
         },
-        "2014": {
-          "votos_pct": 19.5
+        "2014_governador": {
+          "gleisi_pct": 20.19,
+          "gleisi_index": 5.322,
+          "votos": 2651,
+          "total_votos": 13128
         },
-        "2018": {
-          "votos_pct": 4.7
+        "2018_deputado": {
+          "gleisi_pct": 4.44,
+          "gleisi_index": 0.729,
+          "votos": 533,
+          "total_votos": 12017
         },
-        "2022": {
-          "votos_pct": 6.5
+        "2022_deputado": {
+          "gleisi_pct": 4.11,
+          "gleisi_index": -0.147,
+          "votos": 557,
+          "total_votos": 13539
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 58
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.206
     },
     "MANFRINÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "MANFRINÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.36,
+          "gleisi_index": 9.862,
+          "votos": 1673,
+          "total_votos": 4250
         },
-        "2014": {
-          "votos_pct": 20.3
+        "2014_governador": {
+          "gleisi_pct": 18.95,
+          "gleisi_index": 4.08,
+          "votos": 430,
+          "total_votos": 2269
         },
-        "2018": {
-          "votos_pct": 17.5
+        "2018_deputado": {
+          "gleisi_pct": 9.7,
+          "gleisi_index": 5.998,
+          "votos": 203,
+          "total_votos": 2092
         },
-        "2022": {
-          "votos_pct": 13.1
+        "2022_deputado": {
+          "gleisi_pct": 8.34,
+          "gleisi_index": 4.082,
+          "votos": 199,
+          "total_votos": 2385
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 6.006
     },
     "MANGUEIRINHA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.2
+      "municipio": "MANGUEIRINHA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.86,
+          "gleisi_index": 8.359,
+          "votos": 7176,
+          "total_votos": 18953
         },
-        "2014": {
-          "votos_pct": 15.1
+        "2014_governador": {
+          "gleisi_pct": 16.12,
+          "gleisi_index": 1.246,
+          "votos": 1622,
+          "total_votos": 10064
         },
-        "2018": {
-          "votos_pct": 3.9
+        "2018_deputado": {
+          "gleisi_pct": 5.33,
+          "gleisi_index": 1.623,
+          "votos": 526,
+          "total_votos": 9870
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 4.35,
+          "gleisi_index": 0.093,
+          "votos": 444,
+          "total_votos": 10197
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 44
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.83
     },
     "MANOEL RIBAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.0
+      "municipio": "MANOEL RIBAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.23,
+          "gleisi_index": -5.275,
+          "votos": 3520,
+          "total_votos": 14529
         },
-        "2014": {
-          "votos_pct": 5.7
+        "2014_governador": {
+          "gleisi_pct": 8.07,
+          "gleisi_index": -6.798,
+          "votos": 632,
+          "total_votos": 7828
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 3.52,
+          "gleisi_index": -0.189,
+          "votos": 275,
+          "total_votos": 7819
         },
-        "2022": {
-          "votos_pct": 2.3
+        "2022_deputado": {
+          "gleisi_pct": 2.8,
+          "gleisi_index": -1.46,
+          "votos": 230,
+          "total_votos": 8211
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 41
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.431
     },
     "MARECHAL CÂNDIDO RONDON": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.3
+      "municipio": "MARECHAL CÂNDIDO RONDON",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.85,
+          "gleisi_index": 3.349,
+          "votos": 17338,
+          "total_votos": 52776
         },
-        "2014": {
-          "votos_pct": 14.7
+        "2014_governador": {
+          "gleisi_pct": 13.45,
+          "gleisi_index": -1.421,
+          "votos": 3838,
+          "total_votos": 28534
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 3.75,
+          "gleisi_index": 0.046,
+          "votos": 1068,
+          "total_votos": 28463
         },
-        "2022": {
-          "votos_pct": 3.5
+        "2022_deputado": {
+          "gleisi_pct": 2.63,
+          "gleisi_index": -1.629,
+          "votos": 808,
+          "total_votos": 30699
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 136
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.086
     },
     "MARIA HELENA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.9
+      "municipio": "MARIA HELENA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.1,
+          "gleisi_index": 6.6,
+          "votos": 2468,
+          "total_votos": 6836
         },
-        "2014": {
-          "votos_pct": 18.4
+        "2014_governador": {
+          "gleisi_pct": 20.32,
+          "gleisi_index": 5.447,
+          "votos": 740,
+          "total_votos": 3642
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 0.66,
+          "gleisi_index": -3.047,
+          "votos": 24,
+          "total_votos": 3644
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 0.56,
+          "gleisi_index": -3.699,
+          "votos": 21,
+          "total_votos": 3735
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.325
     },
     "MARIALVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.7
+      "municipio": "MARIALVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.69,
+          "gleisi_index": -1.818,
+          "votos": 10004,
+          "total_votos": 36135
         },
-        "2014": {
-          "votos_pct": 11.8
+        "2014_governador": {
+          "gleisi_pct": 17.99,
+          "gleisi_index": 3.123,
+          "votos": 3573,
+          "total_votos": 19856
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.353,
+          "votos": 451,
+          "total_votos": 19165
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 2.21,
+          "gleisi_index": -2.052,
+          "votos": 461,
+          "total_votos": 20865
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 96
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.525
     },
     "MARILENA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "MARILENA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.85,
+          "gleisi_index": 6.347,
+          "votos": 2721,
+          "total_votos": 7590
         },
-        "2014": {
-          "votos_pct": 9.6
+        "2014_governador": {
+          "gleisi_pct": 11.83,
+          "gleisi_index": -3.045,
+          "votos": 520,
+          "total_votos": 4397
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 2.11,
+          "gleisi_index": -1.6,
+          "votos": 83,
+          "total_votos": 3941
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 3.74,
+          "gleisi_index": -0.525,
+          "votos": 160,
+          "total_votos": 4282
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.294
     },
     "MARILUZ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "MARILUZ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.44,
+          "gleisi_index": 2.935,
+          "votos": 3780,
+          "total_votos": 11653
         },
-        "2014": {
-          "votos_pct": 20.9
+        "2014_governador": {
+          "gleisi_pct": 20.02,
+          "gleisi_index": 5.149,
+          "votos": 1221,
+          "total_votos": 6099
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.8,
+          "gleisi_index": -1.903,
+          "votos": 103,
+          "total_votos": 5713
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 0.83,
+          "gleisi_index": -3.436,
+          "votos": 48,
+          "total_votos": 5818
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.686
     },
     "MARILÂNDIA DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "MARILÂNDIA DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.52,
+          "gleisi_index": 2.019,
+          "votos": 3143,
+          "total_votos": 9971
         },
-        "2014": {
-          "votos_pct": 7.1
+        "2014_governador": {
+          "gleisi_pct": 9.08,
+          "gleisi_index": -5.795,
+          "votos": 491,
+          "total_votos": 5410
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 4.1,
+          "gleisi_index": 0.397,
+          "votos": 213,
+          "total_votos": 5191
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 3.99,
+          "gleisi_index": -0.275,
+          "votos": 213,
+          "total_votos": 5343
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.913
     },
     "MARINGÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 7.0
+      "municipio": "MARINGÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 23.13,
+          "gleisi_index": -6.374,
+          "votos": 82207,
+          "total_votos": 355434
         },
-        "2014": {
-          "votos_pct": 6.3
+        "2014_governador": {
+          "gleisi_pct": 15.88,
+          "gleisi_index": 1.013,
+          "votos": 31201,
+          "total_votos": 196424
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 1.82,
+          "gleisi_index": -1.882,
+          "votos": 3583,
+          "total_votos": 196379
         },
-        "2022": {
-          "votos_pct": 2.1
+        "2022_deputado": {
+          "gleisi_pct": 2.15,
+          "gleisi_index": -2.108,
+          "votos": 4607,
+          "total_votos": 213928
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 425
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.338
     },
     "MARIPÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.6
+      "municipio": "MARIPÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 23.38,
+          "gleisi_index": -6.122,
+          "votos": 1661,
+          "total_votos": 7104
         },
-        "2014": {
-          "votos_pct": 4.7
+        "2014_governador": {
+          "gleisi_pct": 8.24,
+          "gleisi_index": -6.628,
+          "votos": 328,
+          "total_votos": 3979
         },
-        "2018": {
-          "votos_pct": 0
+        "2018_deputado": {
+          "gleisi_pct": 1.6,
+          "gleisi_index": -2.111,
+          "votos": 64,
+          "total_votos": 4012
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 1.52,
+          "gleisi_index": -2.738,
+          "votos": 62,
+          "total_votos": 4070
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.4
     },
     "MARIÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 21.4
+      "municipio": "MARIÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.64,
+          "gleisi_index": 11.141,
+          "votos": 3080,
+          "total_votos": 7578
         },
-        "2014": {
-          "votos_pct": 28.0
+        "2014_governador": {
+          "gleisi_pct": 25.8,
+          "gleisi_index": 10.93,
+          "votos": 1063,
+          "total_votos": 4120
         },
-        "2018": {
-          "votos_pct": 3.0
+        "2018_deputado": {
+          "gleisi_pct": 2.83,
+          "gleisi_index": -0.872,
+          "votos": 109,
+          "total_votos": 3846
         },
-        "2022": {
-          "votos_pct": 4.8
+        "2022_deputado": {
+          "gleisi_pct": 4.51,
+          "gleisi_index": 0.247,
+          "votos": 181,
+          "total_votos": 4015
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.361
     },
     "MARMELEIRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.3
+      "municipio": "MARMELEIRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.86,
+          "gleisi_index": 6.36,
+          "votos": 5340,
+          "total_votos": 14890
         },
-        "2014": {
-          "votos_pct": 17.5
+        "2014_governador": {
+          "gleisi_pct": 25.8,
+          "gleisi_index": 10.926,
+          "votos": 2137,
+          "total_votos": 8284
         },
-        "2018": {
-          "votos_pct": 6.5
+        "2018_deputado": {
+          "gleisi_pct": 8.95,
+          "gleisi_index": 5.239,
+          "votos": 738,
+          "total_votos": 8250
         },
-        "2022": {
-          "votos_pct": 8.8
+        "2022_deputado": {
+          "gleisi_pct": 6.43,
+          "gleisi_index": 2.173,
+          "votos": 556,
+          "total_votos": 8641
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 6.175
     },
     "MARQUINHO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "MARQUINHO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.04,
+          "gleisi_index": 1.537,
+          "votos": 1732,
+          "total_votos": 5580
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 13.92,
+          "gleisi_index": -0.952,
+          "votos": 412,
+          "total_votos": 2960
         },
-        "2018": {
-          "votos_pct": 13.5
+        "2018_deputado": {
+          "gleisi_pct": 15.49,
+          "gleisi_index": 11.788,
+          "votos": 425,
+          "total_votos": 2743
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 3.6,
+          "gleisi_index": -0.661,
+          "votos": 109,
+          "total_votos": 3027
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.11,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.928
     },
     "MARUMBI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "MARUMBI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.71,
+          "gleisi_index": 6.204,
+          "votos": 1835,
+          "total_votos": 5139
         },
-        "2014": {
-          "votos_pct": 6.4
+        "2014_governador": {
+          "gleisi_pct": 8.43,
+          "gleisi_index": -6.437,
+          "votos": 258,
+          "total_votos": 3059
         },
-        "2018": {
-          "votos_pct": 7.4
+        "2018_deputado": {
+          "gleisi_pct": 6.01,
+          "gleisi_index": 2.302,
+          "votos": 166,
+          "total_votos": 2763
         },
-        "2022": {
-          "votos_pct": 9.6
+        "2022_deputado": {
+          "gleisi_pct": 7.23,
+          "gleisi_index": 2.964,
+          "votos": 213,
+          "total_votos": 2948
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.258
     },
     "MATELÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "MATELÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.17,
+          "gleisi_index": -0.332,
+          "votos": 5013,
+          "total_votos": 17185
         },
-        "2014": {
-          "votos_pct": 5.2
+        "2014_governador": {
+          "gleisi_pct": 8.99,
+          "gleisi_index": -5.882,
+          "votos": 854,
+          "total_votos": 9500
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 2.74,
+          "gleisi_index": -0.968,
+          "votos": 250,
+          "total_votos": 9130
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 1.79,
+          "gleisi_index": -2.476,
+          "votos": 178,
+          "total_votos": 9971
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 39
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.414
     },
     "MATINHOS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "MATINHOS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.99,
+          "gleisi_index": 2.487,
+          "votos": 9827,
+          "total_votos": 30719
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 14.65,
+          "gleisi_index": -0.219,
+          "votos": 2720,
+          "total_votos": 18564
         },
-        "2018": {
-          "votos_pct": 8.2
+        "2018_deputado": {
+          "gleisi_pct": 5.54,
+          "gleisi_index": 1.833,
+          "votos": 983,
+          "total_votos": 17748
         },
-        "2022": {
-          "votos_pct": 8.1
+        "2022_deputado": {
+          "gleisi_pct": 7.06,
+          "gleisi_index": 2.796,
+          "votos": 1478,
+          "total_votos": 20942
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 89
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.724
     },
     "MATO RICO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "MATO RICO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.58,
+          "gleisi_index": 6.075,
+          "votos": 1559,
+          "total_votos": 4382
         },
-        "2014": {
-          "votos_pct": 39.6
+        "2014_governador": {
+          "gleisi_pct": 27.69,
+          "gleisi_index": 12.822,
+          "votos": 653,
+          "total_votos": 2358
         },
-        "2018": {
-          "votos_pct": 4.5
+        "2018_deputado": {
+          "gleisi_pct": 4.27,
+          "gleisi_index": 0.567,
+          "votos": 92,
+          "total_votos": 2153
         },
-        "2022": {
-          "votos_pct": 1.8
+        "2022_deputado": {
+          "gleisi_pct": 3.73,
+          "gleisi_index": -0.535,
+          "votos": 92,
+          "total_votos": 2469
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.732
     },
     "MAUÁ DA SERRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.9
+      "municipio": "MAUÁ DA SERRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.47,
+          "gleisi_index": -4.029,
+          "votos": 2232,
+          "total_votos": 8762
         },
-        "2014": {
-          "votos_pct": 4.6
+        "2014_governador": {
+          "gleisi_pct": 4.87,
+          "gleisi_index": -10.001,
+          "votos": 246,
+          "total_votos": 5051
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 1.69,
+          "gleisi_index": -2.021,
+          "votos": 91,
+          "total_votos": 5400
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 2.84,
+          "gleisi_index": -1.419,
+          "votos": 157,
+          "total_votos": 5524
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 23
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.367
     },
     "MEDIANEIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "MEDIANEIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.47,
+          "gleisi_index": 4.972,
+          "votos": 15125,
+          "total_votos": 43873
         },
-        "2014": {
-          "votos_pct": 21.5
+        "2014_governador": {
+          "gleisi_pct": 21.76,
+          "gleisi_index": 6.893,
+          "votos": 5420,
+          "total_votos": 24903
         },
-        "2018": {
-          "votos_pct": 6.1
+        "2018_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 1.429,
+          "votos": 1259,
+          "total_votos": 24518
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 3.77,
+          "gleisi_index": -0.489,
+          "votos": 1037,
+          "total_votos": 27486
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 122
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.201
     },
     "MERCEDES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "MERCEDES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.67,
+          "gleisi_index": 1.164,
+          "votos": 1932,
+          "total_votos": 6300
         },
-        "2014": {
-          "votos_pct": 14.5
+        "2014_governador": {
+          "gleisi_pct": 13.7,
+          "gleisi_index": -1.173,
+          "votos": 486,
+          "total_votos": 3548
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.67,
+          "gleisi_index": -3.039,
+          "votos": 24,
+          "total_votos": 3600
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 0.96,
+          "gleisi_index": -3.299,
+          "votos": 38,
+          "total_votos": 3948
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.587
     },
     "MIRADOR": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 22.3
+      "municipio": "MIRADOR",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.48,
+          "gleisi_index": 12.978,
+          "votos": 1192,
+          "total_votos": 2806
         },
-        "2014": {
-          "votos_pct": 24.7
+        "2014_governador": {
+          "gleisi_pct": 24.65,
+          "gleisi_index": 9.779,
+          "votos": 387,
+          "total_votos": 1570
         },
-        "2018": {
-          "votos_pct": 0.4
+        "2018_deputado": {
+          "gleisi_pct": 1.07,
+          "gleisi_index": -2.637,
+          "votos": 16,
+          "total_votos": 1497
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 0.18,
+          "gleisi_index": -4.079,
+          "votos": 3,
+          "total_votos": 1643
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 4.01
     },
     "MIRASELVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 7.3
+      "municipio": "MIRASELVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 14.01,
+          "gleisi_index": -15.495,
+          "votos": 396,
+          "total_votos": 2827
         },
-        "2014": {
-          "votos_pct": 8.1
+        "2014_governador": {
+          "gleisi_pct": 8.11,
+          "gleisi_index": -6.759,
+          "votos": 122,
+          "total_votos": 1504
         },
-        "2018": {
-          "votos_pct": 5.8
+        "2018_deputado": {
+          "gleisi_pct": 4.7,
+          "gleisi_index": 0.992,
+          "votos": 67,
+          "total_votos": 1426
         },
-        "2022": {
-          "votos_pct": 4.8
+        "2022_deputado": {
+          "gleisi_pct": 3.7,
+          "gleisi_index": -0.563,
+          "votos": 54,
+          "total_votos": 1460
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -5.456
     },
     "MISSAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "MISSAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.14,
+          "gleisi_index": 2.634,
+          "votos": 4119,
+          "total_votos": 12817
         },
-        "2014": {
-          "votos_pct": 13.0
+        "2014_governador": {
+          "gleisi_pct": 18.18,
+          "gleisi_index": 3.311,
+          "votos": 1274,
+          "total_votos": 7007
         },
-        "2018": {
-          "votos_pct": 5.4
+        "2018_deputado": {
+          "gleisi_pct": 3.91,
+          "gleisi_index": 0.203,
+          "votos": 266,
+          "total_votos": 6805
         },
-        "2022": {
-          "votos_pct": 3.8
+        "2022_deputado": {
+          "gleisi_pct": 3.43,
+          "gleisi_index": -0.83,
+          "votos": 253,
+          "total_votos": 7372
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 30
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.33
     },
     "MOREIRA SALES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "MOREIRA SALES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.8,
+          "gleisi_index": 6.299,
+          "votos": 4694,
+          "total_votos": 13111
         },
-        "2014": {
-          "votos_pct": 7.4
+        "2014_governador": {
+          "gleisi_pct": 10.76,
+          "gleisi_index": -4.114,
+          "votos": 784,
+          "total_votos": 7288
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 2.21,
+          "gleisi_index": -1.495,
+          "votos": 154,
+          "total_votos": 6966
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 0.97,
+          "gleisi_index": -3.293,
+          "votos": 68,
+          "total_votos": 7024
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 36
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.651
     },
     "MORRETES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.9
+      "municipio": "MORRETES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.95,
+          "gleisi_index": 0.452,
+          "votos": 5834,
+          "total_votos": 19476
         },
-        "2014": {
-          "votos_pct": 6.6
+        "2014_governador": {
+          "gleisi_pct": 8.14,
+          "gleisi_index": -6.736,
+          "votos": 864,
+          "total_votos": 10620
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 3.42,
+          "gleisi_index": -0.287,
+          "votos": 312,
+          "total_votos": 9124
         },
-        "2022": {
-          "votos_pct": 5.6
+        "2022_deputado": {
+          "gleisi_pct": 4.56,
+          "gleisi_index": 0.3,
+          "votos": 455,
+          "total_votos": 9974
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 44
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.568
     },
     "MUNHOZ DE MELO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 21.5
+      "municipio": "MUNHOZ DE MELO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.5,
+          "gleisi_index": 11.992,
+          "votos": 1876,
+          "total_votos": 4521
         },
-        "2014": {
-          "votos_pct": 7.5
+        "2014_governador": {
+          "gleisi_pct": 8.23,
+          "gleisi_index": -6.643,
+          "votos": 209,
+          "total_votos": 2540
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 2.19,
+          "gleisi_index": -1.517,
+          "votos": 53,
+          "total_votos": 2421
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 1.14,
+          "gleisi_index": -3.125,
+          "votos": 30,
+          "total_votos": 2640
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.177
     },
     "NOSSA SENHORA DAS GRAÇAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "NOSSA SENHORA DAS GRAÇAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 43.32,
+          "gleisi_index": 13.814,
+          "votos": 1912,
+          "total_votos": 4414
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.43,
+          "gleisi_index": -2.439,
+          "votos": 299,
+          "total_votos": 2405
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 4.94,
+          "gleisi_index": 1.238,
+          "votos": 102,
+          "total_votos": 2063
         },
-        "2022": {
-          "votos_pct": 2.5
+        "2022_deputado": {
+          "gleisi_pct": 4.44,
+          "gleisi_index": 0.182,
+          "votos": 103,
+          "total_votos": 2318
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.199
     },
     "NOVA ALIANÇA DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "NOVA ALIANÇA DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.39,
+          "gleisi_index": 10.886,
+          "votos": 830,
+          "total_votos": 2055
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 28.9,
+          "gleisi_index": 14.031,
+          "votos": 337,
+          "total_votos": 1166
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 2.47,
+          "gleisi_index": -1.231,
+          "votos": 27,
+          "total_votos": 1091
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 0.68,
+          "gleisi_index": -3.581,
+          "votos": 8,
+          "total_votos": 1175
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 5
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 5.026
     },
     "NOVA AMÉRICA DA COLINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "NOVA AMÉRICA DA COLINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.25,
+          "gleisi_index": 3.746,
+          "votos": 1318,
+          "total_votos": 3964
         },
-        "2014": {
-          "votos_pct": 2.5
+        "2014_governador": {
+          "gleisi_pct": 5.01,
+          "gleisi_index": -9.865,
+          "votos": 118,
+          "total_votos": 2357
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 2.39,
+          "gleisi_index": -1.316,
+          "votos": 54,
+          "total_votos": 2259
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.52,
+          "gleisi_index": -2.74,
+          "votos": 38,
+          "total_votos": 2498
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.544
     },
     "NOVA AURORA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "NOVA AURORA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.0,
+          "gleisi_index": 5.497,
+          "votos": 4908,
+          "total_votos": 14023
         },
-        "2014": {
-          "votos_pct": 15.2
+        "2014_governador": {
+          "gleisi_pct": 13.51,
+          "gleisi_index": -1.363,
+          "votos": 992,
+          "total_votos": 7344
         },
-        "2018": {
-          "votos_pct": 5.2
+        "2018_deputado": {
+          "gleisi_pct": 2.73,
+          "gleisi_index": -0.971,
+          "votos": 191,
+          "total_votos": 6984
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.62,
+          "gleisi_index": -1.645,
+          "votos": 199,
+          "total_votos": 7606
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.38
     },
     "NOVA CANTU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.1
+      "municipio": "NOVA CANTU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.6,
+          "gleisi_index": 10.092,
+          "votos": 3326,
+          "total_votos": 8400
         },
-        "2014": {
-          "votos_pct": 49.8
+        "2014_governador": {
+          "gleisi_pct": 29.2,
+          "gleisi_index": 14.327,
+          "votos": 1297,
+          "total_votos": 4442
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 1.52,
+          "gleisi_index": -2.188,
+          "votos": 68,
+          "total_votos": 4479
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 2.04,
+          "gleisi_index": -2.222,
+          "votos": 93,
+          "total_votos": 4559
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.002
     },
     "NOVA ESPERANÇA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.2
+      "municipio": "NOVA ESPERANÇA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.74,
+          "gleisi_index": -1.765,
+          "votos": 7883,
+          "total_votos": 28420
         },
-        "2014": {
-          "votos_pct": 15.1
+        "2014_governador": {
+          "gleisi_pct": 12.42,
+          "gleisi_index": -2.454,
+          "votos": 1879,
+          "total_votos": 15132
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 3.0,
+          "gleisi_index": -0.709,
+          "votos": 408,
+          "total_votos": 13613
         },
-        "2022": {
-          "votos_pct": 6.2
+        "2022_deputado": {
+          "gleisi_pct": 7.12,
+          "gleisi_index": 2.861,
+          "votos": 1012,
+          "total_votos": 14208
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 71
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.517
     },
     "NOVA ESPERANÇA DO SUDOESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.5
+      "municipio": "NOVA ESPERANÇA DO SUDOESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.17,
+          "gleisi_index": 8.666,
+          "votos": 2305,
+          "total_votos": 6039
         },
-        "2014": {
-          "votos_pct": 13.7
+        "2014_governador": {
+          "gleisi_pct": 14.38,
+          "gleisi_index": -0.493,
+          "votos": 513,
+          "total_votos": 3568
         },
-        "2018": {
-          "votos_pct": 8.6
+        "2018_deputado": {
+          "gleisi_pct": 5.61,
+          "gleisi_index": 1.903,
+          "votos": 199,
+          "total_votos": 3548
         },
-        "2022": {
-          "votos_pct": 7.7
+        "2022_deputado": {
+          "gleisi_pct": 4.98,
+          "gleisi_index": 0.72,
+          "votos": 189,
+          "total_votos": 3794
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.699
     },
     "NOVA FÁTIMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.3
+      "municipio": "NOVA FÁTIMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.42,
+          "gleisi_index": 3.92,
+          "votos": 2751,
+          "total_votos": 8231
         },
-        "2014": {
-          "votos_pct": 9.9
+        "2014_governador": {
+          "gleisi_pct": 10.66,
+          "gleisi_index": -4.213,
+          "votos": 463,
+          "total_votos": 4344
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 2.7,
+          "gleisi_index": -1.008,
+          "votos": 113,
+          "total_votos": 4188
         },
-        "2022": {
-          "votos_pct": 4.8
+        "2022_deputado": {
+          "gleisi_pct": 3.6,
+          "gleisi_index": -0.661,
+          "votos": 157,
+          "total_votos": 4360
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 22
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.491
     },
     "NOVA LARANJEIRAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "NOVA LARANJEIRAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.58,
+          "gleisi_index": 3.079,
+          "votos": 3425,
+          "total_votos": 10512
         },
-        "2014": {
-          "votos_pct": 41.2
+        "2014_governador": {
+          "gleisi_pct": 32.09,
+          "gleisi_index": 17.222,
+          "votos": 1838,
+          "total_votos": 5727
         },
-        "2018": {
-          "votos_pct": 5.9
+        "2018_deputado": {
+          "gleisi_pct": 6.42,
+          "gleisi_index": 2.712,
+          "votos": 371,
+          "total_votos": 5781
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 4.62,
+          "gleisi_index": 0.354,
+          "votos": 277,
+          "total_votos": 6002
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.842
     },
     "NOVA LONDRINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "NOVA LONDRINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.06,
+          "gleisi_index": 2.559,
+          "votos": 4151,
+          "total_votos": 12947
         },
-        "2014": {
-          "votos_pct": 13.5
+        "2014_governador": {
+          "gleisi_pct": 18.37,
+          "gleisi_index": 3.503,
+          "votos": 1266,
+          "total_votos": 6890
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 2.48,
+          "gleisi_index": -1.226,
+          "votos": 157,
+          "total_votos": 6331
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 2.87,
+          "gleisi_index": -1.395,
+          "votos": 201,
+          "total_votos": 7012
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.86
     },
     "NOVA OLÍMPIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 23.2
+      "municipio": "NOVA OLÍMPIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 44.05,
+          "gleisi_index": 14.545,
+          "votos": 2890,
+          "total_votos": 6561
         },
-        "2014": {
-          "votos_pct": 40.1
+        "2014_governador": {
+          "gleisi_pct": 33.58,
+          "gleisi_index": 18.71,
+          "votos": 1222,
+          "total_votos": 3639
         },
-        "2018": {
-          "votos_pct": 0.5
+        "2018_deputado": {
+          "gleisi_pct": 1.01,
+          "gleisi_index": -2.691,
+          "votos": 36,
+          "total_votos": 3547
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 1.31,
+          "gleisi_index": -2.953,
+          "votos": 48,
+          "total_votos": 3668
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 6.903
     },
     "NOVA PRATA DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.9
+      "municipio": "NOVA PRATA DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.97,
+          "gleisi_index": 10.465,
+          "votos": 4653,
+          "total_votos": 11642
         },
-        "2014": {
-          "votos_pct": 15.7
+        "2014_governador": {
+          "gleisi_pct": 18.54,
+          "gleisi_index": 3.668,
+          "votos": 1213,
+          "total_votos": 6543
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 5.22,
+          "gleisi_index": 1.514,
+          "votos": 346,
+          "total_votos": 6628
         },
-        "2022": {
-          "votos_pct": 9.2
+        "2022_deputado": {
+          "gleisi_pct": 8.36,
+          "gleisi_index": 4.103,
+          "votos": 567,
+          "total_votos": 6779
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.07,
-      "num_secoes": 26
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.938
     },
     "NOVA SANTA BÁRBARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.8
+      "municipio": "NOVA SANTA BÁRBARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.13,
+          "gleisi_index": 2.623,
+          "votos": 1392,
+          "total_votos": 4333
         },
-        "2014": {
-          "votos_pct": 13.1
+        "2014_governador": {
+          "gleisi_pct": 15.56,
+          "gleisi_index": 0.689,
+          "votos": 382,
+          "total_votos": 2455
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.38,
+          "gleisi_index": -2.328,
+          "votos": 36,
+          "total_votos": 2612
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 1.61,
+          "gleisi_index": -2.649,
+          "votos": 43,
+          "total_votos": 2667
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.416
     },
     "NOVA SANTA ROSA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "NOVA SANTA ROSA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.48,
+          "gleisi_index": -2.019,
+          "votos": 2689,
+          "total_votos": 9784
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 7.38,
+          "gleisi_index": -7.492,
+          "votos": 392,
+          "total_votos": 5312
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 1.07,
+          "gleisi_index": -2.633,
+          "votos": 57,
+          "total_votos": 5313
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.55,
+          "gleisi_index": -2.715,
+          "votos": 88,
+          "total_votos": 5691
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 23
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.715
     },
     "NOVA TEBAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.9
+      "municipio": "NOVA TEBAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.62,
+          "gleisi_index": 8.112,
+          "votos": 2981,
+          "total_votos": 7925
         },
-        "2014": {
-          "votos_pct": 13.7
+        "2014_governador": {
+          "gleisi_pct": 10.46,
+          "gleisi_index": -4.416,
+          "votos": 427,
+          "total_votos": 4084
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 4.03,
+          "gleisi_index": 0.327,
+          "votos": 178,
+          "total_votos": 4414
         },
-        "2022": {
-          "votos_pct": 10.0
+        "2022_deputado": {
+          "gleisi_pct": 8.99,
+          "gleisi_index": 4.73,
+          "votos": 404,
+          "total_votos": 4493
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.08,
-      "num_secoes": 22
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.188
     },
     "NOVO ITACOLOMI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "NOVO ITACOLOMI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.75,
+          "gleisi_index": 10.252,
+          "votos": 1492,
+          "total_votos": 3753
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 10.24,
+          "gleisi_index": -4.63,
+          "votos": 208,
+          "total_votos": 2031
         },
-        "2018": {
-          "votos_pct": 1.6
+        "2018_deputado": {
+          "gleisi_pct": 3.06,
+          "gleisi_index": -0.644,
+          "votos": 61,
+          "total_votos": 1992
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 4.24,
+          "gleisi_index": -0.017,
+          "votos": 95,
+          "total_votos": 2238
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.24
     },
     "ORTIGUEIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "ORTIGUEIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.0,
+          "gleisi_index": 9.496,
+          "votos": 8513,
+          "total_votos": 21829
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 13.35,
+          "gleisi_index": -1.52,
+          "votos": 1598,
+          "total_votos": 11969
         },
-        "2018": {
-          "votos_pct": 9.3
+        "2018_deputado": {
+          "gleisi_pct": 9.68,
+          "gleisi_index": 5.969,
+          "votos": 1243,
+          "total_votos": 12847
         },
-        "2022": {
-          "votos_pct": 12.9
+        "2022_deputado": {
+          "gleisi_pct": 12.41,
+          "gleisi_index": 8.152,
+          "votos": 1668,
+          "total_votos": 13437
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 62
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.524
     },
     "OURIZONA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "OURIZONA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.78,
+          "gleisi_index": 3.279,
+          "votos": 1427,
+          "total_votos": 4353
         },
-        "2014": {
-          "votos_pct": 31.0
+        "2014_governador": {
+          "gleisi_pct": 33.36,
+          "gleisi_index": 18.491,
+          "votos": 785,
+          "total_votos": 2353
         },
-        "2018": {
-          "votos_pct": 20.9
+        "2018_deputado": {
+          "gleisi_pct": 16.47,
+          "gleisi_index": 12.762,
+          "votos": 345,
+          "total_votos": 2095
         },
-        "2022": {
-          "votos_pct": 14.6
+        "2022_deputado": {
+          "gleisi_pct": 18.13,
+          "gleisi_index": 13.864,
+          "votos": 381,
+          "total_votos": 2102
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.06,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 12.099
     },
     "OURO VERDE DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "OURO VERDE DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.43,
+          "gleisi_index": -0.07,
+          "votos": 1904,
+          "total_votos": 6469
         },
-        "2014": {
-          "votos_pct": 19.8
+        "2014_governador": {
+          "gleisi_pct": 20.0,
+          "gleisi_index": 5.129,
+          "votos": 720,
+          "total_votos": 3600
         },
-        "2018": {
-          "votos_pct": 4.7
+        "2018_deputado": {
+          "gleisi_pct": 3.55,
+          "gleisi_index": -0.154,
+          "votos": 119,
+          "total_votos": 3350
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.42,
+          "gleisi_index": -1.839,
+          "votos": 91,
+          "total_votos": 3756
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.766
     },
     "PAIÇANDU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.6
+      "municipio": "PAIÇANDU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.09,
+          "gleisi_index": 1.589,
+          "votos": 10859,
+          "total_votos": 34926
         },
-        "2014": {
-          "votos_pct": 16.4
+        "2014_governador": {
+          "gleisi_pct": 22.46,
+          "gleisi_index": 7.584,
+          "votos": 4472,
+          "total_votos": 19915
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 2.8,
+          "gleisi_index": -0.908,
+          "votos": 498,
+          "total_votos": 17798
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 5.15,
+          "gleisi_index": 0.892,
+          "votos": 1011,
+          "total_votos": 19619
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 95
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.289
     },
     "PALMAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.0
+      "municipio": "PALMAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.3,
+          "gleisi_index": 6.796,
+          "votos": 13632,
+          "total_votos": 37555
         },
-        "2014": {
-          "votos_pct": 22.1
+        "2014_governador": {
+          "gleisi_pct": 25.19,
+          "gleisi_index": 10.32,
+          "votos": 5118,
+          "total_votos": 20317
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 5.2,
+          "gleisi_index": 1.489,
+          "votos": 1112,
+          "total_votos": 21403
         },
-        "2022": {
-          "votos_pct": 5.2
+        "2022_deputado": {
+          "gleisi_pct": 6.99,
+          "gleisi_index": 2.725,
+          "votos": 1487,
+          "total_votos": 21285
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 99
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.333
     },
     "PALMEIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.0
+      "municipio": "PALMEIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.84,
+          "gleisi_index": -0.663,
+          "votos": 10215,
+          "total_votos": 35420
         },
-        "2014": {
-          "votos_pct": 10.4
+        "2014_governador": {
+          "gleisi_pct": 16.86,
+          "gleisi_index": 1.989,
+          "votos": 3284,
+          "total_votos": 19478
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 2.62,
+          "gleisi_index": -1.09,
+          "votos": 479,
+          "total_votos": 18311
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 1.97,
+          "gleisi_index": -2.288,
+          "votos": 386,
+          "total_votos": 19556
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 83
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.513
     },
     "PALMITAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.1
+      "municipio": "PALMITAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.85,
+          "gleisi_index": 8.343,
+          "votos": 5901,
+          "total_votos": 15592
         },
-        "2014": {
-          "votos_pct": 14.5
+        "2014_governador": {
+          "gleisi_pct": 17.06,
+          "gleisi_index": 2.192,
+          "votos": 1391,
+          "total_votos": 8152
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 3.17,
+          "gleisi_index": -0.537,
+          "votos": 251,
+          "total_votos": 7921
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 3.46,
+          "gleisi_index": -0.796,
+          "votos": 279,
+          "total_votos": 8052
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 41
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.3
     },
     "PALOTINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.0
+      "municipio": "PALOTINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.72,
+          "gleisi_index": -1.785,
+          "votos": 8586,
+          "total_votos": 30976
         },
-        "2014": {
-          "votos_pct": 12.7
+        "2014_governador": {
+          "gleisi_pct": 14.54,
+          "gleisi_index": -0.331,
+          "votos": 2483,
+          "total_votos": 17077
         },
-        "2018": {
-          "votos_pct": 4.6
+        "2018_deputado": {
+          "gleisi_pct": 4.35,
+          "gleisi_index": 0.645,
+          "votos": 759,
+          "total_votos": 17442
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 2.54,
+          "gleisi_index": -1.717,
+          "votos": 468,
+          "total_votos": 18393
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 79
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.797
     },
     "PARANACITY": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "PARANACITY",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.97,
+          "gleisi_index": 1.463,
+          "votos": 3166,
+          "total_votos": 10224
         },
-        "2014": {
-          "votos_pct": 13.6
+        "2014_governador": {
+          "gleisi_pct": 16.64,
+          "gleisi_index": 1.765,
+          "votos": 898,
+          "total_votos": 5398
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 2.6,
+          "gleisi_index": -1.106,
+          "votos": 133,
+          "total_votos": 5116
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 3.46,
+          "gleisi_index": -0.799,
+          "votos": 182,
+          "total_votos": 5256
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 24
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.331
     },
     "PARANAGUÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.0
+      "municipio": "PARANAGUÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.05,
+          "gleisi_index": 0.552,
+          "votos": 44654,
+          "total_votos": 148576
         },
-        "2014": {
-          "votos_pct": 16.0
+        "2014_governador": {
+          "gleisi_pct": 17.36,
+          "gleisi_index": 2.486,
+          "votos": 13429,
+          "total_votos": 77368
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 2.28,
+          "gleisi_index": -1.427,
+          "votos": 1677,
+          "total_votos": 73596
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 3.82,
+          "gleisi_index": -0.437,
+          "votos": 2974,
+          "total_votos": 77753
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 304
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.294
     },
     "PARANAPOEMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.1
+      "municipio": "PARANAPOEMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.41,
+          "gleisi_index": 8.904,
+          "votos": 1133,
+          "total_votos": 2950
         },
-        "2014": {
-          "votos_pct": 28.4
+        "2014_governador": {
+          "gleisi_pct": 28.29,
+          "gleisi_index": 13.424,
+          "votos": 453,
+          "total_votos": 1601
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 2.93,
+          "gleisi_index": -0.781,
+          "votos": 49,
+          "total_votos": 1675
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 2.19,
+          "gleisi_index": -2.072,
+          "votos": 37,
+          "total_votos": 1690
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.869
     },
     "PARANAVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "PARANAVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.94,
+          "gleisi_index": 0.44,
+          "votos": 25891,
+          "total_votos": 86467
         },
-        "2014": {
-          "votos_pct": 7.7
+        "2014_governador": {
+          "gleisi_pct": 12.27,
+          "gleisi_index": -2.597,
+          "votos": 5689,
+          "total_votos": 46349
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.61,
+          "gleisi_index": -2.092,
+          "votos": 728,
+          "total_votos": 45117
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 1.95,
+          "gleisi_index": -2.314,
+          "votos": 926,
+          "total_votos": 47547
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 193
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.641
     },
     "PARAÍSO DO NORTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.7
+      "municipio": "PARAÍSO DO NORTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.22,
+          "gleisi_index": 10.72,
+          "votos": 5161,
+          "total_votos": 12831
         },
-        "2014": {
-          "votos_pct": 44.8
+        "2014_governador": {
+          "gleisi_pct": 43.35,
+          "gleisi_index": 28.478,
+          "votos": 3031,
+          "total_votos": 6992
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.06,
+          "gleisi_index": -2.648,
+          "votos": 71,
+          "total_votos": 6708
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 0.59,
+          "gleisi_index": -3.667,
+          "votos": 44,
+          "total_votos": 7405
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 8.221
     },
     "PATO BRAGADO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.1
+      "municipio": "PATO BRAGADO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.09,
+          "gleisi_index": 4.588,
+          "votos": 2205,
+          "total_votos": 6468
         },
-        "2014": {
-          "votos_pct": 10.9
+        "2014_governador": {
+          "gleisi_pct": 11.45,
+          "gleisi_index": -3.423,
+          "votos": 389,
+          "total_votos": 3398
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 2.0,
+          "gleisi_index": -1.701,
+          "votos": 66,
+          "total_votos": 3292
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 2.24,
+          "gleisi_index": -2.024,
+          "votos": 80,
+          "total_votos": 3576
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.64
     },
     "PATO BRANCO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "PATO BRANCO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.74,
+          "gleisi_index": 6.239,
+          "votos": 27983,
+          "total_votos": 78293
         },
-        "2014": {
-          "votos_pct": 10.3
+        "2014_governador": {
+          "gleisi_pct": 14.72,
+          "gleisi_index": -0.151,
+          "votos": 6225,
+          "total_votos": 42289
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 5.28,
+          "gleisi_index": 1.572,
+          "votos": 2300,
+          "total_votos": 43580
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 7.06,
+          "gleisi_index": 2.801,
+          "votos": 3339,
+          "total_votos": 47277
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 197
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.615
     },
     "PAULA FREITAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.0
+      "municipio": "PAULA FREITAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.13,
+          "gleisi_index": -2.376,
+          "votos": 1575,
+          "total_votos": 5806
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 9.56,
+          "gleisi_index": -5.315,
+          "votos": 321,
+          "total_votos": 3359
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 2.86,
+          "gleisi_index": -0.851,
+          "votos": 81,
+          "total_votos": 2837
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 1.23,
+          "gleisi_index": -3.031,
+          "votos": 41,
+          "total_votos": 3331
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.893
     },
     "PAULO FRONTIN": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.3
+      "municipio": "PAULO FRONTIN",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.26,
+          "gleisi_index": 0.754,
+          "votos": 2200,
+          "total_votos": 7271
         },
-        "2014": {
-          "votos_pct": 14.4
+        "2014_governador": {
+          "gleisi_pct": 14.44,
+          "gleisi_index": -0.43,
+          "votos": 622,
+          "total_votos": 4307
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 3.33,
+          "gleisi_index": -0.375,
+          "votos": 125,
+          "total_votos": 3752
         },
-        "2022": {
-          "votos_pct": 1.8
+        "2022_deputado": {
+          "gleisi_pct": 1.51,
+          "gleisi_index": -2.754,
+          "votos": 60,
+          "total_votos": 3980
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.701
     },
     "PEABIRU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.1
+      "municipio": "PEABIRU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.11,
+          "gleisi_index": -0.391,
+          "votos": 4174,
+          "total_votos": 14338
         },
-        "2014": {
-          "votos_pct": 16.5
+        "2014_governador": {
+          "gleisi_pct": 18.08,
+          "gleisi_index": 3.207,
+          "votos": 1368,
+          "total_votos": 7567
         },
-        "2018": {
-          "votos_pct": 3.7
+        "2018_deputado": {
+          "gleisi_pct": 2.72,
+          "gleisi_index": -0.986,
+          "votos": 190,
+          "total_votos": 6986
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 4.75,
+          "gleisi_index": 0.486,
+          "votos": 348,
+          "total_votos": 7330
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 33
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.579
     },
     "PEROBAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.4
+      "municipio": "PEROBAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.7,
+          "gleisi_index": 5.198,
+          "votos": 2428,
+          "total_votos": 6997
         },
-        "2014": {
-          "votos_pct": 8.0
+        "2014_governador": {
+          "gleisi_pct": 12.18,
+          "gleisi_index": -2.695,
+          "votos": 488,
+          "total_votos": 4008
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 1.99,
+          "gleisi_index": -1.719,
+          "votos": 75,
+          "total_votos": 3775
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 1.94,
+          "gleisi_index": -2.319,
+          "votos": 78,
+          "total_votos": 4016
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.384
     },
     "PINHAIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.3
+      "municipio": "PINHAIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.17,
+          "gleisi_index": 1.671,
+          "votos": 37098,
+          "total_votos": 119005
         },
-        "2014": {
-          "votos_pct": 25.2
+        "2014_governador": {
+          "gleisi_pct": 22.63,
+          "gleisi_index": 7.754,
+          "votos": 15397,
+          "total_votos": 68052
         },
-        "2018": {
-          "votos_pct": 2.8
+        "2018_deputado": {
+          "gleisi_pct": 1.88,
+          "gleisi_index": -1.826,
+          "votos": 1253,
+          "total_votos": 66644
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 3.27,
+          "gleisi_index": -0.989,
+          "votos": 2329,
+          "total_votos": 71175
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 257
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.652
     },
     "PINHAL DE SÃO BENTO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 24.3
+      "municipio": "PINHAL DE SÃO BENTO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 45.82,
+          "gleisi_index": 16.314,
+          "votos": 1517,
+          "total_votos": 3311
         },
-        "2014": {
-          "votos_pct": 14.7
+        "2014_governador": {
+          "gleisi_pct": 15.42,
+          "gleisi_index": 0.552,
+          "votos": 277,
+          "total_votos": 1796
         },
-        "2018": {
-          "votos_pct": 16.5
+        "2018_deputado": {
+          "gleisi_pct": 16.16,
+          "gleisi_index": 12.449,
+          "votos": 295,
+          "total_votos": 1826
         },
-        "2022": {
-          "votos_pct": 11.4
+        "2022_deputado": {
+          "gleisi_pct": 11.87,
+          "gleisi_index": 7.613,
+          "votos": 223,
+          "total_votos": 1878
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.232
     },
     "PINHALÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.1
+      "municipio": "PINHALÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.79,
+          "gleisi_index": 8.291,
+          "votos": 3036,
+          "total_votos": 8033
         },
-        "2014": {
-          "votos_pct": 7.8
+        "2014_governador": {
+          "gleisi_pct": 9.03,
+          "gleisi_index": -5.842,
+          "votos": 372,
+          "total_votos": 4120
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 1.58,
+          "gleisi_index": -2.126,
+          "votos": 63,
+          "total_votos": 3988
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 2.39,
+          "gleisi_index": -1.876,
+          "votos": 99,
+          "total_votos": 4150
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.388
     },
     "PINHÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.1
+      "municipio": "PINHÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.88,
+          "gleisi_index": 8.382,
+          "votos": 11551,
+          "total_votos": 30490
         },
-        "2014": {
-          "votos_pct": 31.1
+        "2014_governador": {
+          "gleisi_pct": 29.76,
+          "gleisi_index": 14.892,
+          "votos": 4940,
+          "total_votos": 16598
         },
-        "2018": {
-          "votos_pct": 11.2
+        "2018_deputado": {
+          "gleisi_pct": 13.34,
+          "gleisi_index": 9.631,
+          "votos": 2138,
+          "total_votos": 16031
         },
-        "2022": {
-          "votos_pct": 11.6
+        "2022_deputado": {
+          "gleisi_pct": 9.82,
+          "gleisi_index": 5.558,
+          "votos": 1616,
+          "total_votos": 16457
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 75
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.616
     },
     "PIRAQUARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.9
+      "municipio": "PIRAQUARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.64,
+          "gleisi_index": 4.139,
+          "votos": 25915,
+          "total_votos": 77031
         },
-        "2014": {
-          "votos_pct": 18.0
+        "2014_governador": {
+          "gleisi_pct": 20.87,
+          "gleisi_index": 5.997,
+          "votos": 9295,
+          "total_votos": 44542
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 3.96,
+          "gleisi_index": 0.257,
+          "votos": 1786,
+          "total_votos": 45071
         },
-        "2022": {
-          "votos_pct": 5.2
+        "2022_deputado": {
+          "gleisi_pct": 5.33,
+          "gleisi_index": 1.07,
+          "votos": 2600,
+          "total_votos": 48763
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 184
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.866
     },
     "PIRAÍ DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.0
+      "municipio": "PIRAÍ DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.01,
+          "gleisi_index": 0.508,
+          "votos": 7736,
+          "total_votos": 25777
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 12.01,
+          "gleisi_index": -2.863,
+          "votos": 1662,
+          "total_votos": 13841
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 1.1,
+          "gleisi_index": -2.603,
+          "votos": 144,
+          "total_votos": 13049
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 1.44,
+          "gleisi_index": -2.82,
+          "votos": 185,
+          "total_votos": 12835
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 63
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.945
     },
     "PITANGA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.3
+      "municipio": "PITANGA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.15,
+          "gleisi_index": 3.647,
+          "votos": 11454,
+          "total_votos": 34552
         },
-        "2014": {
-          "votos_pct": 18.1
+        "2014_governador": {
+          "gleisi_pct": 25.94,
+          "gleisi_index": 11.074,
+          "votos": 4895,
+          "total_votos": 18867
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 4.77,
+          "gleisi_index": 1.066,
+          "votos": 887,
+          "total_votos": 18586
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 8.55,
+          "gleisi_index": 4.292,
+          "votos": 1640,
+          "total_votos": 19173
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 99
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.02
     },
     "PITANGUEIRAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "PITANGUEIRAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.48,
+          "gleisi_index": 2.979,
+          "votos": 1145,
+          "total_votos": 3525
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 7.41,
+          "gleisi_index": -7.457,
+          "votos": 154,
+          "total_votos": 2077
         },
-        "2018": {
-          "votos_pct": 5.8
+        "2018_deputado": {
+          "gleisi_pct": 6.82,
+          "gleisi_index": 3.116,
+          "votos": 126,
+          "total_votos": 1847
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 4.81,
+          "gleisi_index": 0.545,
+          "votos": 92,
+          "total_votos": 1914
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.204
     },
     "PIÊN": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "PIÊN",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.18,
+          "gleisi_index": -1.323,
+          "votos": 3698,
+          "total_votos": 13123
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 10.03,
+          "gleisi_index": -4.838,
+          "votos": 725,
+          "total_votos": 7226
         },
-        "2018": {
-          "votos_pct": 0.4
+        "2018_deputado": {
+          "gleisi_pct": 2.03,
+          "gleisi_index": -1.676,
+          "votos": 145,
+          "total_votos": 7142
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 1.84,
+          "gleisi_index": -2.418,
+          "votos": 144,
+          "total_votos": 7813
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 32
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.564
     },
     "PLANALTINA DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.2
+      "municipio": "PLANALTINA DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.2,
+          "gleisi_index": -0.299,
+          "votos": 1398,
+          "total_votos": 4787
         },
-        "2014": {
-          "votos_pct": 13.9
+        "2014_governador": {
+          "gleisi_pct": 15.11,
+          "gleisi_index": 0.241,
+          "votos": 379,
+          "total_votos": 2508
         },
-        "2018": {
-          "votos_pct": 8.2
+        "2018_deputado": {
+          "gleisi_pct": 8.32,
+          "gleisi_index": 4.617,
+          "votos": 205,
+          "total_votos": 2463
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 2.83,
+          "gleisi_index": -1.429,
+          "votos": 73,
+          "total_votos": 2577
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.06,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.782
     },
     "PLANALTO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.3
+      "municipio": "PLANALTO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.06,
+          "gleisi_index": 12.561,
+          "votos": 6636,
+          "total_votos": 15776
         },
-        "2014": {
-          "votos_pct": 30.8
+        "2014_governador": {
+          "gleisi_pct": 32.75,
+          "gleisi_index": 17.874,
+          "votos": 2674,
+          "total_votos": 8166
         },
-        "2018": {
-          "votos_pct": 7.2
+        "2018_deputado": {
+          "gleisi_pct": 7.3,
+          "gleisi_index": 3.59,
+          "votos": 534,
+          "total_votos": 7319
         },
-        "2022": {
-          "votos_pct": 6.4
+        "2022_deputado": {
+          "gleisi_pct": 9.8,
+          "gleisi_index": 5.534,
+          "votos": 781,
+          "total_votos": 7973
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 38
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.89
     },
     "PONTA GROSSA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.1
+      "municipio": "PONTA GROSSA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.94,
+          "gleisi_index": -0.56,
+          "votos": 91156,
+          "total_votos": 314948
         },
-        "2014": {
-          "votos_pct": 16.5
+        "2014_governador": {
+          "gleisi_pct": 18.03,
+          "gleisi_index": 3.163,
+          "votos": 31527,
+          "total_votos": 174816
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 1.32,
+          "gleisi_index": -2.386,
+          "votos": 2300,
+          "total_votos": 174227
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 1.57,
+          "gleisi_index": -2.694,
+          "votos": 2893,
+          "total_votos": 184622
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 378
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.619
     },
     "PONTAL DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.0
+      "municipio": "PONTAL DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.36,
+          "gleisi_index": -0.145,
+          "votos": 5760,
+          "total_votos": 19620
         },
-        "2014": {
-          "votos_pct": 15.0
+        "2014_governador": {
+          "gleisi_pct": 13.94,
+          "gleisi_index": -0.93,
+          "votos": 1671,
+          "total_votos": 11986
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 4.83,
+          "gleisi_index": 1.123,
+          "votos": 580,
+          "total_votos": 12010
         },
-        "2022": {
-          "votos_pct": 4.1
+        "2022_deputado": {
+          "gleisi_pct": 6.01,
+          "gleisi_index": 1.749,
+          "votos": 889,
+          "total_votos": 14792
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 59
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.449
     },
     "PORECATU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "PORECATU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.83,
+          "gleisi_index": 3.323,
+          "votos": 5042,
+          "total_votos": 15360
         },
-        "2014": {
-          "votos_pct": 15.6
+        "2014_governador": {
+          "gleisi_pct": 12.14,
+          "gleisi_index": -2.733,
+          "votos": 965,
+          "total_votos": 7950
         },
-        "2018": {
-          "votos_pct": 11.3
+        "2018_deputado": {
+          "gleisi_pct": 7.34,
+          "gleisi_index": 3.634,
+          "votos": 512,
+          "total_votos": 6975
         },
-        "2022": {
-          "votos_pct": 10.9
+        "2022_deputado": {
+          "gleisi_pct": 9.84,
+          "gleisi_index": 5.574,
+          "votos": 688,
+          "total_votos": 6995
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.45
     },
     "PORTO AMAZONAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 9.8
+      "municipio": "PORTO AMAZONAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 21.02,
+          "gleisi_index": -8.482,
+          "votos": 1046,
+          "total_votos": 4976
         },
-        "2014": {
-          "votos_pct": 11.9
+        "2014_governador": {
+          "gleisi_pct": 8.48,
+          "gleisi_index": -6.39,
+          "votos": 225,
+          "total_votos": 2653
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 2.41,
+          "gleisi_index": -1.294,
+          "votos": 60,
+          "total_votos": 2488
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 3.45,
+          "gleisi_index": -0.808,
+          "votos": 94,
+          "total_votos": 2722
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.244
     },
     "PORTO BARREIRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.7
+      "municipio": "PORTO BARREIRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.01,
+          "gleisi_index": 5.511,
+          "votos": 1590,
+          "total_votos": 4541
         },
-        "2014": {
-          "votos_pct": 49.3
+        "2014_governador": {
+          "gleisi_pct": 31.74,
+          "gleisi_index": 16.868,
+          "votos": 763,
+          "total_votos": 2404
         },
-        "2018": {
-          "votos_pct": 29.1
+        "2018_deputado": {
+          "gleisi_pct": 19.67,
+          "gleisi_index": 15.959,
+          "votos": 458,
+          "total_votos": 2329
         },
-        "2022": {
-          "votos_pct": 6.2
+        "2022_deputado": {
+          "gleisi_pct": 9.43,
+          "gleisi_index": 5.167,
+          "votos": 236,
+          "total_votos": 2503
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.23,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 10.876
     },
     "PORTO RICO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.0
+      "municipio": "PORTO RICO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.05,
+          "gleisi_index": 7.551,
+          "votos": 1245,
+          "total_votos": 3360
         },
-        "2014": {
-          "votos_pct": 7.6
+        "2014_governador": {
+          "gleisi_pct": 13.06,
+          "gleisi_index": -1.809,
+          "votos": 247,
+          "total_votos": 1891
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.53,
+          "gleisi_index": -2.18,
+          "votos": 27,
+          "total_votos": 1769
         },
-        "2022": {
-          "votos_pct": 0.9
+        "2022_deputado": {
+          "gleisi_pct": 0.88,
+          "gleisi_index": -3.38,
+          "votos": 18,
+          "total_votos": 2043
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.045
     },
     "PORTO VITÓRIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.4
+      "municipio": "PORTO VITÓRIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.75,
+          "gleisi_index": 0.248,
+          "votos": 1301,
+          "total_votos": 4373
         },
-        "2014": {
-          "votos_pct": 13.3
+        "2014_governador": {
+          "gleisi_pct": 16.18,
+          "gleisi_index": 1.306,
+          "votos": 402,
+          "total_votos": 2485
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 3.26,
+          "gleisi_index": -0.45,
+          "votos": 67,
+          "total_votos": 2058
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.914,
+          "votos": 54,
+          "total_votos": 2300
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.202
     },
     "PRADO FERREIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.1
+      "municipio": "PRADO FERREIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.35,
+          "gleisi_index": 4.845,
+          "votos": 1501,
+          "total_votos": 4370
         },
-        "2014": {
-          "votos_pct": 11.3
+        "2014_governador": {
+          "gleisi_pct": 10.31,
+          "gleisi_index": -4.557,
+          "votos": 259,
+          "total_votos": 2511
         },
-        "2018": {
-          "votos_pct": 6.2
+        "2018_deputado": {
+          "gleisi_pct": 3.96,
+          "gleisi_index": 0.252,
+          "votos": 90,
+          "total_votos": 2274
         },
-        "2022": {
-          "votos_pct": 5.7
+        "2022_deputado": {
+          "gleisi_pct": 4.69,
+          "gleisi_index": 0.43,
+          "votos": 114,
+          "total_votos": 2430
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.242
     },
     "PRANCHITA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.0
+      "municipio": "PRANCHITA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.97,
+          "gleisi_index": 0.466,
+          "votos": 2099,
+          "total_votos": 7004
         },
-        "2014": {
-          "votos_pct": 26.3
+        "2014_governador": {
+          "gleisi_pct": 24.13,
+          "gleisi_index": 9.26,
+          "votos": 882,
+          "total_votos": 3655
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 3.13,
+          "gleisi_index": -0.572,
+          "votos": 117,
+          "total_votos": 3733
         },
-        "2022": {
-          "votos_pct": 3.6
+        "2022_deputado": {
+          "gleisi_pct": 2.55,
+          "gleisi_index": -1.716,
+          "votos": 93,
+          "total_votos": 3654
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.859
     },
     "PRESIDENTE CASTELO BRANCO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "PRESIDENTE CASTELO BRANCO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.76,
+          "gleisi_index": 5.255,
+          "votos": 1985,
+          "total_votos": 5711
         },
-        "2014": {
-          "votos_pct": 14.9
+        "2014_governador": {
+          "gleisi_pct": 15.06,
+          "gleisi_index": 0.184,
+          "votos": 447,
+          "total_votos": 2969
         },
-        "2018": {
-          "votos_pct": 8.2
+        "2018_deputado": {
+          "gleisi_pct": 5.93,
+          "gleisi_index": 2.225,
+          "votos": 157,
+          "total_votos": 2647
         },
-        "2022": {
-          "votos_pct": 14.2
+        "2022_deputado": {
+          "gleisi_pct": 11.85,
+          "gleisi_index": 7.593,
+          "votos": 335,
+          "total_votos": 2826
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.06,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.814
     },
     "PRIMEIRO DE MAIO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.8
+      "municipio": "PRIMEIRO DE MAIO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 28.91,
+          "gleisi_index": -0.592,
+          "votos": 3249,
+          "total_votos": 11238
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 12.03,
+          "gleisi_index": -2.836,
+          "votos": 763,
+          "total_votos": 6340
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 3.34,
+          "gleisi_index": -0.367,
+          "votos": 202,
+          "total_votos": 6050
         },
-        "2022": {
-          "votos_pct": 4.8
+        "2022_deputado": {
+          "gleisi_pct": 3.71,
+          "gleisi_index": -0.551,
+          "votos": 243,
+          "total_votos": 6549
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.087
     },
     "PRUDENTÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.7
+      "municipio": "PRUDENTÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.33,
+          "gleisi_index": -0.168,
+          "votos": 14835,
+          "total_votos": 50571
         },
-        "2014": {
-          "votos_pct": 6.4
+        "2014_governador": {
+          "gleisi_pct": 9.45,
+          "gleisi_index": -5.425,
+          "votos": 2675,
+          "total_votos": 28320
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 1.65,
+          "gleisi_index": -2.053,
+          "votos": 440,
+          "total_votos": 26621
         },
-        "2022": {
-          "votos_pct": 1.4
+        "2022_deputado": {
+          "gleisi_pct": 1.25,
+          "gleisi_index": -3.007,
+          "votos": 359,
+          "total_votos": 28623
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 130
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.663
     },
     "PÉROLA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.0
+      "municipio": "PÉROLA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.18,
+          "gleisi_index": 3.68,
+          "votos": 3526,
+          "total_votos": 10626
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 14.19,
+          "gleisi_index": -0.685,
+          "votos": 899,
+          "total_votos": 6337
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.66,
+          "gleisi_index": -2.048,
+          "votos": 110,
+          "total_votos": 6636
         },
-        "2022": {
-          "votos_pct": 1.2
+        "2022_deputado": {
+          "gleisi_pct": 1.09,
+          "gleisi_index": -3.169,
+          "votos": 73,
+          "total_votos": 6682
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 30
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.555
     },
     "PÉROLA D OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.6
+      "municipio": "PÉROLA D OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.82,
+          "gleisi_index": 3.32,
+          "votos": 2657,
+          "total_votos": 8095
         },
-        "2014": {
-          "votos_pct": 10.1
+        "2014_governador": {
+          "gleisi_pct": 20.23,
+          "gleisi_index": 5.358,
+          "votos": 866,
+          "total_votos": 4281
         },
-        "2018": {
-          "votos_pct": 8.6
+        "2018_deputado": {
+          "gleisi_pct": 3.88,
+          "gleisi_index": 0.171,
+          "votos": 159,
+          "total_votos": 4101
         },
-        "2022": {
-          "votos_pct": 8.5
+        "2022_deputado": {
+          "gleisi_pct": 7.77,
+          "gleisi_index": 3.504,
+          "votos": 327,
+          "total_votos": 4211
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.088
     },
     "QUARTO CENTENÁRIO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.3
+      "municipio": "QUARTO CENTENÁRIO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.73,
+          "gleisi_index": 9.226,
+          "votos": 2304,
+          "total_votos": 5949
         },
-        "2014": {
-          "votos_pct": 13.1
+        "2014_governador": {
+          "gleisi_pct": 11.2,
+          "gleisi_index": -3.671,
+          "votos": 336,
+          "total_votos": 3000
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 0.53,
+          "gleisi_index": -3.179,
+          "votos": 15,
+          "total_votos": 2845
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 1.01,
+          "gleisi_index": -3.251,
+          "votos": 28,
+          "total_votos": 2772
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.219
     },
     "QUATIGUÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.7
+      "municipio": "QUATIGUÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.6,
+          "gleisi_index": 1.095,
+          "votos": 2782,
+          "total_votos": 9092
         },
-        "2014": {
-          "votos_pct": 7.2
+        "2014_governador": {
+          "gleisi_pct": 8.0,
+          "gleisi_index": -6.871,
+          "votos": 386,
+          "total_votos": 4825
         },
-        "2018": {
-          "votos_pct": 1.8
+        "2018_deputado": {
+          "gleisi_pct": 1.68,
+          "gleisi_index": -2.022,
+          "votos": 75,
+          "total_votos": 4454
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 1.8,
+          "gleisi_index": -2.466,
+          "votos": 88,
+          "total_votos": 4901
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.566
     },
     "QUATRO BARRAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.0
+      "municipio": "QUATRO BARRAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.73,
+          "gleisi_index": 1.222,
+          "votos": 5831,
+          "total_votos": 18978
         },
-        "2014": {
-          "votos_pct": 9.3
+        "2014_governador": {
+          "gleisi_pct": 8.45,
+          "gleisi_index": -6.42,
+          "votos": 948,
+          "total_votos": 11217
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 3.17,
+          "gleisi_index": -0.539,
+          "votos": 343,
+          "total_votos": 10829
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 3.83,
+          "gleisi_index": -0.427,
+          "votos": 475,
+          "total_votos": 12388
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 45
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.541
     },
     "QUATRO PONTES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "QUATRO PONTES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.61,
+          "gleisi_index": 3.11,
+          "votos": 1629,
+          "total_votos": 4995
         },
-        "2014": {
-          "votos_pct": 25.5
+        "2014_governador": {
+          "gleisi_pct": 24.46,
+          "gleisi_index": 9.591,
+          "votos": 693,
+          "total_votos": 2833
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 1.33,
+          "gleisi_index": -2.375,
+          "votos": 38,
+          "total_votos": 2854
         },
-        "2022": {
-          "votos_pct": 0.4
+        "2022_deputado": {
+          "gleisi_pct": 1.17,
+          "gleisi_index": -3.087,
+          "votos": 37,
+          "total_votos": 3151
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.81
     },
     "QUEDAS DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "QUEDAS DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.58,
+          "gleisi_index": 7.074,
+          "votos": 11126,
+          "total_votos": 30418
         },
-        "2014": {
-          "votos_pct": 13.7
+        "2014_governador": {
+          "gleisi_pct": 11.33,
+          "gleisi_index": -3.546,
+          "votos": 1910,
+          "total_votos": 16865
         },
-        "2018": {
-          "votos_pct": 13.0
+        "2018_deputado": {
+          "gleisi_pct": 11.45,
+          "gleisi_index": 7.74,
+          "votos": 1821,
+          "total_votos": 15910
         },
-        "2022": {
-          "votos_pct": 12.3
+        "2022_deputado": {
+          "gleisi_pct": 11.5,
+          "gleisi_index": 7.243,
+          "votos": 1971,
+          "total_votos": 17133
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 79
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 4.628
     },
     "QUERÊNCIA DO NORTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.8
+      "municipio": "QUERÊNCIA DO NORTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.52,
+          "gleisi_index": 6.019,
+          "votos": 4160,
+          "total_votos": 11711
         },
-        "2014": {
-          "votos_pct": 12.9
+        "2014_governador": {
+          "gleisi_pct": 17.28,
+          "gleisi_index": 2.414,
+          "votos": 1058,
+          "total_votos": 6121
         },
-        "2018": {
-          "votos_pct": 6.6
+        "2018_deputado": {
+          "gleisi_pct": 9.31,
+          "gleisi_index": 5.602,
+          "votos": 568,
+          "total_votos": 6102
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 6.46,
+          "gleisi_index": 2.199,
+          "votos": 404,
+          "total_votos": 6253
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 4.059
     },
     "QUINTA DO SOL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.5
+      "municipio": "QUINTA DO SOL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.39,
+          "gleisi_index": 7.886,
+          "votos": 2345,
+          "total_votos": 6272
         },
-        "2014": {
-          "votos_pct": 16.2
+        "2014_governador": {
+          "gleisi_pct": 16.41,
+          "gleisi_index": 1.543,
+          "votos": 541,
+          "total_votos": 3296
         },
-        "2018": {
-          "votos_pct": 10.7
+        "2018_deputado": {
+          "gleisi_pct": 4.07,
+          "gleisi_index": 0.363,
+          "votos": 127,
+          "total_votos": 3121
         },
-        "2022": {
-          "votos_pct": 14.1
+        "2022_deputado": {
+          "gleisi_pct": 8.93,
+          "gleisi_index": 4.666,
+          "votos": 288,
+          "total_votos": 3226
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.615
     },
     "QUITANDINHA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.7
+      "municipio": "QUITANDINHA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 19.39,
+          "gleisi_index": -10.112,
+          "votos": 3539,
+          "total_votos": 18251
         },
-        "2014": {
-          "votos_pct": 9.4
+        "2014_governador": {
+          "gleisi_pct": 9.91,
+          "gleisi_index": -4.962,
+          "votos": 1017,
+          "total_votos": 10263
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.89,
+          "gleisi_index": -1.819,
+          "votos": 175,
+          "total_votos": 9273
         },
-        "2022": {
-          "votos_pct": 3.3
+        "2022_deputado": {
+          "gleisi_pct": 2.32,
+          "gleisi_index": -1.946,
+          "votos": 232,
+          "total_votos": 10021
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 42
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.71
     },
     "RAMILÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.4
+      "municipio": "RAMILÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.19,
+          "gleisi_index": 2.69,
+          "votos": 1505,
+          "total_votos": 4675
         },
-        "2014": {
-          "votos_pct": 27.5
+        "2014_governador": {
+          "gleisi_pct": 35.38,
+          "gleisi_index": 20.511,
+          "votos": 898,
+          "total_votos": 2538
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 4.54,
+          "gleisi_index": 0.836,
+          "votos": 109,
+          "total_votos": 2400
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 2.61,
+          "gleisi_index": -1.654,
+          "votos": 69,
+          "total_votos": 2646
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.596
     },
     "RANCHO ALEGRE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.0
+      "municipio": "RANCHO ALEGRE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.21,
+          "gleisi_index": 1.71,
+          "votos": 1359,
+          "total_votos": 4354
         },
-        "2014": {
-          "votos_pct": 14.4
+        "2014_governador": {
+          "gleisi_pct": 17.85,
+          "gleisi_index": 2.979,
+          "votos": 430,
+          "total_votos": 2409
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 1.07,
+          "gleisi_index": -2.636,
+          "votos": 26,
+          "total_votos": 2429
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 1.29,
+          "gleisi_index": -2.968,
+          "votos": 31,
+          "total_votos": 2397
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.229
     },
     "RANCHO ALEGRE D OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.8
+      "municipio": "RANCHO ALEGRE D OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.64,
+          "gleisi_index": 8.132,
+          "votos": 1289,
+          "total_votos": 3425
         },
-        "2014": {
-          "votos_pct": 12.0
+        "2014_governador": {
+          "gleisi_pct": 13.32,
+          "gleisi_index": -1.553,
+          "votos": 236,
+          "total_votos": 1772
         },
-        "2018": {
-          "votos_pct": 1.5
+        "2018_deputado": {
+          "gleisi_pct": 1.5,
+          "gleisi_index": -2.211,
+          "votos": 27,
+          "total_votos": 1806
         },
-        "2022": {
-          "votos_pct": 1.7
+        "2022_deputado": {
+          "gleisi_pct": 1.08,
+          "gleisi_index": -3.185,
+          "votos": 19,
+          "total_votos": 1765
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.296
     },
     "REALEZA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.6
+      "municipio": "REALEZA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.29,
+          "gleisi_index": 8.784,
+          "votos": 6948,
+          "total_votos": 18147
         },
-        "2014": {
-          "votos_pct": 27.9
+        "2014_governador": {
+          "gleisi_pct": 22.9,
+          "gleisi_index": 8.025,
+          "votos": 2299,
+          "total_votos": 10041
         },
-        "2018": {
-          "votos_pct": 6.9
+        "2018_deputado": {
+          "gleisi_pct": 7.15,
+          "gleisi_index": 3.449,
+          "votos": 698,
+          "total_votos": 9756
         },
-        "2022": {
-          "votos_pct": 4.0
+        "2022_deputado": {
+          "gleisi_pct": 5.24,
+          "gleisi_index": 0.979,
+          "votos": 565,
+          "total_votos": 10782
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 42
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.309
     },
     "REBOUÇAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.6
+      "municipio": "REBOUÇAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.19,
+          "gleisi_index": 1.691,
+          "votos": 5050,
+          "total_votos": 16189
         },
-        "2014": {
-          "votos_pct": 19.0
+        "2014_governador": {
+          "gleisi_pct": 27.21,
+          "gleisi_index": 12.341,
+          "votos": 2510,
+          "total_votos": 9224
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 3.13,
+          "gleisi_index": -0.574,
+          "votos": 267,
+          "total_votos": 8525
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 2.74,
+          "gleisi_index": -1.518,
+          "votos": 248,
+          "total_votos": 9039
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 38
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.985
     },
     "RENASCENÇA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.6
+      "municipio": "RENASCENÇA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.46,
+          "gleisi_index": 6.962,
+          "votos": 2818,
+          "total_votos": 7728
         },
-        "2014": {
-          "votos_pct": 28.8
+        "2014_governador": {
+          "gleisi_pct": 30.44,
+          "gleisi_index": 15.566,
+          "votos": 1219,
+          "total_votos": 4005
         },
-        "2018": {
-          "votos_pct": 4.6
+        "2018_deputado": {
+          "gleisi_pct": 9.34,
+          "gleisi_index": 5.634,
+          "votos": 358,
+          "total_votos": 3833
         },
-        "2022": {
-          "votos_pct": 13.6
+        "2022_deputado": {
+          "gleisi_pct": 13.8,
+          "gleisi_index": 9.535,
+          "votos": 560,
+          "total_votos": 4059
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.09,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.424
     },
     "RESERVA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.4
+      "municipio": "RESERVA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.02,
+          "gleisi_index": 12.517,
+          "votos": 11105,
+          "total_votos": 26428
         },
-        "2014": {
-          "votos_pct": 13.5
+        "2014_governador": {
+          "gleisi_pct": 9.87,
+          "gleisi_index": -5.005,
+          "votos": 1421,
+          "total_votos": 14403
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 2.77,
+          "gleisi_index": -0.939,
+          "votos": 381,
+          "total_votos": 13767
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 3.52,
+          "gleisi_index": -0.737,
+          "votos": 499,
+          "total_votos": 14160
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 61
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.459
     },
     "RESERVA DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.0
+      "municipio": "RESERVA DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.09,
+          "gleisi_index": 4.591,
+          "votos": 2480,
+          "total_votos": 7274
         },
-        "2014": {
-          "votos_pct": 13.5
+        "2014_governador": {
+          "gleisi_pct": 15.51,
+          "gleisi_index": 0.634,
+          "votos": 632,
+          "total_votos": 4076
         },
-        "2018": {
-          "votos_pct": 0
+        "2018_deputado": {
+          "gleisi_pct": 8.12,
+          "gleisi_index": 4.412,
+          "votos": 315,
+          "total_votos": 3880
         },
-        "2022": {
-          "votos_pct": 5.0
+        "2022_deputado": {
+          "gleisi_pct": 8.94,
+          "gleisi_index": 4.677,
+          "votos": 352,
+          "total_votos": 3938
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.579
     },
     "RIBEIRÃO CLARO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "RIBEIRÃO CLARO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.72,
+          "gleisi_index": -1.785,
+          "votos": 3269,
+          "total_votos": 11794
         },
-        "2014": {
-          "votos_pct": 11.0
+        "2014_governador": {
+          "gleisi_pct": 8.94,
+          "gleisi_index": -5.935,
+          "votos": 586,
+          "total_votos": 6558
         },
-        "2018": {
-          "votos_pct": 5.0
+        "2018_deputado": {
+          "gleisi_pct": 3.76,
+          "gleisi_index": 0.05,
+          "votos": 227,
+          "total_votos": 6044
         },
-        "2022": {
-          "votos_pct": 9.9
+        "2022_deputado": {
+          "gleisi_pct": 8.87,
+          "gleisi_index": 4.612,
+          "votos": 575,
+          "total_votos": 6480
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.05,
-      "num_secoes": 29
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": -0.764
     },
     "RIBEIRÃO DO PINHAL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.0
+      "municipio": "RIBEIRÃO DO PINHAL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.17,
+          "gleisi_index": 8.663,
+          "votos": 5544,
+          "total_votos": 14526
         },
-        "2014": {
-          "votos_pct": 14.0
+        "2014_governador": {
+          "gleisi_pct": 14.88,
+          "gleisi_index": 0.004,
+          "votos": 1125,
+          "total_votos": 7563
         },
-        "2018": {
-          "votos_pct": 2.1
+        "2018_deputado": {
+          "gleisi_pct": 1.79,
+          "gleisi_index": -1.914,
+          "votos": 136,
+          "total_votos": 7591
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 3.64,
+          "gleisi_index": -0.624,
+          "votos": 264,
+          "total_votos": 7257
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.532
     },
     "RIO AZUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "RIO AZUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.45,
+          "gleisi_index": 1.951,
+          "votos": 4530,
+          "total_votos": 14402
         },
-        "2014": {
-          "votos_pct": 11.3
+        "2014_governador": {
+          "gleisi_pct": 13.14,
+          "gleisi_index": -1.726,
+          "votos": 1101,
+          "total_votos": 8376
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 1.41,
+          "gleisi_index": -2.294,
+          "votos": 116,
+          "total_votos": 8215
         },
-        "2022": {
-          "votos_pct": 1.3
+        "2022_deputado": {
+          "gleisi_pct": 1.48,
+          "gleisi_index": -2.782,
+          "votos": 127,
+          "total_votos": 8582
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.213
     },
     "RIO BOM": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.7
+      "municipio": "RIO BOM",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.92,
+          "gleisi_index": -3.579,
+          "votos": 996,
+          "total_votos": 3842
         },
-        "2014": {
-          "votos_pct": 7.9
+        "2014_governador": {
+          "gleisi_pct": 11.05,
+          "gleisi_index": -3.82,
+          "votos": 247,
+          "total_votos": 2235
         },
-        "2018": {
-          "votos_pct": 2.1
+        "2018_deputado": {
+          "gleisi_pct": 2.9,
+          "gleisi_index": -0.808,
+          "votos": 61,
+          "total_votos": 2105
         },
-        "2022": {
-          "votos_pct": 5.4
+        "2022_deputado": {
+          "gleisi_pct": 4.34,
+          "gleisi_index": 0.077,
+          "votos": 100,
+          "total_votos": 2305
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.033
     },
     "RIO BONITO DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.2
+      "municipio": "RIO BONITO DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 42.43,
+          "gleisi_index": 12.926,
+          "votos": 5783,
+          "total_votos": 13630
         },
-        "2014": {
-          "votos_pct": 21.6
+        "2014_governador": {
+          "gleisi_pct": 23.71,
+          "gleisi_index": 8.839,
+          "votos": 1871,
+          "total_votos": 7891
         },
-        "2018": {
-          "votos_pct": 5.9
+        "2018_deputado": {
+          "gleisi_pct": 20.88,
+          "gleisi_index": 17.17,
+          "votos": 1726,
+          "total_votos": 8268
         },
-        "2022": {
-          "votos_pct": 6.6
+        "2022_deputado": {
+          "gleisi_pct": 20.39,
+          "gleisi_index": 16.124,
+          "votos": 1745,
+          "total_votos": 8560
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 13.765
     },
     "RIO BRANCO DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.4
+      "municipio": "RIO BRANCO DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.86,
+          "gleisi_index": 4.358,
+          "votos": 1370,
+          "total_votos": 4046
         },
-        "2014": {
-          "votos_pct": 3.5
+        "2014_governador": {
+          "gleisi_pct": 6.59,
+          "gleisi_index": -8.276,
+          "votos": 159,
+          "total_votos": 2411
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 5.67,
+          "gleisi_index": 1.964,
+          "votos": 132,
+          "total_votos": 2328
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 1.88,
+          "gleisi_index": -2.382,
+          "votos": 48,
+          "total_votos": 2554
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.084
     },
     "RIO BRANCO DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "RIO BRANCO DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.0,
+          "gleisi_index": 7.496,
+          "votos": 13007,
+          "total_votos": 35155
         },
-        "2014": {
-          "votos_pct": 11.4
+        "2014_governador": {
+          "gleisi_pct": 10.97,
+          "gleisi_index": -3.901,
+          "votos": 2102,
+          "total_votos": 19162
         },
-        "2018": {
-          "votos_pct": 9.4
+        "2018_deputado": {
+          "gleisi_pct": 8.76,
+          "gleisi_index": 5.057,
+          "votos": 1599,
+          "total_votos": 18246
         },
-        "2022": {
-          "votos_pct": 6.4
+        "2022_deputado": {
+          "gleisi_pct": 5.81,
+          "gleisi_index": 1.55,
+          "votos": 1138,
+          "total_votos": 19583
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 81
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.551
     },
     "RIO NEGRO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.8
+      "municipio": "RIO NEGRO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.4,
+          "gleisi_index": -5.106,
+          "votos": 7893,
+          "total_votos": 32353
         },
-        "2014": {
-          "votos_pct": 7.1
+        "2014_governador": {
+          "gleisi_pct": 13.01,
+          "gleisi_index": -1.858,
+          "votos": 2267,
+          "total_votos": 17421
         },
-        "2018": {
-          "votos_pct": 1.7
+        "2018_deputado": {
+          "gleisi_pct": 2.62,
+          "gleisi_index": -1.086,
+          "votos": 422,
+          "total_votos": 16106
         },
-        "2022": {
-          "votos_pct": 6.1
+        "2022_deputado": {
+          "gleisi_pct": 3.21,
+          "gleisi_index": -1.049,
+          "votos": 532,
+          "total_votos": 16563
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 77
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.275
     },
     "ROLÂNDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 9.4
+      "municipio": "ROLÂNDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 21.63,
+          "gleisi_index": -7.87,
+          "votos": 12307,
+          "total_votos": 56891
         },
-        "2014": {
-          "votos_pct": 5.5
+        "2014_governador": {
+          "gleisi_pct": 7.28,
+          "gleisi_index": -7.591,
+          "votos": 2443,
+          "total_votos": 33558
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 2.24,
+          "gleisi_index": -1.47,
+          "votos": 724,
+          "total_votos": 32376
         },
-        "2022": {
-          "votos_pct": 2.7
+        "2022_deputado": {
+          "gleisi_pct": 3.26,
+          "gleisi_index": -1.005,
+          "votos": 1094,
+          "total_votos": 33591
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 140
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.484
     },
     "RONCADOR": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.5
+      "municipio": "RONCADOR",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.0,
+          "gleisi_index": 7.494,
+          "votos": 4669,
+          "total_votos": 12620
         },
-        "2014": {
-          "votos_pct": 9.9
+        "2014_governador": {
+          "gleisi_pct": 11.51,
+          "gleisi_index": -3.359,
+          "votos": 715,
+          "total_votos": 6211
         },
-        "2018": {
-          "votos_pct": 5.2
+        "2018_deputado": {
+          "gleisi_pct": 9.07,
+          "gleisi_index": 5.365,
+          "votos": 586,
+          "total_votos": 6460
         },
-        "2022": {
-          "votos_pct": 10.8
+        "2022_deputado": {
+          "gleisi_pct": 9.98,
+          "gleisi_index": 5.717,
+          "votos": 648,
+          "total_votos": 6494
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.06,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 3.804
     },
     "RONDON": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "RONDON",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.76,
+          "gleisi_index": -1.741,
+          "votos": 2955,
+          "total_votos": 10644
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 21.48,
+          "gleisi_index": 6.609,
+          "votos": 1219,
+          "total_votos": 5675
         },
-        "2018": {
-          "votos_pct": 2.4
+        "2018_deputado": {
+          "gleisi_pct": 1.41,
+          "gleisi_index": -2.297,
+          "votos": 75,
+          "total_votos": 5324
         },
-        "2022": {
-          "votos_pct": 0.6
+        "2022_deputado": {
+          "gleisi_pct": 0.68,
+          "gleisi_index": -3.582,
+          "votos": 37,
+          "total_votos": 5442
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.253
     },
     "ROSÁRIO DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "ROSÁRIO DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.69,
+          "gleisi_index": -3.813,
+          "votos": 1591,
+          "total_votos": 6193
         },
-        "2014": {
-          "votos_pct": 8.7
+        "2014_governador": {
+          "gleisi_pct": 7.66,
+          "gleisi_index": -7.208,
+          "votos": 263,
+          "total_votos": 3432
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 2.21,
+          "gleisi_index": -1.495,
+          "votos": 73,
+          "total_votos": 3302
         },
-        "2022": {
-          "votos_pct": 0.6
+        "2022_deputado": {
+          "gleisi_pct": 1.33,
+          "gleisi_index": -2.934,
+          "votos": 45,
+          "total_votos": 3390
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.863
     },
     "SABÁUDIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SABÁUDIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 23.48,
+          "gleisi_index": -6.02,
+          "votos": 1679,
+          "total_votos": 7150
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 6.0,
+          "gleisi_index": -8.87,
+          "votos": 247,
+          "total_votos": 4116
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.355,
+          "votos": 95,
+          "total_votos": 4040
         },
-        "2022": {
-          "votos_pct": 2.8
+        "2022_deputado": {
+          "gleisi_pct": 2.89,
+          "gleisi_index": -1.376,
+          "votos": 132,
+          "total_votos": 4574
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.405
     },
     "SALGADO FILHO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.8
+      "municipio": "SALGADO FILHO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 38.34,
+          "gleisi_index": 8.838,
+          "votos": 1973,
+          "total_votos": 5146
         },
-        "2014": {
-          "votos_pct": 18.0
+        "2014_governador": {
+          "gleisi_pct": 17.47,
+          "gleisi_index": 2.596,
+          "votos": 498,
+          "total_votos": 2851
         },
-        "2018": {
-          "votos_pct": 7.0
+        "2018_deputado": {
+          "gleisi_pct": 7.21,
+          "gleisi_index": 3.501,
+          "votos": 200,
+          "total_votos": 2775
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 2.58,
+          "gleisi_index": -1.682,
+          "votos": 73,
+          "total_votos": 2830
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.313
     },
     "SALTO DO ITARARÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.4
+      "municipio": "SALTO DO ITARARÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.37,
+          "gleisi_index": 5.869,
+          "votos": 1990,
+          "total_votos": 5626
         },
-        "2014": {
-          "votos_pct": 6.0
+        "2014_governador": {
+          "gleisi_pct": 5.27,
+          "gleisi_index": -9.596,
+          "votos": 167,
+          "total_votos": 3166
         },
-        "2018": {
-          "votos_pct": 3.1
+        "2018_deputado": {
+          "gleisi_pct": 2.62,
+          "gleisi_index": -1.083,
+          "votos": 79,
+          "total_votos": 3012
         },
-        "2022": {
-          "votos_pct": 4.9
+        "2022_deputado": {
+          "gleisi_pct": 5.9,
+          "gleisi_index": 1.639,
+          "votos": 187,
+          "total_votos": 3169
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.793
     },
     "SALTO DO LONTRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.2
+      "municipio": "SALTO DO LONTRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 40.77,
+          "gleisi_index": 11.272,
+          "votos": 5768,
+          "total_votos": 14146
         },
-        "2014": {
-          "votos_pct": 10.9
+        "2014_governador": {
+          "gleisi_pct": 24.43,
+          "gleisi_index": 9.564,
+          "votos": 1956,
+          "total_votos": 8005
         },
-        "2018": {
-          "votos_pct": 4.7
+        "2018_deputado": {
+          "gleisi_pct": 10.58,
+          "gleisi_index": 6.875,
+          "votos": 860,
+          "total_votos": 8128
         },
-        "2022": {
-          "votos_pct": 4.6
+        "2022_deputado": {
+          "gleisi_pct": 6.81,
+          "gleisi_index": 2.553,
+          "votos": 585,
+          "total_votos": 8585
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 7.566
     },
     "SANTA AMÉLIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "SANTA AMÉLIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.43,
+          "gleisi_index": 4.926,
+          "votos": 1488,
+          "total_votos": 4322
         },
-        "2014": {
-          "votos_pct": 1.2
+        "2014_governador": {
+          "gleisi_pct": 5.24,
+          "gleisi_index": -9.628,
+          "votos": 122,
+          "total_votos": 2327
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 2.18,
+          "gleisi_index": -1.526,
+          "votos": 51,
+          "total_votos": 2339
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 1.69,
+          "gleisi_index": -2.567,
+          "votos": 39,
+          "total_votos": 2302
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.199
     },
     "SANTA CECÍLIA DO PAVÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.1
+      "municipio": "SANTA CECÍLIA DO PAVÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.87,
+          "gleisi_index": -4.629,
+          "votos": 1039,
+          "total_votos": 4177
         },
-        "2014": {
-          "votos_pct": 3.6
+        "2014_governador": {
+          "gleisi_pct": 5.47,
+          "gleisi_index": -9.402,
+          "votos": 130,
+          "total_votos": 2377
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 1.99,
+          "gleisi_index": -1.717,
+          "votos": 46,
+          "total_votos": 2313
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 1.96,
+          "gleisi_index": -2.299,
+          "votos": 46,
+          "total_votos": 2344
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.512
     },
     "SANTA CRUZ DE MONTE CASTELO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SANTA CRUZ DE MONTE CASTELO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.09,
+          "gleisi_index": 0.584,
+          "votos": 2833,
+          "total_votos": 9416
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.36,
+          "gleisi_index": -2.508,
+          "votos": 645,
+          "total_votos": 5217
         },
-        "2018": {
-          "votos_pct": 2.9
+        "2018_deputado": {
+          "gleisi_pct": 5.81,
+          "gleisi_index": 2.108,
+          "votos": 294,
+          "total_votos": 5057
         },
-        "2022": {
-          "votos_pct": 4.6
+        "2022_deputado": {
+          "gleisi_pct": 3.22,
+          "gleisi_index": -1.039,
+          "votos": 166,
+          "total_votos": 5152
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 20
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.214
     },
     "SANTA FÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SANTA FÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.35,
+          "gleisi_index": -2.155,
+          "votos": 2926,
+          "total_votos": 10699
         },
-        "2014": {
-          "votos_pct": 14.1
+        "2014_governador": {
+          "gleisi_pct": 11.85,
+          "gleisi_index": -3.019,
+          "votos": 748,
+          "total_votos": 6311
         },
-        "2018": {
-          "votos_pct": 5.2
+        "2018_deputado": {
+          "gleisi_pct": 3.51,
+          "gleisi_index": -0.193,
+          "votos": 226,
+          "total_votos": 6433
         },
-        "2022": {
-          "votos_pct": 8.0
+        "2022_deputado": {
+          "gleisi_pct": 7.3,
+          "gleisi_index": 3.035,
+          "votos": 484,
+          "total_votos": 6633
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 24
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": -0.583
     },
     "SANTA HELENA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.6
+      "municipio": "SANTA HELENA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.21,
+          "gleisi_index": 9.711,
+          "votos": 11000,
+          "total_votos": 28051
         },
-        "2014": {
-          "votos_pct": 17.1
+        "2014_governador": {
+          "gleisi_pct": 16.37,
+          "gleisi_index": 1.494,
+          "votos": 2555,
+          "total_votos": 15612
         },
-        "2018": {
-          "votos_pct": 2.5
+        "2018_deputado": {
+          "gleisi_pct": 5.34,
+          "gleisi_index": 1.639,
+          "votos": 771,
+          "total_votos": 14425
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 3.36,
+          "gleisi_index": -0.903,
+          "votos": 539,
+          "total_votos": 16050
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 70
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.985
     },
     "SANTA INÊS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "SANTA INÊS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.85,
+          "gleisi_index": 2.347,
+          "votos": 823,
+          "total_votos": 2584
         },
-        "2014": {
-          "votos_pct": 6.4
+        "2014_governador": {
+          "gleisi_pct": 7.3,
+          "gleisi_index": -7.571,
+          "votos": 96,
+          "total_votos": 1315
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 1.15,
+          "gleisi_index": -2.551,
+          "votos": 15,
+          "total_votos": 1299
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 1.9,
+          "gleisi_index": -2.357,
+          "votos": 26,
+          "total_votos": 1365
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.533
     },
     "SANTA ISABEL DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.5
+      "municipio": "SANTA ISABEL DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.75,
+          "gleisi_index": -2.748,
+          "votos": 2630,
+          "total_votos": 9830
         },
-        "2014": {
-          "votos_pct": 13.8
+        "2014_governador": {
+          "gleisi_pct": 11.91,
+          "gleisi_index": -2.963,
+          "votos": 616,
+          "total_votos": 5173
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.04,
+          "gleisi_index": -2.664,
+          "votos": 52,
+          "total_votos": 4990
         },
-        "2022": {
-          "votos_pct": 1.2
+        "2022_deputado": {
+          "gleisi_pct": 0.81,
+          "gleisi_index": -3.45,
+          "votos": 42,
+          "total_votos": 5177
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 23
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.956
     },
     "SANTA IZABEL DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.7
+      "municipio": "SANTA IZABEL DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.17,
+          "gleisi_index": 7.664,
+          "votos": 4366,
+          "total_votos": 11747
         },
-        "2014": {
-          "votos_pct": 11.7
+        "2014_governador": {
+          "gleisi_pct": 13.97,
+          "gleisi_index": -0.903,
+          "votos": 949,
+          "total_votos": 6794
         },
-        "2018": {
-          "votos_pct": 7.0
+        "2018_deputado": {
+          "gleisi_pct": 5.52,
+          "gleisi_index": 1.814,
+          "votos": 341,
+          "total_votos": 6178
         },
-        "2022": {
-          "votos_pct": 5.9
+        "2022_deputado": {
+          "gleisi_pct": 5.93,
+          "gleisi_index": 1.671,
+          "votos": 407,
+          "total_votos": 6860
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.561
     },
     "SANTA LÚCIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 20.3
+      "municipio": "SANTA LÚCIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.5,
+          "gleisi_index": 9.993,
+          "votos": 1769,
+          "total_votos": 4479
         },
-        "2014": {
-          "votos_pct": 12.6
+        "2014_governador": {
+          "gleisi_pct": 12.78,
+          "gleisi_index": -2.092,
+          "votos": 321,
+          "total_votos": 2512
         },
-        "2018": {
-          "votos_pct": 8.2
+        "2018_deputado": {
+          "gleisi_pct": 3.64,
+          "gleisi_index": -0.063,
+          "votos": 83,
+          "total_votos": 2278
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 4.11,
+          "gleisi_index": -0.151,
+          "votos": 101,
+          "total_votos": 2457
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 13
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.922
     },
     "SANTA MARIA DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 22.5
+      "municipio": "SANTA MARIA DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 41.42,
+          "gleisi_index": 11.913,
+          "votos": 4825,
+          "total_votos": 11650
         },
-        "2014": {
-          "votos_pct": 16.8
+        "2014_governador": {
+          "gleisi_pct": 23.34,
+          "gleisi_index": 8.468,
+          "votos": 1423,
+          "total_votos": 6097
         },
-        "2018": {
-          "votos_pct": 19.4
+        "2018_deputado": {
+          "gleisi_pct": 13.11,
+          "gleisi_index": 9.399,
+          "votos": 736,
+          "total_votos": 5616
         },
-        "2022": {
-          "votos_pct": 8.7
+        "2022_deputado": {
+          "gleisi_pct": 9.8,
+          "gleisi_index": 5.539,
+          "votos": 595,
+          "total_votos": 6071
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.11,
-      "num_secoes": 33
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 8.83
     },
     "SANTA MARIANA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.5
+      "municipio": "SANTA MARIANA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.25,
+          "gleisi_index": 0.744,
+          "votos": 3979,
+          "total_votos": 13155
         },
-        "2014": {
-          "votos_pct": 4.8
+        "2014_governador": {
+          "gleisi_pct": 7.35,
+          "gleisi_index": -7.525,
+          "votos": 527,
+          "total_votos": 7174
         },
-        "2018": {
-          "votos_pct": 4.8
+        "2018_deputado": {
+          "gleisi_pct": 5.12,
+          "gleisi_index": 1.412,
+          "votos": 336,
+          "total_votos": 6565
         },
-        "2022": {
-          "votos_pct": 11.1
+        "2022_deputado": {
+          "gleisi_pct": 9.74,
+          "gleisi_index": 5.479,
+          "votos": 646,
+          "total_votos": 6632
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.06,
-      "num_secoes": 33
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 0.027
     },
     "SANTA MÔNICA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.6
+      "municipio": "SANTA MÔNICA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.91,
+          "gleisi_index": -4.597,
+          "votos": 992,
+          "total_votos": 3983
         },
-        "2014": {
-          "votos_pct": 28.5
+        "2014_governador": {
+          "gleisi_pct": 33.78,
+          "gleisi_index": 18.906,
+          "votos": 736,
+          "total_votos": 2179
         },
-        "2018": {
-          "votos_pct": 3.2
+        "2018_deputado": {
+          "gleisi_pct": 2.5,
+          "gleisi_index": -1.202,
+          "votos": 49,
+          "total_votos": 1957
         },
-        "2022": {
-          "votos_pct": 1.2
+        "2022_deputado": {
+          "gleisi_pct": 0.93,
+          "gleisi_index": -3.331,
+          "votos": 20,
+          "total_votos": 2149
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 2.444
     },
     "SANTA TEREZA DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SANTA TEREZA DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.77,
+          "gleisi_index": 1.267,
+          "votos": 3285,
+          "total_votos": 10676
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 15.75,
+          "gleisi_index": 0.878,
+          "votos": 996,
+          "total_votos": 6324
         },
-        "2018": {
-          "votos_pct": 4.2
+        "2018_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 1.438,
+          "votos": 324,
+          "total_votos": 6298
         },
-        "2022": {
-          "votos_pct": 6.9
+        "2022_deputado": {
+          "gleisi_pct": 6.45,
+          "gleisi_index": 2.186,
+          "votos": 447,
+          "total_votos": 6933
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 28
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.442
     },
     "SANTA TEREZINHA DE ITAIPU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SANTA TEREZINHA DE ITAIPU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.69,
+          "gleisi_index": 3.189,
+          "votos": 7456,
+          "total_votos": 22807
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 13.44,
+          "gleisi_index": -1.427,
+          "votos": 1779,
+          "total_votos": 13233
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 2.07,
+          "gleisi_index": -1.64,
+          "votos": 265,
+          "total_votos": 12825
         },
-        "2022": {
-          "votos_pct": 5.6
+        "2022_deputado": {
+          "gleisi_pct": 3.56,
+          "gleisi_index": -0.703,
+          "votos": 491,
+          "total_votos": 13800
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 53
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.145
     },
     "SANTANA DO ITARARÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.4
+      "municipio": "SANTANA DO ITARARÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.37,
+          "gleisi_index": 3.868,
+          "votos": 2072,
+          "total_votos": 6209
         },
-        "2014": {
-          "votos_pct": 15.7
+        "2014_governador": {
+          "gleisi_pct": 18.9,
+          "gleisi_index": 4.032,
+          "votos": 610,
+          "total_votos": 3227
         },
-        "2018": {
-          "votos_pct": 20.2
+        "2018_deputado": {
+          "gleisi_pct": 16.95,
+          "gleisi_index": 13.243,
+          "votos": 531,
+          "total_votos": 3133
         },
-        "2022": {
-          "votos_pct": 21.4
+        "2022_deputado": {
+          "gleisi_pct": 20.88,
+          "gleisi_index": 16.622,
+          "votos": 671,
+          "total_votos": 3213
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 9.441
     },
     "SANTO ANTONIO DO CAIUÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "SANTO ANTONIO DO CAIUÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.03,
+          "gleisi_index": 1.526,
+          "votos": 1077,
+          "total_votos": 3471
         },
-        "2014": {
-          "votos_pct": 12.2
+        "2014_governador": {
+          "gleisi_pct": 9.28,
+          "gleisi_index": -5.586,
+          "votos": 174,
+          "total_votos": 1874
         },
-        "2018": {
-          "votos_pct": 8.0
+        "2018_deputado": {
+          "gleisi_pct": 5.37,
+          "gleisi_index": 1.665,
+          "votos": 94,
+          "total_votos": 1750
         },
-        "2022": {
-          "votos_pct": 6.0
+        "2022_deputado": {
+          "gleisi_pct": 7.36,
+          "gleisi_index": 3.102,
+          "votos": 131,
+          "total_votos": 1779
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 6
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 0.177
     },
     "SANTO ANTÔNIO DA PLATINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.6
+      "municipio": "SANTO ANTÔNIO DA PLATINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.43,
+          "gleisi_index": 0.927,
+          "votos": 12884,
+          "total_votos": 42340
         },
-        "2014": {
-          "votos_pct": 11.8
+        "2014_governador": {
+          "gleisi_pct": 11.33,
+          "gleisi_index": -3.54,
+          "votos": 2572,
+          "total_votos": 22698
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 4.37,
+          "gleisi_index": 0.663,
+          "votos": 971,
+          "total_votos": 22226
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 3.58,
+          "gleisi_index": -0.68,
+          "votos": 818,
+          "total_votos": 22837
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 107
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.657
     },
     "SANTO ANTÔNIO DO PARAÍSO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.0
+      "municipio": "SANTO ANTÔNIO DO PARAÍSO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.67,
+          "gleisi_index": 6.167,
+          "votos": 1094,
+          "total_votos": 3067
         },
-        "2014": {
-          "votos_pct": 5.9
+        "2014_governador": {
+          "gleisi_pct": 5.61,
+          "gleisi_index": -9.266,
+          "votos": 94,
+          "total_votos": 1677
         },
-        "2018": {
-          "votos_pct": 1.0
+        "2018_deputado": {
+          "gleisi_pct": 2.05,
+          "gleisi_index": -1.657,
+          "votos": 34,
+          "total_votos": 1659
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 2.02,
+          "gleisi_index": -2.24,
+          "votos": 34,
+          "total_votos": 1682
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 9
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.749
     },
     "SANTO ANTÔNIO DO SUDOESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.9
+      "municipio": "SANTO ANTÔNIO DO SUDOESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.47,
+          "gleisi_index": 5.971,
+          "votos": 7111,
+          "total_votos": 20046
         },
-        "2014": {
-          "votos_pct": 26.3
+        "2014_governador": {
+          "gleisi_pct": 33.55,
+          "gleisi_index": 18.679,
+          "votos": 3710,
+          "total_votos": 11058
         },
-        "2018": {
-          "votos_pct": 6.4
+        "2018_deputado": {
+          "gleisi_pct": 6.61,
+          "gleisi_index": 2.907,
+          "votos": 742,
+          "total_votos": 11221
         },
-        "2022": {
-          "votos_pct": 5.7
+        "2022_deputado": {
+          "gleisi_pct": 4.93,
+          "gleisi_index": 0.665,
+          "votos": 584,
+          "total_votos": 11854
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 51
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 7.055
     },
     "SANTO INÁCIO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SANTO INÁCIO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.14,
+          "gleisi_index": 3.636,
+          "votos": 2044,
+          "total_votos": 6168
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 5.62,
+          "gleisi_index": -9.249,
+          "votos": 196,
+          "total_votos": 3486
         },
-        "2018": {
-          "votos_pct": 4.1
+        "2018_deputado": {
+          "gleisi_pct": 3.58,
+          "gleisi_index": -0.122,
+          "votos": 115,
+          "total_votos": 3209
         },
-        "2022": {
-          "votos_pct": 4.5
+        "2022_deputado": {
+          "gleisi_pct": 4.84,
+          "gleisi_index": 0.579,
+          "votos": 170,
+          "total_votos": 3512
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.289
     },
     "SAPOPEMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.8
+      "municipio": "SAPOPEMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.82,
+          "gleisi_index": 1.32,
+          "votos": 2259,
+          "total_votos": 7329
         },
-        "2014": {
-          "votos_pct": 19.6
+        "2014_governador": {
+          "gleisi_pct": 19.78,
+          "gleisi_index": 4.907,
+          "votos": 765,
+          "total_votos": 3868
         },
-        "2018": {
-          "votos_pct": 2.7
+        "2018_deputado": {
+          "gleisi_pct": 2.52,
+          "gleisi_index": -1.191,
+          "votos": 91,
+          "total_votos": 3618
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 1.94,
+          "gleisi_index": -2.324,
+          "votos": 76,
+          "total_votos": 3923
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 19
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.678
     },
     "SARANDI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.6
+      "municipio": "SARANDI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.25,
+          "gleisi_index": 1.748,
+          "votos": 24751,
+          "total_votos": 79202
         },
-        "2014": {
-          "votos_pct": 24.8
+        "2014_governador": {
+          "gleisi_pct": 26.37,
+          "gleisi_index": 11.497,
+          "votos": 11827,
+          "total_votos": 44854
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 2.04,
+          "gleisi_index": -1.663,
+          "votos": 851,
+          "total_votos": 41650
         },
-        "2022": {
-          "votos_pct": 2.1
+        "2022_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.91,
+          "votos": 1075,
+          "total_votos": 45716
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 205
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.418
     },
     "SAUDADE DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SAUDADE DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.3,
+          "gleisi_index": 9.8,
+          "votos": 2142,
+          "total_votos": 5450
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.74,
+          "gleisi_index": -2.127,
+          "votos": 398,
+          "total_votos": 3123
         },
-        "2018": {
-          "votos_pct": 8.9
+        "2018_deputado": {
+          "gleisi_pct": 10.57,
+          "gleisi_index": 6.867,
+          "votos": 367,
+          "total_votos": 3471
         },
-        "2022": {
-          "votos_pct": 3.1
+        "2022_deputado": {
+          "gleisi_pct": 3.27,
+          "gleisi_index": -0.994,
+          "votos": 133,
+          "total_votos": 4071
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.06,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.387
     },
     "SENGÉS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.1
+      "municipio": "SENGÉS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.56,
+          "gleisi_index": -2.942,
+          "votos": 5319,
+          "total_votos": 20026
         },
-        "2014": {
-          "votos_pct": 4.6
+        "2014_governador": {
+          "gleisi_pct": 6.9,
+          "gleisi_index": -7.976,
+          "votos": 693,
+          "total_votos": 10050
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 3.34,
+          "gleisi_index": -0.369,
+          "votos": 326,
+          "total_votos": 9770
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 3.78,
+          "gleisi_index": -0.479,
+          "votos": 366,
+          "total_votos": 9677
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 47
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.941
     },
     "SERRANÓPOLIS DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.0
+      "municipio": "SERRANÓPOLIS DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.93,
+          "gleisi_index": 7.43,
+          "votos": 2199,
+          "total_votos": 5954
         },
-        "2014": {
-          "votos_pct": 27.1
+        "2014_governador": {
+          "gleisi_pct": 21.27,
+          "gleisi_index": 6.394,
+          "votos": 743,
+          "total_votos": 3494
         },
-        "2018": {
-          "votos_pct": 3.6
+        "2018_deputado": {
+          "gleisi_pct": 4.28,
+          "gleisi_index": 0.569,
+          "votos": 138,
+          "total_votos": 3228
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 2.81,
+          "gleisi_index": -1.452,
+          "votos": 96,
+          "total_votos": 3417
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.235
     },
     "SERTANEJA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.9
+      "municipio": "SERTANEJA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.47,
+          "gleisi_index": 2.971,
+          "votos": 2266,
+          "total_votos": 6978
         },
-        "2014": {
-          "votos_pct": 8.0
+        "2014_governador": {
+          "gleisi_pct": 9.51,
+          "gleisi_index": -5.36,
+          "votos": 356,
+          "total_votos": 3743
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 2.27,
+          "gleisi_index": -1.437,
+          "votos": 83,
+          "total_votos": 3658
         },
-        "2022": {
-          "votos_pct": 4.0
+        "2022_deputado": {
+          "gleisi_pct": 2.81,
+          "gleisi_index": -1.45,
+          "votos": 105,
+          "total_votos": 3735
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.03,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.319
     },
     "SERTANÓPOLIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.0
+      "municipio": "SERTANÓPOLIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.78,
+          "gleisi_index": -4.722,
+          "votos": 3958,
+          "total_votos": 15972
         },
-        "2014": {
-          "votos_pct": 10.9
+        "2014_governador": {
+          "gleisi_pct": 10.12,
+          "gleisi_index": -4.753,
+          "votos": 919,
+          "total_votos": 9083
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 1.6,
+          "gleisi_index": -2.106,
+          "votos": 146,
+          "total_votos": 9126
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 2.17,
+          "gleisi_index": -2.095,
+          "votos": 209,
+          "total_votos": 9646
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 38
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.419
     },
     "SIQUEIRA CAMPOS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.4
+      "municipio": "SIQUEIRA CAMPOS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.34,
+          "gleisi_index": 5.833,
+          "votos": 7286,
+          "total_votos": 20619
         },
-        "2014": {
-          "votos_pct": 9.8
+        "2014_governador": {
+          "gleisi_pct": 10.4,
+          "gleisi_index": -4.475,
+          "votos": 1179,
+          "total_votos": 11341
         },
-        "2018": {
-          "votos_pct": 2.1
+        "2018_deputado": {
+          "gleisi_pct": 3.79,
+          "gleisi_index": 0.086,
+          "votos": 388,
+          "total_votos": 10231
         },
-        "2022": {
-          "votos_pct": 3.7
+        "2022_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 0.876,
+          "votos": 551,
+          "total_votos": 10725
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 45
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.58
     },
     "SULINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SULINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.52,
+          "gleisi_index": 2.014,
+          "votos": 1365,
+          "total_votos": 4331
         },
-        "2014": {
-          "votos_pct": 11.7
+        "2014_governador": {
+          "gleisi_pct": 16.51,
+          "gleisi_index": 1.642,
+          "votos": 377,
+          "total_votos": 2283
         },
-        "2018": {
-          "votos_pct": 5.2
+        "2018_deputado": {
+          "gleisi_pct": 5.34,
+          "gleisi_index": 1.635,
+          "votos": 116,
+          "total_votos": 2172
         },
-        "2022": {
-          "votos_pct": 1.0
+        "2022_deputado": {
+          "gleisi_pct": 3.5,
+          "gleisi_index": -0.762,
+          "votos": 78,
+          "total_votos": 2229
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.132
     },
     "SÃO CARLOS DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.3
+      "municipio": "SÃO CARLOS DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.33,
+          "gleisi_index": -2.173,
+          "votos": 1859,
+          "total_votos": 6802
         },
-        "2014": {
-          "votos_pct": 12.6
+        "2014_governador": {
+          "gleisi_pct": 12.96,
+          "gleisi_index": -1.909,
+          "votos": 480,
+          "total_votos": 3703
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 1.02,
+          "gleisi_index": -2.689,
+          "votos": 38,
+          "total_votos": 3735
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 0.31,
+          "gleisi_index": -3.949,
+          "votos": 13,
+          "total_votos": 4159
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.68
     },
     "SÃO JERÔNIMO DA SERRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.9
+      "municipio": "SÃO JERÔNIMO DA SERRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.8,
+          "gleisi_index": 3.298,
+          "votos": 3820,
+          "total_votos": 11646
         },
-        "2014": {
-          "votos_pct": 14.3
+        "2014_governador": {
+          "gleisi_pct": 13.12,
+          "gleisi_index": -1.752,
+          "votos": 819,
+          "total_votos": 6243
         },
-        "2018": {
-          "votos_pct": 6.1
+        "2018_deputado": {
+          "gleisi_pct": 6.05,
+          "gleisi_index": 2.344,
+          "votos": 353,
+          "total_votos": 5835
         },
-        "2022": {
-          "votos_pct": 1.6
+        "2022_deputado": {
+          "gleisi_pct": 2.64,
+          "gleisi_index": -1.624,
+          "votos": 159,
+          "total_votos": 6029
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.566
     },
     "SÃO JORGE D OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SÃO JORGE D OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.57,
+          "gleisi_index": 7.07,
+          "votos": 3918,
+          "total_votos": 10713
         },
-        "2014": {
-          "votos_pct": 8.6
+        "2014_governador": {
+          "gleisi_pct": 15.99,
+          "gleisi_index": 1.118,
+          "votos": 984,
+          "total_votos": 6154
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 6.15,
+          "gleisi_index": 2.443,
+          "votos": 364,
+          "total_votos": 5920
         },
-        "2022": {
-          "votos_pct": 6.7
+        "2022_deputado": {
+          "gleisi_pct": 4.79,
+          "gleisi_index": 0.525,
+          "votos": 300,
+          "total_votos": 6268
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.03,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.789
     },
     "SÃO JORGE DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.2
+      "municipio": "SÃO JORGE DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.31,
+          "gleisi_index": -5.192,
+          "votos": 1615,
+          "total_votos": 6643
         },
-        "2014": {
-          "votos_pct": 13.4
+        "2014_governador": {
+          "gleisi_pct": 12.37,
+          "gleisi_index": -2.497,
+          "votos": 442,
+          "total_votos": 3572
         },
-        "2018": {
-          "votos_pct": 5.9
+        "2018_deputado": {
+          "gleisi_pct": 5.43,
+          "gleisi_index": 1.729,
+          "votos": 185,
+          "total_votos": 3404
         },
-        "2022": {
-          "votos_pct": 4.9
+        "2022_deputado": {
+          "gleisi_pct": 3.86,
+          "gleisi_index": -0.405,
+          "votos": 139,
+          "total_votos": 3604
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.591
     },
     "SÃO JORGE DO PATROCÍNIO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.4
+      "municipio": "SÃO JORGE DO PATROCÍNIO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.46,
+          "gleisi_index": 4.962,
+          "votos": 2458,
+          "total_votos": 7132
         },
-        "2014": {
-          "votos_pct": 14.3
+        "2014_governador": {
+          "gleisi_pct": 13.07,
+          "gleisi_index": -1.802,
+          "votos": 522,
+          "total_votos": 3994
         },
-        "2018": {
-          "votos_pct": 1.1
+        "2018_deputado": {
+          "gleisi_pct": 0.64,
+          "gleisi_index": -3.063,
+          "votos": 25,
+          "total_votos": 3890
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.17,
+          "gleisi_index": -3.091,
+          "votos": 46,
+          "total_votos": 3929
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.749
     },
     "SÃO JOSÉ DA BOA VISTA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.8
+      "municipio": "SÃO JOSÉ DA BOA VISTA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 24.58,
+          "gleisi_index": -4.927,
+          "votos": 1666,
+          "total_votos": 6779
         },
-        "2014": {
-          "votos_pct": 3.6
+        "2014_governador": {
+          "gleisi_pct": 3.92,
+          "gleisi_index": -10.948,
+          "votos": 139,
+          "total_votos": 3543
         },
-        "2018": {
-          "votos_pct": 3.4
+        "2018_deputado": {
+          "gleisi_pct": 3.27,
+          "gleisi_index": -0.436,
+          "votos": 110,
+          "total_votos": 3364
         },
-        "2022": {
-          "votos_pct": 5.7
+        "2022_deputado": {
+          "gleisi_pct": 4.69,
+          "gleisi_index": 0.427,
+          "votos": 162,
+          "total_votos": 3455
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -3.971
     },
     "SÃO JOSÉ DAS PALMEIRAS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SÃO JOSÉ DAS PALMEIRAS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.89,
+          "gleisi_index": 3.388,
+          "votos": 1535,
+          "total_votos": 4667
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 11.09,
+          "gleisi_index": -3.777,
+          "votos": 297,
+          "total_votos": 2677
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 2.72,
+          "gleisi_index": -0.991,
+          "votos": 65,
+          "total_votos": 2394
         },
-        "2022": {
-          "votos_pct": 3.7
+        "2022_deputado": {
+          "gleisi_pct": 2.53,
+          "gleisi_index": -1.733,
+          "votos": 64,
+          "total_votos": 2531
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 11
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.778
     },
     "SÃO JOSÉ DOS PINHAIS": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.6
+      "municipio": "SÃO JOSÉ DOS PINHAIS",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.65,
+          "gleisi_index": 2.151,
+          "votos": 75793,
+          "total_votos": 239443
         },
-        "2014": {
-          "votos_pct": 17.5
+        "2014_governador": {
+          "gleisi_pct": 18.13,
+          "gleisi_index": 3.255,
+          "votos": 25117,
+          "total_votos": 138568
         },
-        "2018": {
-          "votos_pct": 3.8
+        "2018_deputado": {
+          "gleisi_pct": 3.81,
+          "gleisi_index": 0.106,
+          "votos": 5015,
+          "total_votos": 131545
         },
-        "2022": {
-          "votos_pct": 2.1
+        "2022_deputado": {
+          "gleisi_pct": 4.08,
+          "gleisi_index": -0.177,
+          "votos": 6177,
+          "total_votos": 151234
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 423
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.334
     },
     "SÃO JOÃO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SÃO JOÃO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 39.73,
+          "gleisi_index": 10.231,
+          "votos": 4449,
+          "total_votos": 11197
         },
-        "2014": {
-          "votos_pct": 14.5
+        "2014_governador": {
+          "gleisi_pct": 16.17,
+          "gleisi_index": 1.302,
+          "votos": 1054,
+          "total_votos": 6517
         },
-        "2018": {
-          "votos_pct": 5.5
+        "2018_deputado": {
+          "gleisi_pct": 4.02,
+          "gleisi_index": 0.315,
+          "votos": 264,
+          "total_votos": 6565
         },
-        "2022": {
-          "votos_pct": 9.3
+        "2022_deputado": {
+          "gleisi_pct": 5.14,
+          "gleisi_index": 0.874,
+          "votos": 346,
+          "total_votos": 6737
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.18
     },
     "SÃO JOÃO DO CAIUÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "SÃO JOÃO DO CAIUÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.43,
+          "gleisi_index": 6.923,
+          "votos": 2387,
+          "total_votos": 6553
         },
-        "2014": {
-          "votos_pct": 18.4
+        "2014_governador": {
+          "gleisi_pct": 21.77,
+          "gleisi_index": 6.898,
+          "votos": 758,
+          "total_votos": 3482
         },
-        "2018": {
-          "votos_pct": 5.2
+        "2018_deputado": {
+          "gleisi_pct": 8.54,
+          "gleisi_index": 4.833,
+          "votos": 277,
+          "total_votos": 3244
         },
-        "2022": {
-          "votos_pct": 5.9
+        "2022_deputado": {
+          "gleisi_pct": 7.65,
+          "gleisi_index": 3.389,
+          "votos": 269,
+          "total_votos": 3516
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.511
     },
     "SÃO JOÃO DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "SÃO JOÃO DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.21,
+          "gleisi_index": 4.703,
+          "votos": 4509,
+          "total_votos": 13182
         },
-        "2014": {
-          "votos_pct": 10.1
+        "2014_governador": {
+          "gleisi_pct": 7.48,
+          "gleisi_index": -7.389,
+          "votos": 526,
+          "total_votos": 7030
         },
-        "2018": {
-          "votos_pct": 11.8
+        "2018_deputado": {
+          "gleisi_pct": 7.27,
+          "gleisi_index": 3.56,
+          "votos": 470,
+          "total_votos": 6468
         },
-        "2022": {
-          "votos_pct": 6.9
+        "2022_deputado": {
+          "gleisi_pct": 9.41,
+          "gleisi_index": 5.147,
+          "votos": 615,
+          "total_votos": 6537
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.05,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 1.505
     },
     "SÃO JOÃO DO TRIUNFO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "SÃO JOÃO DO TRIUNFO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.23,
+          "gleisi_index": 4.728,
+          "votos": 4947,
+          "total_votos": 14452
         },
-        "2014": {
-          "votos_pct": 35.2
+        "2014_governador": {
+          "gleisi_pct": 33.37,
+          "gleisi_index": 18.495,
+          "votos": 2741,
+          "total_votos": 8215
         },
-        "2018": {
-          "votos_pct": 0.4
+        "2018_deputado": {
+          "gleisi_pct": 2.98,
+          "gleisi_index": -0.729,
+          "votos": 241,
+          "total_votos": 8096
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 1.97,
+          "gleisi_index": -2.287,
+          "votos": 168,
+          "total_votos": 8510
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 40
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 5.052
     },
     "SÃO MANOEL DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.3
+      "municipio": "SÃO MANOEL DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.95,
+          "gleisi_index": -1.554,
+          "votos": 744,
+          "total_votos": 2662
         },
-        "2014": {
-          "votos_pct": 7.0
+        "2014_governador": {
+          "gleisi_pct": 6.73,
+          "gleisi_index": -8.145,
+          "votos": 98,
+          "total_votos": 1457
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 0.99,
+          "gleisi_index": -2.717,
+          "votos": 14,
+          "total_votos": 1416
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 0.39,
+          "gleisi_index": -3.872,
+          "votos": 6,
+          "total_votos": 1541
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 7
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -4.072
     },
     "SÃO MATEUS DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.8
+      "municipio": "SÃO MATEUS DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.27,
+          "gleisi_index": 0.765,
+          "votos": 13350,
+          "total_votos": 44106
         },
-        "2014": {
-          "votos_pct": 14.4
+        "2014_governador": {
+          "gleisi_pct": 18.23,
+          "gleisi_index": 3.36,
+          "votos": 4429,
+          "total_votos": 24294
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 3.23,
+          "gleisi_index": -0.474,
+          "votos": 722,
+          "total_votos": 22339
         },
-        "2022": {
-          "votos_pct": 5.1
+        "2022_deputado": {
+          "gleisi_pct": 2.91,
+          "gleisi_index": -1.351,
+          "votos": 716,
+          "total_votos": 24605
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 101
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.575
     },
     "SÃO MIGUEL DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "SÃO MIGUEL DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.2,
+          "gleisi_index": 7.695,
+          "votos": 10682,
+          "total_votos": 28717
         },
-        "2014": {
-          "votos_pct": 16.6
+        "2014_governador": {
+          "gleisi_pct": 17.7,
+          "gleisi_index": 2.826,
+          "votos": 2850,
+          "total_votos": 16104
         },
-        "2018": {
-          "votos_pct": 4.5
+        "2018_deputado": {
+          "gleisi_pct": 3.49,
+          "gleisi_index": -0.214,
+          "votos": 526,
+          "total_votos": 15064
         },
-        "2022": {
-          "votos_pct": 5.4
+        "2022_deputado": {
+          "gleisi_pct": 3.86,
+          "gleisi_index": -0.399,
+          "votos": 641,
+          "total_votos": 16594
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 76
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.477
     },
     "SÃO PEDRO DO IGUAÇU": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.2
+      "municipio": "SÃO PEDRO DO IGUAÇU",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.49,
+          "gleisi_index": 1.988,
+          "votos": 2382,
+          "total_votos": 7564
         },
-        "2014": {
-          "votos_pct": 21.0
+        "2014_governador": {
+          "gleisi_pct": 16.24,
+          "gleisi_index": 1.365,
+          "votos": 672,
+          "total_votos": 4139
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 3.09,
+          "gleisi_index": -0.617,
+          "votos": 115,
+          "total_votos": 3723
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 2.55,
+          "gleisi_index": -1.712,
+          "votos": 95,
+          "total_votos": 3726
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.02,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.256
     },
     "SÃO PEDRO DO IVAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "SÃO PEDRO DO IVAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 37.41,
+          "gleisi_index": 7.908,
+          "votos": 3826,
+          "total_votos": 10227
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 13.17,
+          "gleisi_index": -1.703,
+          "votos": 719,
+          "total_votos": 5460
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 1.42,
+          "gleisi_index": -2.282,
+          "votos": 74,
+          "total_votos": 5196
         },
-        "2022": {
-          "votos_pct": 2.4
+        "2022_deputado": {
+          "gleisi_pct": 2.83,
+          "gleisi_index": -1.432,
+          "votos": 142,
+          "total_votos": 5018
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 25
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.623
     },
     "SÃO PEDRO DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 18.6
+      "municipio": "SÃO PEDRO DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.5,
+          "gleisi_index": 4.995,
+          "votos": 1126,
+          "total_votos": 3264
         },
-        "2014": {
-          "votos_pct": 10.2
+        "2014_governador": {
+          "gleisi_pct": 8.02,
+          "gleisi_index": -6.854,
+          "votos": 148,
+          "total_votos": 1846
         },
-        "2018": {
-          "votos_pct": 2.3
+        "2018_deputado": {
+          "gleisi_pct": 1.96,
+          "gleisi_index": -1.749,
+          "votos": 35,
+          "total_votos": 1788
         },
-        "2022": {
-          "votos_pct": 0.5
+        "2022_deputado": {
+          "gleisi_pct": 0.98,
+          "gleisi_index": -3.282,
+          "votos": 19,
+          "total_votos": 1939
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 10
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.723
     },
     "SÃO SEBASTIÃO DA AMOREIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.9
+      "municipio": "SÃO SEBASTIÃO DA AMOREIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 36.43,
+          "gleisi_index": 6.927,
+          "votos": 3455,
+          "total_votos": 9484
         },
-        "2014": {
-          "votos_pct": 9.2
+        "2014_governador": {
+          "gleisi_pct": 8.75,
+          "gleisi_index": -6.126,
+          "votos": 465,
+          "total_votos": 5317
         },
-        "2018": {
-          "votos_pct": 2.2
+        "2018_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.355,
+          "votos": 119,
+          "total_votos": 5061
         },
-        "2022": {
-          "votos_pct": 3.2
+        "2022_deputado": {
+          "gleisi_pct": 2.22,
+          "gleisi_index": -2.043,
+          "votos": 113,
+          "total_votos": 5094
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 22
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.649
     },
     "SÃO TOMÉ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 12.5
+      "municipio": "SÃO TOMÉ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.45,
+          "gleisi_index": -2.048,
+          "votos": 1686,
+          "total_votos": 6141
         },
-        "2014": {
-          "votos_pct": 16.9
+        "2014_governador": {
+          "gleisi_pct": 18.09,
+          "gleisi_index": 3.215,
+          "votos": 654,
+          "total_votos": 3616
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.66,
+          "gleisi_index": -3.042,
+          "votos": 22,
+          "total_votos": 3311
         },
-        "2022": {
-          "votos_pct": 0.9
+        "2022_deputado": {
+          "gleisi_pct": 0.58,
+          "gleisi_index": -3.685,
+          "votos": 20,
+          "total_votos": 3470
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.39
     },
     "TAMARANA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.4
+      "municipio": "TAMARANA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.51,
+          "gleisi_index": 3.005,
+          "votos": 3610,
+          "total_votos": 11105
         },
-        "2014": {
-          "votos_pct": 16.3
+        "2014_governador": {
+          "gleisi_pct": 11.95,
+          "gleisi_index": -2.924,
+          "votos": 721,
+          "total_votos": 6035
         },
-        "2018": {
-          "votos_pct": 5.0
+        "2018_deputado": {
+          "gleisi_pct": 5.23,
+          "gleisi_index": 1.526,
+          "votos": 297,
+          "total_votos": 5677
         },
-        "2022": {
-          "votos_pct": 4.0
+        "2022_deputado": {
+          "gleisi_pct": 3.94,
+          "gleisi_index": -0.326,
+          "votos": 240,
+          "total_votos": 6099
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 26
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.32
     },
     "TAMBOARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "TAMBOARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.47,
+          "gleisi_index": 3.969,
+          "votos": 1769,
+          "total_votos": 5285
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 12.75,
+          "gleisi_index": -2.122,
+          "votos": 397,
+          "total_votos": 3114
         },
-        "2018": {
-          "votos_pct": 1.2
+        "2018_deputado": {
+          "gleisi_pct": 0.96,
+          "gleisi_index": -2.748,
+          "votos": 28,
+          "total_votos": 2923
         },
-        "2022": {
-          "votos_pct": 0.9
+        "2022_deputado": {
+          "gleisi_pct": 0.98,
+          "gleisi_index": -3.285,
+          "votos": 30,
+          "total_votos": 3072
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.0,
-      "num_secoes": 14
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.046
     },
     "TAPEJARA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "TAPEJARA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 27.72,
+          "gleisi_index": -1.779,
+          "votos": 4450,
+          "total_votos": 16051
         },
-        "2014": {
-          "votos_pct": 16.1
+        "2014_governador": {
+          "gleisi_pct": 19.29,
+          "gleisi_index": 4.415,
+          "votos": 1643,
+          "total_votos": 8519
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.54,
+          "gleisi_index": -3.167,
+          "votos": 43,
+          "total_votos": 7973
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 0.47,
+          "gleisi_index": -3.789,
+          "votos": 41,
+          "total_votos": 8669
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 34
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.08
     },
     "TAPIRA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.1
+      "municipio": "TAPIRA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.64,
+          "gleisi_index": 2.137,
+          "votos": 2117,
+          "total_votos": 6691
         },
-        "2014": {
-          "votos_pct": 11.2
+        "2014_governador": {
+          "gleisi_pct": 15.82,
+          "gleisi_index": 0.946,
+          "votos": 580,
+          "total_votos": 3667
         },
-        "2018": {
-          "votos_pct": 0.8
+        "2018_deputado": {
+          "gleisi_pct": 1.45,
+          "gleisi_index": -2.254,
+          "votos": 49,
+          "total_votos": 3375
         },
-        "2022": {
-          "votos_pct": 2.6
+        "2022_deputado": {
+          "gleisi_pct": 1.17,
+          "gleisi_index": -3.095,
+          "votos": 41,
+          "total_votos": 3514
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 17
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -0.567
     },
     "TEIXEIRA SOARES": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 13.7
+      "municipio": "TEIXEIRA SOARES",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.24,
+          "gleisi_index": 3.736,
+          "votos": 3410,
+          "total_votos": 10259
         },
-        "2014": {
-          "votos_pct": 13.4
+        "2014_governador": {
+          "gleisi_pct": 20.48,
+          "gleisi_index": 5.606,
+          "votos": 1201,
+          "total_votos": 5865
         },
-        "2018": {
-          "votos_pct": 4.9
+        "2018_deputado": {
+          "gleisi_pct": 8.85,
+          "gleisi_index": 5.141,
+          "votos": 485,
+          "total_votos": 5482
         },
-        "2022": {
-          "votos_pct": 6.2
+        "2022_deputado": {
+          "gleisi_pct": 5.54,
+          "gleisi_index": 1.278,
+          "votos": 330,
+          "total_votos": 5957
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 27
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 3.94
     },
     "TELÊMACO BORBA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "TELÊMACO BORBA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.16,
+          "gleisi_index": 4.653,
+          "votos": 24047,
+          "total_votos": 70403
         },
-        "2014": {
-          "votos_pct": 15.4
+        "2014_governador": {
+          "gleisi_pct": 12.69,
+          "gleisi_index": -2.181,
+          "votos": 4673,
+          "total_votos": 36823
         },
-        "2018": {
-          "votos_pct": 2.6
+        "2018_deputado": {
+          "gleisi_pct": 3.27,
+          "gleisi_index": -0.441,
+          "votos": 1172,
+          "total_votos": 35892
         },
-        "2022": {
-          "votos_pct": 3.0
+        "2022_deputado": {
+          "gleisi_pct": 4.59,
+          "gleisi_index": 0.327,
+          "votos": 1691,
+          "total_votos": 36856
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 156
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.589
     },
     "TERRA BOA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "TERRA BOA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.75,
+          "gleisi_index": 1.248,
+          "votos": 5335,
+          "total_votos": 17349
         },
-        "2014": {
-          "votos_pct": 12.7
+        "2014_governador": {
+          "gleisi_pct": 10.89,
+          "gleisi_index": -3.985,
+          "votos": 1029,
+          "total_votos": 9452
         },
-        "2018": {
-          "votos_pct": 0.9
+        "2018_deputado": {
+          "gleisi_pct": 0.72,
+          "gleisi_index": -2.981,
+          "votos": 69,
+          "total_votos": 9518
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 1.12,
+          "gleisi_index": -3.138,
+          "votos": 111,
+          "total_votos": 9876
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 39
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.214
     },
     "TERRA RICA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.1
+      "municipio": "TERRA RICA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.45,
+          "gleisi_index": 3.95,
+          "votos": 5492,
+          "total_votos": 16417
         },
-        "2014": {
-          "votos_pct": 11.0
+        "2014_governador": {
+          "gleisi_pct": 12.04,
+          "gleisi_index": -2.83,
+          "votos": 1070,
+          "total_votos": 8886
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.96,
+          "gleisi_index": -1.742,
+          "votos": 167,
+          "total_votos": 8504
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 2.15,
+          "gleisi_index": -2.109,
+          "votos": 183,
+          "total_votos": 8500
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.0,
-      "num_secoes": 39
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.683
     },
     "TERRA ROXA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.8
+      "municipio": "TERRA ROXA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.06,
+          "gleisi_index": 3.559,
+          "votos": 5727,
+          "total_votos": 17322
         },
-        "2014": {
-          "votos_pct": 16.2
+        "2014_governador": {
+          "gleisi_pct": 14.95,
+          "gleisi_index": 0.081,
+          "votos": 1435,
+          "total_votos": 9597
         },
-        "2018": {
-          "votos_pct": 4.6
+        "2018_deputado": {
+          "gleisi_pct": 2.66,
+          "gleisi_index": -1.043,
+          "votos": 259,
+          "total_votos": 9726
         },
-        "2022": {
-          "votos_pct": 1.8
+        "2022_deputado": {
+          "gleisi_pct": 1.96,
+          "gleisi_index": -2.299,
+          "votos": 197,
+          "total_votos": 10039
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 45
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.075
     },
     "TIBAGI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "TIBAGI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.0,
+          "gleisi_index": 1.494,
+          "votos": 6142,
+          "total_votos": 19815
         },
-        "2014": {
-          "votos_pct": 7.6
+        "2014_governador": {
+          "gleisi_pct": 12.71,
+          "gleisi_index": -2.158,
+          "votos": 1370,
+          "total_votos": 10776
         },
-        "2018": {
-          "votos_pct": 5.1
+        "2018_deputado": {
+          "gleisi_pct": 2.52,
+          "gleisi_index": -1.188,
+          "votos": 262,
+          "total_votos": 10405
         },
-        "2022": {
-          "votos_pct": 9.0
+        "2022_deputado": {
+          "gleisi_pct": 5.83,
+          "gleisi_index": 1.572,
+          "votos": 607,
+          "total_votos": 10406
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 49
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.07
     },
     "TIJUCAS DO SUL": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.0
+      "municipio": "TIJUCAS DO SUL",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.35,
+          "gleisi_index": -0.153,
+          "votos": 4256,
+          "total_votos": 14501
         },
-        "2014": {
-          "votos_pct": 14.0
+        "2014_governador": {
+          "gleisi_pct": 22.74,
+          "gleisi_index": 7.869,
+          "votos": 1955,
+          "total_votos": 8597
         },
-        "2018": {
-          "votos_pct": 3.4
+        "2018_deputado": {
+          "gleisi_pct": 3.88,
+          "gleisi_index": 0.175,
+          "votos": 303,
+          "total_votos": 7807
         },
-        "2022": {
-          "votos_pct": 7.6
+        "2022_deputado": {
+          "gleisi_pct": 4.49,
+          "gleisi_index": 0.227,
+          "votos": 385,
+          "total_votos": 8577
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 37
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.03
     },
     "TOLEDO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.7
+      "municipio": "TOLEDO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.66,
+          "gleisi_index": 3.162,
+          "votos": 41454,
+          "total_votos": 126907
         },
-        "2014": {
-          "votos_pct": 18.3
+        "2014_governador": {
+          "gleisi_pct": 18.71,
+          "gleisi_index": 3.84,
+          "votos": 13566,
+          "total_votos": 72504
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 3.19,
+          "gleisi_index": -0.513,
+          "votos": 2311,
+          "total_votos": 72368
         },
-        "2022": {
-          "votos_pct": 1.0
+        "2022_deputado": {
+          "gleisi_pct": 2.17,
+          "gleisi_index": -2.087,
+          "votos": 1715,
+          "total_votos": 78866
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 334
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 1.1
     },
     "TOMAZINA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.1
+      "municipio": "TOMAZINA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 20.46,
+          "gleisi_index": -9.041,
+          "votos": 1930,
+          "total_votos": 9432
         },
-        "2014": {
-          "votos_pct": 6.1
+        "2014_governador": {
+          "gleisi_pct": 6.68,
+          "gleisi_index": -8.194,
+          "votos": 329,
+          "total_votos": 4927
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 1.63,
+          "gleisi_index": -2.08,
+          "votos": 74,
+          "total_votos": 4551
         },
-        "2022": {
-          "votos_pct": 1.9
+        "2022_deputado": {
+          "gleisi_pct": 2.72,
+          "gleisi_index": -1.54,
+          "votos": 128,
+          "total_votos": 4704
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.01,
-      "num_secoes": 21
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -5.214
     },
     "TRÊS BARRAS DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.3
+      "municipio": "TRÊS BARRAS DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.86,
+          "gleisi_index": 0.36,
+          "votos": 3645,
+          "total_votos": 12206
         },
-        "2014": {
-          "votos_pct": 12.7
+        "2014_governador": {
+          "gleisi_pct": 10.78,
+          "gleisi_index": -4.089,
+          "votos": 744,
+          "total_votos": 6900
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 2.93,
+          "gleisi_index": -0.773,
+          "votos": 192,
+          "total_votos": 6546
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 2.44,
+          "gleisi_index": -1.817,
+          "votos": 170,
+          "total_votos": 6954
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 35
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.58
     },
     "TUNAS DO PARANÁ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.9
+      "municipio": "TUNAS DO PARANÁ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 35.39,
+          "gleisi_index": 5.885,
+          "votos": 2107,
+          "total_votos": 5954
         },
-        "2014": {
-          "votos_pct": 9.1
+        "2014_governador": {
+          "gleisi_pct": 7.53,
+          "gleisi_index": -7.338,
+          "votos": 276,
+          "total_votos": 3664
         },
-        "2018": {
-          "votos_pct": 3.5
+        "2018_deputado": {
+          "gleisi_pct": 4.69,
+          "gleisi_index": 0.981,
+          "votos": 170,
+          "total_votos": 3627
         },
-        "2022": {
-          "votos_pct": 6.0
+        "2022_deputado": {
+          "gleisi_pct": 5.08,
+          "gleisi_index": 0.818,
+          "votos": 199,
+          "total_votos": 3918
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 16
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.086
     },
     "TUNEIRAS DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.0
+      "municipio": "TUNEIRAS DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.36,
+          "gleisi_index": 3.855,
+          "votos": 3122,
+          "total_votos": 9359
         },
-        "2014": {
-          "votos_pct": 13.2
+        "2014_governador": {
+          "gleisi_pct": 12.8,
+          "gleisi_index": -2.071,
+          "votos": 662,
+          "total_votos": 5172
         },
-        "2018": {
-          "votos_pct": 0.0
+        "2018_deputado": {
+          "gleisi_pct": 0.93,
+          "gleisi_index": -2.779,
+          "votos": 45,
+          "total_votos": 4854
         },
-        "2022": {
-          "votos_pct": 0.0
+        "2022_deputado": {
+          "gleisi_pct": 0.61,
+          "gleisi_index": -3.651,
+          "votos": 30,
+          "total_votos": 4915
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -1.161
     },
     "TUPÃSSI": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "TUPÃSSI",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.07,
+          "gleisi_index": 4.57,
+          "votos": 3009,
+          "total_votos": 8831
         },
-        "2014": {
-          "votos_pct": 0
+        "2014_governador": {
+          "gleisi_pct": 8.95,
+          "gleisi_index": -5.917,
+          "votos": 459,
+          "total_votos": 5126
         },
-        "2018": {
-          "votos_pct": 0.6
+        "2018_deputado": {
+          "gleisi_pct": 2.67,
+          "gleisi_index": -1.036,
+          "votos": 122,
+          "total_votos": 4569
         },
-        "2022": {
-          "votos_pct": 4.9
+        "2022_deputado": {
+          "gleisi_pct": 3.09,
+          "gleisi_index": -1.169,
+          "votos": 147,
+          "total_votos": 4753
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.04,
-      "num_secoes": 20
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.888
     },
     "TURVO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.7
+      "municipio": "TURVO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.67,
+          "gleisi_index": 5.167,
+          "votos": 5422,
+          "total_votos": 15639
         },
-        "2014": {
-          "votos_pct": 29.5
+        "2014_governador": {
+          "gleisi_pct": 21.58,
+          "gleisi_index": 6.705,
+          "votos": 1848,
+          "total_votos": 8565
         },
-        "2018": {
-          "votos_pct": 12.9
+        "2018_deputado": {
+          "gleisi_pct": 11.38,
+          "gleisi_index": 7.67,
+          "votos": 949,
+          "total_votos": 8342
         },
-        "2022": {
-          "votos_pct": 10.9
+        "2022_deputado": {
+          "gleisi_pct": 8.65,
+          "gleisi_index": 4.391,
+          "votos": 769,
+          "total_votos": 8888
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.02,
-      "num_secoes": 44
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 5.983
     },
     "UBIRATÃ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 10.6
+      "municipio": "UBIRATÃ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 20.89,
+          "gleisi_index": -8.614,
+          "votos": 5006,
+          "total_votos": 23965
         },
-        "2014": {
-          "votos_pct": 13.4
+        "2014_governador": {
+          "gleisi_pct": 11.56,
+          "gleisi_index": -3.307,
+          "votos": 1504,
+          "total_votos": 13006
         },
-        "2018": {
-          "votos_pct": 2.0
+        "2018_deputado": {
+          "gleisi_pct": 1.46,
+          "gleisi_index": -2.25,
+          "votos": 201,
+          "total_votos": 13804
         },
-        "2022": {
-          "votos_pct": 4.4
+        "2022_deputado": {
+          "gleisi_pct": 1.79,
+          "gleisi_index": -2.468,
+          "votos": 259,
+          "total_votos": 14442
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.02,
-      "num_secoes": 63
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -4.16
     },
     "UMUARAMA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.6
+      "municipio": "UMUARAMA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.01,
+          "gleisi_index": 3.512,
+          "votos": 34449,
+          "total_votos": 104344
         },
-        "2014": {
-          "votos_pct": 21.1
+        "2014_governador": {
+          "gleisi_pct": 21.3,
+          "gleisi_index": 6.434,
+          "votos": 11881,
+          "total_votos": 55767
         },
-        "2018": {
-          "votos_pct": 2.1
+        "2018_deputado": {
+          "gleisi_pct": 1.6,
+          "gleisi_index": -2.109,
+          "votos": 923,
+          "total_votos": 57782
         },
-        "2022": {
-          "votos_pct": 1.1
+        "2022_deputado": {
+          "gleisi_pct": 1.13,
+          "gleisi_index": -3.132,
+          "votos": 666,
+          "total_votos": 58988
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 246
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 1.176
     },
     "UNIFLOR": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.5
+      "municipio": "UNIFLOR",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 30.27,
+          "gleisi_index": 0.766,
+          "votos": 856,
+          "total_votos": 2828
         },
-        "2014": {
-          "votos_pct": 14.1
+        "2014_governador": {
+          "gleisi_pct": 14.52,
+          "gleisi_index": -0.347,
+          "votos": 252,
+          "total_votos": 1735
         },
-        "2018": {
-          "votos_pct": 4.0
+        "2018_deputado": {
+          "gleisi_pct": 3.95,
+          "gleisi_index": 0.249,
+          "votos": 63,
+          "total_votos": 1593
         },
-        "2022": {
-          "votos_pct": 4.2
+        "2022_deputado": {
+          "gleisi_pct": 3.54,
+          "gleisi_index": -0.724,
+          "votos": 59,
+          "total_votos": 1668
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -0.014
     },
     "UNIÃO DA VITÓRIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 8.4
+      "municipio": "UNIÃO DA VITÓRIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 25.0,
+          "gleisi_index": -4.502,
+          "votos": 13331,
+          "total_votos": 53323
         },
-        "2014": {
-          "votos_pct": 9.6
+        "2014_governador": {
+          "gleisi_pct": 15.76,
+          "gleisi_index": 0.888,
+          "votos": 4669,
+          "total_votos": 29627
         },
-        "2018": {
-          "votos_pct": 1.3
+        "2018_deputado": {
+          "gleisi_pct": 3.43,
+          "gleisi_index": -0.279,
+          "votos": 870,
+          "total_votos": 25389
         },
-        "2022": {
-          "votos_pct": 0.7
+        "2022_deputado": {
+          "gleisi_pct": 1.45,
+          "gleisi_index": -2.808,
+          "votos": 407,
+          "total_votos": 28005
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 134
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.675
     },
     "URAÍ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 15.5
+      "municipio": "URAÍ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.31,
+          "gleisi_index": 1.804,
+          "votos": 3687,
+          "total_votos": 11777
         },
-        "2014": {
-          "votos_pct": 20.0
+        "2014_governador": {
+          "gleisi_pct": 16.81,
+          "gleisi_index": 1.934,
+          "votos": 1069,
+          "total_votos": 6361
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 2.25,
+          "gleisi_index": -1.455,
+          "votos": 141,
+          "total_votos": 6265
         },
-        "2022": {
-          "votos_pct": 5.3
+        "2022_deputado": {
+          "gleisi_pct": 2.99,
+          "gleisi_index": -1.268,
+          "votos": 192,
+          "total_votos": 6414
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.05,
-      "num_secoes": 31
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.254
     },
     "VENTANIA": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 17.7
+      "municipio": "VENTANIA",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 33.05,
+          "gleisi_index": 3.551,
+          "votos": 3199,
+          "total_votos": 9678
         },
-        "2014": {
-          "votos_pct": 10.3
+        "2014_governador": {
+          "gleisi_pct": 8.4,
+          "gleisi_index": -6.473,
+          "votos": 464,
+          "total_votos": 5525
         },
-        "2018": {
-          "votos_pct": 3.1
+        "2018_deputado": {
+          "gleisi_pct": 2.39,
+          "gleisi_index": -1.313,
+          "votos": 123,
+          "total_votos": 5140
         },
-        "2022": {
-          "votos_pct": 2.0
+        "2022_deputado": {
+          "gleisi_pct": 3.12,
+          "gleisi_index": -1.14,
+          "votos": 175,
+          "total_votos": 5607
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 22
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -1.344
     },
     "VERA CRUZ DO OESTE": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.8
+      "municipio": "VERA CRUZ DO OESTE",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.09,
+          "gleisi_index": 1.591,
+          "votos": 3003,
+          "total_votos": 9658
         },
-        "2014": {
-          "votos_pct": 23.7
+        "2014_governador": {
+          "gleisi_pct": 27.05,
+          "gleisi_index": 12.183,
+          "votos": 1426,
+          "total_votos": 5271
         },
-        "2018": {
-          "votos_pct": 1.4
+        "2018_deputado": {
+          "gleisi_pct": 2.35,
+          "gleisi_index": -1.357,
+          "votos": 115,
+          "total_votos": 4896
         },
-        "2022": {
-          "votos_pct": 1.5
+        "2022_deputado": {
+          "gleisi_pct": 2.29,
+          "gleisi_index": -1.975,
+          "votos": 115,
+          "total_votos": 5029
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.0,
-      "num_secoes": 26
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.611
     },
     "VERÊ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 19.8
+      "municipio": "VERÊ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 32.06,
+          "gleisi_index": 2.559,
+          "votos": 3412,
+          "total_votos": 10642
         },
-        "2014": {
-          "votos_pct": 16.3
+        "2014_governador": {
+          "gleisi_pct": 16.59,
+          "gleisi_index": 1.715,
+          "votos": 928,
+          "total_votos": 5595
         },
-        "2018": {
-          "votos_pct": 7.2
+        "2018_deputado": {
+          "gleisi_pct": 6.09,
+          "gleisi_index": 2.384,
+          "votos": 314,
+          "total_votos": 5156
         },
-        "2022": {
-          "votos_pct": 3.9
+        "2022_deputado": {
+          "gleisi_pct": 7.62,
+          "gleisi_index": 3.362,
+          "votos": 426,
+          "total_votos": 5588
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.03,
-      "num_secoes": 24
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Seguro Gleisi",
+      "performance_medio": 2.505
     },
     "VIRMOND": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 16.2
+      "municipio": "VIRMOND",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.37,
+          "gleisi_index": 4.864,
+          "votos": 1729,
+          "total_votos": 5031
         },
-        "2014": {
-          "votos_pct": 15.9
+        "2014_governador": {
+          "gleisi_pct": 15.13,
+          "gleisi_index": 0.26,
+          "votos": 409,
+          "total_votos": 2703
         },
-        "2018": {
-          "votos_pct": 7.1
+        "2018_deputado": {
+          "gleisi_pct": 9.14,
+          "gleisi_index": 5.43,
+          "votos": 220,
+          "total_votos": 2408
         },
-        "2022": {
-          "votos_pct": 2.9
+        "2022_deputado": {
+          "gleisi_pct": 3.73,
+          "gleisi_index": -0.528,
+          "votos": 99,
+          "total_votos": 2652
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.04,
-      "num_secoes": 12
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 2.506
     },
     "VITORINO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 0
+      "municipio": "VITORINO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 34.24,
+          "gleisi_index": 4.741,
+          "votos": 2383,
+          "total_votos": 6959
         },
-        "2014": {
-          "votos_pct": 7.8
+        "2014_governador": {
+          "gleisi_pct": 10.83,
+          "gleisi_index": -4.045,
+          "votos": 409,
+          "total_votos": 3778
         },
-        "2018": {
-          "votos_pct": 3.3
+        "2018_deputado": {
+          "gleisi_pct": 4.25,
+          "gleisi_index": 0.546,
+          "votos": 163,
+          "total_votos": 3833
         },
-        "2022": {
-          "votos_pct": 2.2
+        "2022_deputado": {
+          "gleisi_pct": 4.27,
+          "gleisi_index": 0.006,
+          "votos": 177,
+          "total_votos": 4148
         }
       },
-      "trajetoria": "N/A",
-      "volatilidade": 0.01,
-      "num_secoes": 15
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": 0.312
     },
     "WENCESLAU BRAZ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 11.7
+      "municipio": "WENCESLAU BRAZ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 26.58,
+          "gleisi_index": -2.925,
+          "votos": 5301,
+          "total_votos": 19945
         },
-        "2014": {
-          "votos_pct": 7.1
+        "2014_governador": {
+          "gleisi_pct": 8.68,
+          "gleisi_index": -6.193,
+          "votos": 927,
+          "total_votos": 10682
         },
-        "2018": {
-          "votos_pct": 0.7
+        "2018_deputado": {
+          "gleisi_pct": 2.43,
+          "gleisi_index": -1.28,
+          "votos": 246,
+          "total_votos": 10141
         },
-        "2022": {
-          "votos_pct": 4.3
+        "2022_deputado": {
+          "gleisi_pct": 3.17,
+          "gleisi_index": -1.092,
+          "votos": 321,
+          "total_votos": 10129
         }
       },
-      "trajetoria": "crescente",
-      "volatilidade": 0.04,
-      "num_secoes": 48
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Swing",
+      "performance_medio": -2.872
     },
     "XAMBRÊ": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.5
+      "municipio": "XAMBRÊ",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 31.55,
+          "gleisi_index": 2.049,
+          "votos": 2361,
+          "total_votos": 7483
         },
-        "2014": {
-          "votos_pct": 20.7
+        "2014_governador": {
+          "gleisi_pct": 18.59,
+          "gleisi_index": 3.715,
+          "votos": 736,
+          "total_votos": 3960
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 1.89,
+          "gleisi_index": -1.812,
+          "votos": 75,
+          "total_votos": 3960
         },
-        "2022": {
-          "votos_pct": 1.2
+        "2022_deputado": {
+          "gleisi_pct": 0.63,
+          "gleisi_index": -3.628,
+          "votos": 25,
+          "total_votos": 3949
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 18
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": 0.081
     },
     "ÂNGULO": {
-      "gleisi": {
-        "2010": {
-          "votos_pct": 14.0
+      "municipio": "ÂNGULO",
+      "anos": {
+        "2010_senado": {
+          "gleisi_pct": 29.33,
+          "gleisi_index": -0.17,
+          "votos": 1024,
+          "total_votos": 3491
         },
-        "2014": {
-          "votos_pct": 9.6
+        "2014_governador": {
+          "gleisi_pct": 9.48,
+          "gleisi_index": -5.386,
+          "votos": 186,
+          "total_votos": 1961
         },
-        "2018": {
-          "votos_pct": 1.9
+        "2018_deputado": {
+          "gleisi_pct": 1.6,
+          "gleisi_index": -2.107,
+          "votos": 31,
+          "total_votos": 1939
         },
-        "2022": {
-          "votos_pct": 0.8
+        "2022_deputado": {
+          "gleisi_pct": 1.15,
+          "gleisi_index": -3.109,
+          "votos": 24,
+          "total_votos": 2083
         }
       },
-      "trajetoria": "decrescente",
-      "volatilidade": 0.01,
-      "num_secoes": 8
+      "trajetoria": "Decrescente",
+      "gleisi_classification": "Difícil Gleisi",
+      "performance_medio": -2.693
     }
   }
 };
